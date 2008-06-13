@@ -38,6 +38,7 @@ $HeadURL$
 		<url>http://EasyMorse.com</url>
 	</organization>
 	<scm>
+		<developerConnection>scm:svn:https://easymorse.googlecode.com/svn/trunk/pom</developerConnection>
 		<connection>scm:svn:http://easymorse.googlecode.com/svn/trunk/pom 
 		</connection>
 		<url>http://easymorse-repo.googlecode.com/svn/trunk/pom/base</url>
@@ -62,6 +63,13 @@ $HeadURL$
 				</configuration>
 			</plugin>
 		</plugins>
+		<extensions>
+			<extension>
+				<groupId>org.jvnet.wagon-svn</groupId>
+				<artifactId>wagon-svn</artifactId>
+				<version>1.8</version>
+			</extension>
+		</extensions>
 	</build>
 	<dependencies>
 		<dependency>
