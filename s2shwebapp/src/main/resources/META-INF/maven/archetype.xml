@@ -3,14 +3,6 @@
 	<id>s2shwebapp</id>
 	<sources>
 		<source encoding="utf-8">src/main/java/App.java</source>
-<!--    <source>src/main/resources/struts.xml</source>-->
-<!--    <source>src/main/resources/globalMessages.properties</source>-->
-<!--    <source>src/main/webapp/index.jsp</source>-->
-<!--    <source>src/main/webapp/WEB-INF/web.xml</source>-->
-<!--    <source>src/main/webapp/WEB-INF/web.xml</source>-->
-<!--    <source>src/main/webapp/WEB-INF/applicationContext.xml</source>-->
-<!--    <source>src/main/webapp/WEB-INF/log4j.properties</source>-->
-<!--    <source>src/main/webapp/WEB-INF/commons/*</source>-->
 	</sources>
 	<resources>
 		<resource encoding="utf-8">src/main/resources/struts.xml
