@@ -22,4 +22,10 @@ public class PersonDaoTest extends AbstractTransactionalSpringContextTests {
 		person.setName("zhangsan");
 		assertNotNull(this.personDao.save(person).getId());
 	}
+
+	@Test
+	public void testGet() {
+		Person person = this.personDao.get(1L);
+		assertNotNull(person);
+	}
 }
