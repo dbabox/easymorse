@@ -37,7 +37,7 @@ $HeadURL$
 				<artifactId>dbunit-maven-plugin</artifactId>
 				<version>1.0-beta-1</version>
 				<configuration>
-					<dataTypeFactoryName>org.dbunit.dataset.datatype.DefaultDataTypeFactory</dataTypeFactoryName>
+					<dataTypeFactoryName>${dbunit.dataTypeFactoryName}</dataTypeFactoryName>
 					<driver>${jdbc.driverClassName}</driver>
 					<username>${jdbc.username}</username>
 					<password>${jdbc.password}</password>
