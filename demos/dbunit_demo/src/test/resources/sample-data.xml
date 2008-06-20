@@ -8,4 +8,48 @@
 			<value>marshal</value>
 		</row>
 	</table>
+	<table name="CUSTOMERS">
+		<column>ID</column>
+		<column>CUSTOMER_NAME</column>
+		<row>
+			<value>1</value>
+			<value>marshal</value>
+		</row>
+	</table>
+	<table name="PRODUCTS">
+		<column>ID</column>
+		<column>PRODUCT_NAME</column>
+		<row>
+			<value>1</value>
+			<value>AAA</value>
+		</row>
+	</table>
+	<table name="MERCHANDISES">
+		<column>ID</column>
+		<column>MERCHANDISE_NAME</column>
+		<column>PRODUCT_ID</column>
+		<row>
+			<value>1</value>
+			<value>BBB</value>
+			<value>1</value>
+		</row>
+	</table>
+	<table name="TRANSACTIONS">
+		<column>ID</column>
+		<column>CUSTOMER_ID</column>
+		<row>
+			<value>1</value>
+			<value>1</value>
+		</row>
+	</table>
+	<table name="TRANSACTION_ITEMS">
+		<column>ID</column>
+		<column>TRANSACTION_ID</column>
+		<column>MERCHANDISE_ID</column>
+		<row>
+			<value>1</value>
+			<value>1</value>
+			<value>1</value>
+		</row>
+	</table>
 </dataset>
