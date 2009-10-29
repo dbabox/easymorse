@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: jstl-1.1.0.jar mysql-connector-java-5.0.5.jar standard-1.1
+ .0.jar
+
