@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Class-Path: antlr-2.7.6.jar aopalliance-1.0.jar aspectjrt-1.5.4.jar as
+ pectjweaver-1.5.4.jar cglib-nodep-2.1_3.jar commons-codec-1.3.jar com
+ mons-collections-3.1.jar commons-fileupload-1.1.1.jar commons-io-1.1.
+ jar commons-lang-2.4.jar commons-logging-1.1.1.jar directorywatcher-1
+ .0.jar dom4j-1.6.1.jar ejb3-persistence-1.0.2.GA.jar hibernate-annota
+ tions-3.4.0.GA.jar hibernate-commons-annotations-3.1.0.GA.jar hiberna
+ te-core-3.3.1.GA.jar im4java-0.98.0.jar im4java.patch-0.98.0.jar java
+ ssist-3.8.0.GA.jar jstl-1.1.0.jar jta-1.1.jar log4j-1.2.14.jar mysql-
+ connector-java-5.0.5.jar slf4j-api-1.4.2.jar slf4j-log4j12-1.5.2.jar 
+ slf4j-nop-1.5.2.jar spring-aop-2.5.6.jar spring-beans-2.5.6.jar sprin
+ g-context-2.5.6.jar spring-context-support-2.5.6.jar spring-core-2.5.
+ 6.jar spring-jdbc-2.5.6.jar spring-orm-2.5.6.jar spring-security-acl-
+ 2.0.4.jar spring-security-core-2.0.4.jar spring-security-core-tiger-2
+ .0.4.jar spring-security-taglibs-2.0.4.jar spring-test-2.5.6.jar spri
+ ng-tx-2.5.6.jar spring-web-2.5.6.jar spring-webmvc-2.5.6.jar standard
+ -1.1.0.jar xml-apis-1.0.b2.jar
+
