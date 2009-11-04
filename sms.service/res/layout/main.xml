@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+	<TabHost android:id="@android:id/tabhost" android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+		<TabWidget android:id="@android:id/tabs"
+			android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		<FrameLayout android:id="@android:id/tabcontent"
+			android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+			<LinearLayout android:id="@+id/Option01"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:orientation="vertical" android:paddingTop="80px"
+				android:paddingLeft="10px">
+				<TextView android:id="@+id/TextView01"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:text="控制服务器" />
+				<RadioGroup android:id="@+id/radioGroup01" android:paddingTop="10px"
+					android:layout_width="wrap_content" android:layout_height="wrap_content">
+					<RadioButton android:id="@+id/radioButtonStart"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:text="启动" />
+					<RadioButton android:id="@+id/radioButtonStop"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:text="停止" />
+				</RadioGroup>
+			</LinearLayout>
+			<LinearLayout android:id="@+id/Option02"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:orientation="vertical" android:paddingTop="80px"
+				android:paddingLeft="10px">
+				<TextView android:id="@+id/TextView02"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:text="未发现有短信收发服务。" />
+			</LinearLayout>
+		</FrameLayout>
+	</TabHost>
+</RelativeLayout>
