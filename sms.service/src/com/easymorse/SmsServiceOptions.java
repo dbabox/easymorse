@@ -28,6 +28,22 @@ public class SmsServiceOptions extends TabActivity {
 			} else {
 				radioGroup.check(R.id.radioButtonStop);
 			}
+
+			radioGroup
+					.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+
+						@Override
+						public void onCheckedChanged(RadioGroup group,
+								int checkedId) {
+							if (checkedId == R.id.radioButtonStart) {
+								Log.d("sms.service", "starting service...");
+								smsService.start();
+							} else {
+								Log.d("sms.service", "stopping service...");
+								smsService.stop();
+							}
+						}
+					});
 		}
 
 		@Override
@@ -60,20 +76,6 @@ public class SmsServiceOptions extends TabActivity {
 		tabHost.addTab(spec);
 
 		radioGroup = (RadioGroup) this.findViewById(R.id.radioGroup01);
-
-		radioGroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-
-			@Override
-			public void onCheckedChanged(RadioGroup group, int checkedId) {
-				if (checkedId == R.id.radioButtonStart) {
-					Log.d("sms.service", "starting service...");
-					smsService.start();
-				} else {
-					Log.d("sms.service", "stopping service...");
-					smsService.stop();
-				}
-			}
-		});
 	}
 
 	@Override

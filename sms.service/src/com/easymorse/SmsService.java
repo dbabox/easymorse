@@ -23,14 +23,15 @@ public class SmsService extends Service {
 
 		@Override
 		public void start() {
+			started=true;
 			Log.d("sms.service", "sms service started.");
 		}
 
 		@Override
 		public void stop() {
+			started=false;
 			Log.d("sms.service", "sms service stopped.");
 		}
-
 	}
 
 	@Override
@@ -60,7 +61,6 @@ public class SmsService extends Service {
 		thread.start();
 
 		Log.d("sms.service", "sms service created.");
-
 	}
 
 	@Override
