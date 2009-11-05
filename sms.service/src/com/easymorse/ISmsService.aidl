@@ -1,6 +1,6 @@
 package com.easymorse;
 
-public interface ISmsService {
+interface ISmsService {
 	boolean isStarted();
 	void start();
 	void stop();

@@ -4,6 +4,7 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.Binder;
 import android.os.IBinder;
+import android.os.RemoteException;
 import android.util.Log;
 
 public class SmsService extends Service {
@@ -12,27 +13,25 @@ public class SmsService extends Service {
 
 	private boolean threadDisable;
 
-	private ServiceBinder serviceBinder = new ServiceBinder();
-
-	public class ServiceBinder extends Binder implements ISmsService {
+	private ISmsService.Stub serviceBinder = new ISmsService.Stub() {
 
 		@Override
-		public boolean isStarted() {
-			return started;
+		public void stop() throws RemoteException {
+			started = false;
+			Log.d("sms.service", "sms service stopped.");
 		}
 
 		@Override
-		public void start() {
-			started=true;
+		public void start() throws RemoteException {
+			started = true;
 			Log.d("sms.service", "sms service started.");
 		}
 
 		@Override
-		public void stop() {
-			started=false;
-			Log.d("sms.service", "sms service stopped.");
+		public boolean isStarted() throws RemoteException {
+			return started;
 		}
-	}
+	};
 
 	@Override
 	public IBinder onBind(Intent intent) {

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.os.RemoteException;
 import android.util.Log;
 import android.widget.RadioGroup;
 import android.widget.TabHost;
@@ -23,10 +24,15 @@ public class SmsServiceOptions extends TabActivity {
 		public void onServiceConnected(ComponentName name, IBinder service) {
 			smsService = (ISmsService) service;
 
-			if (smsService.isStarted()) {
-				radioGroup.check(R.id.radioButtonStart);
-			} else {
-				radioGroup.check(R.id.radioButtonStop);
+			try {
+				if (smsService.isStarted()) {
+					radioGroup.check(R.id.radioButtonStart);
+				} else {
+					radioGroup.check(R.id.radioButtonStop);
+				}
+			} catch (RemoteException e) {
+				Log.e("sms.service", "error: " + e.getMessage(), e);
+				throw new RuntimeException(e);
 			}
 
 			radioGroup
@@ -37,10 +43,22 @@ public class SmsServiceOptions extends TabActivity {
 								int checkedId) {
 							if (checkedId == R.id.radioButtonStart) {
 								Log.d("sms.service", "starting service...");
-								smsService.start();
+								try {
+									smsService.start();
+								} catch (RemoteException e) {
+									Log.e("sms.service", "error: "
+											+ e.getMessage(), e);
+									throw new RuntimeException(e);
+								}
 							} else {
 								Log.d("sms.service", "stopping service...");
-								smsService.stop();
+								try {
+									smsService.stop();
+								} catch (RemoteException e) {
+									Log.e("sms.service", "error: "
+											+ e.getMessage(), e);
+									throw new RuntimeException(e);
+								}
 							}
 						}
 					});
