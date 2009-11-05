@@ -1,17 +1,19 @@
 package com.easymorse;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 import android.app.Service;
 import android.content.Intent;
-import android.os.Binder;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.util.Log;
 
 public class SmsService extends Service {
 
-	private boolean started;
+	private Timer timer;
 
-	private boolean threadDisable;
+	private boolean started;
 
 	private ISmsService.Stub serviceBinder = new ISmsService.Stub() {
 
@@ -38,26 +40,20 @@ public class SmsService extends Service {
 		return serviceBinder;
 	}
 
-	@Override
-	public void onCreate() {
-		super.onCreate();
+@Override
+public void onCreate() {
+	super.onCreate();
 
-		Thread thread = new Thread() {
-			@Override
-			public void run() {
-				while (!threadDisable) {
-					try {
-						if (started) {
-							Log.d("sms.service", "send a sms message.");
-						}
-						Thread.sleep(1000 * 5);
-					} catch (InterruptedException e) {
-					}
-				}
+	timer = new Timer();
+	timer.scheduleAtFixedRate(new TimerTask() {
+
+		@Override
+		public void run() {
+			if (started) {
+				Log.d("sms.service", "send a sms message.");
 			}
-		};
-
-		thread.start();
+		}
+	}, 0, 1000 * 5);
 
 		Log.d("sms.service", "sms service created.");
 	}
@@ -65,7 +61,9 @@ public class SmsService extends Service {
 	@Override
 	public void onDestroy() {
 		super.onDestroy();
-		threadDisable = true;
+		if (timer != null) {
+			timer.cancel();
+		}
 		Log.d("sms.service", "sms service shutdown.");
 	}
 }
