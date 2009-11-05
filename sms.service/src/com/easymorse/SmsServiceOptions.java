@@ -1,8 +1,11 @@
 package com.easymorse;
 
 import android.app.TabActivity;
-import android.content.SharedPreferences;
+import android.content.ComponentName;
+import android.content.Intent;
+import android.content.ServiceConnection;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.util.Log;
 import android.widget.RadioGroup;
 import android.widget.TabHost;
@@ -10,16 +13,38 @@ import android.widget.RadioGroup.OnCheckedChangeListener;
 
 public class SmsServiceOptions extends TabActivity {
 
-	private boolean isStart;
+	private RadioGroup radioGroup;
 
-	private SharedPreferences preferences;
+	private ISmsService smsService;
+
+	private ServiceConnection serviceConnection = new ServiceConnection() {
+
+		@Override
+		public void onServiceConnected(ComponentName name, IBinder service) {
+			smsService = (ISmsService) service;
+
+			if (smsService.isStarted()) {
+				radioGroup.check(R.id.radioButtonStart);
+			} else {
+				radioGroup.check(R.id.radioButtonStop);
+			}
+		}
+
+		@Override
+		public void onServiceDisconnected(ComponentName name) {
+			smsService = null;
+		}
+	};
 
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
+
 		this.setTitle("短信服务器");
+		this.bindService(new Intent("com.easymorse.SmsService"),
+				this.serviceConnection, BIND_AUTO_CREATE);
 
 		TabHost tabHost = this.getTabHost();
 		tabHost.setup();
@@ -34,31 +59,26 @@ public class SmsServiceOptions extends TabActivity {
 		spec.setIndicator("服务状态");
 		tabHost.addTab(spec);
 
-		preferences = this.getSharedPreferences("sms.service.easymorse.com", 0);
-		isStart = preferences.getBoolean("sms.service.is.start", false);
-
-		RadioGroup radioGroup = (RadioGroup) this
-				.findViewById(R.id.radioGroup01);
-		if (isStart) {
-			radioGroup.check(R.id.radioButtonStart);
-		} else {
-			radioGroup.check(R.id.radioButtonStop);
-		}
+		radioGroup = (RadioGroup) this.findViewById(R.id.radioGroup01);
 
 		radioGroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
 			@Override
 			public void onCheckedChanged(RadioGroup group, int checkedId) {
 				if (checkedId == R.id.radioButtonStart) {
-					isStart = true;
-					Log.v("sms.service", ">>start service...");
+					Log.d("sms.service", "starting service...");
+					smsService.start();
 				} else {
-					isStart = false;
-					Log.v("sms.service", ">>stop service...");
+					Log.d("sms.service", "stopping service...");
+					smsService.stop();
 				}
-				preferences.edit().putBoolean("sms.service.is.start", isStart)
-						.commit();
 			}
 		});
+	}
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		this.unbindService(serviceConnection);
 	}
 }
