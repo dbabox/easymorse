@@ -14,6 +14,11 @@
 				<action android:name="com.easymorse.SmsService"></action>
 			</intent-filter>
 		</service>
+		<receiver android:name="SmsServiceBootReceiver">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED"></action>
+			</intent-filter>
+		</receiver>
 	</application>
 	<uses-sdk android:minSdkVersion="3" />
 </manifest> 
