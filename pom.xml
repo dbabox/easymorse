@@ -96,7 +96,7 @@
 				<artifactId>tomcat-maven-plugin</artifactId>
 				<version>1.0-beta-1</version>
 				<configuration>
-					<server>tomcat.server</server>
+					<server>myserver</server>
 					<url>http://localhost:8080/manager</url>
 				</configuration>
 			</plugin>
@@ -133,6 +133,10 @@
 				<groupId>org.mortbay.jetty</groupId>
 				<artifactId>maven-jetty-plugin</artifactId>
 				<version>6.1.6</version>
+<!--				<configuration>-->
+<!--					<scanIntervalSeconds>10</scanIntervalSeconds>-->
+<!--					<jettyConfig>src/etc/jetty-jmx.xml</jettyConfig>-->
+<!--				</configuration>-->
 			</plugin>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
