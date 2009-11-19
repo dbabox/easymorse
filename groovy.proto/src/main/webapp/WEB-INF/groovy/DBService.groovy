@@ -6,7 +6,7 @@ class DBService{
 	private static sql
 
 	def databaseName='mydb'
-	def url="jdbc:mysql://localhost/${databaseName}?useUnicode=true&characterEncoding=utf-8"
+	def url="jdbc:mysql://localhost/?useUnicode=true&characterEncoding=utf-8"
 	def driverClassName="com.mysql.jdbc.Driver"
 	def username="root"
 	def password="password"
@@ -20,6 +20,7 @@ class DBService{
 		)
 		
 		sql.execute("create database if not exists " +databaseName+	" CHARACTER SET utf8")
+		sql.execute('use '+databaseName)
 	}
 	
 	def getSql(){
