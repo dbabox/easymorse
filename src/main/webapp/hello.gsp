@@ -1,4 +1,8 @@
 import groovy.xml.MarkupBuilder;
+import org.apache.log4j.Logger;
+
+def log=Logger.getLogger(this.getClass())
+
 
 def time=new Date().time
 def classloader=new GroovyClassLoader()

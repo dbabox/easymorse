@@ -7,9 +7,23 @@
 		<servlet-name>Groovy</servlet-name>
 		<servlet-class>groovy.servlet.GroovyServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>StartConsumer</servlet-name>
+		<servlet-class>com.easymorse.StartConsumerServlet</servlet-class>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>Log4jInitServlet</servlet-name>
+		<servlet-class>com.easymorse.Log4jInitServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>Groovy</servlet-name>
 		<url-pattern>*.gsp</url-pattern>
 	</servlet-mapping>
+	
+	<listener>
+		<listener-class>com.easymorse.StartConsumerServlet</listener-class>
+	</listener>
 </web-app>
