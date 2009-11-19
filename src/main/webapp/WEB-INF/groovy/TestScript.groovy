@@ -3,6 +3,7 @@
 import groovy.sql.Sql;
 import org.apache.activemq.ActiveMQConnectionFactory;
 import javax.jms.*;
+import groovy.xml.MarkupBuilder;
 
 class MyBiz implements MessageListener{
 	def classloader=new GroovyClassLoader()
@@ -35,6 +36,7 @@ class MyBiz implements MessageListener{
 			println """
 收到消息：${message.text}
 			"""
+			sendMessageToQueue('receive.confirm','--','ok.')
 			session.commit()
 		}else if (message.destination.equals(shutdownDestination)){
 			print ('shutdown ...')
@@ -44,6 +46,23 @@ class MyBiz implements MessageListener{
 		}
 		
 	 }
+
+	 def sendMessageToQueue(queueName,tag,text){
+		def destination=session.createQueue(queueName)
+		def producer=session.createProducer(destination)
+		producer.setDeliveryMode(javax.jms.DeliveryMode.PERSISTENT)
+
+		def out=new StringWriter()
+		def xmlResults=new MarkupBuilder(out)
+		
+		xmlResults.messages{
+			message text
+		}
+		
+		def message=session.createTextMessage(out.toString())
+		message.setStringProperty('tag',tag)
+		producer.send(message)
+	}
 }
 
 def biz=new MyBiz()

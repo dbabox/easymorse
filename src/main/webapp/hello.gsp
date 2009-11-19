@@ -1,3 +1,5 @@
+import groovy.xml.MarkupBuilder;
+
 def time=new Date().time
 def classloader=new GroovyClassLoader()
 def realpath=application.getRealPath('')
@@ -56,10 +58,36 @@ sql.rows("select * from users").each{row->
 	println "${row.name} || ${row.job}<br />"
 }
 
+def params=[:]
+def address=1066987654321
+
+params.smsItems=['123','223','323']
+params.wapItms=['http://wap.mycompony.com/bz.php?id=23']
+
+def out=new StringWriter()
+def xmlResults=new MarkupBuilder(out)
+
+xmlResults.messages{
+	if(params.smsItems.isEmpty()){
+		message 'sms have no data.'
+	}else{
+		sms(address:address){
+			params.smsItems.each{
+				content it
+			}
+		}
+	}
+	wap{
+		params.wapItms.each{
+			url it
+		}
+	}
+}
+
 def t1=new Date().time
 println """
 <div>
-发送消息到队列  ... ${sendMessageToQueue(connectionFactory,'myqueue','15201234567','你好')}
+发送消息到队列  ... ${sendMessageToQueue(connectionFactory,'myqueue','15201234567',out.toString())}
 </div>
 """
 
