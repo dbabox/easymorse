@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<servlet>
+		<servlet-name>Groovy</servlet-name>
+		<servlet-class>groovy.servlet.GroovyServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>StartConsumer</servlet-name>
+		<servlet-class>com.easymorse.StartConsumerServlet</servlet-class>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>Log4jInitServlet</servlet-name>
+		<servlet-class>com.easymorse.Log4jInitServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Groovy</servlet-name>
+		<url-pattern>*.gsp</url-pattern>
+	</servlet-mapping>
+	
+	<listener>
+		<listener-class>com.easymorse.StartConsumerServlet</listener-class>
+	</listener>
+</web-app>
