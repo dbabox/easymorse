@@ -23,11 +23,6 @@ public class VfsDemo {
 		printFilePath(fileObject);
 	}
 
-	/**
-	 * 根据文件路径遍历（打印）文件对象。改动一下。
-	 * @param fileObject
-	 * @throws Exception
-	 */
 	private static void printFilePath(FileObject fileObject) throws Exception {
 		if (fileObject.getType().hasChildren()) {
 			System.out.println("is directory>>" + fileObject);
