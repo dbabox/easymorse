@@ -39,7 +39,7 @@ def sendMessageToQueue(connectionFactory,queueName,tag,text){
 	def producer=session.createProducer(destination)
 	producer.setDeliveryMode(javax.jms.DeliveryMode.PERSISTENT)
 	def message=session.createTextMessage(text)
-	message.setStringProperty('tag',tag)
+	message.setStringProperty('phone',tag)
 	producer.send(message)
 	session.commit()
 	
@@ -91,7 +91,7 @@ xmlResults.messages{
 def t1=new Date().time
 println """
 <div>
-发送消息到队列  ... ${sendMessageToQueue(connectionFactory,'myqueue','15201234567',out.toString())}
+发送消息到队列  ... ${sendMessageToQueue(connectionFactory,'inbound','15201234567',out.toString())}
 </div>
 """
 

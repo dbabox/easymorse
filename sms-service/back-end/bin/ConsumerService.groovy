@@ -31,7 +31,7 @@ class ShutdownThread extends Thread{
 class JMSConsumer implements MessageListener{
 	
 	private static final Logger logger=Logger.getLogger(JMSConsumer.class)
-
+	
 	def connection
 	def session
 	
@@ -43,7 +43,7 @@ class JMSConsumer implements MessageListener{
 		connection.start()
 		
 		session=connection.createSession(true,javax.jms.Session.AUTO_ACKNOWLEDGE)
-		def destination=session.createQueue("myqueue")
+		def destination=session.createQueue("inbound")
 		def consumer=session.createConsumer(destination)
 		consumer.setMessageListener(this)
 		
@@ -51,25 +51,38 @@ class JMSConsumer implements MessageListener{
 	}
 	
 	public void onMessage(Message message) {
-		sendMessageToQueue('message.confirm','tag','ok.')
+		//sendMessageToQueue('message.confirm','tag','ok.')
+		routeMessage(message)
+		
 		session.commit()
 		logger.debug("receive message successful.")
 	}
 	
-	def sendMessageToQueue(queueName,tag,text){
+	def routeMessage(message){
+		logger.debug("begin route messages ...")
+
+		def phone=message.getStringProperty('phone')
+
+		if(phone){
+			sendMessageToQueue("outbound-${phone}",phone,'test ok.')
+		}
+
+		logger.debug("end route.")
+	}
+	
+	def sendMessageToQueue(queueName,phone,text){
 		def producer=session.createProducer(session.createQueue(queueName))
 		producer.setDeliveryMode(javax.jms.DeliveryMode.PERSISTENT)
 		
 		def out=new StringWriter()
 		def xmlResults=new MarkupBuilder(out)
 		
-		xmlResults.messages{
-			message text
-		}
+		xmlResults.messages{ message text }
 		
 		def message=session.createTextMessage(out.toString())
-		message.setStringProperty('tag',tag)
+		message.setStringProperty('phone',phone)
 		producer.send(message)
-		logger.debug("send confirm message successful.")
+		
+		logger.debug("send route message successful.")
 	}
 }
