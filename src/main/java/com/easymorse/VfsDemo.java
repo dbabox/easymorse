@@ -8,6 +8,12 @@ import org.apache.commons.vfs.FileObject;
 import org.apache.commons.vfs.FileSystemManager;
 import org.apache.commons.vfs.VFS;
 
+/**
+ * 演示vfs的调用
+ * 
+ * @author marshal
+ * 
+ */
 public class VfsDemo {
 	public static void main(String[] args) throws Exception {
 		FileSystemManager manager = VFS.getManager();
@@ -30,7 +36,8 @@ public class VfsDemo {
 				BufferedReader reader = new BufferedReader(
 						new InputStreamReader(fileObject.getContent()
 								.getInputStream()));
-				for(String s=reader.readLine();s!=null;s=reader.readLine()){
+				for (String s = reader.readLine(); s != null; s = reader
+						.readLine()) {
 					System.out.println(s);
 				}
 			}
