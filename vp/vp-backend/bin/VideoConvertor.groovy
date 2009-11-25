@@ -11,10 +11,6 @@ class Convertor implements MessageListener{
 	
 	private static Logger logger=Logger.getLogger(Convertor.class)
 	
-	static{
-		PropertyConfigurator.configure("log4j.properties");				
-	}
-	
 	def connection
 	def session
 	
@@ -54,4 +50,5 @@ class Convertor implements MessageListener{
 	}
 }
 
+PropertyConfigurator.configure("log4j.properties");
 new Convertor().start()
