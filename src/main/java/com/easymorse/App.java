@@ -17,5 +17,6 @@ public class App {
 		for (; e.hasMoreElements();) {
 			System.out.println(e.nextElement());
 		}
+		file.close();
 	}
 }
