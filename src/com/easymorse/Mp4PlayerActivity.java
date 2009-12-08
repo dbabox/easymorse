@@ -20,12 +20,7 @@ public class Mp4PlayerActivity extends Activity {
 		MediaController controller = new MediaController(this);
 		this.videoView.setMediaController(controller);
 		
-		if(videoView.isPlaying()){
-			videoView.stopPlayback();
-		}
-		
 		videoView.setVideoURI(Uri.parse("http://sayedhashimi.com/downloads/android/movie.mp4"));
 		videoView.requestFocus();
-		videoView.start();
 	}
 }
