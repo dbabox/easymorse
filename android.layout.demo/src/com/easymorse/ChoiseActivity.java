@@ -16,10 +16,19 @@ public class ChoiseActivity extends Activity {
 
 		Button button = (Button) this.findViewById(R.id.Button01);
 		button.setOnClickListener(new OnClickListener() {
-
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(ChoiseActivity.this, LinearLayoutDemo.class));
+				startActivity(new Intent(ChoiseActivity.this,
+						LinearLayoutDemo.class));
+			}
+		});
+
+		button = (Button) this.findViewById(R.id.Button02);
+		button.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(ChoiseActivity.this,
+						LinearLayoutDemo2.class));
 			}
 		});
 	}

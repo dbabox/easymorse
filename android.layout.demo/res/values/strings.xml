@@ -6,4 +6,5 @@
 <string name="button01">点击增加</string>
 <string name="name">名称</string>
 <string name="comments">评论</string>
+<string name="button2">线性布局示例2</string>
 </resources>
