@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">演示各种布局的示例。</string>
+    <string name="app_name">layout.demo</string>
+<string name="button1">线性布局示例1</string>
+<string name="button01">点击增加</string>
+<string name="name">名称</string>
+<string name="comments">评论</string>
+</resources>
