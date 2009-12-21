@@ -31,5 +31,14 @@ public class ChoiseActivity extends Activity {
 						LinearLayoutDemo2.class));
 			}
 		});
+		
+		button = (Button) this.findViewById(R.id.Button03);
+		button.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(ChoiseActivity.this,
+						RelativeLayoutDemo.class));
+			}
+		});
 	}
 }
