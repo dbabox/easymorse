@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">展示Layout</string>
+	<string name="app_name">UiLayout</string>
+	<string name="framelayout">framelayout</string>
+	<string name="LinearLayout">LinearLayout</string>
+	<string name="AbsoluteLayout">AbsoluteLayout</string>
+	<string name="RelativeLayout">RelativeLayout</string>
+	<string name="TableLayout">TableLayout</string>
+</resources>
