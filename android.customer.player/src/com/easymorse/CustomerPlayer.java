@@ -4,8 +4,10 @@ import android.app.TabActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TabHost;
 import android.widget.TabHost.TabContentFactory;
@@ -15,6 +17,7 @@ public class CustomerPlayer extends TabActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
+
 		final TabHost tabHost = getTabHost();
 
 		tabHost.addTab(tabHost.newTabSpec("tab1").setIndicator("栏目内容")
@@ -25,7 +28,7 @@ public class CustomerPlayer extends TabActivity {
 						ListView listView = new ListView(CustomerPlayer.this);
 						listView.setAdapter(new ArrayAdapter<String>(
 								CustomerPlayer.this,
-								android.R.layout.simple_list_item_1,
+								R.layout.content_view,
 								new String[] { "c1", "c2", "c3" }));
 						return listView;
 					}
