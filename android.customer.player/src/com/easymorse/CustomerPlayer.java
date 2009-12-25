@@ -5,27 +5,29 @@ import java.util.List;
 
 import android.app.TabActivity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TabHost;
 import android.widget.TextView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TabHost.TabContentFactory;
 
 public class CustomerPlayer extends TabActivity {
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		final TabHost tabHost = getTabHost();
 
-		tabHost.addTab(tabHost.newTabSpec("tab1").setIndicator("栏目内容")
+		tabHost.addTab(tabHost.newTabSpec("tab1").setIndicator("视频")
 				.setContent(new TabContentFactory() {
 
 					List<Content> items;
@@ -72,7 +74,28 @@ public class CustomerPlayer extends TabActivity {
 				}));
 
 		tabHost.addTab(tabHost.newTabSpec("tab2").setIndicator("栏目列表")
-				.setContent(new Intent(this, ItemList.class)));
+				.setContent(new TabContentFactory() {
+
+					@Override
+					public View createTabContent(String tag) {
+						ListView listView = new ListView(CustomerPlayer.this);
+						listView.setAdapter(new ArrayAdapter<String>(
+								CustomerPlayer.this,
+								android.R.layout.simple_list_item_1,
+								new String[] { "视频", "听听", "社区" }));
+						listView
+								.setOnItemClickListener(new OnItemClickListener() {
+
+									@Override
+									public void onItemClick(
+											AdapterView<?> parent, View view,
+											int position, long id) {
+										tabHost.setCurrentTab(0);
+									}
+								});
+						return listView;
+					}
+				}));
 	}
 
 	private class ContentAdapter extends ArrayAdapter<Content> {
