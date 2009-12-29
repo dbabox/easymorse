@@ -12,6 +12,7 @@ public class TheadDemo1 {
 	public static void main(String[] args) {
 		List<String> contents = new ArrayList<String>();
 		new Thread(new Consumer(contents)).start();
+		new Thread(new Consumer(contents)).start();
 		new Thread(new Producer(contents)).start();
 	}
 }
@@ -31,7 +32,7 @@ class Producer implements Runnable {
 		while (true) {
 			synchronized (contents) {
 				this.contents.add("s" + (count++));
-				this.contents.notify();
+				this.contents.notifyAll();
 			}
 			try {
 				Thread.sleep(1000 * 2);
@@ -45,10 +46,16 @@ class Producer implements Runnable {
 
 class Consumer implements Runnable {
 
+	private static int consumerCount;
+
 	private List<String> contents;
+	
+	private int number;
 
 	public Consumer(List<String> contents) {
 		this.contents = contents;
+		++consumerCount;
+		number=consumerCount;
 	}
 
 	@Override
@@ -61,11 +68,11 @@ class Consumer implements Runnable {
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
-				}else{
-					System.out.println(contents.remove(0));
+				} else {
+					System.out.println("c" + number + " -> "
+							+ contents.remove(0));
 				}
 			}
 		}
 	}
-
 }
