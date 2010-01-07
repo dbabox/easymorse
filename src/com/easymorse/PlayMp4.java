@@ -8,6 +8,7 @@ import android.media.MediaPlayer.OnCompletionListener;
 import android.media.MediaPlayer.OnPreparedListener;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.MediaController;
@@ -48,11 +49,13 @@ public class PlayMp4 extends Activity {
 		{
 			//横屏
 			path = bundle.getString("widthurl");
+			Log.i("mp4", "heng");
 		}
 		if(width/heigh==0)
 		{
 			//竖屏
 			path = bundle.getString("heighturl");
+			Log.i("mp4", "shu");
 		}
 	
 		mVideoView.setVideoPath(path);
