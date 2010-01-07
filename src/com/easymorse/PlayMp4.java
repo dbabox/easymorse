@@ -8,7 +8,6 @@ import android.media.MediaPlayer.OnCompletionListener;
 import android.media.MediaPlayer.OnPreparedListener;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.MediaController;
@@ -66,7 +65,6 @@ public class PlayMp4 extends Activity {
 			@Override
 			public void onPrepared(MediaPlayer mp) {
 				mVideoView.setBackgroundColor(Color.argb(0, 0, 255, 0));
-				Log.i("mp4", "llllllll="+mVideoView.getBackground());
 				dialog.dismiss();
 			}
 		});
