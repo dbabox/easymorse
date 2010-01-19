@@ -6,6 +6,8 @@ import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class WeaponService {
@@ -35,7 +37,15 @@ public class WeaponService {
 
 	@RequestMapping("/list.json")
 	@ModelAttribute("data")
-	public List list() {
+	public List<Weapon> list() {
 		return data;
+	}
+
+	@RequestMapping(value = "/delete.json", method = RequestMethod.POST)
+	public String delete(@RequestParam("id") List<Integer> ids) {
+		for (Integer id : ids) {
+			data.remove(id.intValue());
+		}
+		return "delete";
 	}
 }

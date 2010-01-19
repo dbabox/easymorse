@@ -1,10 +1,12 @@
 package com.easymorse.weapons.client.view;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.easymorse.weapons.client.model.Weapon;
 import com.easymorse.weapons.client.presenter.WeaponsPresenter;
 import com.google.gwt.core.client.JsArray;
+import com.google.gwt.event.dom.client.HasClickHandlers;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.CheckBox;
 import com.google.gwt.user.client.ui.Composite;
@@ -69,5 +71,24 @@ public class WeaponsView extends Composite implements WeaponsPresenter.Display {
 	@Override
 	public Widget asWidget() {
 		return this;
+	}
+
+	@Override
+	public HasClickHandlers getDeleteButton() {
+		return this.deleteButton;
+	}
+
+	@Override
+	public List<Integer> getSelectedRows() {
+		List<Integer> selectedRows = new ArrayList<Integer>();
+
+		for (int i = 0; i < contactsTable.getRowCount(); ++i) {
+			CheckBox checkBox = (CheckBox) contactsTable.getWidget(i, 0);
+			if (checkBox.getValue()) {
+				selectedRows.add(i);
+			}
+		}
+
+		return selectedRows;
 	}
 }

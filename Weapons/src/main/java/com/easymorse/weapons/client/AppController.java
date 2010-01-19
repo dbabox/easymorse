@@ -27,8 +27,7 @@ public class AppController implements Presenter, ValueChangeHandler<String> {
 			Presenter presenter = null;
 
 			if (token.equals("list")) {
-				presenter = new WeaponsPresenter(eventBus,
-						new WeaponsView());
+				presenter = new WeaponsPresenter(eventBus, new WeaponsView());
 			}
 
 			if (presenter != null) {

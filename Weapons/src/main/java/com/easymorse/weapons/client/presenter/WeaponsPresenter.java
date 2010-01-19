@@ -1,7 +1,12 @@
 package com.easymorse.weapons.client.presenter;
 
+import java.util.List;
+
 import com.easymorse.weapons.client.model.Weapon;
 import com.google.gwt.core.client.JsArray;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.event.dom.client.HasClickHandlers;
 import com.google.gwt.event.shared.HandlerManager;
 import com.google.gwt.http.client.Request;
 import com.google.gwt.http.client.RequestBuilder;
@@ -18,24 +23,73 @@ public class WeaponsPresenter implements Presenter {
 		void setData(JsArray<Weapon> data);
 
 		Widget asWidget();
+
+		HasClickHandlers getDeleteButton();
+
+		List<Integer> getSelectedRows();
 	}
 
 	private Display display;
+
 	private HandlerManager eventBus;
 
 	public WeaponsPresenter(HandlerManager eventBus, Display display) {
 		this.eventBus = eventBus;
 		this.display = display;
-//		 List<String> data = Arrays.asList("T-34 坦克",
-//		 "虎式坦克","零式战斗轰炸机","野马战斗机","B-25轰炸机");
-//		 this.display.setData(data);
+	}
+
+	public void bind() {
+		display.getDeleteButton().addClickHandler(new ClickHandler() {
+			public void onClick(ClickEvent event) {
+				deleteSelectedContacts();
+			}
+		});
+	}
+
+	protected void deleteSelectedContacts() {
+		List<Integer> selectedRows = display.getSelectedRows();
+
+		RequestBuilder requestBuilder = new RequestBuilder(RequestBuilder.POST,
+				"../delete.json");
+		requestBuilder.setHeader("Content-Type",
+				"application/x-www-form-urlencoded");
+
+		StringBuilder builder = new StringBuilder();
+
+		for (Integer id : selectedRows) {
+			builder.append("id=").append(id).append("&");
+		}
+
+		requestBuilder.setRequestData(builder.toString());
+
+		requestBuilder.setCallback(new RequestCallback() {
+
+			@Override
+			public void onResponseReceived(Request request, Response response) {
+				list();
+			}
+
+			@Override
+			public void onError(Request request, Throwable e) {
+				Window.alert("error");
+			}
+		});
+		try {
+			requestBuilder.send();
+		} catch (RequestException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
 	public void go(HasWidgets container) {
+		this.bind();
 		container.clear();
 		container.add(this.display.asWidget());
+		this.list();
+	}
 
+	private void list() {
 		RequestBuilder requestBuilder = new RequestBuilder(RequestBuilder.GET,
 				"../list.json");
 		requestBuilder.setCallback(new RequestCallback() {
@@ -51,13 +105,12 @@ public class WeaponsPresenter implements Presenter {
 			}
 
 		});
-		
+
 		try {
 			requestBuilder.send();
 		} catch (RequestException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 }
