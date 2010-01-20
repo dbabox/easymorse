@@ -2,6 +2,7 @@ package com.easymorse.weapons.client.presenter;
 
 import java.util.List;
 
+import com.easymorse.weapons.client.event.AddWeaponEvent;
 import com.easymorse.weapons.client.model.Weapon;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -27,6 +28,8 @@ public class WeaponsPresenter implements Presenter {
 		HasClickHandlers getDeleteButton();
 
 		List<Integer> getSelectedRows();
+
+		HasClickHandlers getAddButton();
 	}
 
 	private Display display;
@@ -44,40 +47,50 @@ public class WeaponsPresenter implements Presenter {
 				deleteSelectedContacts();
 			}
 		});
+
+		display.getAddButton().addClickHandler(new ClickHandler() {
+			public void onClick(ClickEvent event) {
+				eventBus.fireEvent(new AddWeaponEvent());
+			}
+		});
 	}
 
 	protected void deleteSelectedContacts() {
 		List<Integer> selectedRows = display.getSelectedRows();
 
-		RequestBuilder requestBuilder = new RequestBuilder(RequestBuilder.POST,
-				"../delete.json");
-		requestBuilder.setHeader("Content-Type",
-				"application/x-www-form-urlencoded");
+		if (selectedRows != null && !selectedRows.isEmpty()) {
 
-		StringBuilder builder = new StringBuilder();
+			RequestBuilder requestBuilder = new RequestBuilder(
+					RequestBuilder.POST, "../delete.json");
+			requestBuilder.setHeader("Content-Type",
+					"application/x-www-form-urlencoded");
 
-		for (Integer id : selectedRows) {
-			builder.append("id=").append(id).append("&");
-		}
+			StringBuilder builder = new StringBuilder();
 
-		requestBuilder.setRequestData(builder.toString());
-
-		requestBuilder.setCallback(new RequestCallback() {
-
-			@Override
-			public void onResponseReceived(Request request, Response response) {
-				list();
+			for (Integer id : selectedRows) {
+				builder.append("id=").append(id).append("&");
 			}
 
-			@Override
-			public void onError(Request request, Throwable e) {
-				Window.alert("error");
+			requestBuilder.setRequestData(builder.toString());
+
+			requestBuilder.setCallback(new RequestCallback() {
+
+				@Override
+				public void onResponseReceived(Request request,
+						Response response) {
+					list();
+				}
+
+				@Override
+				public void onError(Request request, Throwable e) {
+					Window.alert("error");
+				}
+			});
+			try {
+				requestBuilder.send();
+			} catch (RequestException e) {
+				e.printStackTrace();
 			}
-		});
-		try {
-			requestBuilder.send();
-		} catch (RequestException e) {
-			e.printStackTrace();
 		}
 	}
 

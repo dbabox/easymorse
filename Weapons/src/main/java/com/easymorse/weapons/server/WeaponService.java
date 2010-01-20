@@ -46,6 +46,21 @@ public class WeaponService {
 		for (Integer id : ids) {
 			data.remove(id.intValue());
 		}
-		return "delete";
+		return "deleted";
+	}
+
+	@RequestMapping(value = "/save.json", method = RequestMethod.POST)
+	public String save(Weapon weapon) {
+
+		if (weapon.getId() == null) {
+			create(weapon);
+		}
+
+		return "saved";
+	}
+
+	private void create(Weapon weapon) {
+		weapon.setId(Integer.toString(data.size() + 1));
+		data.add(weapon);
 	}
 }

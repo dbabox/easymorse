@@ -43,6 +43,5 @@ public class Weapon extends JavaScriptObject {
 	public static native JsArray<Weapon> arrayFromJson(String jsonString) /*-{
 		return eval('(' + jsonString + ')').data;
 	}-*/;
-	
-	
+
 }

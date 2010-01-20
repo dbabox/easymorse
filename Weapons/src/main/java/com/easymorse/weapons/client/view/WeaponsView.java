@@ -91,4 +91,9 @@ public class WeaponsView extends Composite implements WeaponsPresenter.Display {
 
 		return selectedRows;
 	}
+
+	@Override
+	public HasClickHandlers getAddButton() {
+		return this.addButton;
+	}
 }
