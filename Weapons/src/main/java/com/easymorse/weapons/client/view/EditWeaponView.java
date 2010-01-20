@@ -5,9 +5,11 @@ import com.easymorse.weapons.client.presenter.EditWeaponPresenter;
 import com.google.gwt.event.dom.client.HasClickHandlers;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.FileUpload;
 import com.google.gwt.user.client.ui.FlexTable;
 import com.google.gwt.user.client.ui.HasValue;
 import com.google.gwt.user.client.ui.HorizontalPanel;
+import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TextArea;
 import com.google.gwt.user.client.ui.TextBox;
@@ -22,6 +24,7 @@ public class EditWeaponView extends Composite implements
 	private TextArea description;
 	private Button saveButton;
 	private Button cancelButton;
+	private Image image;
 
 	public EditWeaponView() {
 		VerticalPanel contentDetailsPanel = new VerticalPanel();
@@ -54,6 +57,11 @@ public class EditWeaponView extends Composite implements
 		detailsTable.setWidget(0, 1, name);
 		detailsTable.setWidget(1, 0, new Label("介绍"));
 		detailsTable.setWidget(1, 1, description);
+		detailsTable.setWidget(2, 0, new Label("图片"));
+		image=new Image();
+		detailsTable.setWidget(2, 1, image);
+		// detailsTable.setWidget(3, 0, new Label("上传图片"));
+		// detailsTable.setWidget(3, 1, new FileUpload());
 		name.setFocus(true);
 	}
 
@@ -86,6 +94,6 @@ public class EditWeaponView extends Composite implements
 	public void setData(Weapon weapon) {
 		this.name.setValue(weapon.getName());
 		this.description.setValue(weapon.getDescription());
-		
+		this.image.setUrl("/images/"+weapon.getId());
 	}
 }
