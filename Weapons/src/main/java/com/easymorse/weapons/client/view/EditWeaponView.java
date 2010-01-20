@@ -5,7 +5,6 @@ import com.easymorse.weapons.client.presenter.EditWeaponPresenter;
 import com.google.gwt.event.dom.client.HasClickHandlers;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.DecoratorPanel;
 import com.google.gwt.user.client.ui.FlexTable;
 import com.google.gwt.user.client.ui.HasValue;
 import com.google.gwt.user.client.ui.HorizontalPanel;
@@ -25,12 +24,10 @@ public class EditWeaponView extends Composite implements
 	private Button cancelButton;
 
 	public EditWeaponView() {
-		DecoratorPanel contentDetailsDecorator = new DecoratorPanel();
-		contentDetailsDecorator.setWidth("15em");
-		initWidget(contentDetailsDecorator);
-
 		VerticalPanel contentDetailsPanel = new VerticalPanel();
+		contentDetailsPanel.setSpacing(4);
 		contentDetailsPanel.setWidth("100%");
+		initWidget(contentDetailsPanel);
 
 		detailsTable = new FlexTable();
 		detailsTable.setCellSpacing(0);
@@ -50,8 +47,6 @@ public class EditWeaponView extends Composite implements
 	    menuPanel.add(saveButton);
 	    menuPanel.add(cancelButton);
 	    contentDetailsPanel.add(menuPanel);
-
-		contentDetailsDecorator.add(contentDetailsPanel);
 	}
 
 	private void initDetailsTable() {

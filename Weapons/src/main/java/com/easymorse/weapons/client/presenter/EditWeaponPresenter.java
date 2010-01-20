@@ -15,6 +15,7 @@ import com.google.gwt.http.client.RequestCallback;
 import com.google.gwt.http.client.RequestException;
 import com.google.gwt.http.client.Response;
 import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.client.ui.FocusWidget;
 import com.google.gwt.user.client.ui.HasValue;
 import com.google.gwt.user.client.ui.HasWidgets;
@@ -32,7 +33,7 @@ public class EditWeaponPresenter implements Presenter {
 		HasValue<String> getDescription();
 
 		Widget asWidget();
-		
+
 		void setData(Weapon weapon);
 	}
 
@@ -41,6 +42,8 @@ public class EditWeaponPresenter implements Presenter {
 	private Display display;
 
 	private Weapon weapon;
+
+	private DialogBox dialogBox;
 
 	public EditWeaponPresenter(HandlerManager eventBus, Display display) {
 		this.eventBus = eventBus;
@@ -63,7 +66,7 @@ public class EditWeaponPresenter implements Presenter {
 
 			@Override
 			public void onResponseReceived(Request request, Response response) {
-				weapon=Weapon.fromJson(response.getText());
+				weapon = Weapon.fromJson(response.getText());
 				display.setData(weapon);
 			}
 
@@ -110,12 +113,12 @@ public class EditWeaponPresenter implements Presenter {
 				"../save.json");
 		requestBuilder.setHeader("Content-Type",
 				"application/x-www-form-urlencoded");
-		
-		StringBuilder query=new StringBuilder().append("name=")
-		.append(weapon.getName()).append("&description=").append(
+
+		StringBuilder query = new StringBuilder().append("name=").append(
+				weapon.getName()).append("&description=").append(
 				weapon.getDescription());
-		
-		if(weapon.getId()!=null && !weapon.getId().isEmpty()){
+
+		if (weapon.getId() != null && !weapon.getId().isEmpty()) {
 			query.append("&id=").append(weapon.getId());
 		}
 
@@ -143,8 +146,12 @@ public class EditWeaponPresenter implements Presenter {
 
 	@Override
 	public void go(HasWidgets container) {
-		container.clear();
-		container.add(display.asWidget());
+		dialogBox = new DialogBox();
+		dialogBox.setText("编辑记录");
+//		dialogBox.setGlassEnabled(true);
+		dialogBox.setAnimationEnabled(true);
+		dialogBox.setWidget(display.asWidget());
+		dialogBox.show();
 	}
 
 }
