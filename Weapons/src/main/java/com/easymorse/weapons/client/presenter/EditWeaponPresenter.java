@@ -3,6 +3,7 @@ package com.easymorse.weapons.client.presenter;
 import com.easymorse.weapons.client.event.EditWeaponCancelledEvent;
 import com.easymorse.weapons.client.event.WeaponUpdatedEvent;
 import com.easymorse.weapons.client.model.Weapon;
+import com.easymorse.weapons.client.view.EditWeaponView;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -31,6 +32,8 @@ public class EditWeaponPresenter implements Presenter {
 		HasValue<String> getDescription();
 
 		Widget asWidget();
+		
+		void setData(Weapon weapon);
 	}
 
 	private HandlerManager eventBus;
@@ -46,6 +49,38 @@ public class EditWeaponPresenter implements Presenter {
 		bind();
 	}
 
+	public EditWeaponPresenter(final HandlerManager eventBus,
+			final EditWeaponView display, String id) {
+		this.eventBus = eventBus;
+		this.display = display;
+
+		RequestBuilder requestBuilder = new RequestBuilder(RequestBuilder.GET,
+				"../get.json?"
+						+ new StringBuilder().append("id=").append(id)
+								.toString());
+
+		requestBuilder.setCallback(new RequestCallback() {
+
+			@Override
+			public void onResponseReceived(Request request, Response response) {
+				weapon=Weapon.fromJson(response.getText());
+				display.setData(weapon);
+			}
+
+			@Override
+			public void onError(Request request, Throwable e) {
+				Window.alert("error");
+			}
+		});
+		try {
+			requestBuilder.send();
+		} catch (RequestException e) {
+			e.printStackTrace();
+		}
+
+		bind();
+	}
+
 	private void bind() {
 
 		this.display.getSaveButton().addClickHandler(new ClickHandler() {
@@ -53,7 +88,7 @@ public class EditWeaponPresenter implements Presenter {
 				if (display.getName().getValue() == null
 						|| display.getName().getValue().isEmpty()) {
 					Window.alert("名称不能为空");
-					((FocusWidget)display.getName()).setFocus(true);
+					((FocusWidget) display.getName()).setFocus(true);
 					return;
 				}
 				doSave();
@@ -75,10 +110,16 @@ public class EditWeaponPresenter implements Presenter {
 				"../save.json");
 		requestBuilder.setHeader("Content-Type",
 				"application/x-www-form-urlencoded");
+		
+		StringBuilder query=new StringBuilder().append("name=")
+		.append(weapon.getName()).append("&description=").append(
+				weapon.getDescription());
+		
+		if(weapon.getId()!=null && !weapon.getId().isEmpty()){
+			query.append("&id=").append(weapon.getId());
+		}
 
-		requestBuilder.setRequestData(new StringBuilder().append("name=")
-				.append(weapon.getName()).append("&description=").append(
-						weapon.getDescription()).toString());
+		requestBuilder.setRequestData(query.toString());
 
 		requestBuilder.setCallback(new RequestCallback() {
 

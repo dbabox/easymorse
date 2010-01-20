@@ -3,6 +3,7 @@ package com.easymorse.weapons.client.presenter;
 import java.util.List;
 
 import com.easymorse.weapons.client.event.AddWeaponEvent;
+import com.easymorse.weapons.client.event.EditWeaponEvent;
 import com.easymorse.weapons.client.model.Weapon;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -30,7 +31,13 @@ public class ListWeaponPresenter implements Presenter {
 		List<Integer> getSelectedRows();
 
 		HasClickHandlers getAddButton();
+
+		HasClickHandlers getList();
+
+		int getClickedRow(ClickEvent event);
 	}
+	
+	private JsArray<Weapon> list;
 
 	private Display display;
 
@@ -44,7 +51,7 @@ public class ListWeaponPresenter implements Presenter {
 	public void bind() {
 		display.getDeleteButton().addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
-				deleteSelectedContacts();
+				deleteSelectedWeapons();
 			}
 		});
 
@@ -53,9 +60,22 @@ public class ListWeaponPresenter implements Presenter {
 				eventBus.fireEvent(new AddWeaponEvent());
 			}
 		});
+
+		display.getList().addClickHandler(new ClickHandler() {
+
+			@Override
+			public void onClick(ClickEvent event) {
+				int selectedRow = display.getClickedRow(event);
+
+				if (selectedRow >= 0) {
+					String id=list.get(selectedRow).getId();
+					eventBus.fireEvent(new EditWeaponEvent(id));
+				}
+			}
+		});
 	}
 
-	protected void deleteSelectedContacts() {
+	protected void deleteSelectedWeapons() {
 		List<Integer> selectedRows = display.getSelectedRows();
 
 		if (selectedRows != null && !selectedRows.isEmpty()) {
@@ -68,7 +88,7 @@ public class ListWeaponPresenter implements Presenter {
 			StringBuilder builder = new StringBuilder();
 
 			for (Integer id : selectedRows) {
-				builder.append("id=").append(id).append("&");
+				builder.append("id=").append(list.get(id).getId()).append("&");
 			}
 
 			requestBuilder.setRequestData(builder.toString());
@@ -114,7 +134,8 @@ public class ListWeaponPresenter implements Presenter {
 
 			@Override
 			public void onResponseReceived(Request request, Response response) {
-				display.setData(Weapon.arrayFromJson(response.getText()));
+				list=Weapon.arrayFromJson(response.getText());
+				display.setData(list);
 			}
 
 		});

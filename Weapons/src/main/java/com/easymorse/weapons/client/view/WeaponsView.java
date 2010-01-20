@@ -6,6 +6,7 @@ import java.util.List;
 import com.easymorse.weapons.client.model.Weapon;
 import com.easymorse.weapons.client.presenter.ListWeaponPresenter;
 import com.google.gwt.core.client.JsArray;
+import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.HasClickHandlers;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.CheckBox;
@@ -13,6 +14,7 @@ import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.DecoratorPanel;
 import com.google.gwt.user.client.ui.DockPanel;
 import com.google.gwt.user.client.ui.FlexTable;
+import com.google.gwt.user.client.ui.HTMLTable;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Widget;
 
@@ -95,5 +97,24 @@ public class WeaponsView extends Composite implements ListWeaponPresenter.Displa
 	@Override
 	public HasClickHandlers getAddButton() {
 		return this.addButton;
+	}
+
+	@Override
+	public int getClickedRow(ClickEvent event) {
+		int selectedRow = -1;
+	    HTMLTable.Cell cell = contactsTable.getCellForEvent(event);
+	    
+	    if (cell != null) {
+	      if (cell.getCellIndex() > 0) {
+	        selectedRow = cell.getRowIndex();
+	      }
+	    }
+	    
+	    return selectedRow;
+	}
+
+	@Override
+	public HasClickHandlers getList() {
+		return contactsTable;
 	}
 }

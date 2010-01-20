@@ -1,5 +1,6 @@
 package com.easymorse.weapons.client.view;
 
+import com.easymorse.weapons.client.model.Weapon;
 import com.easymorse.weapons.client.presenter.EditWeaponPresenter;
 import com.google.gwt.event.dom.client.HasClickHandlers;
 import com.google.gwt.user.client.ui.Button;
@@ -84,5 +85,12 @@ public class EditWeaponView extends Composite implements
 	@Override
 	public HasClickHandlers getSaveButton() {
 		return this.saveButton;
+	}
+
+	@Override
+	public void setData(Weapon weapon) {
+		this.name.setValue(weapon.getName());
+		this.description.setValue(weapon.getDescription());
+		
 	}
 }

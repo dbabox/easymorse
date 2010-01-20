@@ -20,19 +20,16 @@ public class WeaponService {
 		Weapon weapon = new Weapon();
 		weapon.setId("1");
 		weapon.setName("虎式坦克");
-		weapon.setDescription("w1.desc");
+		weapon.setDescription("虎式重型坦克即“虎I”坦克是第二次世界大战期间纳粹德国制造的重型坦克。");
 		weapon.setImageUrl("w1.png");
 		data.add(weapon);
 
 		weapon = new Weapon();
 		weapon.setId("2");
 		weapon.setName("T-34 坦克");
-		weapon.setDescription("w2.desc");
+		weapon.setDescription("T-34坦克是苏联于1940年代到1950年代生产的中型坦克。");
 		weapon.setImageUrl("w2.png");
 		data.add(weapon);
-
-		// "T-34 坦克",
-		// "虎式坦克","零式战斗轰炸机","野马战斗机","B-25轰炸机"
 	}
 
 	@RequestMapping("/list.json")
@@ -42,21 +39,47 @@ public class WeaponService {
 	}
 
 	@RequestMapping(value = "/delete.json", method = RequestMethod.POST)
-	public String delete(@RequestParam("id") List<Integer> ids) {
-		for (Integer id : ids) {
-			data.remove(id.intValue());
+	public String delete(@RequestParam("id") List<String> ids) {
+		for (String id : ids) {
+			data.remove(find(id));
 		}
 		return "deleted";
+	}
+
+	private Weapon find(String id) {
+		for (Weapon w : data) {
+			if (w.getId().equals(id)) {
+				return w;
+			}
+		}
+		return null;
 	}
 
 	@RequestMapping(value = "/save.json", method = RequestMethod.POST)
 	public String save(Weapon weapon) {
 
-		if (weapon.getId() == null) {
+		if (weapon.getId() == null || weapon.getId().isEmpty()) {
 			create(weapon);
+		} else {
+			update(weapon);
 		}
 
 		return "saved";
+	}
+
+	private void update(Weapon weapon) {
+		Weapon w = find(weapon.getId());
+		if (w != null) {
+			w.setName(weapon.getName());
+			w.setDescription(weapon.getDescription());
+			w.setImageUrl(weapon.getImageUrl());
+		}
+	}
+
+	@RequestMapping("/get.json")
+	@ModelAttribute("weapon")
+	public Weapon get(@RequestParam("id") String id) {
+		return find(id);
 	}
 
 	private void create(Weapon weapon) {

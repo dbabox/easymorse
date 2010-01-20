@@ -4,11 +4,13 @@ import com.easymorse.weapons.client.event.AddWeaponEvent;
 import com.easymorse.weapons.client.event.AddWeaponEventHandler;
 import com.easymorse.weapons.client.event.EditWeaponCancelledEvent;
 import com.easymorse.weapons.client.event.EditWeaponCancelledEventHandler;
+import com.easymorse.weapons.client.event.EditWeaponEvent;
+import com.easymorse.weapons.client.event.EditWeaponEventHandler;
 import com.easymorse.weapons.client.event.WeaponUpdatedEvent;
 import com.easymorse.weapons.client.event.WeaponUpdatedEventHandler;
 import com.easymorse.weapons.client.presenter.EditWeaponPresenter;
-import com.easymorse.weapons.client.presenter.Presenter;
 import com.easymorse.weapons.client.presenter.ListWeaponPresenter;
+import com.easymorse.weapons.client.presenter.Presenter;
 import com.easymorse.weapons.client.view.EditWeaponView;
 import com.easymorse.weapons.client.view.WeaponsView;
 import com.google.gwt.event.logical.shared.ValueChangeEvent;
@@ -69,12 +71,25 @@ public class AppController implements Presenter, ValueChangeHandler<String> {
 		eventBus.addHandler(WeaponUpdatedEvent.TYPE,
 				new WeaponUpdatedEventHandler() {
 					public void onContactUpdated(WeaponUpdatedEvent event) {
-						doContactUpdated();
+						doWeaponUpdated();
+					}
+				});
+		eventBus.addHandler(EditWeaponEvent.TYPE,
+				new EditWeaponEventHandler() {
+					@Override
+					public void onEditWeapon(EditWeaponEvent event) {
+						doEditWeapon(event.getId());
 					}
 				});
 	}
 
-	protected void doContactUpdated() {
+	protected void doEditWeapon(String id) {
+		History.newItem("edit", false);
+		Presenter presenter = new EditWeaponPresenter(eventBus, new EditWeaponView(), id);
+	    presenter.go(container);
+	}
+
+	protected void doWeaponUpdated() {
 		History.newItem("list");
 	}
 

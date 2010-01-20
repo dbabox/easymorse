@@ -44,4 +44,8 @@ public class Weapon extends JavaScriptObject {
 		return eval('(' + jsonString + ')').data;
 	}-*/;
 
+	public static native Weapon fromJson(String jsonString) /*-{
+		return eval('(' + jsonString + ')').weapon;
+	}-*/;
+
 }
