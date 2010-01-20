@@ -44,6 +44,11 @@ public class AppController implements Presenter, ValueChangeHandler<String> {
 				presenter = new EditWeaponPresenter(eventBus,
 						new EditWeaponView());
 			}
+			
+			if (token.equals("edit")) {
+				presenter = new EditWeaponPresenter(eventBus,
+						new EditWeaponView());
+			}
 
 			if (presenter != null) {
 				presenter.go(container);
