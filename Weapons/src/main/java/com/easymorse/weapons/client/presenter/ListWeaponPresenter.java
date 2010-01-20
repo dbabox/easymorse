@@ -18,7 +18,7 @@ import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.HasWidgets;
 import com.google.gwt.user.client.ui.Widget;
 
-public class WeaponsPresenter implements Presenter {
+public class ListWeaponPresenter implements Presenter {
 
 	public interface Display {
 		void setData(JsArray<Weapon> data);
@@ -36,7 +36,7 @@ public class WeaponsPresenter implements Presenter {
 
 	private HandlerManager eventBus;
 
-	public WeaponsPresenter(HandlerManager eventBus, Display display) {
+	public ListWeaponPresenter(HandlerManager eventBus, Display display) {
 		this.eventBus = eventBus;
 		this.display = display;
 	}

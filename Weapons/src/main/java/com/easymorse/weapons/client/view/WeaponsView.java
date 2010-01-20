@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.easymorse.weapons.client.model.Weapon;
-import com.easymorse.weapons.client.presenter.WeaponsPresenter;
+import com.easymorse.weapons.client.presenter.ListWeaponPresenter;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.event.dom.client.HasClickHandlers;
 import com.google.gwt.user.client.ui.Button;
@@ -16,7 +16,7 @@ import com.google.gwt.user.client.ui.FlexTable;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Widget;
 
-public class WeaponsView extends Composite implements WeaponsPresenter.Display {
+public class WeaponsView extends Composite implements ListWeaponPresenter.Display {
 	private FlexTable contentTable;
 	private FlexTable contactsTable;
 	private Button addButton;

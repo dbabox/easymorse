@@ -8,7 +8,7 @@ import com.easymorse.weapons.client.event.WeaponUpdatedEvent;
 import com.easymorse.weapons.client.event.WeaponUpdatedEventHandler;
 import com.easymorse.weapons.client.presenter.EditWeaponPresenter;
 import com.easymorse.weapons.client.presenter.Presenter;
-import com.easymorse.weapons.client.presenter.WeaponsPresenter;
+import com.easymorse.weapons.client.presenter.ListWeaponPresenter;
 import com.easymorse.weapons.client.view.EditWeaponView;
 import com.easymorse.weapons.client.view.WeaponsView;
 import com.google.gwt.event.logical.shared.ValueChangeEvent;
@@ -35,7 +35,7 @@ public class AppController implements Presenter, ValueChangeHandler<String> {
 			Presenter presenter = null;
 
 			if (token.equals("list")) {
-				presenter = new WeaponsPresenter(eventBus, new WeaponsView());
+				presenter = new ListWeaponPresenter(eventBus, new WeaponsView());
 			}
 
 			if (token.equals("add")) {

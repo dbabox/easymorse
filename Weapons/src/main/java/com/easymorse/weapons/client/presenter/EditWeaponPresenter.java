@@ -14,6 +14,7 @@ import com.google.gwt.http.client.RequestCallback;
 import com.google.gwt.http.client.RequestException;
 import com.google.gwt.http.client.Response;
 import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.ui.FocusWidget;
 import com.google.gwt.user.client.ui.HasValue;
 import com.google.gwt.user.client.ui.HasWidgets;
 import com.google.gwt.user.client.ui.Widget;
@@ -49,6 +50,12 @@ public class EditWeaponPresenter implements Presenter {
 
 		this.display.getSaveButton().addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
+				if (display.getName().getValue() == null
+						|| display.getName().getValue().isEmpty()) {
+					Window.alert("名称不能为空");
+					((FocusWidget)display.getName()).setFocus(true);
+					return;
+				}
 				doSave();
 			}
 		});
