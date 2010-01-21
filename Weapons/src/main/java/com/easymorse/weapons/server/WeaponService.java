@@ -3,8 +3,8 @@ package com.easymorse.weapons.server;
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 @Controller
 public class WeaponService {
@@ -104,16 +105,44 @@ public class WeaponService {
 
 		try {
 			OutputStream outputStream = response.getOutputStream();
+			File file = new File(request.getSession().getServletContext()
+					.getRealPath("/images/")
+					+ id);
+			if (!file.exists()) {
+				file = new File(request.getSession().getServletContext()
+						.getRealPath("/images/1"));
+			}
 			BufferedInputStream inputStream = new BufferedInputStream(
-					new FileInputStream(request.getSession()
-							.getServletContext().getRealPath("/images/")
-							+ id));
+					new FileInputStream(file));
 			byte[] data = new byte[1024];
 			for (int i = inputStream.read(data); i > 0; i = inputStream
 					.read(data)) {
 				outputStream.write(data, 0, i);
 			}
 			inputStream.close();
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+	@RequestMapping("/upload.do")
+	public void upload(@RequestParam("id") String id,
+			@RequestParam("file") MultipartFile file,
+			HttpServletRequest request, HttpServletResponse response) {
+		try {
+			if (id != null && !id.isEmpty()) {
+				File image = new File(request.getSession().getServletContext()
+						.getRealPath("/images/" + id));
+				if (image.exists()) {
+					image.delete();
+				}
+				FileOutputStream outputStream = new FileOutputStream(image);
+				outputStream.write(file.getBytes());
+				outputStream.close();
+				response.getWriter().append("ok");
+			} else {
+				response.getWriter().append("undo while no id");
+			}
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}

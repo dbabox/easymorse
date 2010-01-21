@@ -2,13 +2,18 @@ package com.easymorse.weapons.client.view;
 
 import com.easymorse.weapons.client.model.Weapon;
 import com.easymorse.weapons.client.presenter.EditWeaponPresenter;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.HasClickHandlers;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.client.ui.FileUpload;
 import com.google.gwt.user.client.ui.FlexTable;
+import com.google.gwt.user.client.ui.FormPanel;
 import com.google.gwt.user.client.ui.HasValue;
+import com.google.gwt.user.client.ui.Hidden;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.Label;
@@ -16,6 +21,8 @@ import com.google.gwt.user.client.ui.TextArea;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
+import com.google.gwt.user.client.ui.FormPanel.SubmitCompleteEvent;
+import com.google.gwt.user.client.ui.FormPanel.SubmitCompleteHandler;
 
 public class EditWeaponView extends Composite implements
 		EditWeaponPresenter.Display {
@@ -92,10 +99,74 @@ public class EditWeaponView extends Composite implements
 	}
 
 	@Override
-	public void setData(Weapon weapon) {
+	public void setData(final Weapon weapon) {
 		this.name.setValue(weapon.getName());
 		this.description.setValue(weapon.getDescription());
-		this.image = new Image("/getImage.do?id=" + weapon.getId());
+		this.image = new Image("/getImage.do?id=" + weapon.getId() + "&time="
+				+ System.currentTimeMillis());
 		this.detailsTable.setWidget(2, 1, this.image);
+
+		this.image.addClickHandler(new ClickHandler() {
+
+			@Override
+			public void onClick(ClickEvent event) {
+				final DialogBox dialogBox = new DialogBox();
+				dialogBox.setText("替换图片");
+				dialogBox.setGlassEnabled(true);
+				dialogBox.setAnimationEnabled(true);
+				VerticalPanel dialogContents = new VerticalPanel();
+
+				final FormPanel form = new FormPanel();
+				form.setAction("/upload.do");
+				form.setEncoding(FormPanel.ENCODING_MULTIPART);
+				form.setMethod(FormPanel.METHOD_POST);
+
+				form.addSubmitCompleteHandler(new SubmitCompleteHandler() {
+					@Override
+					public void onSubmitComplete(SubmitCompleteEvent event) {
+						dialogBox.setGlassEnabled(false);
+						dialogBox.hide();
+						setData(weapon);
+					}
+				});
+				dialogContents.add(form);
+
+				HorizontalPanel uploadPanel = new HorizontalPanel();
+				form.add(uploadPanel);
+
+				final FileUpload fileUpload = new FileUpload();
+				uploadPanel.add(fileUpload);
+				fileUpload.setName("file");
+				
+				Hidden hidden = new Hidden("id", weapon.getId());
+				uploadPanel.add(hidden);
+
+				Button sendButton = new Button("上传", new ClickHandler() {
+
+					@Override
+					public void onClick(ClickEvent event) {
+						if (fileUpload.getFilename().isEmpty()) {
+							Window.alert("请选择文件后上传");
+						} else {
+							form.submit();
+						}
+					}
+				});
+				uploadPanel.add(sendButton);
+
+				Button closeButton = new Button("关闭", new ClickHandler() {
+					@Override
+					public void onClick(ClickEvent event) {
+						dialogBox.setGlassEnabled(false);
+						dialogBox.hide();
+					}
+				});
+				dialogContents.add(closeButton);
+
+				dialogContents.setSpacing(4);
+				dialogBox.setWidget(dialogContents);
+				dialogBox.show();
+			}
+		});
 	}
 }
