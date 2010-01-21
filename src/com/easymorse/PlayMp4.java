@@ -23,41 +23,44 @@ public class PlayMp4 extends Activity {
 	private Dialog dialog;
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
+//		  LinearLayout layout = new LinearLayout(this);
+//		  layout.setBackgroundColor(Color.RED);
 		//去掉头信息
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		 getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,  
 	                WindowManager.LayoutParams.FLAG_FULLSCREEN);  
-		
-		setContentView(R.layout.videoview);
-		
+		//setWallpaper(bitmap)
+		 
+			Bundle bundle = this.getIntent().getExtras();
+			
+			//判断手机屏幕的方向
+			DisplayMetrics dm = new DisplayMetrics(); 
+	        getWindowManager().getDefaultDisplay().getMetrics(dm);
+			width=dm.widthPixels;
+			heigh=dm.heightPixels;
+			if(width/heigh>0)
+			{
+				setContentView(R.layout.videoview);
+				//横屏
+				path = bundle.getString("widthurl");
+				Log.i("mp4", "heng"+path);
+			}
+			if(width/heigh==0)
+			{
+				setContentView(R.layout.view);
+				//竖屏
+				path = bundle.getString("heighturl");
+				Log.i("mp4", "shu"+path);
+			}
+		 
         //创建进度条
 		 dialog=ProgressDialog.show(this, "正在加载...", "三枪马上开始");
 		 
-		
 		mVideoView = (VideoView) findViewById(R.id.surface_view);
 		
-		mVideoView.setBackgroundDrawable(getResources().getDrawable(R.drawable.gallery_photo_8));
 		
-		Bundle bundle = this.getIntent().getExtras();
+		mVideoView.setBackgroundDrawable(getWallpaper());
 		
-		//判断手机屏幕的方向
-		DisplayMetrics dm = new DisplayMetrics(); 
-        getWindowManager().getDefaultDisplay().getMetrics(dm);
-		width=dm.widthPixels;
-		heigh=dm.heightPixels;
-		if(width/heigh>0)
-		{
-			//横屏
-			path = bundle.getString("widthurl");
-			Log.i("mp4", "heng");
-		}
-		if(width/heigh==0)
-		{
-			//竖屏
-			path = bundle.getString("heighturl");
-			Log.i("mp4", "shu");
-		}
-	
 		mVideoView.setVideoPath(path);
 		MediaController controller = new MediaController(this);
 		mVideoView.setMediaController(controller);
