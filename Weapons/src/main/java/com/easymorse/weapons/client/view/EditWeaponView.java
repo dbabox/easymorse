@@ -102,7 +102,7 @@ public class EditWeaponView extends Composite implements
 	public void setData(final Weapon weapon) {
 		this.name.setValue(weapon.getName());
 		this.description.setValue(weapon.getDescription());
-		this.image = new Image("/getImage.do?id=" + weapon.getId() + "&time="
+		this.image = new Image("../getImage.do?id=" + weapon.getId() + "&time="
 				+ System.currentTimeMillis());
 		this.detailsTable.setWidget(2, 1, this.image);
 
