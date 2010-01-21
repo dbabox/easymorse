@@ -24,7 +24,11 @@
 		<servlet-name>controller</servlet-name>
 		<url-pattern>*.json</url-pattern>
 	</servlet-mapping>
-	
+	<servlet-mapping>
+		<servlet-name>controller</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+
 	<filter>
 		<filter-name>Set Character Encoding</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -37,5 +41,4 @@
 		<filter-name>Set Character Encoding</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-	
 </web-app>
