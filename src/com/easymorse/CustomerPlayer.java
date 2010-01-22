@@ -79,10 +79,8 @@ public class CustomerPlayer extends TabActivity {
 						content.setImageUrl("" + R.drawable.c1);
 						content
 								.setUrl("http://10.167.33.223:8080/mp4/320480flv.3gp");
-						content
-								.setHeightUrl("http://10.167.33.223:8080/mp4/xyx.3gp");
-						content
-								.setWidthUrl("http://10.167.33.223:8080/mp4/480320flv.3gp");
+						content.setHeightUrl("/sdcard/Video/xyx.3gp");
+						content.setWidthUrl("/sdcard/Video/480320flv.3gp");
 						items.add(content);
 
 						content = new Content();
@@ -91,7 +89,11 @@ public class CustomerPlayer extends TabActivity {
 								.setComment("故事发生于古代某大漠之中，一家面馆老板名为王五麻子，为人阴险吝啬，如此人品，老婆自然不待见。恰好伙计李四长得很帅又有幽默感，两人一拍即合，有了私情。王五发现两人私情后...");
 						content.setImageUrl("" + R.drawable.c2);
 						content
-								.setUrl("http://dev.mopietek.net:8080/mp4/avi1.mp4");
+								.setUrl("http://10.167.33.223:8080/mp4/320480flv.3gp");
+						content
+								.setHeightUrl("http://10.167.33.223:8080/mp4/xyx.3gp");
+						content
+								.setWidthUrl("http://10.167.33.223:8080/mp4/480320flv.3gp");
 						items.add(content);
 
 						content = new Content();
@@ -100,7 +102,11 @@ public class CustomerPlayer extends TabActivity {
 								.setComment("在古老的中国，有一位个性爽朗，性情善良的好女孩，名字叫作「花木兰」，身为花家的大女儿，花木兰在父母开明的教悔下，一直很期待自己能花家带来荣耀。不过就在北方匈奴来犯...");
 						content.setImageUrl("" + R.drawable.c3);
 						content
-								.setUrl("http://dev.mopietek.net:8080/mp4/b2.mp4");
+								.setUrl("http://10.167.33.223:8080/mp4/320480flv.3gp");
+						content
+								.setHeightUrl("http://10.167.33.223:8080/mp4/xyx.3gp");
+						content
+								.setWidthUrl("http://10.167.33.223:8080/mp4/480320flv.3gp");
 						items.add(content);
 
 						content = new Content();
@@ -278,19 +284,22 @@ public class CustomerPlayer extends TabActivity {
 				ImageView imageInfo = (ImageView) view.findViewById(R.id.info);
 				imageInfo.setImageDrawable(getResources().getDrawable(
 						R.drawable.info));
-				
-				ImageView imageInfo1 = (ImageView) view.findViewById(R.id.info1);
+
+				ImageView imageInfo1 = (ImageView) view
+						.findViewById(R.id.info1);
 				imageInfo1.setImageDrawable(getResources().getDrawable(
 						R.drawable.info));
-				
-				ImageView imageInfo2 = (ImageView) view.findViewById(R.id.info2);
+
+				ImageView imageInfo2 = (ImageView) view
+						.findViewById(R.id.info2);
 				imageInfo2.setImageDrawable(getResources().getDrawable(
 						R.drawable.info));
-				
-				ImageView imageInfo3 = (ImageView) view.findViewById(R.id.info3);
+
+				ImageView imageInfo3 = (ImageView) view
+						.findViewById(R.id.info3);
 				imageInfo3.setImageDrawable(getResources().getDrawable(
 						R.drawable.info));
-				
+
 				// 星星
 				RatingBar mSmallRatingBar = (RatingBar) view
 						.findViewById(R.id.ratingBar);

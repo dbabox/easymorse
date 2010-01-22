@@ -23,16 +23,11 @@ public class PlayMp4 extends Activity {
 	private Dialog dialog;
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
-//		  LinearLayout layout = new LinearLayout(this);
-//		  layout.setBackgroundColor(Color.RED);
 		//去掉头信息
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		 getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,  
 	                WindowManager.LayoutParams.FLAG_FULLSCREEN);  
-		//setWallpaper(bitmap)
-		 
 			Bundle bundle = this.getIntent().getExtras();
-			
 			//判断手机屏幕的方向
 			DisplayMetrics dm = new DisplayMetrics(); 
 	        getWindowManager().getDefaultDisplay().getMetrics(dm);
@@ -52,20 +47,15 @@ public class PlayMp4 extends Activity {
 				path = bundle.getString("heighturl");
 				Log.i("mp4", "shu"+path);
 			}
-		 
         //创建进度条
 		 dialog=ProgressDialog.show(this, "正在加载...", "三枪马上开始");
 		 
 		mVideoView = (VideoView) findViewById(R.id.surface_view);
-		
-		
-		mVideoView.setBackgroundDrawable(getWallpaper());
-		
+//		mVideoView.setBackgroundDrawable(getWallpaper());
 		mVideoView.setVideoPath(path);
 		MediaController controller = new MediaController(this);
 		mVideoView.setMediaController(controller);
 		mVideoView.requestFocus();
-
 		mVideoView.setOnPreparedListener(new OnPreparedListener() {
 			// 开始播放
 			@Override
@@ -82,7 +72,6 @@ public class PlayMp4 extends Activity {
 						.show();
 			}
 		});
-		
 	}
 	@Override
 	protected void onResume() {
