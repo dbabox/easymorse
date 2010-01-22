@@ -1,5 +1,9 @@
 package com.easymorse.weapons.server;
 
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotEmpty;
+
 public class Weapon {
 	private String description;
 
@@ -7,6 +11,8 @@ public class Weapon {
 
 	private String imageUrl;
 
+	@NotNull
+	@NotEmpty
 	private String name;
 
 	public String getDescription() {

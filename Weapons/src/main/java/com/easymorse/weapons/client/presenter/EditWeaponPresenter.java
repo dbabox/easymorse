@@ -88,12 +88,12 @@ public class EditWeaponPresenter implements Presenter {
 
 		this.display.getSaveButton().addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
-				if (display.getName().getValue() == null
-						|| display.getName().getValue().isEmpty()) {
-					Window.alert("名称不能为空");
-					((FocusWidget) display.getName()).setFocus(true);
-					return;
-				}
+//				if (display.getName().getValue() == null
+//						|| display.getName().getValue().isEmpty()) {
+//					Window.alert("名称不能为空");
+//					((FocusWidget) display.getName()).setFocus(true);
+//					return;
+//				}
 				doSave();
 			}
 		});
