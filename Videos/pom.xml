@@ -93,12 +93,12 @@
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>gwt-maven-plugin</artifactId>
 				<configuration>
-					<runTarget>com.easymorse.videos.videos/show_videos.html</runTarget>
+					<runTarget>show_videos.html</runTarget>
 				</configuration>
 				<executions>
 					<execution>
 						<goals>
-							<goal>compile</goal>
+<!--							<goal>compile</goal>-->
 							<goal>generateAsync</goal>
 							<goal>test</goal>
 						</goals>
