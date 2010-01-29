@@ -9,11 +9,36 @@
 	</welcome-file-list>
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>/WEB-INF/applicationContext.xml</param-value>
+		<param-value>/WEB-INF/applicationContext.xml,/WEB-INF/security.xml</param-value>
 	</context-param>
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
+	
+	<filter>
+		<filter-name>ajaxAuthFilter</filter-name>
+		<filter-class>com.easymorse.videos.server.FormAuthenticationFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>ajaxAuthFilter</filter-name>
+		<url-pattern>*.json</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>ajaxAuthFilter</filter-name>
+		<url-pattern>/j_spring_security_check</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 
 	<servlet>
 		<servlet-name>controller</servlet-name>
@@ -41,5 +66,7 @@
 		<filter-name>Set Character Encoding</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+
+
 
 </web-app>

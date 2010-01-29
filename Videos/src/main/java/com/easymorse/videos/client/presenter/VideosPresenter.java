@@ -1,6 +1,9 @@
 package com.easymorse.videos.client.presenter;
 
 import com.easymorse.videos.client.event.LogOffEvent;
+import com.easymorse.videos.client.event.NeedLoginEvent;
+import com.easymorse.videos.client.model.VideoItem;
+import com.easymorse.videos.client.view.VideoItemView;
 import com.easymorse.videos.client.view.VideosView;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -9,6 +12,11 @@ import com.google.gwt.event.logical.shared.SelectionHandler;
 import com.google.gwt.event.logical.shared.ValueChangeEvent;
 import com.google.gwt.event.logical.shared.ValueChangeHandler;
 import com.google.gwt.event.shared.HandlerManager;
+import com.google.gwt.http.client.Request;
+import com.google.gwt.http.client.RequestBuilder;
+import com.google.gwt.http.client.RequestCallback;
+import com.google.gwt.http.client.RequestException;
+import com.google.gwt.http.client.Response;
 import com.google.gwt.user.client.History;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.HasWidgets;
@@ -24,12 +32,12 @@ public class VideosPresenter implements Presenter, ValueChangeHandler<String> {
 	public VideosPresenter(HandlerManager handlerManager, HasWidgets container) {
 		this.handlerManager = handlerManager;
 		this.container = container;
+		this.videosView = new VideosView();
 		bind();
 	}
 
 	private void bind() {
 		History.addValueChangeHandler(this);
-		this.videosView = new VideosView();
 
 		this.videosView.getLogoffButton().addClickHandler(new ClickHandler() {
 			@Override
@@ -45,10 +53,9 @@ public class VideosPresenter implements Presenter, ValueChangeHandler<String> {
 					@Override
 					public void onSelection(SelectionEvent<Integer> event) {
 						int selectIndex = event.getSelectedItem();
-
 						switch (selectIndex) {
 						case 0:
-							History.newItem("browse", false);
+							History.newItem("browse", true);
 							break;
 						case 1:
 							History.newItem("upload", false);
@@ -60,7 +67,6 @@ public class VideosPresenter implements Presenter, ValueChangeHandler<String> {
 							History.newItem("browse", false);
 							break;
 						}
-
 					}
 				});
 	}
@@ -80,18 +86,49 @@ public class VideosPresenter implements Presenter, ValueChangeHandler<String> {
 
 		if (token != null) {
 
-			this.videosView.getTabPanel().selectTab(0);
-
 			if (token.equals("upload")) {
 				this.videosView.getTabPanel().selectTab(1);
-			}
-
-			if (token.equals("user")) {
+			} else if (token.equals("user")) {
 				this.videosView.getTabPanel().selectTab(2);
+			} else if (token.equals("browse")) {
+				this.videosView.getTabPanel().selectTab(0);
+				getBrowseData();
 			}
 		}
-		container.clear();
 		container.add(videosView);
+	}
+
+	private void getBrowseData() {
+		RequestBuilder builder = new RequestBuilder(RequestBuilder.GET,
+				"../browse.json");
+
+		builder.setCallback(new RequestCallback() {
+
+			@Override
+			public void onResponseReceived(Request request, Response response) {
+				if (response.getStatusCode() == 401) {
+					handlerManager.fireEvent(new NeedLoginEvent());
+				} else {
+					videosView.getBrowseWidget().clear();
+					VideoItem videoItem = VideoItem
+							.fromJson("{'id':'1','title':'阿凡达','content':'阿凡达（Avatar）是一部科幻电影，由著名导演詹姆斯·卡梅隆执导，二十世纪福克斯出品。该影片预算超过5亿美元，成为电影史上预算最高的电影。此外，由卡梅隆导演注入心血的全平台同名游戏《阿凡达（James Camerons Avatar: The Game）》已于2009年12月1日率先推出，游戏类型为TPS（第三人科幻称射击动作游戏），支持3D显示器。该片有3D、平面胶片、IMAX胶片三种制式供观众选择。'}");
+					videosView.getBrowseWidget().add(
+							new VideoItemView(videoItem));
+				}
+			}
+
+			@Override
+			public void onError(Request request, Throwable e) {
+				Window.alert("error");
+			}
+		});
+
+		try {
+			builder.send();
+		} catch (RequestException e1) {
+			e1.printStackTrace();
+		}
+
 	}
 
 }
