@@ -24,6 +24,8 @@ public class VideosView extends Composite {
 	private DecoratedTabPanel tabPanel;
 
 	private VerticalPanel browsePanel;
+	
+	private UploadView uploadView;
 
 	public DialogBox getLogoffDialogBox() {
 		return logoffDialogBox;
@@ -92,7 +94,10 @@ public class VideosView extends Composite {
 		tabPanel.setAnimationEnabled(true);
 
 		tabPanel.add(getBrowseWidget(), "浏览视频");
-		tabPanel.add(new UploadView(), "上传视频");
+		
+		uploadView=new UploadView();
+		
+		tabPanel.add(uploadView, "上传视频");
 		tabPanel.add(new LazyPanel() {
 			@Override
 			protected Widget createWidget() {
@@ -103,6 +108,10 @@ public class VideosView extends Composite {
 		tabPanel.selectTab(0);
 
 		panel.add(tabPanel);
+	}
+
+	public UploadView getUploadView() {
+		return uploadView;
 	}
 
 	public DecoratedTabPanel getTabPanel() {

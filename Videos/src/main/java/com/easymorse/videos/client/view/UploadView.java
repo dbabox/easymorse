@@ -13,6 +13,8 @@ import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
 public class UploadView extends Composite {
+	private Button saveButton;
+
 	public UploadView() {
 		DecoratorPanel panel = new DecoratorPanel();
 		panel.setTitle("上传视频");
@@ -31,14 +33,18 @@ public class UploadView extends Composite {
 		table.setWidget(1, 0, new Label("视频文件"));
 		table.setWidget(1, 1, new FileUpload());
 		table.setWidget(2, 0, new Label("介绍"));
-		TextArea area=new TextArea();
+		TextArea area = new TextArea();
 		area.setVisibleLines(4);
 		table.setWidget(2, 1, area);
 
 		HorizontalPanel horizontalPanel = new HorizontalPanel();
 		verticalPanel.add(horizontalPanel);
 		horizontalPanel.setSpacing(5);
-		Button saveButton = new Button("保存");
+		saveButton = new Button("保存");
 		horizontalPanel.add(saveButton);
+	}
+
+	public Button getSaveButton() {
+		return saveButton;
 	}
 }

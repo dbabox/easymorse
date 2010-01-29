@@ -1,5 +1,6 @@
 package com.easymorse.videos.client.presenter;
 
+import com.easymorse.videos.client.event.AccessDeniedEvent;
 import com.easymorse.videos.client.event.LogOffEvent;
 import com.easymorse.videos.client.event.NeedLoginEvent;
 import com.easymorse.videos.client.model.VideoItem;
@@ -66,6 +67,37 @@ public class VideosPresenter implements Presenter, ValueChangeHandler<String> {
 						default:
 							History.newItem("browse", false);
 							break;
+						}
+					}
+				});
+		this.videosView.getUploadView().getSaveButton().addClickHandler(
+				new ClickHandler() {
+					@Override
+					public void onClick(ClickEvent event) {
+						RequestBuilder builder = new RequestBuilder(
+								RequestBuilder.GET, "../upload.json");
+						builder.setCallback(new RequestCallback() {
+
+							@Override
+							public void onResponseReceived(Request request,
+									Response response) {
+								if (response.getStatusCode() == 403) {
+									handlerManager
+											.fireEvent(new AccessDeniedEvent());
+									return;
+								}
+							}
+
+							@Override
+							public void onError(Request request, Throwable e) {
+								Window.alert("error!");
+							}
+						});
+						
+						try {
+							builder.send();
+						} catch (RequestException e) {
+							e.printStackTrace();
 						}
 					}
 				});

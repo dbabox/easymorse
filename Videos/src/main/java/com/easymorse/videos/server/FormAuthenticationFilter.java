@@ -23,7 +23,6 @@ public class FormAuthenticationFilter implements Filter {
 		HttpServletResponse httpServletResponse = new AuthenticationResponseWrapper(
 				(HttpServletResponse) response);
 		chain.doFilter(request, httpServletResponse);
-
 	}
 
 	@Override
