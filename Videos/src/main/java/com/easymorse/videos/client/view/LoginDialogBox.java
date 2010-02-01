@@ -1,6 +1,7 @@
 package com.easymorse.videos.client.view;
 
 import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.CheckBox;
 import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.client.ui.FlexTable;
 import com.google.gwt.user.client.ui.HorizontalPanel;
@@ -19,11 +20,19 @@ public class LoginDialogBox extends DialogBox {
 	private Button loginButton;
 
 	private Label message=new Label();
+	
+	private CheckBox saveCheckBox;
+	
+	public CheckBox getSaveCheckBox() {
+		return saveCheckBox;
+	}
 
 	public LoginDialogBox() {
 		userName = new TextBox();
 		password = new PasswordTextBox();
+		saveCheckBox=new CheckBox();
 		this.setText("登录");
+		
 		this.setWidget(getDialogWidget());
 		userName.setFocus(true);
 	}
@@ -59,6 +68,8 @@ public class LoginDialogBox extends DialogBox {
 		table.setWidget(0, 1, this.userName);
 		table.setWidget(1, 0, new Label("密码"));
 		table.setWidget(1, 1, this.password);
+		table.setWidget(2, 1, new Label("是否保存登录信息"));
+		table.setWidget(2, 0, this.saveCheckBox);
 
 		HorizontalPanel buttonPanel = new HorizontalPanel();
 		panel.add(buttonPanel);

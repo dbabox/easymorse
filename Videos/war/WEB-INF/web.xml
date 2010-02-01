@@ -5,7 +5,7 @@
 	id="WebApp_ID" version="2.5">
 	<display-name>videos</display-name>
 	<welcome-file-list>
-		<welcome-file>/com.easymorse.videos.videos/show_videos.html</welcome-file>
+		<welcome-file>/show_videos.html</welcome-file>
 	</welcome-file-list>
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
@@ -14,7 +14,7 @@
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
-	
+
 	<filter>
 		<filter-name>ajaxAuthFilter</filter-name>
 		<filter-class>com.easymorse.videos.server.FormAuthenticationFilter</filter-class>
@@ -24,7 +24,7 @@
 		<filter-name>ajaxAuthFilter</filter-name>
 		<url-pattern>*.json</url-pattern>
 	</filter-mapping>
-	
+
 	<filter-mapping>
 		<filter-name>ajaxAuthFilter</filter-name>
 		<url-pattern>/j_spring_security_check</url-pattern>

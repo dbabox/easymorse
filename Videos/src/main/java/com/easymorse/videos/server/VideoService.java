@@ -7,9 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class VideoService {
 
-	@RequestMapping("/login.json")
-	public void login(String userName, String password, ModelMap modelMap) {
-		modelMap.put("result", "success");
+	@RequestMapping("/isLogined.json")
+	public void isLogined() {
 	}
 
 	@RequestMapping("/browse.json")

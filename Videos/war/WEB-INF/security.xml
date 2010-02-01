@@ -6,9 +6,11 @@
            http://www.springframework.org/schema/security
            http://www.springframework.org/schema/security/spring-security-3.0.xsd">
 	<http auto-config='true'>
+		<intercept-url pattern="/isLogined.json" access="ROLE_USER" />
 		<intercept-url pattern="/browse.json" access="ROLE_USER" />
 		<intercept-url pattern="/upload.json" access="ROLE_ADMIN" />
 		<form-login default-target-url="/show_videos.html" />
+		<remember-me />
 	</http>
 	<authentication-manager>
 		<authentication-provider>

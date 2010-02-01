@@ -44,6 +44,10 @@ public class LoginPresenter implements Presenter {
 				this.loginDialogBox.getUserName().getValue()).append(
 				"&j_password=").append(
 				this.loginDialogBox.getPassword().getValue());
+		
+		if(this.loginDialogBox.getSaveCheckBox().getValue()){
+			stringBuilder.append("&_spring_security_remember_me=on");
+		}
 
 		builder.setRequestData(stringBuilder.toString());
 		builder.setCallback(new RequestCallback() {

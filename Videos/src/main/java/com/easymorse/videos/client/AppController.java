@@ -46,12 +46,35 @@ public class AppController implements Presenter {
 
 	@Override
 	public void go(HasWidgets container) {
-		if (userName == null) {
-			handlerManager.fireEvent(new NeedLoginEvent());
-			return;
+		checkLogin();
+	}
+
+	private void checkLogin() {
+		RequestBuilder requestBuilder = new RequestBuilder(RequestBuilder.GET,
+				"../isLogined.json");
+		requestBuilder.setCallback(new RequestCallback() {
+
+			@Override
+			public void onResponseReceived(Request request, Response response) {
+				if (response.getStatusCode() == 401) {
+					handlerManager.fireEvent(new NeedLoginEvent());
+				} else {
+					container.clear();
+					videosPresenter.go(container);
+				}
+			}
+
+			@Override
+			public void onError(Request request, Throwable e) {
+				Window.alert("error!");
+			}
+		});
+		
+		try {
+			requestBuilder.send();
+		} catch (RequestException e) {
+			e.printStackTrace();
 		}
-		container.clear();
-		videosPresenter.go(container);
 	}
 
 	private void bind() {
@@ -122,7 +145,7 @@ public class AppController implements Presenter {
 							}
 						});
 						box.add(panel);
-						
+
 						box.show();
 					}
 				});
