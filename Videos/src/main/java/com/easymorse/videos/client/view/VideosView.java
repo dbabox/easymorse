@@ -2,11 +2,15 @@ package com.easymorse.videos.client.view;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.event.logical.shared.ResizeEvent;
+import com.google.gwt.event.logical.shared.ResizeHandler;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.DecoratedTabPanel;
 import com.google.gwt.user.client.ui.DialogBox;
+import com.google.gwt.user.client.ui.DockPanel;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HorizontalPanel;
@@ -15,7 +19,7 @@ import com.google.gwt.user.client.ui.Panel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
 
-public class VideosView extends Composite {
+public class VideosView extends Composite implements ResizeHandler {
 
 	private Button logoffButton;
 
@@ -24,8 +28,16 @@ public class VideosView extends Composite {
 	private DecoratedTabPanel tabPanel;
 
 	private VerticalPanel browsePanel;
-	
+
 	private UploadView uploadView;
+
+	private VerticalPanel panel;
+
+	private DockPanel outerPanel;
+
+	private VerticalPanel leftPanel;
+
+	private VerticalPanel rightPanel;
 
 	public DialogBox getLogoffDialogBox() {
 		return logoffDialogBox;
@@ -36,10 +48,20 @@ public class VideosView extends Composite {
 	}
 
 	public VideosView() {
-		VerticalPanel panel = new VerticalPanel();
-		panel.setWidth("500px");
+		outerPanel = new DockPanel();
+		initWidget(outerPanel);
+		
+		panel = new VerticalPanel();
 		panel.setSpacing(5);
-		initWidget(panel);
+		outerPanel.add(panel, DockPanel.CENTER);
+
+		leftPanel = new VerticalPanel();
+		outerPanel.add(leftPanel, DockPanel.WEST);
+
+		rightPanel = new VerticalPanel();
+		outerPanel.add(rightPanel, DockPanel.EAST);
+		
+		initPanelSize();
 
 		HorizontalPanel titlePanel = new HorizontalPanel();
 		titlePanel.setWidth("100%");
@@ -94,9 +116,9 @@ public class VideosView extends Composite {
 		tabPanel.setAnimationEnabled(true);
 
 		tabPanel.add(getBrowseWidget(), "浏览视频");
-		
-		uploadView=new UploadView();
-		
+
+		uploadView = new UploadView();
+
 		tabPanel.add(uploadView, "上传视频");
 		tabPanel.add(new LazyPanel() {
 			@Override
@@ -118,13 +140,31 @@ public class VideosView extends Composite {
 		return tabPanel;
 	}
 
-	public  Panel getBrowseWidget() {
+	public Panel getBrowseWidget() {
 		if (this.browsePanel == null) {
 			VerticalPanel panel = new VerticalPanel();
 			panel.setWidth("100%");
-			this.browsePanel=panel;
+			this.browsePanel = panel;
 		}
 		return browsePanel;
+	}
+
+	private void initPanelSize() {
+if (Window.getClientWidth() > 640) {
+	this.panel.setWidth("640px");
+	int width = (Window.getClientWidth() - 640) / 2;
+	this.leftPanel.setWidth(width + "px");
+	this.rightPanel.setWidth(width + "px");
+} else {
+	this.panel.setWidth(Window.getClientWidth() + "px");
+	this.leftPanel.setWidth(0 + "px");
+	this.rightPanel.setWidth(0 + "px");
+}
+	}
+
+	@Override
+	public void onResize(ResizeEvent event) {
+		this.initPanelSize();
 	}
 
 }

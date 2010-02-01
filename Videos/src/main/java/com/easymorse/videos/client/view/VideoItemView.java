@@ -14,6 +14,7 @@ import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Image;
+import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
 public class VideoItemView extends Composite {
@@ -33,7 +34,7 @@ public class VideoItemView extends Composite {
 			@Override
 			public void onClick(ClickEvent event) {
 				final DialogBox box = new DialogBox();
-				box.setWidth("400");
+//				box.setWidth("400");
 
 				VerticalPanel panel = new VerticalPanel();
 //				ArrayList<String> items = new ArrayList<String>();
@@ -69,6 +70,7 @@ public class VideoItemView extends Composite {
 				});
 
 				box.setAnimationEnabled(true);
+				box.center();
 				box.show();
 			}
 		});

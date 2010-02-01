@@ -38,6 +38,9 @@ public class VideosPresenter implements Presenter, ValueChangeHandler<String> {
 	}
 
 	private void bind() {
+		
+		Window.addResizeHandler(this.videosView);
+		
 		History.addValueChangeHandler(this);
 
 		this.videosView.getLogoffButton().addClickHandler(new ClickHandler() {
