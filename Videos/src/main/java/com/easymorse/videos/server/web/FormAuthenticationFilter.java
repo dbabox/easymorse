@@ -1,4 +1,4 @@
-package com.easymorse.videos.server;
+package com.easymorse.videos.server.web;
 
 import java.io.IOException;
 

@@ -34,6 +34,7 @@ public class AppController implements Presenter {
 
 	private VideosPresenter videosPresenter;
 
+	@SuppressWarnings("unused")
 	private String userName;
 
 	public AppController(HandlerManager handlerManager, HasWidgets container) {
@@ -145,7 +146,7 @@ public class AppController implements Presenter {
 							}
 						});
 						box.add(panel);
-
+						box.center();
 						box.show();
 					}
 				});
