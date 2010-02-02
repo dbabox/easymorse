@@ -5,6 +5,7 @@ import com.easymorse.videos.client.event.LogOffEvent;
 import com.easymorse.videos.client.event.NeedLoginEvent;
 import com.easymorse.videos.client.model.VideoItem;
 import com.easymorse.videos.client.view.VideoItemView;
+import com.easymorse.videos.client.view.VideoPlayerView;
 import com.easymorse.videos.client.view.VideosView;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -20,6 +21,7 @@ import com.google.gwt.http.client.RequestException;
 import com.google.gwt.http.client.Response;
 import com.google.gwt.user.client.History;
 import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HasWidgets;
 
 public class VideosPresenter implements Presenter, ValueChangeHandler<String> {
@@ -38,9 +40,9 @@ public class VideosPresenter implements Presenter, ValueChangeHandler<String> {
 	}
 
 	private void bind() {
-		
+
 		Window.addResizeHandler(this.videosView);
-		
+
 		History.addValueChangeHandler(this);
 
 		this.videosView.getLogoffButton().addClickHandler(new ClickHandler() {
@@ -96,7 +98,7 @@ public class VideosPresenter implements Presenter, ValueChangeHandler<String> {
 								Window.alert("error!");
 							}
 						});
-						
+
 						try {
 							builder.send();
 						} catch (RequestException e) {
@@ -147,8 +149,30 @@ public class VideosPresenter implements Presenter, ValueChangeHandler<String> {
 					videosView.getBrowseWidget().clear();
 					VideoItem videoItem = VideoItem
 							.fromJson("{'id':'1','title':'阿凡达','content':'阿凡达（Avatar）是一部科幻电影，由著名导演詹姆斯·卡梅隆执导，二十世纪福克斯出品。该影片预算超过5亿美元，成为电影史上预算最高的电影。此外，由卡梅隆导演注入心血的全平台同名游戏《阿凡达（James Camerons Avatar: The Game）》已于2009年12月1日率先推出，游戏类型为TPS（第三人科幻称射击动作游戏），支持3D显示器。该片有3D、平面胶片、IMAX胶片三种制式供观众选择。'}");
-					videosView.getBrowseWidget().add(
-							new VideoItemView(videoItem));
+					VideoItemView itemView = new VideoItemView(videoItem);
+					itemView.getPlayButton().addClickHandler(new ClickHandler() {
+						@Override
+						public void onClick(ClickEvent event) {
+							if(videosView.getTabPanel().getTabBar().getTabCount()<4){
+								VideoPlayerView playerView=new VideoPlayerView();
+								videosView.getTabPanel().insert(playerView, "播放", 3);
+								playerView.getCloseButton().addClickHandler(new ClickHandler() {
+									@Override
+									public void onClick(ClickEvent event) {
+										videosView.getTabPanel().remove(3);
+										videosView.getTabPanel().getTabBar().selectTab(0);
+									}
+								});
+								
+								videosView.getTabPanel().getTabBar().selectTab(3);
+							}else{
+								videosView.getTabPanel().getTabBar().selectTab(3);
+//								videosView.getTabPanel().remove(3);
+							}
+						}
+					});
+					videosView.getBrowseWidget().add(itemView);
+
 				}
 			}
 

@@ -8,7 +8,8 @@ Class-Path: activation-1.1.jar aopalliance-1.0.jar aspectjrt-1.6.5.jar
  r spring-beans-3.0.0.RELEASE.jar spring-context-3.0.0.RELEASE.jar spr
  ing-core-3.0.0.RELEASE.jar spring-expression-3.0.0.RELEASE.jar spring
  -jdbc-3.0.0.RELEASE.jar spring-orm-3.0.0.RELEASE.jar spring-security-
- core-3.0.1.RELEASE.jar spring-security-web-3.0.1.RELEASE.jar spring-t
- x-3.0.0.RELEASE.jar spring-web-3.0.0.RELEASE.jar spring-webmvc-3.0.0.
- RELEASE.jar stax-api-1.0-2.jar validation-api-1.0.0.GA.jar
+ config-3.0.1.RELEASE.jar spring-security-core-3.0.1.RELEASE.jar sprin
+ g-security-web-3.0.1.RELEASE.jar spring-tx-3.0.0.RELEASE.jar spring-w
+ eb-3.0.0.RELEASE.jar spring-webmvc-3.0.0.RELEASE.jar stax-api-1.0-2.j
+ ar validation-api-1.0.0.GA.jar
 
