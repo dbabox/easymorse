@@ -25,59 +25,21 @@ public class VideoItemView extends Composite {
 		initWidget(panel);
 		panel.setSpacing(5);
 
+		VerticalPanel imagePanel = new VerticalPanel();
+		panel.add(imagePanel);
+		imagePanel.setVerticalAlignment(VerticalPanel.ALIGN_BOTTOM);
+
 		Image image = new Image("1.jpg");
 		button = new PushButton(image);
 		button.setTitle("播放");
-		panel.add(button);
-		// image.addClickHandler(new ClickHandler() {
-		// @Override
-		// public void onClick(ClickEvent event) {
-		// final DialogBox box = new DialogBox();
-		// // box.setWidth("400");
-		//
-		// VerticalPanel panel = new VerticalPanel();
-		// // ArrayList<String> items = new ArrayList<String>();
-		// // items.add(new String(GWT.getHostPageBaseURL()
-		// // + "media/big-buck-bunny.mp4"));
-		// // items.add(new String(GWT.getHostPageBaseURL()
-		// // + "media/big-buck-bunny.ogv"));
-		// AbstractMediaPlayer player = null;
-		// try {
-		// player = new FlashMediaPlayer(
-		// "http://marshal.easymorse.com/videos/test.mp4");
-		// panel.add(player);
-		// } catch (PluginNotFoundException e) {
-		// e.printStackTrace();
-		// } catch (LoadException e) {
-		// e.printStackTrace();
-		// } catch (PluginVersionException e) {
-		// e.printStackTrace();
-		// }
-		//
-		// box.setText("播放:" + videoItem.getTitle());
-		// box.add(panel);
-		//
-		// Button button = new Button("关闭");
-		// panel.add(button);
-		// button.addClickHandler(new ClickHandler() {
-		//
-		// @Override
-		// public void onClick(ClickEvent event) {
-		// box.clear();
-		// box.hide();
-		// }
-		// });
-		//
-		// box.setAnimationEnabled(true);
-		// box.center();
-		// box.show();
-		// }
-		// });
+		imagePanel.add(button);
 
-		VerticalPanel verticalPanel = new VerticalPanel();
-		verticalPanel.add(new HTML("<h3>" + videoItem.getTitle() + "</h3>"));
-		verticalPanel.add(new HTML(videoItem.getContent()));
-		panel.add(verticalPanel);
+		VerticalPanel contentPanel = new VerticalPanel();
+		contentPanel.setSpacing(3);
+		contentPanel.setVerticalAlignment(VerticalPanel.ALIGN_TOP);
+		contentPanel.add(new HTML("<h3>" + videoItem.getTitle() + "</h3>"));
+		contentPanel.add(new HTML(videoItem.getContent()));
+		panel.add(contentPanel);
 	}
 
 	public VideoItem getVideoItem() {

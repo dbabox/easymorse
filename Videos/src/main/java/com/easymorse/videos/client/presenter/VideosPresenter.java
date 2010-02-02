@@ -21,8 +21,13 @@ import com.google.gwt.http.client.RequestException;
 import com.google.gwt.http.client.Response;
 import com.google.gwt.user.client.History;
 import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.FormPanel;
 import com.google.gwt.user.client.ui.HasWidgets;
+import com.google.gwt.user.client.ui.HorizontalPanel;
+import com.google.gwt.user.client.ui.Hyperlink;
+import com.google.gwt.user.client.ui.Image;
+import com.google.gwt.user.client.ui.PushButton;
 import com.google.gwt.user.client.ui.FormPanel.SubmitCompleteEvent;
 import com.google.gwt.user.client.ui.FormPanel.SubmitCompleteHandler;
 
@@ -151,7 +156,7 @@ public class VideosPresenter implements Presenter, ValueChangeHandler<String> {
 				} else {
 					videosView.getBrowseWidget().clear();
 					VideoItem videoItem = VideoItem
-							.fromJson("{'id':'1','title':'阿凡达','content':'阿凡达（Avatar）是一部科幻电影，由著名导演詹姆斯·卡梅隆执导，二十世纪福克斯出品。该影片预算超过5亿美元，成为电影史上预算最高的电影。此外，由卡梅隆导演注入心血的全平台同名游戏《阿凡达（James Camerons Avatar: The Game）》已于2009年12月1日率先推出，游戏类型为TPS（第三人科幻称射击动作游戏），支持3D显示器。该片有3D、平面胶片、IMAX胶片三种制式供观众选择。'}");
+							.fromJson("{'id':'1','title':'喜羊羊与灰太狼','content':'国产原创系列电视动画片《喜羊羊与灰太狼》，由广东原创动力文化传播有限公司出品。自2005年6月推出后，陆续在全国近50家电视台热播，在北京、上海、杭州、南京、广州、福州等城市，《喜羊羊与灰太狼》最高收视率达17.3%，大大超过了同时段播出的境外动画片。'}");
 					VideoItemView itemView = new VideoItemView(videoItem);
 					itemView.getPlayButton().addClickHandler(
 							new ClickHandler() {
@@ -185,11 +190,25 @@ public class VideosPresenter implements Presenter, ValueChangeHandler<String> {
 									} else {
 										videosView.getTabPanel().getTabBar()
 												.selectTab(3);
-										// videosView.getTabPanel().remove(3);
 									}
 								}
 							});
 					videosView.getBrowseWidget().add(itemView);
+					HorizontalPanel pagePanel = new HorizontalPanel();
+
+					pagePanel.setSpacing(5);
+					pagePanel
+							.setHorizontalAlignment(HorizontalPanel.ALIGN_RIGHT);
+					pagePanel.setWidth("100%");
+
+					HorizontalPanel innerPagePanel = new HorizontalPanel();
+					innerPagePanel.setSpacing(5);
+					pagePanel.add(innerPagePanel);
+
+					innerPagePanel.add(new Image("/before.gif"));
+					innerPagePanel.add(new Image("/next.gif"));
+
+					videosView.getBrowseWidget().add(pagePanel);
 
 				}
 			}

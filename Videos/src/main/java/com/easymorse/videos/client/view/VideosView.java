@@ -50,7 +50,7 @@ public class VideosView extends Composite implements ResizeHandler {
 	public VideosView() {
 		outerPanel = new DockPanel();
 		initWidget(outerPanel);
-		
+
 		panel = new VerticalPanel();
 		panel.setSpacing(5);
 		outerPanel.add(panel, DockPanel.CENTER);
@@ -60,7 +60,7 @@ public class VideosView extends Composite implements ResizeHandler {
 
 		rightPanel = new VerticalPanel();
 		outerPanel.add(rightPanel, DockPanel.EAST);
-		
+
 		initPanelSize();
 
 		HorizontalPanel titlePanel = new HorizontalPanel();
@@ -150,16 +150,16 @@ public class VideosView extends Composite implements ResizeHandler {
 	}
 
 	private void initPanelSize() {
-if (Window.getClientWidth() > 640) {
-	this.panel.setWidth("640px");
-	int width = (Window.getClientWidth() - 640) / 2;
-	this.leftPanel.setWidth(width + "px");
-	this.rightPanel.setWidth(width + "px");
-} else {
-	this.panel.setWidth(Window.getClientWidth() + "px");
-	this.leftPanel.setWidth(0 + "px");
-	this.rightPanel.setWidth(0 + "px");
-}
+		if (Window.getClientWidth() > 640) {
+			this.panel.setWidth("640px");
+			int width = (Window.getClientWidth() - 640) / 2;
+			this.leftPanel.setWidth(width + "px");
+			this.rightPanel.setWidth(width + "px");
+		} else {
+			this.panel.setWidth(Window.getClientWidth() + "px");
+			this.leftPanel.setWidth(0 + "px");
+			this.rightPanel.setWidth(0 + "px");
+		}
 	}
 
 	@Override
