@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="hello">目前没有扫描结果。</string>
-    <string name="app_name">购物小参考</string>
-    <string name="Button01">扫描条形码</string>
-</resources>
