@@ -9,6 +9,7 @@ import com.easymorse.videos.client.event.PlayMideaEvent;
 import com.easymorse.videos.client.event.PlayMideaEventHandler;
 import com.easymorse.videos.client.model.VideoItem;
 import com.easymorse.videos.client.model.VideoItemPagination;
+import com.easymorse.videos.client.view.UploadDialogBox;
 import com.easymorse.videos.client.view.VideoItemView;
 import com.easymorse.videos.client.view.VideoPlayerView;
 import com.easymorse.videos.client.view.VideosView;
@@ -26,12 +27,15 @@ import com.google.gwt.http.client.RequestException;
 import com.google.gwt.http.client.Response;
 import com.google.gwt.user.client.History;
 import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.client.ui.FormPanel;
 import com.google.gwt.user.client.ui.HasWidgets;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.FormPanel.SubmitCompleteEvent;
 import com.google.gwt.user.client.ui.FormPanel.SubmitCompleteHandler;
+import com.google.gwt.user.client.ui.FormPanel.SubmitEvent;
+import com.google.gwt.user.client.ui.FormPanel.SubmitHandler;
 
 public class VideosPresenter implements Presenter, ValueChangeHandler<String> {
 
@@ -108,7 +112,7 @@ public class VideosPresenter implements Presenter, ValueChangeHandler<String> {
 									pagePanel.add(innerPagePanel);
 
 									if (pagination.isPrevious()) {
-										Image image = new Image("/before.gif");
+										Image image = new Image("before.gif");
 										image
 												.addClickHandler(new ClickHandler() {
 
@@ -125,7 +129,7 @@ public class VideosPresenter implements Presenter, ValueChangeHandler<String> {
 									}
 
 									if (pagination.isNext()) {
-										Image image = new Image("/next.gif");
+										Image image = new Image("next.gif");
 										image
 												.addClickHandler(new ClickHandler() {
 
@@ -193,23 +197,35 @@ public class VideosPresenter implements Presenter, ValueChangeHandler<String> {
 			}
 		});
 
-		videosView.getUploadView().getFormPanel().addSubmitCompleteHandler(
-				new SubmitCompleteHandler() {
-					@Override
-					public void onSubmitComplete(SubmitCompleteEvent event) {
-						if (event.getResults().contains("401")) {
-							handlerManager.fireEvent(new NeedLoginEvent());
-							return;
-						}
-						if (event.getResults().contains("403")) {
-							handlerManager.fireEvent(new AccessDeniedEvent());
-							return;
-						}
-						Window.alert("保存成功！");// TODO 改为gwt dialog
-						videosView.getUploadView().getFormPanel().reset();
-						videosView.getTabPanel().getTabBar().selectTab(0);
-					}
-				});
+		DialogBox uploadDialogBox = new UploadDialogBox(videosView
+				.getUploadView().getFormPanel());
+
+		// videosView.getUploadView().getFormPanel().addSubmitHandler(new
+		// SubmitHandler() {
+		//		
+		// @Override
+		// public void onSubmit(SubmitEvent event) {
+		// Window.alert("提交。。。");
+		// }
+		// });
+		//
+		// videosView.getUploadView().getFormPanel().addSubmitCompleteHandler(
+		// new SubmitCompleteHandler() {
+		// @Override
+		// public void onSubmitComplete(SubmitCompleteEvent event) {
+		// if (event.getResults().contains("401")) {
+		// handlerManager.fireEvent(new NeedLoginEvent());
+		// return;
+		// }
+		// if (event.getResults().contains("403")) {
+		// handlerManager.fireEvent(new AccessDeniedEvent());
+		// return;
+		// }
+		// // Window.alert("保存成功！");// TODO 改为gwt dialog
+		// // videosView.getUploadView().getFormPanel().reset();
+		// // videosView.getTabPanel().getTabBar().selectTab(0);
+		// }
+		// });
 
 		this.videosView.getTabPanel().getTabBar().addSelectionHandler(
 				new SelectionHandler<Integer>() {
@@ -242,7 +258,7 @@ public class VideosPresenter implements Presenter, ValueChangeHandler<String> {
 						videosView.getUploadView().getFormPanel().setMethod(
 								FormPanel.METHOD_POST);
 						videosView.getUploadView().getFormPanel().setAction(
-								"../upload.json");
+								"upload.json");
 
 						videosView.getUploadView().getFormPanel().submit();
 					}

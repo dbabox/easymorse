@@ -31,8 +31,8 @@ public class VideoService {
 	private String uploadPath = "WEB-INF" + File.separator + "upload";
 
 	private int uploadBuffer = 1024 * 1024;
-	
-	private int pageSize=1;
+
+	private int pageSize = 1;
 
 	@Autowired
 	private VideoItemDao videoItemDao;
@@ -57,19 +57,39 @@ public class VideoService {
 		response.setContentType("text/plain");
 		if (file != null) {
 			try {
-				this
-						.saveUploadFile(file, request.getSession()
-								.getServletContext().getRealPath(""), videoItem
-								.getId());
+				this.saveUploadFile(file, request, videoItem.getId());
 			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}
 		}
 	}
 
-	private void saveUploadFile(MultipartFile file, String relationPath,
+	@RequestMapping("/extract.json")
+	public void extractImage(String id, long second, HttpServletRequest request) {
+		File dir = getDir(request, id);
+		if(dir.exists()){
+			File file=getSourceFile(dir);
+		}
+	}
+	
+	private File getSourceFile(File dir){
+		for(File file:dir.listFiles()){
+			if(file.getName().startsWith("source.")){
+				return file;
+			}
+		}
+		return null;
+	}
+
+	private File getDir(HttpServletRequest request, String id) {
+		return new File(request.getSession().getServletContext()
+				.getRealPath("")
+				+ File.separator + this.uploadPath, id);
+	}
+
+	private void saveUploadFile(MultipartFile file, HttpServletRequest request,
 			String id) throws IOException {
-		File dir = new File(relationPath + File.separator + this.uploadPath, id);
+		File dir = getDir(request, id);
 
 		if (dir.exists()) {
 			dir.delete();
