@@ -31,6 +31,8 @@ public class VideoService {
 	private String uploadPath = "WEB-INF" + File.separator + "upload";
 
 	private int uploadBuffer = 1024 * 1024;
+	
+	private int pageSize=1;
 
 	@Autowired
 	private VideoItemDao videoItemDao;
@@ -41,8 +43,8 @@ public class VideoService {
 
 	@RequestMapping("/browse.json")
 	public void browse(Pagination<VideoItem> pagination, ModelMap modelMap) {
-		List<VideoItem> results = this.videoItemDao.findAll().subList(0, 3);
-		pagination.setResults(results);
+		pagination.setSize(this.pageSize);
+		this.videoItemDao.browse(pagination);
 		modelMap.put("pagination", pagination);
 	}
 
