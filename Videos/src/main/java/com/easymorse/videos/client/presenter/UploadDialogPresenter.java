@@ -3,7 +3,6 @@ package com.easymorse.videos.client.presenter;
 import com.easymorse.videos.client.event.BrowseVideoItemsEvent;
 import com.easymorse.videos.client.event.UploadCompleteEvent;
 import com.easymorse.videos.client.event.UploadCompleteEventHandler;
-import com.easymorse.videos.client.view.UploadDialogBox;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.shared.HandlerManager;
