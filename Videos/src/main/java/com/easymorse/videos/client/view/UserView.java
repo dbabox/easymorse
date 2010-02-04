@@ -11,8 +11,11 @@ import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
 public class UserView extends Composite {
+	private Button saveButton;
+
 	public UserView() {
 		DecoratorPanel panel = new DecoratorPanel();
+		panel.setWidth("100%");
 		panel.setTitle("用户认证信息");
 		initWidget(panel);
 		
@@ -34,8 +37,12 @@ public class UserView extends Composite {
 		HorizontalPanel horizontalPanel=new HorizontalPanel();
 		verticalPanel.add(horizontalPanel);
 		horizontalPanel.setSpacing(5);
-		Button saveButton=new Button("保存");
+		saveButton=new Button("保存");
 		horizontalPanel.add(saveButton);
 		
+	}
+	
+	public Button getSaveButton() {
+		return saveButton;
 	}
 }

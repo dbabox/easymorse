@@ -39,6 +39,8 @@ public class VideosView extends Composite implements ResizeHandler {
 
 	private VerticalPanel rightPanel;
 
+	private UserView userView;
+
 	public DialogBox getLogoffDialogBox() {
 		return logoffDialogBox;
 	}
@@ -120,12 +122,8 @@ public class VideosView extends Composite implements ResizeHandler {
 		uploadView = new UploadView();
 
 		tabPanel.add(uploadView, "上传视频");
-		tabPanel.add(new LazyPanel() {
-			@Override
-			protected Widget createWidget() {
-				return new UserView();
-			}
-		}, "用户信息");
+		userView=new UserView();
+		tabPanel.add(userView, "用户信息");
 
 		tabPanel.selectTab(0);
 
@@ -134,6 +132,10 @@ public class VideosView extends Composite implements ResizeHandler {
 
 	public UploadView getUploadView() {
 		return uploadView;
+	}
+	
+	public UserView getUserView() {
+		return userView;
 	}
 
 	public DecoratedTabPanel getTabPanel() {

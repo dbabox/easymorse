@@ -1,12 +1,12 @@
 package com.easymorse.videos.client.presenter;
 
-import com.easymorse.videos.client.event.AccessDeniedEvent;
 import com.easymorse.videos.client.event.BrowseVideoItemsEvent;
 import com.easymorse.videos.client.event.BrowseVideoItemsEventHandler;
 import com.easymorse.videos.client.event.LogOffEvent;
 import com.easymorse.videos.client.event.NeedLoginEvent;
 import com.easymorse.videos.client.event.PlayMideaEvent;
 import com.easymorse.videos.client.event.PlayMideaEventHandler;
+import com.easymorse.videos.client.event.UploadCompleteEvent;
 import com.easymorse.videos.client.model.VideoItem;
 import com.easymorse.videos.client.model.VideoItemPagination;
 import com.easymorse.videos.client.view.UploadDialogBox;
@@ -28,7 +28,10 @@ import com.google.gwt.http.client.Response;
 import com.google.gwt.user.client.History;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.DialogBox;
+import com.google.gwt.user.client.ui.FormHandler;
 import com.google.gwt.user.client.ui.FormPanel;
+import com.google.gwt.user.client.ui.FormSubmitCompleteEvent;
+import com.google.gwt.user.client.ui.FormSubmitEvent;
 import com.google.gwt.user.client.ui.HasWidgets;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Image;
@@ -62,6 +65,7 @@ public class VideosPresenter implements Presenter, ValueChangeHandler<String> {
 				new BrowseVideoItemsEventHandler() {
 					@Override
 					public void onBrowseVideoItem(BrowseVideoItemsEvent event) {
+						videosView.getTabPanel().getTabBar().selectTab(0);
 						RequestBuilder builder = new RequestBuilder(
 								RequestBuilder.GET, new StringBuilder().append(
 										"../browse.json?no=").append(
@@ -197,35 +201,34 @@ public class VideosPresenter implements Presenter, ValueChangeHandler<String> {
 			}
 		});
 
-		DialogBox uploadDialogBox = new UploadDialogBox(videosView
-				.getUploadView().getFormPanel());
+		// DialogBox uploadDialogBox = new UploadDialogBox(videosView
+		// .getUploadView().getFormPanel(),this.handlerManager);
+		videosView.getUploadView().getFormPanel().addSubmitHandler(
+				new SubmitHandler() {
+					@Override
+					public void onSubmit(SubmitEvent event) {
+						new UploadDialogPresenter(handlerManager, videosView
+								.getUploadView().getFormPanel(), event)
+								.go(container);
+					}
+				});
 
-		// videosView.getUploadView().getFormPanel().addSubmitHandler(new
-		// SubmitHandler() {
-		//		
-		// @Override
-		// public void onSubmit(SubmitEvent event) {
-		// Window.alert("提交。。。");
-		// }
-		// });
-		//
-		// videosView.getUploadView().getFormPanel().addSubmitCompleteHandler(
-		// new SubmitCompleteHandler() {
-		// @Override
-		// public void onSubmitComplete(SubmitCompleteEvent event) {
-		// if (event.getResults().contains("401")) {
-		// handlerManager.fireEvent(new NeedLoginEvent());
-		// return;
-		// }
-		// if (event.getResults().contains("403")) {
-		// handlerManager.fireEvent(new AccessDeniedEvent());
-		// return;
-		// }
-		// // Window.alert("保存成功！");// TODO 改为gwt dialog
-		// // videosView.getUploadView().getFormPanel().reset();
-		// // videosView.getTabPanel().getTabBar().selectTab(0);
-		// }
-		// });
+		videosView.getUploadView().getFormPanel().addSubmitCompleteHandler(
+				new SubmitCompleteHandler() {
+					@Override
+					public void onSubmitComplete(SubmitCompleteEvent event) {
+						handlerManager.fireEvent(new UploadCompleteEvent());
+					}
+				});
+
+		videosView.getUserView().getSaveButton().addClickHandler(
+				new ClickHandler() {
+
+					@Override
+					public void onClick(ClickEvent event) {
+						Window.alert("尚未实现");// TODO 实现修改用户权限
+					}
+				});
 
 		this.videosView.getTabPanel().getTabBar().addSelectionHandler(
 				new SelectionHandler<Integer>() {
