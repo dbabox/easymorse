@@ -29,7 +29,7 @@ public class VideoItemView extends Composite {
 		panel.add(imagePanel);
 		imagePanel.setVerticalAlignment(VerticalPanel.ALIGN_BOTTOM);
 
-		Image image = new Image("1.jpg");
+		Image image = new Image("image.do?id="+this.videoItem.getId());
 		button = new PushButton(image);
 		button.setTitle("播放");
 		imagePanel.add(button);

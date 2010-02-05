@@ -1,11 +1,20 @@
 package com.easymorse.videos.client.presenter;
 
 import com.easymorse.videos.client.event.BrowseVideoItemsEvent;
+import com.easymorse.videos.client.event.TaskCompleteEvent;
+import com.easymorse.videos.client.event.TaskCompleteEventHandler;
 import com.easymorse.videos.client.event.UploadCompleteEvent;
 import com.easymorse.videos.client.event.UploadCompleteEventHandler;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.event.dom.client.LoadEvent;
+import com.google.gwt.event.dom.client.LoadHandler;
 import com.google.gwt.event.shared.HandlerManager;
+import com.google.gwt.http.client.Request;
+import com.google.gwt.http.client.RequestBuilder;
+import com.google.gwt.http.client.RequestCallback;
+import com.google.gwt.http.client.Response;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.client.ui.FormPanel;
@@ -26,6 +35,10 @@ public class UploadDialogPresenter implements Presenter {
 
 	private DialogBox box;
 
+	private Integer second = 0;
+
+	private String id;
+
 	public UploadDialogPresenter(HandlerManager handlerManager,
 			FormPanel formPanel, SubmitEvent event) {
 		this.handlerManager = handlerManager;
@@ -40,6 +53,7 @@ public class UploadDialogPresenter implements Presenter {
 				new UploadCompleteEventHandler() {
 					@Override
 					public void onUploadComplete(UploadCompleteEvent event) {
+						id = event.getId();
 						box.clear();
 						VerticalPanel panel = new VerticalPanel();
 						box.add(panel);
@@ -54,31 +68,63 @@ public class UploadDialogPresenter implements Presenter {
 								chooseImage();
 							}
 
-							
 						});
 						panel.add(button);
 					}
 				});
 	}
-	
+
 	protected void chooseImage() {
 		box.clear();
 		HorizontalPanel panel = new HorizontalPanel();
 		panel.setSpacing(5);
 		box.add(panel);
-		int width=300;
-		panel.setWidth(width+"px");
+		int width = 300;
+		panel.setWidth(width + "px");
 		setPosition(width);
-		
-		panel.add(new Image("1.jpg"));
-		
-		VerticalPanel buttonPanel=new VerticalPanel();
+
+		final Image image = new Image("extract.json?id=" + id + "&second=" + 0
+				+ "&t=" + System.currentTimeMillis());
+
+		image.addLoadHandler(new LoadHandler() {
+			@Override
+			public void onLoad(LoadEvent event) {
+				handlerManager.fireEvent(new TaskCompleteEvent());
+			}
+		});
+		panel.add(image);
+
+		VerticalPanel buttonPanel = new VerticalPanel();
 		panel.add(buttonPanel);
 		buttonPanel.setSpacing(5);
-		buttonPanel.add(new Button("上一帧"));
-		buttonPanel.add(new Button("下一帧"));
-		
-		Button confirmButton=new Button("确　定");
+		Button beforeButton = new Button("上一帧");
+		beforeButton.addClickHandler(new ClickHandler() {
+			@Override
+			public void onClick(ClickEvent event) {
+				second = second - 10;
+				if (second < 0) {
+					second = 0;
+				}
+				image.setUrl("extract.json?id=" + id + "&second=" + second
+						+ "&t=" + System.currentTimeMillis());
+				new WaitForDialogBox().show();
+			}
+		});
+		buttonPanel.add(beforeButton);
+
+		Button nextButton = new Button("下一帧");
+		nextButton.addClickHandler(new ClickHandler() {
+			@Override
+			public void onClick(ClickEvent event) {
+				second = second + 10;
+				image.setUrl("extract.json?id=" + id + "&second=" + second
+						+ "&t=" + System.currentTimeMillis());
+				new WaitForDialogBox().show();
+			}
+		});
+		buttonPanel.add(nextButton);
+
+		Button confirmButton = new Button("确　定");
 		confirmButton.addClickHandler(new ClickHandler() {
 			@Override
 			public void onClick(ClickEvent event) {
@@ -138,6 +184,38 @@ public class UploadDialogPresenter implements Presenter {
 
 		box.setPopupPosition(left, top);
 
+	}
+
+	class WaitForDialogBox extends DialogBox {
+		public WaitForDialogBox() {
+			VerticalPanel panel = new VerticalPanel();
+			this.add(panel);
+			int width = 150;
+			panel.setWidth(width + "px");
+			panel.setSpacing(5);
+			HorizontalPanel innerPanel = new HorizontalPanel();
+			innerPanel.setSpacing(5);
+			innerPanel.add(new Image("loading.gif"));
+			innerPanel.add(new HTML("图片生成中...."));
+			panel.add(innerPanel);
+
+			int left = (formPanel.getOffsetWidth() - width) / 2
+					+ formPanel.getAbsoluteLeft();
+			int top = (formPanel.getOffsetHeight() - width / 2) / 2
+					+ formPanel.getAbsoluteTop();
+			this.setPopupPosition(left, top);
+
+			this.setText("操作提示");
+			this.setAnimationEnabled(true);
+			this.setGlassEnabled(true);
+			
+			handlerManager.addHandler(TaskCompleteEvent.TYPE, new TaskCompleteEventHandler() {
+				@Override
+				public void onTaskComplete(TaskCompleteEvent event) {
+					hide();
+				}
+			});
+		}
 	}
 
 }

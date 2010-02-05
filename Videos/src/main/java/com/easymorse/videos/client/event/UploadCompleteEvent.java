@@ -5,6 +5,15 @@ import com.google.gwt.event.shared.GwtEvent;
 public class UploadCompleteEvent extends GwtEvent<UploadCompleteEventHandler> {
 
 	public static Type<UploadCompleteEventHandler> TYPE = new Type<UploadCompleteEventHandler>();
+	private String id;
+
+	public UploadCompleteEvent(String id) {
+		this.id = id;
+	}
+
+	public String getId() {
+		return id;
+	}
 
 	@Override
 	protected void dispatch(UploadCompleteEventHandler eventHandler) {

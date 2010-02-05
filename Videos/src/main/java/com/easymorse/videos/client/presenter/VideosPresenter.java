@@ -212,7 +212,8 @@ public class VideosPresenter implements Presenter, ValueChangeHandler<String> {
 				new SubmitCompleteHandler() {
 					@Override
 					public void onSubmitComplete(SubmitCompleteEvent event) {
-						handlerManager.fireEvent(new UploadCompleteEvent());
+						handlerManager.fireEvent(new UploadCompleteEvent(event
+								.getResults().substring(5, 32 + 5)));
 					}
 				});
 
