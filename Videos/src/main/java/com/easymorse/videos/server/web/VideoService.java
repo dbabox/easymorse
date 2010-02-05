@@ -3,16 +3,17 @@ package com.easymorse.videos.server.web;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.text.MessageFormat;
 
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -21,7 +22,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -57,13 +57,13 @@ public class VideoService {
 		modelMap.put("pagination", pagination);
 	}
 
-	@RequestMapping(value = "/upload.json", method = RequestMethod.POST)
+	@RequestMapping(value = "/upload.do", method = RequestMethod.POST)
 	@Transactional(propagation = Propagation.REQUIRED)
 	public void upload(VideoItem videoItem,
 			@RequestParam("file") MultipartFile file,
 			HttpServletRequest request, HttpServletResponse response) {
 		this.videoItemDao.saveOrUpdate(videoItem);
-		response.setContentType("text/plain");
+		// response.setContentType("text/plain");
 		if (file != null) {
 			try {
 				this.saveUploadFile(file, request, videoItem.getId());
@@ -72,11 +72,70 @@ public class VideoService {
 			}
 		}
 
+		this.convertVideo(videoItem.getId(), request);
 		try {
 			response.getWriter().write(videoItem.getId());
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	private void convertVideo(final String id, final HttpServletRequest request) {
+		File videoSourceFile = getSourceFile(getDir(request, id));
+		File videoDir = new File(request.getSession().getServletContext()
+				.getRealPath("videos"), id);
+		if (!videoDir.exists()) {
+			videoDir.mkdirs();
+		}
+		File videoFile = new File(videoDir, "video.mp4");
+
+		// Runtime
+		// .getRuntime()
+		// .exec(
+		// MessageFormat
+		// .format(
+		// "ffmpeg -i {0} -an -pass 1 -threads 2 -vcodec libx264 -b 512k -flags +loop+mv4 -cmp 256 -partitions +parti4x4+parti8x8+partp4x4+partp8x8+partb8x8 -me_method hex -subq 7 -trellis 1 -refs 5 -bf 3 -flags2 +bpyramid+wpred+mixed_refs+dct8x8 -coder 1 -me_range 16 -g 250 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -qmin 10 -qmax 51 -qdiff 4 -y {1}",
+		// videoSourceFile.getAbsolutePath(),
+		// videoFile.getAbsolutePath()));
+		try {
+			final Process process = new ProcessBuilder(
+					new File(request.getSession().getServletContext()
+							.getRealPath("WEB-INF/shell/convertvideo.sh"))
+							.getAbsolutePath(), videoSourceFile
+							.getAbsolutePath(), videoFile.getAbsolutePath())
+					.directory(
+							new File(new File(request.getSession()
+									.getServletContext().getRealPath(
+											"videos/" + id)).getAbsolutePath()))
+					.start();
+
+			new Thread() {
+				@Override
+				public void run() {
+					BufferedReader inputReader = new BufferedReader(
+							new InputStreamReader(process.getErrorStream()));
+					try {
+						BufferedWriter writer = new BufferedWriter(
+								new FileWriter(new File(request.getSession()
+										.getServletContext().getRealPath(
+												"videos/" + id),"convert.log")));
+
+						for (String s = inputReader.readLine(); s != null; s = inputReader
+								.readLine()) {
+							writer.write(s);
+						}
+						writer.close();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+
+				}
+			}.start();
+
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+
 	}
 
 	@RequestMapping("/extract.json")
@@ -95,7 +154,8 @@ public class VideoService {
 		}
 
 		try {
-			request.getRequestDispatcher("/image.do").forward(request, response);
+			request.getRequestDispatcher("/image.do")
+					.forward(request, response);
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
@@ -161,13 +221,23 @@ public class VideoService {
 		}
 	}
 
-	private void printMessages(InputStream inputStream) throws IOException {
+	private static void printMessages(InputStream inputStream)
+			throws IOException {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(
 				inputStream));
 		for (String s = reader.readLine(); s != null; s = reader.readLine()) {
 			System.out.println(">>>" + s);
 		}
 		reader.close();
+	}
+
+	private static void printProcessResults(Process process)
+			throws InterruptedException, IOException {
+		if (process.waitFor() == 0) {
+			printMessages(process.getInputStream());
+		} else {
+			printMessages(process.getErrorStream());
+		}
 	}
 
 	private File getImageFile(File dir) {
@@ -213,5 +283,103 @@ public class VideoService {
 		}
 
 		outputStream.close();
+	}
+
+	@RequestMapping("/video.do")
+	public void getVideo(String id, HttpServletRequest request,
+			HttpServletResponse response) {
+		if (id == null) {
+//			try {
+//				response.sendRedirect("default.mp4");
+//				return;
+//			} catch (IOException e) {
+//				throw new RuntimeException(e);
+//			}
+			id="";
+		}
+		String message = getVideoPath(id, request);
+		if (message == null) {
+			message = "wait";
+		}
+		try {
+			response.getWriter().write(message);
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+	private String getVideoPath(String id, HttpServletRequest request) {
+		File dir = new File(request.getSession().getServletContext()
+				.getRealPath("videos"));
+
+		if (dir.exists()) {
+			File videoDir = new File(dir, id);
+			if (videoDir.exists()) {
+				File videoFile = new File(videoDir, "video.mp4");
+				if (videoFile.exists()) {
+					File completeFlagFile = new File(videoDir, "completeFlag");
+					if (completeFlagFile.exists()) {
+						return "../videos/" + id + "/video.mp4";
+					} else {
+						long size = videoFile.length();
+						try {
+							Thread.sleep(1000 * 2);
+						} catch (InterruptedException e) {
+						}
+						if (videoFile.length() == size) {
+							try {
+								completeFlagFile.createNewFile();
+							} catch (IOException e) {
+								throw new RuntimeException(e);
+							}
+							return "../videos/" + id + "/video.mp4";
+						}
+					}
+				}
+			}
+		}
+
+		return null;
+	}
+
+	public static void main(String[] args) throws IOException,
+			InterruptedException {
+		// Process process = new
+		// ProcessBuilder("/home/marshal/workspace5/Videos/war/WEB-INF/shell/convertvideo.sh",
+		// "/home/marshal/workspace5/Videos/war/WEB-INF/upload/ff808181269e275501269e2b31db0001/source.mp4",
+		// "/home/marshal/桌面/mm/q7.mp4").directory(new
+		// File("/home/marshal/桌面/mm")).start();
+		// if (process.waitFor() == 0) {
+		// printMessages(process.getInputStream());
+		// } else {
+		// printMessages(process.getErrorStream());
+		// }
+		final Process process = Runtime
+				.getRuntime()
+				.exec(
+						new String[] {
+								"/home/marshal/workspace5/Videos/war/WEB-INF/shell/convertvideo.sh",
+								"/home/marshal/workspace5/Videos/war/WEB-INF/upload/ff808181269e275501269e2b31db0001/source.mp4",
+								"/home/marshal/桌面/mm/q7.mp4" }, null,
+						new File("/home/marshal/桌面/mm"));
+		new Thread() {
+			@Override
+			public void run() {
+				System.out.println("start...");
+				BufferedReader inputReader = new BufferedReader(
+						new InputStreamReader(process.getErrorStream()));
+				try {
+					for (String s = inputReader.readLine(); s != null; s = inputReader
+							.readLine()) {
+						System.out.println(s);
+					}
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+
+				System.out.println("end.");
+			}
+		}.start();
+
 	}
 }

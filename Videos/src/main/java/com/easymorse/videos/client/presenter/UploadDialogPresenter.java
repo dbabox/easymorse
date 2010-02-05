@@ -10,10 +10,6 @@ import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.LoadEvent;
 import com.google.gwt.event.dom.client.LoadHandler;
 import com.google.gwt.event.shared.HandlerManager;
-import com.google.gwt.http.client.Request;
-import com.google.gwt.http.client.RequestBuilder;
-import com.google.gwt.http.client.RequestCallback;
-import com.google.gwt.http.client.Response;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.DialogBox;
@@ -82,7 +78,7 @@ public class UploadDialogPresenter implements Presenter {
 		int width = 300;
 		panel.setWidth(width + "px");
 		setPosition(width);
-
+		
 		final Image image = new Image("extract.json?id=" + id + "&second=" + 0
 				+ "&t=" + System.currentTimeMillis());
 
@@ -190,7 +186,7 @@ public class UploadDialogPresenter implements Presenter {
 		public WaitForDialogBox() {
 			VerticalPanel panel = new VerticalPanel();
 			this.add(panel);
-			int width = 150;
+			int width = 100;
 			panel.setWidth(width + "px");
 			panel.setSpacing(5);
 			HorizontalPanel innerPanel = new HorizontalPanel();

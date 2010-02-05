@@ -12,6 +12,8 @@ import com.easymorse.videos.client.model.VideoItemPagination;
 import com.easymorse.videos.client.view.VideoItemView;
 import com.easymorse.videos.client.view.VideoPlayerView;
 import com.easymorse.videos.client.view.VideosView;
+import com.google.gwt.core.client.JsonUtils;
+import com.google.gwt.dom.client.PreElement;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.logical.shared.SelectionEvent;
@@ -26,10 +28,14 @@ import com.google.gwt.http.client.RequestException;
 import com.google.gwt.http.client.Response;
 import com.google.gwt.user.client.History;
 import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.client.ui.FormPanel;
+import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HasWidgets;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Image;
+import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.FormPanel.SubmitCompleteEvent;
 import com.google.gwt.user.client.ui.FormPanel.SubmitCompleteHandler;
 import com.google.gwt.user.client.ui.FormPanel.SubmitEvent;
@@ -168,20 +174,84 @@ public class VideosPresenter implements Presenter, ValueChangeHandler<String> {
 					@Override
 					public void onPlayMidea(PlayMideaEvent event) {
 						if (videosView.getTabPanel().getTabBar().getTabCount() < 4) {
-							VideoPlayerView playerView = new VideoPlayerView();
-							videosView.getTabPanel()
-									.insert(playerView, "播放", 3);
-							playerView.getCloseButton().addClickHandler(
-									new ClickHandler() {
-										@Override
-										public void onClick(ClickEvent event) {
-											videosView.getTabPanel().remove(3);
-											videosView.getTabPanel()
-													.getTabBar().selectTab(0);
-										}
-									});
+							RequestBuilder requestBuilder = new RequestBuilder(
+									RequestBuilder.GET, "../video.do?id="
+											+ event.getId());
+							requestBuilder.setCallback(new RequestCallback() {
+								@Override
+								public void onResponseReceived(Request request,
+										Response response) {
+									if (response.getText().equals("wait")) {
+										final DialogBox box = new DialogBox();
+										int width = 160;
+										box.setWidth(width + "px");
+										box.setText("操作提示");
+										box.setGlassEnabled(true);
+										box.setPopupPosition(videosView
+												.getTabPanel()
+												.getAbsoluteLeft() + 100,
+												videosView.getTabPanel()
+														.getAbsoluteTop() + 20);// TODO
+										VerticalPanel panel = new VerticalPanel();
+										box.add(panel);
 
-							videosView.getTabPanel().getTabBar().selectTab(3);
+										panel.add(new HTML("视频转换中，请等待...."));
+										Button button = new Button("关闭");
+
+										panel.add(button);
+
+										button
+												.addClickHandler(new ClickHandler() {
+
+													@Override
+													public void onClick(
+															ClickEvent event) {
+														box.hide();
+													}
+												});
+
+										// 临时定位
+										box.show();
+									} else {
+										VideoPlayerView playerView = new VideoPlayerView(
+												response.getText());
+										videosView.getTabPanel().insert(
+												playerView, "播放", 3);
+										playerView.getCloseButton()
+												.addClickHandler(
+														new ClickHandler() {
+															@Override
+															public void onClick(
+																	ClickEvent event) {
+																videosView
+																		.getTabPanel()
+																		.remove(
+																				3);
+																videosView
+																		.getTabPanel()
+																		.getTabBar()
+																		.selectTab(
+																				0);
+															}
+														});
+
+										videosView.getTabPanel().getTabBar()
+												.selectTab(3);
+									}
+								}
+
+								@Override
+								public void onError(Request request, Throwable e) {
+									Window.alert("error!!");
+								}
+							});
+
+							try {
+								requestBuilder.send();
+							} catch (RequestException e) {
+								throw new RuntimeException(e);
+							}
+
 						} else {
 							videosView.getTabPanel().getTabBar().selectTab(3);
 						}
@@ -212,8 +282,16 @@ public class VideosPresenter implements Presenter, ValueChangeHandler<String> {
 				new SubmitCompleteHandler() {
 					@Override
 					public void onSubmitComplete(SubmitCompleteEvent event) {
-						handlerManager.fireEvent(new UploadCompleteEvent(event
-								.getResults().substring(5, 32 + 5)));
+						// Window.alert(JsonUtils.unsafeEval(""));
+						// Window.alert(event.getResults());
+						String result = event.getResults();
+						if (result.length() > 32) {
+							result = result.substring(result.length() - 6 - 32,
+									result.length() - 6);
+						}
+//						Window.alert(result);
+						handlerManager
+								.fireEvent(new UploadCompleteEvent(result));
 					}
 				});
 
@@ -257,7 +335,7 @@ public class VideosPresenter implements Presenter, ValueChangeHandler<String> {
 						videosView.getUploadView().getFormPanel().setMethod(
 								FormPanel.METHOD_POST);
 						videosView.getUploadView().getFormPanel().setAction(
-								"upload.json");
+								"upload.do");
 
 						videosView.getUploadView().getFormPanel().submit();
 					}
@@ -272,6 +350,10 @@ public class VideosPresenter implements Presenter, ValueChangeHandler<String> {
 			History.fireCurrentHistoryState();
 		}
 	}
+
+	// public static native PreElement getPreElement(String string) /*-{
+	// return eval('(' + string + ')');
+	// }-*/;
 
 	@Override
 	public void onValueChange(ValueChangeEvent<String> event) {

@@ -135,6 +135,7 @@
 				<artifactId>gwt-maven-plugin</artifactId>
 				<configuration>
 					<runTarget>show_videos.html</runTarget>
+					 <extraJvmArgs>-Xmx512m -XX:PermSize=128M</extraJvmArgs>
 				</configuration>
 				<executions>
 					<execution>
