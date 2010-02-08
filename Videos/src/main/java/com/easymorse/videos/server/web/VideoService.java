@@ -6,13 +6,19 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.text.MessageFormat;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -89,16 +95,8 @@ public class VideoService {
 		}
 		File videoFile = new File(videoDir, "video.mp4");
 
-		// Runtime
-		// .getRuntime()
-		// .exec(
-		// MessageFormat
-		// .format(
-		// "ffmpeg -i {0} -an -pass 1 -threads 2 -vcodec libx264 -b 512k -flags +loop+mv4 -cmp 256 -partitions +parti4x4+parti8x8+partp4x4+partp8x8+partb8x8 -me_method hex -subq 7 -trellis 1 -refs 5 -bf 3 -flags2 +bpyramid+wpred+mixed_refs+dct8x8 -coder 1 -me_range 16 -g 250 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -qmin 10 -qmax 51 -qdiff 4 -y {1}",
-		// videoSourceFile.getAbsolutePath(),
-		// videoFile.getAbsolutePath()));
 		try {
-			final Process process = new ProcessBuilder(
+			final Process process = new ProcessBuilder("bash",
 					new File(request.getSession().getServletContext()
 							.getRealPath("WEB-INF/shell/convertvideo.sh"))
 							.getAbsolutePath(), videoSourceFile
@@ -118,7 +116,7 @@ public class VideoService {
 						BufferedWriter writer = new BufferedWriter(
 								new FileWriter(new File(request.getSession()
 										.getServletContext().getRealPath(
-												"videos/" + id),"convert.log")));
+												"videos/" + id), "convert.log")));
 
 						for (String s = inputReader.readLine(); s != null; s = inputReader
 								.readLine()) {
@@ -233,11 +231,11 @@ public class VideoService {
 
 	private static void printProcessResults(Process process)
 			throws InterruptedException, IOException {
-		if (process.waitFor() == 0) {
-			printMessages(process.getInputStream());
-		} else {
-			printMessages(process.getErrorStream());
-		}
+		// if (process.waitFor() == 0) {
+		// printMessages(process.getInputStream());
+		// } else {
+		printMessages(process.getErrorStream());
+		// }
 	}
 
 	private File getImageFile(File dir) {
@@ -289,13 +287,13 @@ public class VideoService {
 	public void getVideo(String id, HttpServletRequest request,
 			HttpServletResponse response) {
 		if (id == null) {
-//			try {
-//				response.sendRedirect("default.mp4");
-//				return;
-//			} catch (IOException e) {
-//				throw new RuntimeException(e);
-//			}
-			id="";
+			// try {
+			// response.sendRedirect("default.mp4");
+			// return;
+			// } catch (IOException e) {
+			// throw new RuntimeException(e);
+			// }
+			id = "";
 		}
 		String message = getVideoPath(id, request);
 		if (message == null) {
@@ -318,8 +316,12 @@ public class VideoService {
 				File videoFile = new File(videoDir, "video.mp4");
 				if (videoFile.exists()) {
 					File completeFlagFile = new File(videoDir, "completeFlag");
+					String videoSizeInfo = getVideoSizeInfo(videoDir);
 					if (completeFlagFile.exists()) {
-						return "../videos/" + id + "/video.mp4";
+						return "http://" + request.getServerName() + ":"
+								+ request.getServerPort()
+								+ request.getContextPath() + "/videos/" + id
+								+ "/video.mp4?width=" + videoSizeInfo;
 					} else {
 						long size = videoFile.length();
 						try {
@@ -332,7 +334,10 @@ public class VideoService {
 							} catch (IOException e) {
 								throw new RuntimeException(e);
 							}
-							return "../videos/" + id + "/video.mp4";
+							return "http://" + request.getServerName() + ":"
+									+ request.getServerPort()
+									+ request.getContextPath() + "/videos/"
+									+ id + "/video.mp4?width=" + videoSizeInfo;
 						}
 					}
 				}
@@ -342,44 +347,78 @@ public class VideoService {
 		return null;
 	}
 
-	public static void main(String[] args) throws IOException,
-			InterruptedException {
-		// Process process = new
-		// ProcessBuilder("/home/marshal/workspace5/Videos/war/WEB-INF/shell/convertvideo.sh",
-		// "/home/marshal/workspace5/Videos/war/WEB-INF/upload/ff808181269e275501269e2b31db0001/source.mp4",
-		// "/home/marshal/桌面/mm/q7.mp4").directory(new
-		// File("/home/marshal/桌面/mm")).start();
-		// if (process.waitFor() == 0) {
-		// printMessages(process.getInputStream());
-		// } else {
-		// printMessages(process.getErrorStream());
-		// }
-		final Process process = Runtime
-				.getRuntime()
-				.exec(
-						new String[] {
-								"/home/marshal/workspace5/Videos/war/WEB-INF/shell/convertvideo.sh",
-								"/home/marshal/workspace5/Videos/war/WEB-INF/upload/ff808181269e275501269e2b31db0001/source.mp4",
-								"/home/marshal/桌面/mm/q7.mp4" }, null,
-						new File("/home/marshal/桌面/mm"));
-		new Thread() {
-			@Override
-			public void run() {
-				System.out.println("start...");
-				BufferedReader inputReader = new BufferedReader(
-						new InputStreamReader(process.getErrorStream()));
-				try {
-					for (String s = inputReader.readLine(); s != null; s = inputReader
-							.readLine()) {
-						System.out.println(s);
+	private String getVideoSizeInfo(File videoDir) {
+		File convertLog = new File(videoDir, "convert.log");
+		String info = "";
+
+		if (convertLog.exists()) {
+			try {
+				BufferedReader reader = new BufferedReader(new FileReader(
+						convertLog));
+				Pattern pattern = Pattern.compile("\\d{2,4}x\\d{2,4}");
+				for (String s = reader.readLine(); s != null; s = reader
+						.readLine()) {
+					Matcher matcher = pattern.matcher(s);
+					if (matcher.find()) {
+						info = s.substring(matcher.start(), matcher.end());
 					}
-				} catch (IOException e) {
-					e.printStackTrace();
 				}
-
-				System.out.println("end.");
+				reader.close();
+			} catch (IOException e) {
+				throw new RuntimeException(e);
 			}
-		}.start();
+		}
 
+		return info;
+	}
+
+	// public static void main(String[] args) throws IOException,
+	// InterruptedException {
+	// Process process = new
+	// ProcessBuilder("/home/marshal/workspace5/Videos/war/WEB-INF/shell/convertvideo.sh",
+	// "/home/marshal/workspace5/Videos/war/WEB-INF/upload/ff808181269e275501269e2b31db0001/source.mp4",
+	// "/home/marshal/桌面/mm/q7.mp4").directory(new
+	// File("/home/marshal/桌面/mm")).start();
+	// if (process.waitFor() == 0) {
+	// printMessages(process.getInputStream());
+	// } else {
+	// printMessages(process.getErrorStream());
+	// }
+	// final Process process = Runtime
+	// .getRuntime()
+	// .exec(
+	// new String[] {
+	// "/home/marshal/workspace5/Videos/war/WEB-INF/shell/convertvideo.sh",
+	// "/home/marshal/workspace5/Videos/war/WEB-INF/upload/ff808181269e275501269e2b31db0001/source.mp4",
+	// "/home/marshal/桌面/mm/q7.mp4" }, null,
+	// new File("/home/marshal/桌面/mm"));
+	// new Thread() {
+	// @Override
+	// public void run() {
+	// System.out.println("start...");
+	// BufferedReader inputReader = new BufferedReader(
+	// new InputStreamReader(process.getErrorStream()));
+	// try {
+	// for (String s = inputReader.readLine(); s != null; s = inputReader
+	// .readLine()) {
+	// System.out.println(s);
+	// }
+	// } catch (IOException e) {
+	// e.printStackTrace();
+	// }
+	//
+	// System.out.println("end.");
+	// }
+	// }.start();
+	// }
+
+	public static void main(String[] args) throws Exception {
+		List<String> commands = new ArrayList<String>();
+		commands.add("bash");
+		commands.add("/home/marshal/桌面/convertvideo.sh");
+		// commands.add("ffmpeg -formats");
+		// Runtime.getRuntime().exec("ffmpeg -version");
+		// printProcessResults(Runtime.getRuntime().exec("ffmpeg -version"));
+		printProcessResults(new ProcessBuilder(commands).start());
 	}
 }
