@@ -1,0 +1,35 @@
+.Application-top {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.Application-links {
+	padding: 2px 13px 2px 0px;
+	background: #C3D9FF;
+}
+
+.Application-title {
+	padding: 0px 0px 0px 10px;
+}
+
+.Application-title h1 { /* color: #67A7E3; */
+	margin: 0px;
+	padding: 0px 0px 0px 4px;
+	font-size: 20px;
+}
+
+.Application-title h2 {
+	color: #888;
+	margin: 0px;
+	padding: 0px 0px 0px 4px;
+	font-size: 12px;
+}
+
+.Application-options {
+	padding: 6px 10px 0px 0px;
+}
+
+.Application-menu {
+	width: 18em;
+	text-align: left;
+}
