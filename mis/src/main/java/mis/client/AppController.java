@@ -36,25 +36,25 @@ public class AppController implements Presenter {
 	}
 
 	private void bind() {
-view.addSelectionHandler(new SelectionHandler<TreeItem>() {
+		view.addSelectionHandler(new SelectionHandler<TreeItem>() {
 
-	@Override
-	public void onSelection(SelectionEvent<TreeItem> event) {
-		TreeItem item = event.getSelectedItem();
+			@Override
+			public void onSelection(SelectionEvent<TreeItem> event) {
+				TreeItem item = event.getSelectedItem();
 
-		if (item.getParentItem() != null) {
-			Tree tree = item.getTree();
-			for (Iterator<TreeItem> iterator = tree.treeItemIterator(); iterator
-					.hasNext();) {
-				TreeItem i = iterator.next();
-				if (i.getParentItem() == null) {
-					if (i.getChildIndex(item) == -1) {
-						i.setState(false, false);
+				if (item.getParentItem() != null) {
+					Tree tree = item.getTree();
+					for (Iterator<TreeItem> iterator = tree.treeItemIterator(); iterator
+							.hasNext();) {
+						TreeItem i = iterator.next();
+						if (i.getParentItem() == null) {
+							if (i.getChildIndex(item) == -1) {
+								i.setState(false, false);
+							}
+						}
 					}
 				}
 			}
-		}
-	}
-});
+		});
 	}
 }
