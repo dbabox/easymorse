@@ -69,7 +69,7 @@ public class ApplicationView extends Composite implements ResizeHandler,HasSelec
 
 		TreeItem item = mainMenu.addItem("系统管理");
 		item.addItem("数据库");
-		item.addItem("日志").addItem("系统日志");
+		item.addItem("日志");
 
 		item = mainMenu.addItem("用户管理");
 		item.addItem("修改当前用户密码");
