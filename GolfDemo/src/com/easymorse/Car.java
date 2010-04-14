@@ -11,6 +11,16 @@ public class Car {
 
 	private List<String> shapeInfo;
 
+	private List<String> controlInfo;
+
+	public List<String> getControlInfo() {
+		return controlInfo;
+	}
+
+	public void setControlInfo(List<String> controlInfo) {
+		this.controlInfo = controlInfo;
+	}
+
 	private List<String> speedInfo;
 
 	public List<String> getSpeedInfo() {
