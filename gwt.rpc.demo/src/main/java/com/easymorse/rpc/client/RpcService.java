@@ -111,7 +111,7 @@ public class RpcService implements EntryPoint {
         greetingService.helloUser(textToServer, new AsyncCallback<User>() {
           public void onFailure(Throwable caught) {
             // Show the RPC error message to the user
-            dialogBox.setText("Remote Procedure Call - Failure");
+            dialogBox.setText("Remote Procedure Call - Failure"+caught.getMessage());
             serverResponseLabel.addStyleName("serverResponseLabelError");
             serverResponseLabel.setHTML(SERVER_ERROR);
             dialogBox.center();
@@ -121,7 +121,7 @@ public class RpcService implements EntryPoint {
           public void onSuccess(User user) {
             dialogBox.setText("Remote Procedure Call");
             serverResponseLabel.removeStyleName("serverResponseLabelError");
-            serverResponseLabel.setHTML(user.getName());
+            serverResponseLabel.setHTML(user.getName()+" | "+user.getId());
             dialogBox.center();
             closeButton.setFocus(true);
           }

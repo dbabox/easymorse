@@ -1,5 +1,7 @@
 package com.easymorse.rpc.server;
 
+import org.hibernate.Session;
+
 import com.easymorse.rpc.beans.User;
 import com.easymorse.rpc.client.GreetingService;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
@@ -21,8 +23,11 @@ public class GreetingServiceImpl extends RemoteServiceServlet implements
 	@Override
 	public User helloUser(String userName) {
 		User user = new User();
-		user.setId("1");
 		user.setName(userName);
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		session.save(user);
+		session.getTransaction().commit();
 		return user;
 	}
 }
