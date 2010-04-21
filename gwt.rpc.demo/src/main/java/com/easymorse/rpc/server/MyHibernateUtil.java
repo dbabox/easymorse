@@ -3,7 +3,7 @@ package com.easymorse.rpc.server;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
-public class HibernateUtil {
+public class MyHibernateUtil {
 
 	private static final SessionFactory sessionFactory = buildSessionFactory();
 

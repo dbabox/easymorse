@@ -1,17 +1,29 @@
 package com.easymorse.rpc.server;
 
+import net.sf.gilead.core.PersistentBeanManager;
+import net.sf.gilead.core.hibernate.HibernateUtil;
+import net.sf.gilead.gwt.GwtConfigurationHelper;
+import net.sf.gilead.gwt.PersistentRemoteService;
+
 import org.hibernate.Session;
 
 import com.easymorse.rpc.beans.User;
 import com.easymorse.rpc.client.GreetingService;
-import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
 /**
  * The server side implementation of the RPC service.
  */
 @SuppressWarnings("serial")
-public class GreetingServiceImpl extends RemoteServiceServlet implements
+public class GreetingServiceImpl extends PersistentRemoteService implements
 		GreetingService {
+
+	public GreetingServiceImpl() {
+		HibernateUtil hibernateUtil = new HibernateUtil(MyHibernateUtil
+				.getSessionFactory());
+		PersistentBeanManager persistentBeanManager = GwtConfigurationHelper
+				.initGwtStatelessBeanManager(hibernateUtil);
+		setBeanManager(persistentBeanManager);
+	}
 
 	public String greetServer(String input) {
 		String serverInfo = getServletContext().getServerInfo();
@@ -24,10 +36,11 @@ public class GreetingServiceImpl extends RemoteServiceServlet implements
 	public User helloUser(String userName) {
 		User user = new User();
 		user.setName(userName);
-		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		Session session = MyHibernateUtil.getSessionFactory()
+				.getCurrentSession();
 		session.beginTransaction();
 		session.save(user);
 		session.getTransaction().commit();
-		return user;
+		return (User) this.getBeanManager().clone(user);
 	}
 }
