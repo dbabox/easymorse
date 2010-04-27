@@ -1,0 +1,16 @@
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+</head>
+<body>
+<h2 id="title"></h2>
+<div id="content"></div>
+<script>
+$.getJSON('a.json',function(date){
+$("#title").html(data.title);
+$("#content").html('my content.');
+$("#content").append("<div>... other content.</div>");
+});
+</script>
+</body>
+</html>
