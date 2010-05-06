@@ -1,5 +1,6 @@
 package com.easymorse.ria.client;
 
+import com.easymorse.ria.beans.User;
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 
@@ -9,4 +10,6 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 @RemoteServiceRelativePath("greet")
 public interface GreetingService extends RemoteService {
 	String greetServer(String name) throws IllegalArgumentException;
+
+	User createUser(String userName) throws IllegalArgumentException;
 }

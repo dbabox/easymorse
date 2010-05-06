@@ -151,7 +151,7 @@
 					<server>videoserver</server>
 					<!--					<url>http://localhost:8080/manager</url>-->
 					<!--					<server>myserver</server>-->
-					<path>/videos</path>
+					<path>/gwt-proto</path>
 				</configuration>
 			</plugin>
 			<plugin>

@@ -1,5 +1,6 @@
 package com.easymorse.ria.client;
 
+import com.easymorse.ria.beans.User;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
 /**
@@ -8,4 +9,6 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 public interface GreetingServiceAsync {
 	void greetServer(String input, AsyncCallback<String> callback)
 			throws IllegalArgumentException;
+
+	void createUser(String userName, AsyncCallback<User> callback);
 }
