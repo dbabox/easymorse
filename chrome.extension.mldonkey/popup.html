@@ -1,0 +1,32 @@
+<html>
+<head><title>My Test Extension Options</title></head>
+<script type="text/javascript">
+
+// Saves options to localStorage.
+function save_options() {
+	localStorage["url"] = document.getElementById('url').value;
+}
+
+function exit_options() {
+	window.close();
+}
+
+// Restores select box state to saved value from localStorage.
+function restore_options() {
+	var url=localStorage["url"];
+	if(url!=null){
+		document.getElementById('url').value=url;
+	}
+}
+</script>
+
+<body onload="restore_options()">
+
+MLDoneky Server URL:
+<input id="url" type="text" size="50"/>
+
+<br>
+<button onclick="save_options()">Save</button>
+<button onclick="exit_options()">Close</button>
+</body>
+</html>
