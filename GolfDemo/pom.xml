@@ -26,40 +26,6 @@
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
-			<!--			<plugin>-->
-			<!--				<groupId>org.codehaus.mojo</groupId>-->
-			<!--				<artifactId>build-helper-maven-plugin</artifactId>-->
-			<!--				<version>1.5</version>-->
-			<!--				<executions>-->
-			<!--					<execution>-->
-			<!--						<id>add-source</id>-->
-			<!--						<phase>generate-sources</phase>-->
-			<!--						<goals>-->
-			<!--							<goal>add-source</goal>-->
-			<!--						</goals>-->
-			<!--						<configuration>-->
-			<!--							<sources>-->
-			<!--								<source>gen</source>-->
-			<!--							</sources>-->
-			<!--						</configuration>-->
-			<!--					</execution>-->
-			<!--				</executions>-->
-			<!--			</plugin>-->
-			<!--			<plugin>-->
-			<!--				<groupId>org.apache.maven.plugins</groupId>-->
-			<!--				<artifactId>maven-jarsigner-plugin</artifactId>-->
-			<!--				<version>1.2</version>-->
-			<!--				<executions>-->
-			<!--					<execution>-->
-			<!--						<id>signing</id>-->
-			<!--						<goals>-->
-			<!--							<goal>sign</goal>-->
-			<!--						</goals>-->
-			<!--						<phase>package</phase>-->
-			<!--						<inherited>true</inherited>-->
-			<!--					</execution>-->
-			<!--				</executions>-->
-			<!--			</plugin>-->
 			<plugin>
 				<groupId>
 					com.jayway.maven.plugins.android.generation2
@@ -71,9 +37,6 @@
 						<path>${env.ANDROID_HOME}</path>
 						<platform>7</platform>
 					</sdk>
-					<sign>
-						<debug>true</debug>
-					</sign>
 					<deleteConflictingFiles>true</deleteConflictingFiles>
 				</configuration>
 				<extensions>true</extensions>
@@ -87,4 +50,48 @@
 			</plugin>
 		</plugins>
 	</build>
+	<profiles>
+		<profile>
+			<id>sign</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-jarsigner-plugin</artifactId>
+						<version>1.2</version>
+						<executions>
+							<execution>
+								<id>signing</id>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+								<phase>package</phase>
+								<inherited>true</inherited>
+								<configuration>
+									<archiveDirectory></archiveDirectory>
+									<includes>
+										<include>target/*.apk</include>
+									</includes>
+									<keystore>${keyFilePath}</keystore>
+									<storepass>${storePassword}</storepass>
+									<keypass>${keyPassword}</keypass>
+									<alias>${keyAlias}</alias>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>com.jayway.maven.plugins.android.generation2</groupId>
+						<artifactId>maven-android-plugin</artifactId>
+						<inherited>true</inherited>
+						<configuration>
+							<sign>
+								<debug>false</debug>
+							</sign>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>

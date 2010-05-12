@@ -22,7 +22,7 @@ public class StartActivity extends Activity {
 			@Override
 			public void run() {
 				try {
-					Thread.sleep(3*1000);
+					Thread.sleep(2*1000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
