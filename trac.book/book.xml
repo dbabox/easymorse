@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC '-//OASIS//DTD DocBook XML V4.5//EN'
+                         'http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd'>
+<book lang="zh">
+	<bookinfo>
+		<title>怎样使用TRAC</title>
+		<subtitle>写给程序员的TRAC入门</subtitle>
+		<author>
+			<othername>Marshal</othername>
+			<email>Marshal.Wu@gmail.com</email>
+		</author>
+	</bookinfo>
+	<!--	<preface></preface>-->
+	<chapter id="ch1">
+		<title>本文目的
+		</title>
+		<para>向程序开发人员介绍如何使用Trac追踪bug以及管理任务和需求等功能。</para>
+		<para>本文不是对Trac软件面面俱到的介绍。</para>
+		<para>本文通过基于场景，比如一个bug从提交到纠正的过程，介绍Trac的主要功能。</para>
+		<para>希望通过本文，使团队成员都能尽快开始正确合理的使用Trac，提高团队的整体协作能力。</para>
+		<para>本文只介绍安装和定制好的trac的使用，不涉及如何安装和定制trac。</para>
+	</chapter>
+	<chapter id="ch2">
+		<title>为什么要使用Trac</title>
+		<section id="ch2.1">
+			<title>Trac是什么</title>
+			<para>要想说清楚使用Trac的理由，首先需要介绍一下Trac到底是个什么软件。</para>
+			<para>
+				在Trac的官方网站（
+				<ulink url="http://trac.edgewall.org/">http://trac.edgewall.org/</ulink>
+				）是这样介绍自己的：
+			</para>
+			<blockquote>
+				<para>Trac is an enhanced wiki and issue tracking system for
+					software development projects.</para>
+			</blockquote>
+			<para></para>
+		</section>
+	</chapter>
+</book>
