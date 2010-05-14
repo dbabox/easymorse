@@ -34,7 +34,111 @@
 				<para>Trac is an enhanced wiki and issue tracking system for
 					software development projects.</para>
 			</blockquote>
+			<para>Trac是软件开发项目的问题追踪系统，另外，还是一个增强的wiki。</para>
+			<para>这里提到了两个事情，问题追踪（issue tracking）和wiki。</para>
+			<section>
+				<title>和issue tracking相关的事情</title>
+				<para>先说说issue tracking，在软件开发中，比较苦恼的是问题很多，往往不好跟踪，容易遗忘，尤其是多人共事的时候，比如：
+				</para>
+				<itemizedlist>
+					<listitem>
+						<para>项目经理把事情布置下去了，怎么检查事情是否得到解决，事情是否在解决，事情是怎么解决的；</para>
+					</listitem>
+					<listitem>
+						<para>团队成员之间，互相如何知道大家都在做什么，很多团队缺乏沟通，互相都不知道各自在做什么；</para>
+					</listitem>
+					<listitem>
+						<para>问题解决以后，如何保存、整理以便以后总结该问题的处理方法，或者共享给他人；</para>
+					</listitem>
+					<listitem>
+						<para>问题的解决如何与源代码关联；</para>
+					</listitem>
+					<listitem>
+						<para>软件的bug的统一管理，比如用户（测试人员）如何提交bug，bug怎么管理；</para>
+					</listitem>
+					<listitem>
+						<para>软件的需求的统一管理，用户或者其他人提出了要求，怎么管理它，比如甄别是否是需求，如果是，怎么管理；</para>
+					</listitem>
+					<listitem>
+						<para>...</para>
+					</listitem>
+				</itemizedlist>
+				<para>这些都是issue tracking tools能够解决的。现在大家都提issue
+					management，问题管理，早年是bug management，bug管理。</para>
+				<para>软件开发在面向过程年代，往往是瀑布式的开发过程，这样需求和bug分属不同的阶段，bug管理适用于项目软件开发的测试和运维阶段。
+				</para>
+				<para>面向对象的开发，需求和编码可以很容易的融合在同一个阶段内，因为需求的语汇直接映射为开发的对象（domain
+					model），需求的变化很容易反应到代码的变动，不必在程序员脑海里先产生需求数据流图的变化，然后再考虑数据结构，函数参数甚至数据库字段的改动。
+				</para>
+				<para>这样衍生出多种基于增量迭代的开发过程。可以频繁的修改需求，短促的、小步快跑的改动代码，提交版本，反馈给用户。</para>
+				<para>面向对象的好处是，让开发者和用户能拥有相同的词汇空间，开发者在开发中可以始终围绕需求，而不会迷失到编码中去。</para>
+				<para>因此，bug management逐渐演化为issue
+					management，issue包含bug，也包含requirement等。</para>
+			</section>
+			<section>
+				<title>和wiki相关的事情</title>
+				<para>wiki是什么呢，摘一段网上的定义：</para>
+				<blockquote>
+					<para>WiKi，多数人对WiKi的兴趣部分源自维基百科(Wikipedia)的成功。想象一下：一组人坐在一块白板面前，任何人都可以在上面添加想法，做出修改，甚至擦掉一点东西，你就可以对WiKi有了个大致的印象。
+					</para>
+				</blockquote>
+				<para>使用trac，对wiki的体会是：</para>
+				<itemizedlist>
+					<listitem>
+						<para>可以很容易的编写文档，发布到web上，这样发送一个链接，同事们就立刻可以看到；</para>
+					</listitem>
+					<listitem>
+						<para>因为是发布到web上，文档变化后，也不需要再通过邮件附件（比如doc），再通知别人，这样一方面版本很混乱，可能出现你用第二个版本在和拿着第一个版本的人沟通，另一方面，发布一个文档比较繁琐，从潜意识里，让人不爱写文档；
+						</para>
+					</listitem>
+					<listitem>
+						<para>文档生成的格式是html的，很丰富，比word
+							doc文档好，方便互相连接，文档也可以嵌套，可以全文检索，设置可以插入视频等；</para>
+					</listitem>
+					<listitem>
+						<para>wiki是活的文档，可以不断的被更新，如果有需要的话；</para>
+					</listitem>
+					<listitem>
+						<para>它鼓励同事之间写文档沟通，而不是口对口的诉说，写文档是需要思考的，而说话可能很随意；</para>
+					</listitem>
+					<listitem>
+						<para>因为多人为wiki贡献内容，文档成长的很快；</para>
+					</listitem>
+					<listitem>
+						<para>wiki为项目的后来者，提供了学习的机会；</para>
+					</listitem>
+					<listitem>
+						<para>wiki文档也是开发者的备忘录；</para>
+					</listitem>
+					<listitem>
+						<para>需要正式文档的时候，wiki提供了很好的素材；</para>
+					</listitem>
+					<listitem>
+						<para>trac的wiki，和issue management结合的很好，issue的说明以及跟帖，都可以是wiki格式的内容。
+						</para>
+					</listitem>
+				</itemizedlist>
+			</section>
+		</section>
+		<section>
+			<title>和Trac同类的软件</title>
 			<para></para>
+		</section>
+		<section>
+			<title>Trac解决开发中的哪些问题</title>
+			<para></para>
+		</section>
+	</chapter>
+	<chapter>
+		<title>Trac的功能浏览</title>
+		<para>虽然不想逐个讲解Trac的功能，因为有些功能我也未必用过，但是应该在一开始，对Trac有个整体的浏览。</para>
+		<section>
+			<title>Trac首页，也是WIKI首页</title>
+			<para>一个刚刚安装好的Trac大致是这个样子的：</para>
+			<figure>
+				<title>Trac首页截图</title>
+				<graphic fileref="images/a1.png"/>
+			</figure>
 		</section>
 	</chapter>
 </book>
