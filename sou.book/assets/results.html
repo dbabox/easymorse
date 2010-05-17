@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="layout.css" rel="stylesheet" type="text/css" />
+<script language="javascript">
+function loadBookInfo(){
+	document.getElementById("bookName").innerHTML=window.searchResult.getBookName();
+	document.getElementById("bookSummary").innerHTML=window.searchResult.getBookSummary();
+	document.getElementById("bookImage").src=window.searchResult.getBookImageUrl();
+	document.getElementById("bookAuthor").innerHTML=window.searchResult.getBookAuthor();
+}
+</script>
+</head>
+<body onload="loadBookInfo();">
+<h2>图书查询详细信息</h2>
+<hr />
+<h3>书名:</h3>
+<div id="bookName">--</div>
+<div>
+<h3>作者:</h3>
+<div id="bookAuthor">--</div>
+<div>
+<p />
+<img id="bookImage" src="nopicture.PNG"/>
+</div>
+<h3>简介:</h3>
+<div id="bookSummary">--</div>
+</body>
+</html>
