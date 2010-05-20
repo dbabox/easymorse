@@ -6,9 +6,9 @@
 		android:layout_height="wrap_content" android:text="@string/introduction" />
 	<Button android:text="@string/search_button" android:id="@+id/searchButton"
 		android:layout_width="fill_parent" android:layout_height="wrap_content" />
-	<!--
-		<TextView android:id="@+id/searchResult"
-		android:layout_width="fill_parent"
-	-->
-	<!--		android:layout_height="wrap_content" />-->
+	<Button android:text="@string/favorite_button" android:id="@+id/favoriteButton"
+		android:layout_width="fill_parent" android:layout_height="wrap_content" />
+	<Button android:text="@string/order_button" android:id="@+id/orderButton"
+		android:layout_width="fill_parent" android:layout_height="wrap_content" />
+
 </LinearLayout>

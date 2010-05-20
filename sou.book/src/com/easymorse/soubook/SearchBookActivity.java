@@ -15,13 +15,17 @@ import org.xmlpull.v1.XmlPullParserFactory;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.webkit.WebView;
-import android.widget.TextView;
+import android.widget.Button;
 
 public class SearchBookActivity extends Activity {
 	private static String url = "http://api.douban.com/book/subject/isbn/";
 
-	private TextView resultText;
+	private Button returnButton;
+
+	private Button addFavoriteButton;
 
 	private WebView resultWeb;
 
@@ -32,8 +36,6 @@ public class SearchBookActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.search_result);
 
-		resultText = (TextView) this.findViewById(R.id.resultText);
-
 		try {
 			bookInfo = getResultByIsbn(this.getIntent().getExtras().getString(
 					"ISBN"));
@@ -42,9 +44,24 @@ public class SearchBookActivity extends Activity {
 			throw new RuntimeException(e);
 		}
 
-		resultText.setText(bookInfo.getName());
+		this.returnButton = (Button) this.findViewById(R.id.returnButton);
+		this.returnButton.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				SearchBookActivity.this.finish();
+			}
+		});
 
-		resultWeb = (WebView) this.findViewById(R.id.resultWeb);
+		this.addFavoriteButton = (Button) this
+				.findViewById(R.id.favoriteButton);
+
+		if (BookInfoDao.getInstance().get(bookInfo.getIsbn()) == null) {
+			setAddFavorite();
+		} else {
+			setHasAddFavorite();
+		}
+
+		this.resultWeb = (WebView) this.findViewById(R.id.resultWeb);
 		this.resultWeb.getSettings().setSupportZoom(false);
 		this.resultWeb.getSettings().setJavaScriptCanOpenWindowsAutomatically(
 				true);
@@ -69,6 +86,35 @@ public class SearchBookActivity extends Activity {
 				return bookInfo.getAuthor();
 			}
 		}, "searchResult");
+
+		this.resultWeb.addJavascriptInterface(new Object() {
+			public void save(String count) {
+				finish();
+			}
+
+		}, "saveOrderCount");
+	}
+	
+	private void setAddFavorite(){
+		addFavoriteButton.setText("收藏");
+		this.addFavoriteButton.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				BookInfoDao.getInstance().create(bookInfo);
+				setHasAddFavorite();
+			}
+		});
+	}
+
+	private void setHasAddFavorite() {
+		addFavoriteButton.setText("取消收藏");
+		addFavoriteButton.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				BookInfoDao.getInstance().delete(bookInfo);
+				setAddFavorite();
+			}
+		});
 	}
 
 	private BookInfo getResultByIsbn(String isbn)
@@ -87,6 +133,7 @@ public class SearchBookActivity extends Activity {
 		XmlPullParser parser = factory.newPullParser();
 		parser.setInput(inputStream, "UTF-8");
 		BookInfo bookInfo = new BookInfo();
+		bookInfo.setIsbn(this.getIntent().getExtras().getString("ISBN"));
 
 		for (int i = parser.getEventType(); i != XmlPullParser.END_DOCUMENT; i = parser
 				.next()) {
@@ -94,31 +141,26 @@ public class SearchBookActivity extends Activity {
 					&& parser.getName().equals("attribute")
 					&& parser.getAttributeValue(0).equals("title")) {
 				bookInfo.setName(parser.nextText());
-				Log.v("soubook", "title>>" + bookInfo.getName());
 				continue;
 			}
 			if (i == XmlPullParser.START_TAG
 					&& parser.getName().equals("attribute")
 					&& parser.getAttributeValue(0).equals("author")) {
 				bookInfo.setAuthor(parser.nextText());
-				Log.v("soubook", "author>>" + bookInfo.getAuthor());
 				continue;
 			}
 			if (i == XmlPullParser.START_TAG
 					&& parser.getName().equals("summary")) {
 				bookInfo.setSummary(parser.nextText());
-				Log.v("soubook", "summary>>" + bookInfo.getSummary());
 				continue;
 			}
 			if (i == XmlPullParser.START_TAG && parser.getName().equals("link")) {
 				if (parser.getAttributeValue(1).equals("image")) {
 					bookInfo.setImageUrl(parser.getAttributeValue(0));
-					Log.v("soubook", "iamge>>" + bookInfo.getImageUrl());
 				}
 				continue;
 			}
 		}
-		Log.v("soubook", ">>>>> parse end.");
 
 		return bookInfo;
 	}

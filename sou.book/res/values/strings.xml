@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="introduction">搜图书软件, 将通过扫描ISBN条形码, 在线给出该图书的相关信息.</string>
-    <string name="app_name">搜图书</string>
-    <string name="search_button">搜索图书</string>
+	<string name="introduction">搜图书软件, 将通过扫描ISBN条形码, 在线给出该图书的相关信息.</string>
+	<string name="app_name">搜图书</string>
+	<string name="search_button">搜索图书</string>
+	<string name="returnButtonText">返回</string>
+	<string name="favoriteButtonText">收藏</string>
+	<string name="favorite_button">查看收藏</string>
+	<string name="order_button">处理订单</string>
+	<string name="cleanButtonText">清空</string>
 </resources>

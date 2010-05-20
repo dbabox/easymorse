@@ -6,9 +6,10 @@
 		android:layout_height="wrap_content">
 		<Button android:id="@+id/returnButton" android:layout_width="wrap_content"
 			android:layout_height="wrap_content" android:text="@string/returnButtonText" />
-		<Button android:id="@+id/favoriteButton" android:layout_width="wrap_content"
-			android:layout_height="wrap_content" android:text="@string/favoriteButtonText" />
-	</LinearLayout>
-	<WebView android:id="@+id/resultWeb" android:layout_width="fill_parent"
+		<Button android:id="@+id/cleanButton" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/cleanButtonText" />
+	
+</LinearLayout>
+	<WebView android:id="@+id/favoriteWeb" android:layout_width="fill_parent"
 		android:layout_height="0dip" android:layout_weight="1" />
 </LinearLayout>

@@ -11,6 +11,8 @@ public class SouBookMenuActivity extends Activity {
 
 	private Button searchButton;
 
+	private Button favoriteButton;
+
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,19 @@ public class SouBookMenuActivity extends Activity {
 				startActivityForResult(intent, 0);
 			}
 		});
+
+		this.favoriteButton = (Button) this.findViewById(R.id.favoriteButton);
+		this.favoriteButton.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent();
+				intent.setClass(SouBookMenuActivity.this,
+						FavoriteActivity.class);
+				startActivity(intent);
+			}
+		});
+
+		BookInfoDao.initBookInfoDao(this);
 	}
 
 	@Override

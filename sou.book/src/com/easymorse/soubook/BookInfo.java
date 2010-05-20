@@ -1,6 +1,17 @@
 package com.easymorse.soubook;
 
 public class BookInfo {
+	
+	private String isbn;
+	
+	public String getIsbn() {
+		return isbn;
+	}
+
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
+	}
+
 	private String name;
 
 	private String author;

@@ -2,16 +2,34 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link href="layout.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="jquery-1.4.2.min.js"></script>
 <script language="javascript">
 function loadBookInfo(){
-	document.getElementById("bookName").innerHTML=window.searchResult.getBookName();
-	document.getElementById("bookSummary").innerHTML=window.searchResult.getBookSummary();
-	document.getElementById("bookImage").src=window.searchResult.getBookImageUrl();
-	document.getElementById("bookAuthor").innerHTML=window.searchResult.getBookAuthor();
+	$("#bookName").html(window.searchResult.getBookName());
+	$("#bookSummary").html(window.searchResult.getBookSummary());
+	$("#bookImage").attr("src",window.searchResult.getBookImageUrl());
+	$("#bookAuthor").html(window.searchResult.getBookAuthor());
+}
+
+function saveCount(){
+	var count=$("input[name$='orderCount']").attr("value");
+
+	if(isNaN(count)){
+		$("#orderCount").attr("value","");
+		$("#orderCount").focus();
+		$("#errorMessage").html("必须输入数字.");
+		return;
+	}
+	window.saveOrderCount.save(count);
 }
 </script>
 </head>
 <body onload="loadBookInfo();">
+<h2>订购数量</h2>
+<div><input type="text" name="orderCount"/><div id="errorMessage"></div>
+<button onclick="saveCount();">提交</button>
+</div>
+<hr />
 <h2>图书查询详细信息</h2>
 <hr />
 <h3>书名:</h3>
@@ -20,8 +38,7 @@ function loadBookInfo(){
 <h3>作者:</h3>
 <div id="bookAuthor">--</div>
 <div>
-<p />
-<img id="bookImage" src="nopicture.PNG"/>
+<p /><img id="bookImage" src="nopicture.PNG" />
 </div>
 <h3>简介:</h3>
 <div id="bookSummary">--</div>
