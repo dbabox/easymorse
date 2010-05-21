@@ -111,7 +111,7 @@ public class SearchBookActivity extends Activity {
 		addFavoriteButton.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				BookInfoDao.getInstance().delete(bookInfo);
+				BookInfoDao.getInstance().delete(bookInfo.getIsbn());
 				setAddFavorite();
 			}
 		});

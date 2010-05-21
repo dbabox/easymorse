@@ -50,13 +50,14 @@ public class BookInfoDao {
 	public JSONArray list() {
 		JSONArray array = new JSONArray();
 
-		Cursor cursor = database.rawQuery("select name from favorite_books",
+		Cursor cursor = database.rawQuery("select name,isbn from favorite_books",
 				new String[] {});
 
 		while (cursor.moveToNext()) {
 			JSONObject object = new JSONObject();
 			try {
 				object.put("name", cursor.getString(0));
+				object.put("isbn", cursor.getString(1));
 			} catch (JSONException e) {
 				throw new RuntimeException(e);
 			}
@@ -68,10 +69,10 @@ public class BookInfoDao {
 		return array;
 	}
 
-	public void delete(BookInfo bookInfo) {
+	public void delete(String isbn) {
 		SQLiteStatement statement = database
 				.compileStatement("delete from favorite_books where isbn=?");
-		statement.bindString(1, bookInfo.getIsbn());
+		statement.bindString(1, isbn);
 		statement.execute();
 		statement.close();
 	}

@@ -8,4 +8,5 @@
 	<string name="favorite_button">查看收藏</string>
 	<string name="order_button">处理订单</string>
 	<string name="cleanButtonText">清空</string>
+	<string name="deleteButtonText">删除</string>
 </resources>

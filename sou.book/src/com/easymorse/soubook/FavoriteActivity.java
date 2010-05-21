@@ -1,11 +1,16 @@
 package com.easymorse.soubook;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.webkit.WebView;
@@ -18,6 +23,12 @@ public class FavoriteActivity extends Activity {
 	private Button returnButton;
 
 	private Button cleanButton;
+
+	private Button deleteButton;
+
+	private Handler handler = new Handler();
+
+	private Set<String> deleteSet = new HashSet<String>();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -47,26 +58,42 @@ public class FavoriteActivity extends Activity {
 									int which) {
 								BookInfoDao.getInstance().deleteAll();
 								new Handler().post(new Runnable() {
-									
 									@Override
 									public void run() {
-										resultWeb.loadUrl("javascript:listFavorite()");
+										resultWeb
+												.loadUrl("javascript:listFavorite()");
 									}
 								});
+								deleteSet.clear();
 								dialog.dismiss();
 							}
 
 						});
-				builder.setNegativeButton("取消", new DialogInterface.OnClickListener(){
+				builder.setNegativeButton("取消",
+						new DialogInterface.OnClickListener() {
 
-					@Override
-					public void onClick(DialogInterface dialog, int which) {
-						dialog.dismiss();
-					}
-					
-				});
-				
+							@Override
+							public void onClick(DialogInterface dialog,
+									int which) {
+								dialog.dismiss();
+							}
+
+						});
+
 				builder.create().show();
+			}
+		});
+
+		this.deleteButton = (Button) this.findViewById(R.id.deleteButton);
+		this.deleteButton.setEnabled(false);
+		this.deleteButton.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				for (String isbn : deleteSet) {
+					BookInfoDao.getInstance().delete(isbn);
+				}
+				deleteButton.setEnabled(false);
+				resultWeb.loadUrl("javascript:listFavorite()");
 			}
 		});
 
@@ -82,6 +109,42 @@ public class FavoriteActivity extends Activity {
 			public String getFavoriteResult() {
 				return BookInfoDao.getInstance().list().toString();
 			}
+
+			public void addDeleteItem(String isbn) {
+				deleteSet.add(isbn);
+				updateDeleteButtonStatus();
+			}
+
+			public void removeDeleteItem(String isbn) {
+				deleteSet.remove(isbn);
+				updateDeleteButtonStatus();
+			}
+
+			public void getDetail(final String isbn) {
+				Log.v("soubook", ">>>>"+isbn);
+				handler.post(new Runnable() {
+					@Override
+					public void run() {
+						Intent intent = new Intent();
+						intent.setClass(FavoriteActivity.this,
+								SearchBookActivity.class);
+						intent.putExtra("ISBN", isbn);
+						startActivity(intent);
+					}
+				});
+			}
+
+			private void updateDeleteButtonStatus() {
+				handler.post(new Runnable() {
+
+					@Override
+					public void run() {
+						deleteButton.setEnabled(!deleteSet.isEmpty());
+					}
+				});
+			}
+
 		}, "favoriteControl");
+
 	}
 }
