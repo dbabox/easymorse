@@ -9,6 +9,7 @@ import android.media.MediaPlayer.OnPreparedListener;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.MediaController;
@@ -83,4 +84,12 @@ public class PlayMp4 extends Activity {
 		mVideoView.pause();
 		i = mVideoView.getCurrentPosition();
 	}
+	@Override 
+    public boolean onKeyDown(int keyCode, KeyEvent event) { 
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) { 
+        	finish();
+            return true; 
+        } 
+        return false; 
+    }
 }
