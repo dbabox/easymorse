@@ -9,7 +9,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Html;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -85,7 +84,7 @@ public class CustomerPlayer extends TabActivity {
 						content.setImageUrl("" + R.drawable.c1);
 						content
 								.setUrl("http://dev2.mopietek.net:8080/mp4/320480flv.3gp");
-						content.setHeightUrl("/sdcard/Video/ztx0520.3gp");
+						content.setHeightUrl("/sdcard/Video/www.3gp");
 						content.setWidthUrl("/sdcard/Video/ztx0520.3gp");
 						items.add(content);
 						content = new Content();
@@ -96,11 +95,10 @@ public class CustomerPlayer extends TabActivity {
 						content
 								.setUrl("http://dev2.mopietek.net:8080/mp4/320480flv.3gp");
 						content
-								.setHeightUrl("http://192.168.0.56:8080/mp4/flv.3gp");
+								.setHeightUrl("http://dev2.mopietek.net:8080/mp4/new.3gp");
 						content
-								.setWidthUrl("http://192.168.0.56:8080/mp4/ztx0520.3gp");
+								.setWidthUrl("http://dev2.mopietek.net:8080/mp4/480320.3gp");
 						items.add(content);
-
 						content = new Content();
 						content.setTitle("花木兰");
 						content
@@ -109,11 +107,10 @@ public class CustomerPlayer extends TabActivity {
 						content
 								.setUrl("http://dev2.mopietek.net:8080/mp4/320480flv.3gp");
 						content
-								.setHeightUrl("http://192.168.0.56:8080/mp4/xyx.3gp");
+								.setHeightUrl("http://dev2.mopietek.net:8080/mp4/new.3gp");
 						content
-								.setWidthUrl("http://dev2.mopietek.net:8080/mp4/480320flv.3gp");
+								.setWidthUrl("http://dev2.mopietek.net:8080/mp4/480320.3gp");
 						items.add(content);
-
 						content = new Content();
 						content.setTitle("达芬奇密码");
 						content
@@ -122,9 +119,9 @@ public class CustomerPlayer extends TabActivity {
 						content
 								.setUrl("http://dev2.mopietek.net:8080/mp4/320480flv.3gp");
 						content
-								.setHeightUrl("http://dev2.mopietek.net:8080/mp4/xyx.3gp");
+								.setHeightUrl("http://dev2.mopietek.net:8080/mp4/new.3gp");
 						content
-								.setWidthUrl("http://dev2.mopietek.net:8080/mp4/480320flv.3gp");
+								.setWidthUrl("http://dev2.mopietek.net:8080/mp4/480320.3gp");
 						items.add(content);
 					}
 
@@ -316,13 +313,13 @@ public class CustomerPlayer extends TabActivity {
 			return view;
 		}
 	}
-	
-	@Override 
-    public boolean onKeyDown(int keyCode, KeyEvent event) { 
-        if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) { 
-        	finish();
-            return true; 
-        } 
-        return false; 
-    }
+
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
+			finish();
+			return true;
+		}
+		return false;
+	}
 }
