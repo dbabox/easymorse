@@ -1,0 +1,72 @@
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<title>RGraph条形图</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="rgraph html5 canvas basic example" />
+<meta name="description" content="RGraph: A basic example" />
+
+<!-- 1/3. Include the RGraph libraries -->
+<script src="js/RGraph.common.core.js"></script>
+<script src="js/RGraph.bar.js"></script>
+<script src="js/RGraph.common.annotate.js"></script>
+<script src="js/RGraph.common.context.js"></script>
+<script src="js/RGraph.common.tooltips.js"></script>
+<script src="js/RGraph.common.resizing.js"></script>
+<!--[if IE]><script src="js/excanvas.compressed.js"></script><![endif]-->
+
+<script>
+window.onload = function ()
+{
+	var bar4 = new RGraph.Bar('bar4', [                             
+                                   [0.000092, 0.00008,0.00005],
+                                   [0.000034, 0.000057,0.00005],
+                                   [0.000056, 0.000062,0.00005],
+                                   [0.000055, 0.000045,0.00005],
+                                   [0.000036, 0.000012,0.00005],
+                                   [0.000044, 0.000056,0.00005],
+                                   [0.000051, 0.000066,0.00005],
+                                   [0.000068, 0.000088,0.00005]]);
+    bar4.Set('chart.title', '带分组的条形图');
+    bar4.Set('chart.gutter', 50);
+    bar4.Set('chart.background.barcolor1', 'white');
+    bar4.Set('chart.background.barcolor2', 'white');
+    bar4.Set('chart.labels', ['1', '2', '3', '4', '5', '6', '7', '8']);
+    bar4.Set('chart.key', ['灰太狼', '喜羊羊','大灰']);
+    bar4.Set('chart.key.position', 'gutter');
+   
+    bar4.Set('chart.key.shadow', true);
+    bar4.Set('chart.colors', ['#00f', '#0f0','red']);
+    bar4.Set('chart.shadow', true);
+    bar4.Set('chart.shadow.offsety', -3);
+    bar4.Set('chart.shadow.color', '#aaa');
+    bar4.Set('chart.yaxispos', 'right');
+
+    bar4.Set('chart.tooltips.event', 'onmousemove');
+    bar4.Set('chart.tooltips.effect', 'fade');
+
+    bar4.Set('chart.tooltips', [
+                                '灰太狼', '喜羊羊', '大灰',
+                                '灰太狼', '喜羊羊', '大灰',
+                                '灰太狼', '喜羊羊', '大灰',
+                                '灰太狼', '喜羊羊', '大灰',
+                                '灰太狼', '喜羊羊', '大灰',
+                                '灰太狼', '喜羊羊', '大灰',
+                                '灰太狼', '喜羊羊', '大灰',
+                                '灰太狼', '喜羊羊', '大灰'
+                               ]);
+    
+    bar4.Draw();
+}
+</script> 
+
+</head>
+
+<body>
+
+<h1>RGraph条形图示例</h1>
+
+<canvas id="bar4" width="450" height="200">[No canvas support]</canvas> 
+
+</body>
