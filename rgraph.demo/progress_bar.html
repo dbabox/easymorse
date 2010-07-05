@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<title>RGraph进度条</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="rgraph html5 canvas basic example" />
+<meta name="description" content="RGraph: A basic example" />
+
+<!-- 1/3. Include the RGraph libraries -->
+<script src="js/RGraph.common.core.js"></script>
+<script src="js/RGraph.common.annotate.js"></script>
+<script src="js/RGraph.common.context.js"></script>
+<script src="js/RGraph.common.tooltips.js"></script>
+<script src="js/RGraph.common.zoom.js" ></script> 
+<script src="js/RGraph.common.resizing.js"></script>
+<script src="js/RGraph.progress.js"></script>
+<!--[if IE]><script src="js/excanvas.compressed.js"></script><![endif]-->
+
+<script>
+window.onload = function ()
+{
+	 var progress1 = new RGraph.Progress('progress1', 63, 100);
+     progress1.Set('chart.tickmarks', false);
+     progress1.Set('chart.arrows', false);
+     progress1.Set('chart.annotatable', false);
+     progress1.Set('chart.margin', 3);
+     progress1.Set('chart.tickmarks.inner', false);
+     progress1.Set('chart.label.inner', true);
+     progress1.Set('chart.units.post', '%');
+     progress1.Draw();
+}
+</script> 
+
+</head>
+
+<body>
+
+<h1>RGraph进度条示例</h1>
+
+<canvas width="450" height="75" id="progress1">[No canvas support]</canvas>
+
+</body>
