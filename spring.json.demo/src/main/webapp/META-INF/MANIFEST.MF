@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Class-Path: aopalliance-1.0.jar commons-logging-1.1.1.jar jackson-core
- -asl-1.4.1.jar jackson-mapper-asl-1.4.1.jar spring-aop-3.0.0.RELEASE.
- jar spring-asm-3.0.0.RELEASE.jar spring-beans-3.0.0.RELEASE.jar sprin
- g-context-3.0.0.RELEASE.jar spring-core-3.0.0.RELEASE.jar spring-expr
- ession-3.0.0.RELEASE.jar spring-jdbc-3.0.0.RELEASE.jar spring-orm-3.0
- .0.RELEASE.jar spring-tx-3.0.0.RELEASE.jar spring-web-3.0.0.RELEASE.j
- ar spring-webmvc-3.0.0.RELEASE.jar
-
