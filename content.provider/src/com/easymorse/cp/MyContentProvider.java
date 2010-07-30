@@ -7,7 +7,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;
 import android.net.Uri;
-import android.util.Log;
 
 public class MyContentProvider extends ContentProvider {
 
@@ -75,7 +74,6 @@ public class MyContentProvider extends ContentProvider {
 	public Cursor query(Uri uri, String[] projection, String selection,
 			String[] selectionArgs, String sortOrder) {
 		Cursor cursor = database.rawQuery("select * from emperors", null);
-		Log.i("mycp", "cursor>" + cursor);
 		return cursor;
 	}
 
