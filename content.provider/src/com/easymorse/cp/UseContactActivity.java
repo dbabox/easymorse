@@ -22,13 +22,20 @@ public class UseContactActivity extends Activity {
 		Cursor cursor = managedQuery(MyContentProvider.CONTENT_URI, null, null,
 				null, null);
 		while (cursor.moveToNext()) {
-			builder.append(
-					cursor.getString(cursor
-							.getColumnIndex(MyContentProvider.NAME))).append(
-					" | ").append(
-					cursor.getColumnIndex(MyContentProvider.DYNASTY)).append(
-					" | ").append(
-					cursor.getColumnIndex(MyContentProvider.DYNASTY));
+			builder
+					.append(
+							cursor.getString(cursor
+									.getColumnIndex(MyContentProvider.NAME)))
+					.append(" | ")
+					.append(
+							cursor
+									.getString(cursor
+											.getColumnIndex(MyContentProvider.START_YEAR)))
+					.append(" | ")
+					.append(
+							cursor.getString(cursor
+									.getColumnIndex(MyContentProvider.DYNASTY)))
+					.append("\n");
 		}
 
 		return builder.toString();

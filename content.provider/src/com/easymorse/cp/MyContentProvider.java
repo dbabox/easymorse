@@ -10,7 +10,8 @@ import android.net.Uri;
 
 public class MyContentProvider extends ContentProvider {
 
-	public static final Uri CONTENT_URI = Uri.parse("content://com.easymorse.cp.mycp");
+	public static final Uri CONTENT_URI = Uri
+			.parse("content://com.easymorse.cp.mycp");
 
 	public static final String _ID = "id";
 
