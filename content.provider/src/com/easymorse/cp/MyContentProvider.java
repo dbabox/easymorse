@@ -1,5 +1,10 @@
 package com.easymorse.cp;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
 import android.content.ContentProvider;
 import android.content.ContentUris;
 import android.content.ContentValues;
@@ -29,6 +34,8 @@ public class MyContentProvider extends ContentProvider {
 
 	public static final String START_YEAR = "start_year";
 
+	public static final String IMAGE = "image";
+
 	private static SQLiteDatabase database;
 
 	private static final String TABLE_EMPERORS = "emperors";
@@ -39,7 +46,7 @@ public class MyContentProvider extends ContentProvider {
 
 	private static UriMatcher uriMatcher;
 
-	private static final int DATABASE_VERSION = 1;
+	private static final int DATABASE_VERSION = 2;
 
 	static {
 		uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
@@ -127,29 +134,57 @@ public class MyContentProvider extends ContentProvider {
 
 	private static class MyDatabaseHelper extends SQLiteOpenHelper {
 
+		private Context context;
+
 		public MyDatabaseHelper(Context context, String name,
 				CursorFactory factory, int version) {
 			super(context, name, factory, version);
+			this.context = context;
+		}
+
+		private byte[] getImageData(int rawId) {
+			InputStream inputStream = context.getResources().openRawResource(
+					rawId);
+			ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+			byte[] data = new byte[1024 * 100];
+
+			try {
+				for (int i = inputStream.read(data); i > 0; i = inputStream
+						.read(data)) {
+					outputStream.write(data, 0, i);
+				}
+
+				inputStream.close();
+				data = outputStream.toByteArray();
+				outputStream.close();
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+			return data;
 		}
 
 		@Override
 		public void onCreate(SQLiteDatabase database) {
 			database.execSQL("create table if not exists emperors("
 					+ " id integer primary key autoincrement," + " name text,"
-					+ "dynasty text," + "start_year text" + ");");
+					+ "dynasty text," + "start_year text," + "image blob"
+					+ ");");
 
 			SQLiteStatement statement = database
-					.compileStatement("insert into emperors(name,dynasty,start_year) values(?,?,?)");
+					.compileStatement("insert into emperors(name,dynasty,start_year,image) values(?,?,?,?)");
 			int index = 1;
 			statement.bindString(index++, "朱元璋");
 			statement.bindString(index++, "明");
 			statement.bindString(index++, "1398");
+			statement.bindBlob(index++, getImageData(R.raw.e1));
 			statement.execute();
 
 			index = 1;
 			statement.bindString(index++, "玄烨");
 			statement.bindString(index++, "清");
 			statement.bindString(index++, "1722");
+			statement.bindBlob(index++, getImageData(R.raw.e2));
 			statement.execute();
 
 			statement.close();

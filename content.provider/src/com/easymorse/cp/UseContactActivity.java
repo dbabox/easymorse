@@ -1,21 +1,33 @@
 package com.easymorse.cp;
 
+import java.io.ByteArrayInputStream;
+
 import android.app.Activity;
 import android.content.ContentValues;
 import android.database.Cursor;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class UseContactActivity extends Activity {
+
+	ImageView imageView;
+
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
+		LinearLayout layout = new LinearLayout(this);
+		layout.setOrientation(LinearLayout.VERTICAL);
+		this.setContentView(layout);
 		TextView textView = new TextView(this);
 		textView.setText(getContentProviderValues());
-		// modifyRecord();
-		this.setContentView(textView);
+		layout.addView(textView);
+		layout.addView(imageView);
+
 	}
 
 	private void modifyRecord() {
@@ -31,8 +43,9 @@ public class UseContactActivity extends Activity {
 		// 查名称和朝代，朝代=明，而且按照登基时间倒排序
 		Cursor cursor = managedQuery(MyContentProvider.CONTENT_URI,
 				new String[] { MyContentProvider.NAME,
-						MyContentProvider.DYNASTY }, MyContentProvider.DYNASTY
-						+ "=?", new String[] { "明" }, " start_year desc");
+						MyContentProvider.DYNASTY, MyContentProvider.IMAGE },
+				MyContentProvider.DYNASTY + "=?", new String[] { "明" },
+				" start_year desc");
 
 		// 查全部记录
 		// Cursor cursor = managedQuery(MyContentProvider.CONTENT_URI, null,
@@ -59,6 +72,12 @@ public class UseContactActivity extends Activity {
 							cursor.getString(cursor
 									.getColumnIndex(MyContentProvider.DYNASTY)))
 					.append("\n");
+
+			this.imageView = new ImageView(this);
+			this.imageView.setImageDrawable(Drawable.createFromStream(
+					new ByteArrayInputStream(cursor.getBlob(cursor
+							.getColumnIndex(MyContentProvider.IMAGE))),
+					"image.png"));
 		}
 
 		return builder.toString();
