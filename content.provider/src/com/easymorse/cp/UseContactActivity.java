@@ -1,11 +1,12 @@
 package com.easymorse.cp;
 
-import java.io.ByteArrayInputStream;
+import java.io.FileNotFoundException;
 
 import android.app.Activity;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -74,10 +75,22 @@ public class UseContactActivity extends Activity {
 					.append("\n");
 
 			this.imageView = new ImageView(this);
-			this.imageView.setImageDrawable(Drawable.createFromStream(
-					new ByteArrayInputStream(cursor.getBlob(cursor
-							.getColumnIndex(MyContentProvider.IMAGE))),
-					"image.png"));
+			try {
+				this.imageView
+						.setImageDrawable(Drawable
+								.createFromStream(
+										getContentResolver()
+												.openInputStream(
+														Uri
+																.withAppendedPath(
+																		MyContentProvider.CONTENT_URI,
+																		cursor
+																				.getString(cursor
+																						.getColumnIndex(MyContentProvider.IMAGE)))),
+										"a.png"));
+			} catch (FileNotFoundException e) {
+				throw new RuntimeException(e);
+			}
 		}
 
 		return builder.toString();

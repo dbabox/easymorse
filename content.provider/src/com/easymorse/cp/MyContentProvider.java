@@ -1,10 +1,12 @@
 package com.easymorse.cp;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
+import android.app.Activity;
 import android.content.ContentProvider;
 import android.content.ContentUris;
 import android.content.ContentValues;
@@ -17,6 +19,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteStatement;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.net.Uri;
+import android.os.ParcelFileDescriptor;
 import android.util.Log;
 
 public class MyContentProvider extends ContentProvider {
@@ -46,7 +49,7 @@ public class MyContentProvider extends ContentProvider {
 
 	private static UriMatcher uriMatcher;
 
-	private static final int DATABASE_VERSION = 2;
+	private static final int DATABASE_VERSION = 3;
 
 	static {
 		uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
@@ -66,6 +69,14 @@ public class MyContentProvider extends ContentProvider {
 		default:
 			throw new IllegalArgumentException("Unsupported URI: " + uri);
 		}
+	}
+
+	@Override
+	public ParcelFileDescriptor openFile(Uri uri, String mode)
+			throws FileNotFoundException {
+		return ParcelFileDescriptor.open(new File(
+				"/data/data/com.easymorse.cp/files", uri.getPathSegments().get(
+						1)), ParcelFileDescriptor.MODE_READ_ONLY);
 	}
 
 	@Override
@@ -142,33 +153,34 @@ public class MyContentProvider extends ContentProvider {
 			this.context = context;
 		}
 
-		private byte[] getImageData(int rawId) {
+		private String getImageData(int rawId) {
+			String uri = "";
 			InputStream inputStream = context.getResources().openRawResource(
 					rawId);
-			ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+
 			byte[] data = new byte[1024 * 100];
 
 			try {
+				FileOutputStream outputStream = context.openFileOutput(rawId
+						+ ".png", Activity.MODE_WORLD_WRITEABLE);
 				for (int i = inputStream.read(data); i > 0; i = inputStream
 						.read(data)) {
 					outputStream.write(data, 0, i);
 				}
 
 				inputStream.close();
-				data = outputStream.toByteArray();
 				outputStream.close();
 			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}
-
-			return data;
+			return rawId + ".png";
 		}
 
 		@Override
 		public void onCreate(SQLiteDatabase database) {
 			database.execSQL("create table if not exists emperors("
 					+ " id integer primary key autoincrement," + " name text,"
-					+ "dynasty text," + "start_year text," + "image blob"
+					+ "dynasty text," + "start_year text," + "image text"
 					+ ");");
 
 			SQLiteStatement statement = database
@@ -177,14 +189,14 @@ public class MyContentProvider extends ContentProvider {
 			statement.bindString(index++, "朱元璋");
 			statement.bindString(index++, "明");
 			statement.bindString(index++, "1398");
-			statement.bindBlob(index++, getImageData(R.raw.e1));
+			statement.bindString(index++, getImageData(R.raw.e1));
 			statement.execute();
 
 			index = 1;
 			statement.bindString(index++, "玄烨");
 			statement.bindString(index++, "清");
 			statement.bindString(index++, "1722");
-			statement.bindBlob(index++, getImageData(R.raw.e2));
+			statement.bindString(index++, getImageData(R.raw.e2));
 			statement.execute();
 
 			statement.close();
