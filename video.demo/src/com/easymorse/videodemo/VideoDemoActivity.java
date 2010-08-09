@@ -1,5 +1,7 @@
 package com.easymorse.videodemo;
 
+import java.util.Observable;
+
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
@@ -10,6 +12,7 @@ import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.Gallery;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -32,6 +35,7 @@ public class VideoDemoActivity extends Activity {
 		listView = (ListView) this.findViewById(R.id.list);
 		listView.addHeaderView(LayoutInflater.from(this).inflate(
 				R.layout.table_title, null));
+		
 		this.gallery = (Gallery) this.findViewById(R.id.gallery);
 		this.gallery.setAdapter(new ImageAdapter(this));
 		this.gallery.setOnItemClickListener(new OnItemClickListener() {

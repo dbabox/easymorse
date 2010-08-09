@@ -7,12 +7,17 @@
 		android:focusable="true" android:focusableInTouchMode="true"
 		android:paddingBottom="2px">
 		<com.easymorse.videodemo.MyTextButton
+			android:id="@+id/b1"
 			android:layout_width="wrap_content" android:layout_height="match_parent"
 			android:text="电影" android:layout_weight="1" />
-		<Button android:layout_width="wrap_content"
+		<com.easymorse.videodemo.MyTextButton 
+			android:id="@+id/b2"
+			android:layout_width="wrap_content"
 			android:layout_height="match_parent" android:text="电视"
 			android:layout_weight="1" />
-		<Button android:layout_width="wrap_content"
+		<com.easymorse.videodemo.MyTextButton 
+			android:id="@+id/b3"
+			android:layout_width="wrap_content"
 			android:layout_height="match_parent" android:text="明星"
 			android:layout_weight="1" />
 	</LinearLayout>
