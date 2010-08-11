@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@drawable/background_color">
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="10dip" />
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="40dip">
+		<com.easymorse.textbutton.TextButton
+			android:layout_width="fill_parent" android:layout_height="fill_parent"
+			android:layout_weight="1" android:text="电影"
+			android:gravity="center_vertical|center_horizontal"
+			android:background="@drawable/button" android:focusable="true" android:clickable="true"/>
+		<View android:layout_width="2px" android:layout_height="fill_parent"
+			android:background="#ffffffff" />
+		<com.easymorse.textbutton.TextButton
+			android:layout_width="fill_parent" android:layout_height="fill_parent" android:clickable="true"
+			android:layout_weight="1" android:text="电视"
+			android:gravity="center_vertical|center_horizontal"
+			android:background="@drawable/button" android:focusable="true" />
+		<View android:layout_width="2px" android:layout_height="fill_parent"
+			android:background="#ffffffff" />
+		<com.easymorse.textbutton.TextButton
+			android:layout_width="fill_parent" android:layout_height="fill_parent" android:clickable="true"
+			android:layout_weight="1" android:text="明星"
+			android:gravity="center_vertical|center_horizontal"
+			android:background="@drawable/button" android:focusable="true" />
+	</LinearLayout>
+</LinearLayout>
