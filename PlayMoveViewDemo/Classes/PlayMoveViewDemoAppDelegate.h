@@ -4,7 +4,7 @@
 //
 //  Created by wangjun on 10-8-12.
 //  Copyright __MyCompanyName__ 2010. All rights reserved.
-//
+
 
 #import <UIKit/UIKit.h>
 
