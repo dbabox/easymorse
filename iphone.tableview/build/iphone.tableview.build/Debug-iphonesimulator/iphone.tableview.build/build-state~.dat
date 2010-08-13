@@ -1,0 +1,256 @@
+Tiphone.tableview
+v7
+r0
+t303360865.437706
+cCheck dependencies
+cProcessInfoPlistFile /Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app/Info.plist iphone_tableview-Info.plist
+cCompileXIB /Users/vsp/iosapp/iphone.tableview/MainWindow.xib
+cCompileXIB /Users/vsp/iosapp/iphone.tableview/iphone_tableviewViewController.xib
+cProcessPCH /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iphone_tableview_Prefix-aztuzvaegystiofprgendouwagus/iphone_tableview_Prefix.pch.gch iphone_tableview_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/Objects-normal/i386/main.o /Users/vsp/iosapp/iphone.tableview/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/Objects-normal/i386/iphone_tableviewAppDelegate.o /Users/vsp/iosapp/iphone.tableview/Classes/iphone_tableviewAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/Objects-normal/i386/iphone_tableviewViewController.o /Users/vsp/iosapp/iphone.tableview/Classes/iphone_tableviewViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app/iphone.tableview normal i386
+cGenerateDSYMFile /Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app.dSYM /Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app/iphone.tableview
+cTouch /Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk
+c000000004C58250200000000000000EE
+t1280845058
+s238
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004B2B4CC3000000000026EE30
+t1261128899
+s2551344
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004B2B4DC8000000000027E880
+t1261129160
+s2615424
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004B2B4DAE0000000000001355
+t1261129134
+s4949
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004B2B61620000000000000788
+t1261134178
+s1928
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004B2B62B500000000016721E0
+t1261134517
+s23536096
+
+N/Users/vsp/iosapp/iphone.tableview/Classes/iphone_tableviewAppDelegate.h
+c000000004C64B3D60000000000000210
+t1281668054
+s528
+i<UIKit/UIKit.h>
+
+N/Users/vsp/iosapp/iphone.tableview/Classes/iphone_tableviewAppDelegate.m
+c000000004C64B3D60000000000000292
+t1281668054
+s658
+i"iphone_tableviewAppDelegate.h"
+i"iphone_tableviewViewController.h"
+
+N/Users/vsp/iosapp/iphone.tableview/Classes/iphone_tableviewViewController.h
+c000000004C64B3D60000000000000104
+t1281668054
+s260
+i<UIKit/UIKit.h>
+
+N/Users/vsp/iosapp/iphone.tableview/Classes/iphone_tableviewViewController.m
+c000000004C64B3D600000000000005D6
+t1281668054
+s1494
+i"iphone_tableviewViewController.h"
+
+N/Users/vsp/iosapp/iphone.tableview/MainWindow.xib
+c000000004C64B3D600000000000024B1
+t1281668054
+s9393
+
+N/Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app
+t1281668065
+s238
+
+N/Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app.dSYM
+t1281668065
+s102
+
+N/Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app/Info.plist
+t1281668061
+s606
+
+N/Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app/MainWindow.nib
+t1281668062
+s1513
+
+N/Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app/PkgInfo
+t1281668061
+s8
+
+N/Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app/iphone.tableview
+t1281668065
+s19648
+
+N/Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app/iphone_tableviewViewController.nib
+t1281668062
+s1151
+
+N/Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/Objects-normal/i386/iphone.tableview.LinkFileList
+c000000004C64B3DD00000000000001C9
+t1281668061
+s457
+
+N/Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/Objects-normal/i386/iphone_tableviewAppDelegate.o
+t1281668064
+s38272
+
+N/Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/Objects-normal/i386/iphone_tableviewViewController.o
+t1281668064
+s30056
+
+N/Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/Objects-normal/i386/main.o
+t1281668064
+s5948
+
+N/Users/vsp/iosapp/iphone.tableview/iphone_tableviewViewController.xib
+c000000004C64B3D600000000000018FF
+t1281668054
+s6399
+
+N/Users/vsp/iosapp/iphone.tableview/iphone_tableview_Prefix.pch
+c000000004C64B3D600000000000000C9
+t1281668054
+s201
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/vsp/iosapp/iphone.tableview/main.m
+c000000004C64B3D6000000000000016D
+t1281668054
+s365
+i<UIKit/UIKit.h>
+
+N/var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iphone_tableview_Prefix-aztuzvaegystiofprgendouwagus/iphone_tableview_Prefix.pch.gch
+t1281668064
+s13034960
+
+Niphone_tableview-Info.plist
+c000000004C64B3D6000000000000038D
+t1281668054
+s909
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies303360861#303360861#0(0"0(0#1#0"4300885448#0"0#
+
+CCompileC build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/Objects-normal/i386/iphone_tableviewAppDelegate.o /Users/vsp/iosapp/iphone.tableview/Classes/iphone_tableviewAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s303360864.767181
+e303360864.866888
+r1
+xCompileC
+xbuild/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/Objects-normal/i386/iphone_tableviewAppDelegate.o
+x/Users/vsp/iosapp/iphone.tableview/Classes/iphone_tableviewAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@80"Compile /Users/vsp/iosapp/iphone.tableview/Classes/iphone_tableviewAppDelegate.m303360864#303360864#0(0"0(0#0#72"/Users/vsp/iosapp/iphone.tableview/Classes/iphone_tableviewAppDelegate.m4300885448#2049"    cd /Users/vsp/iosapp/iphone.tableview    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/iphone.tableview-generated-files.hmap -I/Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/iphone.tableview-own-target-headers.hmap -I/Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/iphone.tableview-all-target-headers.hmap -iquote /Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/iphone.tableview-project-headers.hmap -F/Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator -I/Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/DerivedSources/i386 -I/Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iphone_tableview_Prefix-aztuzvaegystiofprgendouwagus/iphone_tableview_Prefix.pch -c /Users/vsp/iosapp/iphone.tableview/Classes/iphone_tableviewAppDelegate.m -o /Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/Objects-normal/i386/iphone_tableviewAppDelegate.o0#
+
+CCompileC build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/Objects-normal/i386/iphone_tableviewViewController.o /Users/vsp/iosapp/iphone.tableview/Classes/iphone_tableviewViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s303360864.840555
+e303360864.957826
+r1
+xCompileC
+xbuild/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/Objects-normal/i386/iphone_tableviewViewController.o
+x/Users/vsp/iosapp/iphone.tableview/Classes/iphone_tableviewViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@83"Compile /Users/vsp/iosapp/iphone.tableview/Classes/iphone_tableviewViewController.m303360864#303360864#0(0"0(0#0#75"/Users/vsp/iosapp/iphone.tableview/Classes/iphone_tableviewViewController.m4300885448#2055"    cd /Users/vsp/iosapp/iphone.tableview    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/iphone.tableview-generated-files.hmap -I/Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/iphone.tableview-own-target-headers.hmap -I/Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/iphone.tableview-all-target-headers.hmap -iquote /Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/iphone.tableview-project-headers.hmap -F/Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator -I/Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/DerivedSources/i386 -I/Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iphone_tableview_Prefix-aztuzvaegystiofprgendouwagus/iphone_tableview_Prefix.pch -c /Users/vsp/iosapp/iphone.tableview/Classes/iphone_tableviewViewController.m -o /Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/Objects-normal/i386/iphone_tableviewViewController.o0#
+
+CCompileC build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/Objects-normal/i386/main.o /Users/vsp/iosapp/iphone.tableview/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s303360864.766044
+e303360864.840455
+r1
+xCompileC
+xbuild/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/Objects-normal/i386/main.o
+x/Users/vsp/iosapp/iphone.tableview/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@49"Compile /Users/vsp/iosapp/iphone.tableview/main.m303360864#303360864#0(0"0(0#0#41"/Users/vsp/iosapp/iphone.tableview/main.m4300885448#1995"    cd /Users/vsp/iosapp/iphone.tableview    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/iphone.tableview-generated-files.hmap -I/Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/iphone.tableview-own-target-headers.hmap -I/Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/iphone.tableview-all-target-headers.hmap -iquote /Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/iphone.tableview-project-headers.hmap -F/Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator -I/Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/DerivedSources/i386 -I/Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iphone_tableview_Prefix-aztuzvaegystiofprgendouwagus/iphone_tableview_Prefix.pch -c /Users/vsp/iosapp/iphone.tableview/main.m -o /Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/Objects-normal/i386/main.o0#
+
+CCompileXIB /Users/vsp/iosapp/iphone.tableview/MainWindow.xib
+s303360861.843386
+e303360862.309006
+r1
+xCompileXIB
+x/Users/vsp/iosapp/iphone.tableview/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib303360861#303360862#0(0"0(0#0#49"/Users/vsp/iosapp/iphone.tableview/MainWindow.xib4300885448#479"    cd /Users/vsp/iosapp/iphone.tableview    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app/MainWindow.nib /Users/vsp/iosapp/iphone.tableview/MainWindow.xib0#
+
+CCompileXIB /Users/vsp/iosapp/iphone.tableview/iphone_tableviewViewController.xib
+s303360861.902606
+e303360862.304683
+r1
+xCompileXIB
+x/Users/vsp/iosapp/iphone.tableview/iphone_tableviewViewController.xib
+lSLF07#2@45"CompileXIB iphone_tableviewViewController.xib303360861#303360862#0(0"0(0#0#69"/Users/vsp/iosapp/iphone.tableview/iphone_tableviewViewController.xib4300885448#519"    cd /Users/vsp/iosapp/iphone.tableview    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app/iphone_tableviewViewController.nib /Users/vsp/iosapp/iphone.tableview/iphone_tableviewViewController.xib0#
+
+CGenerateDSYMFile /Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app.dSYM /Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app/iphone.tableview
+s303360865.338640
+e303360865.398051
+r1
+xGenerateDSYMFile
+x/Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app.dSYM
+x/Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app/iphone.tableview
+lSLF07#2@136"GenerateDSYMFile build/Debug-iphonesimulator/iphone.tableview.app.dSYM build/Debug-iphonesimulator/iphone.tableview.app/iphone.tableview303360865#303360865#0(0"0(0#0#100"/Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app/iphone.tableview4300885448#398"    cd /Users/vsp/iosapp/iphone.tableview    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app/iphone.tableview -o /Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app.dSYM0#
+
+CLd /Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app/iphone.tableview normal i386
+s303360864.958003
+e303360865.338547
+r1
+xLd
+x/Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app/iphone.tableview
+xnormal
+xi386
+lSLF07#2@105"Link /Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app/iphone.tableview303360864#303360865#0(0"0(0#0#0"4300885448#889"    cd /Users/vsp/iosapp/iphone.tableview    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -L/Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator -F/Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator -filelist /Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/Objects-normal/i386/iphone.tableview.LinkFileList -mmacosx-version-min=10.5 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app/iphone.tableview0#
+
+CProcessInfoPlistFile /Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app/Info.plist iphone_tableview-Info.plist
+s303360861.835133
+e303360861.843293
+r1
+xProcessInfoPlistFile
+x/Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app/Info.plist
+xiphone_tableview-Info.plist
+lSLF07#2@35"Process iphone_tableview-Info.plist303360861#303360861#0(0"0(0#0#62"/Users/vsp/iosapp/iphone.tableview/iphone_tableview-Info.plist4300885448#494"    cd /Users/vsp/iosapp/iphone.tableview    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility iphone_tableview-Info.plist -genpkginfo /Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app/Info.plist0#
+
+CProcessPCH /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iphone_tableview_Prefix-aztuzvaegystiofprgendouwagus/iphone_tableview_Prefix.pch.gch iphone_tableview_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s303360862.309134
+e303360864.765825
+r1
+xProcessPCH
+x/var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iphone_tableview_Prefix-aztuzvaegystiofprgendouwagus/iphone_tableview_Prefix.pch.gch
+xiphone_tableview_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@38"Precompile iphone_tableview_Prefix.pch303360862#303360864#0(0"0(0#0#62"/Users/vsp/iosapp/iphone.tableview/iphone_tableview_Prefix.pch4300885448#1882"    cd /Users/vsp/iosapp/iphone.tableview    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/iphone.tableview-generated-files.hmap -I/Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/iphone.tableview-own-target-headers.hmap -I/Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/iphone.tableview-all-target-headers.hmap -iquote /Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/iphone.tableview-project-headers.hmap -F/Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator -I/Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/DerivedSources/i386 -I/Users/vsp/iosapp/iphone.tableview/build/iphone.tableview.build/Debug-iphonesimulator/iphone.tableview.build/DerivedSources -c /Users/vsp/iosapp/iphone.tableview/iphone_tableview_Prefix.pch -o /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iphone_tableview_Prefix-aztuzvaegystiofprgendouwagus/iphone_tableview_Prefix.pch.gch0#
+
+CTouch /Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app
+s303360865.398140
+e303360865.437659
+r1
+xTouch
+x/Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app
+lSLF07#2@89"Touch /Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app303360865#303360865#0(0"0(0#0#0"4300885448#279"    cd /Users/vsp/iosapp/iphone.tableview    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/vsp/iosapp/iphone.tableview/build/Debug-iphonesimulator/iphone.tableview.app0#
+
