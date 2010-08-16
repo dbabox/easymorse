@@ -1,0 +1,382 @@
+TNav
+v7
+r0
+t303652692.807145
+cCheck dependencies
+cProcessInfoPlistFile /Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app/Info.plist Nav-Info.plist
+cCompileXIB /Users/vsp/iosapp/Nav/MainWindow.xib
+cCompileXIB /Users/vsp/iosapp/Nav/DisclosureDetail.xib
+cCpResource build/Debug-iphonesimulator/Nav.app/ceshi.png ../../Downloads/ceshi.png
+cProcessPCH /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nav_Prefix-bzfpmvfzvzievygnpklciuznfbwd/Nav_Prefix.pch.gch Nav_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/main.o /Users/vsp/iosapp/Nav/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/NavAppDelegate.o /Users/vsp/iosapp/Nav/Classes/NavAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/RootViewController.o /Users/vsp/iosapp/Nav/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/SecondLevelViewController.o /Users/vsp/iosapp/Nav/Classes/SecondLevelViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/DisclosureButtonController.o /Users/vsp/iosapp/Nav/Classes/DisclosureButtonController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/DisclosureDetailController.o /Users/vsp/iosapp/Nav/Classes/DisclosureDetailController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app/Nav normal i386
+cGenerateDSYMFile /Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app.dSYM /Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app/Nav
+cTouch /Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk
+c000000004C68A2AB00000000000000EE
+t1281925803
+s238
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004B2B4CC3000000000026EE30
+t1261128899
+s2551344
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004B2B4DC8000000000027E880
+t1261129160
+s2615424
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004B2B4DAE0000000000001355
+t1261129134
+s4949
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004B2B61620000000000000788
+t1261134178
+s1928
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004B2B62B500000000016721E0
+t1261134517
+s23536096
+
+N/Users/vsp/iosapp/Nav/../../Downloads/ceshi.png
+c000000004C60AF400000000000000F0B
+t1281404736
+s3851
+
+N/Users/vsp/iosapp/Nav/Classes/DisclosureButtonController.h
+c000000004C69224B00000000000001DB
+t1281958475
+s475
+i<UIKit/UIKit.h>
+i"SecondLevelViewController.h"
+i"DisclosureDetailController.h"
+
+N/Users/vsp/iosapp/Nav/Classes/DisclosureButtonController.m
+c000000004C69279F0000000000000BB0
+t1281959839
+s2992
+i"DisclosureButtonController.h"
+i"NavAppDelegate.h"
+i"DisclosureDetailController.h"
+
+N/Users/vsp/iosapp/Nav/Classes/DisclosureDetailController.h
+c000000004C690F2D000000000000017C
+t1281953581
+s380
+i<UIKit/UIKit.h>
+
+N/Users/vsp/iosapp/Nav/Classes/DisclosureDetailController.m
+c000000004C690FC30000000000000472
+t1281953731
+s1138
+i"DisclosureDetailController.h"
+
+N/Users/vsp/iosapp/Nav/Classes/NavAppDelegate.h
+c000000004C69019800000000000001AD
+t1281950104
+s429
+i<UIKit/UIKit.h>
+
+N/Users/vsp/iosapp/Nav/Classes/NavAppDelegate.m
+c000000004C6901CD000000000000022A
+t1281950157
+s554
+i"NavAppDelegate.h"
+
+N/Users/vsp/iosapp/Nav/Classes/RootViewController.h
+c000000004C690976000000000000015B
+t1281952118
+s347
+i<UIKit/UIKit.h>
+
+N/Users/vsp/iosapp/Nav/Classes/RootViewController.m
+c000000004C6923490000000000000BA8
+t1281958729
+s2984
+i"RootViewController.h"
+i"SecondLevelViewController.h"
+i"NavAppDelegate.h"
+i"DisclosureButtonController.h"
+
+N/Users/vsp/iosapp/Nav/Classes/SecondLevelViewController.h
+c000000004C690DFC000000000000013A
+t1281953276
+s314
+i<UIKit/UIKit.h>
+
+N/Users/vsp/iosapp/Nav/Classes/SecondLevelViewController.m
+c000000004C690E0100000000000000FF
+t1281953281
+s255
+i"SecondLevelViewController.h"
+
+N/Users/vsp/iosapp/Nav/DisclosureDetail.xib
+c000000004C691070000000000000426C
+t1281953904
+s17004
+
+N/Users/vsp/iosapp/Nav/MainWindow.xib
+c000000004C69070B00000000000058A2
+t1281951499
+s22690
+
+N/Users/vsp/iosapp/Nav/Nav_Prefix.pch
+c000000004C6900D200000000000000AF
+t1281949906
+s175
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app
+t1281959892
+s272
+
+N/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app.dSYM
+t1281959892
+s102
+
+N/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app/DisclosureDetail.nib
+t1281958243
+s1683
+
+N/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app/Info.plist
+t1281949924
+s548
+
+N/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app/MainWindow.nib
+t1281953260
+s2021
+
+N/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app/Nav
+t1281959892
+s29576
+
+N/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app/PkgInfo
+t1281949924
+s8
+
+N/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app/ceshi.png
+t1281958417
+s3851
+
+N/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/DisclosureButtonController.o
+t1281959892
+s50728
+
+N/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/DisclosureDetailController.o
+t1281958244
+s33156
+
+N/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/Nav.LinkFileList
+c000000004C692161000000000000029F
+t1281958241
+s671
+
+N/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/NavAppDelegate.o
+t1281953260
+s39348
+
+N/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/RootViewController.o
+t1281958984
+s47156
+
+N/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/SecondLevelViewController.o
+t1281953282
+s29144
+
+N/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/main.o
+t1281949926
+s5924
+
+N/Users/vsp/iosapp/Nav/main.m
+c000000004C6900D20000000000000160
+t1281949906
+s352
+i<UIKit/UIKit.h>
+
+N/var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nav_Prefix-bzfpmvfzvzievygnpklciuznfbwd/Nav_Prefix.pch.gch
+t1281949925
+s13034960
+
+NNav-Info.plist
+c000000004C6900D2000000000000038D
+t1281949906
+s909
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies303652692#303652692#0(0"0(0#1#0"4300885448#0"0#
+
+CCompileC build/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/DisclosureButtonController.o /Users/vsp/iosapp/Nav/Classes/DisclosureButtonController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s303652692.610064
+e303652692.748888
+r1
+xCompileC
+xbuild/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/DisclosureButtonController.o
+x/Users/vsp/iosapp/Nav/Classes/DisclosureButtonController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/vsp/iosapp/Nav/Classes/DisclosureButtonController.m: In function '-[DisclosureButtonController tableView:cellForRowAtIndexPath:]':
+o/Users/vsp/iosapp/Nav/Classes/DisclosureButtonController.m:80: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)
+o/Users/vsp/iosapp/Nav/Classes/DisclosureButtonController.m: In function '-[DisclosureButtonController tableView:accessoryTypeForRowWithIndexPath:]':
+o/Users/vsp/iosapp/Nav/Classes/DisclosureButtonController.m:89: warning: conflicting types for '-(UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSInteger *)indexPath'
+o/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableView.h:332: warning: previous declaration of '-(UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath'
+lSLF07#2@66"Compile /Users/vsp/iosapp/Nav/Classes/DisclosureButtonController.m303652692#303652692#0(1088"/Users/vsp/iosapp/Nav/Classes/DisclosureButtonController.m: In function '-[DisclosureButtonController tableView:cellForRowAtIndexPath:]':/Users/vsp/iosapp/Nav/Classes/DisclosureButtonController.m:80: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)/Users/vsp/iosapp/Nav/Classes/DisclosureButtonController.m: In function '-[DisclosureButtonController tableView:accessoryTypeForRowWithIndexPath:]':/Users/vsp/iosapp/Nav/Classes/DisclosureButtonController.m:89: warning: conflicting types for '-(UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSInteger *)indexPath'/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableView.h:332: warning: previous declaration of '-(UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath'3(22@196"'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)303652692#138#269#0(6@58"/Users/vsp/iosapp/Nav/Classes/DisclosureButtonController.m303652639#80#0#80#0#33"'*' is deprecated (declared at *)0(22@145"Conflicting types for '-(UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSInteger *)indexPath'303652692#556#218#0(6@58"/Users/vsp/iosapp/Nav/Classes/DisclosureButtonController.m303652639#89#0#89#0#25"conflicting types for '*'0(22@149"Previous declaration of '-(UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath'303652692#774#314#0(6@149"/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableView.h282826979#332#0#332#0#0"0(0#0#58"/Users/vsp/iosapp/Nav/Classes/DisclosureButtonController.m4300885448#1644"    cd /Users/vsp/iosapp/Nav    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Nav-generated-files.hmap -I/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Nav-own-target-headers.hmap -I/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Nav-all-target-headers.hmap -iquote /Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Nav-project-headers.hmap -F/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator -I/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/DerivedSources/i386 -I/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nav_Prefix-bzfpmvfzvzievygnpklciuznfbwd/Nav_Prefix.pch -c /Users/vsp/iosapp/Nav/Classes/DisclosureButtonController.m -o /Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/DisclosureButtonController.o0#
+
+CCompileC build/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/DisclosureDetailController.o /Users/vsp/iosapp/Nav/Classes/DisclosureDetailController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s303651043.965887
+e303651044.156431
+r1
+xCompileC
+xbuild/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/DisclosureDetailController.o
+x/Users/vsp/iosapp/Nav/Classes/DisclosureDetailController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@66"Compile /Users/vsp/iosapp/Nav/Classes/DisclosureDetailController.m303651043#303651044#0(0"0(0#0#58"/Users/vsp/iosapp/Nav/Classes/DisclosureDetailController.m4300885448#1644"    cd /Users/vsp/iosapp/Nav    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Nav-generated-files.hmap -I/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Nav-own-target-headers.hmap -I/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Nav-all-target-headers.hmap -iquote /Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Nav-project-headers.hmap -F/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator -I/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/DerivedSources/i386 -I/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nav_Prefix-bzfpmvfzvzievygnpklciuznfbwd/Nav_Prefix.pch -c /Users/vsp/iosapp/Nav/Classes/DisclosureDetailController.m -o /Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/DisclosureDetailController.o0#
+
+CCompileC build/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/NavAppDelegate.o /Users/vsp/iosapp/Nav/Classes/NavAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s303646060.287361
+e303646060.570747
+r1
+xCompileC
+xbuild/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/NavAppDelegate.o
+x/Users/vsp/iosapp/Nav/Classes/NavAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@54"Compile /Users/vsp/iosapp/Nav/Classes/NavAppDelegate.m303646060#303646060#0(0"0(0#0#46"/Users/vsp/iosapp/Nav/Classes/NavAppDelegate.m4300885448#1620"    cd /Users/vsp/iosapp/Nav    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Nav-generated-files.hmap -I/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Nav-own-target-headers.hmap -I/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Nav-all-target-headers.hmap -iquote /Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Nav-project-headers.hmap -F/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator -I/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/DerivedSources/i386 -I/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nav_Prefix-bzfpmvfzvzievygnpklciuznfbwd/Nav_Prefix.pch -c /Users/vsp/iosapp/Nav/Classes/NavAppDelegate.m -o /Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/NavAppDelegate.o0#
+
+CCompileC build/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/RootViewController.o /Users/vsp/iosapp/Nav/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s303651783.847772
+e303651784.044809
+r1
+xCompileC
+xbuild/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/RootViewController.o
+x/Users/vsp/iosapp/Nav/Classes/RootViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/vsp/iosapp/Nav/Classes/RootViewController.m: In function '-[RootViewController tableView:cellForRowAtIndexPath:]':
+o/Users/vsp/iosapp/Nav/Classes/RootViewController.m:99: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)
+o/Users/vsp/iosapp/Nav/Classes/RootViewController.m:100: warning: 'setImage:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)
+o/Users/vsp/iosapp/Nav/Classes/RootViewController.m: In function '-[RootViewController tableView:accessoryTypeForRowWithIndexPath:]':
+o/Users/vsp/iosapp/Nav/Classes/RootViewController.m:108: warning: conflicting types for '-(UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSInteger *)indexPath'
+o/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableView.h:332: warning: previous declaration of '-(UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath'
+lSLF07#2@58"Compile /Users/vsp/iosapp/Nav/Classes/RootViewController.m303651783#303651784#0(1304"/Users/vsp/iosapp/Nav/Classes/RootViewController.m: In function '-[RootViewController tableView:cellForRowAtIndexPath:]':/Users/vsp/iosapp/Nav/Classes/RootViewController.m:99: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)/Users/vsp/iosapp/Nav/Classes/RootViewController.m:100: warning: 'setImage:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)/Users/vsp/iosapp/Nav/Classes/RootViewController.m: In function '-[RootViewController tableView:accessoryTypeForRowWithIndexPath:]':/Users/vsp/iosapp/Nav/Classes/RootViewController.m:108: warning: conflicting types for '-(UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSInteger *)indexPath'/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableView.h:332: warning: previous declaration of '-(UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath'4(22@196"'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)303651784#122#261#0(6@50"/Users/vsp/iosapp/Nav/Classes/RootViewController.m303651529#99#0#99#0#33"'*' is deprecated (declared at *)0(22@197"'setImage:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)303651784#383#263#0(6@50"/Users/vsp/iosapp/Nav/Classes/RootViewController.m303651529#100#0#100#0#33"'*' is deprecated (declared at *)0(22@145"Conflicting types for '-(UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSInteger *)indexPath'303651784#779#211#0(6@50"/Users/vsp/iosapp/Nav/Classes/RootViewController.m303651529#108#0#108#0#25"conflicting types for '*'0(22@149"Previous declaration of '-(UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath'303651784#990#314#0(6@149"/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableView.h282826979#332#0#332#0#0"0(0#0#50"/Users/vsp/iosapp/Nav/Classes/RootViewController.m4300885448#1628"    cd /Users/vsp/iosapp/Nav    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Nav-generated-files.hmap -I/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Nav-own-target-headers.hmap -I/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Nav-all-target-headers.hmap -iquote /Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Nav-project-headers.hmap -F/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator -I/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/DerivedSources/i386 -I/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nav_Prefix-bzfpmvfzvzievygnpklciuznfbwd/Nav_Prefix.pch -c /Users/vsp/iosapp/Nav/Classes/RootViewController.m -o /Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/RootViewController.o0#
+
+CCompileC build/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/SecondLevelViewController.o /Users/vsp/iosapp/Nav/Classes/SecondLevelViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s303646082.551236
+e303646082.700720
+r1
+xCompileC
+xbuild/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/SecondLevelViewController.o
+x/Users/vsp/iosapp/Nav/Classes/SecondLevelViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@65"Compile /Users/vsp/iosapp/Nav/Classes/SecondLevelViewController.m303646082#303646082#0(0"0(0#0#57"/Users/vsp/iosapp/Nav/Classes/SecondLevelViewController.m4300885448#1642"    cd /Users/vsp/iosapp/Nav    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Nav-generated-files.hmap -I/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Nav-own-target-headers.hmap -I/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Nav-all-target-headers.hmap -iquote /Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Nav-project-headers.hmap -F/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator -I/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/DerivedSources/i386 -I/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nav_Prefix-bzfpmvfzvzievygnpklciuznfbwd/Nav_Prefix.pch -c /Users/vsp/iosapp/Nav/Classes/SecondLevelViewController.m -o /Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/SecondLevelViewController.o0#
+
+CCompileC build/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/main.o /Users/vsp/iosapp/Nav/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s303642726.134072
+e303642726.282526
+r1
+xCompileC
+xbuild/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/main.o
+x/Users/vsp/iosapp/Nav/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@36"Compile /Users/vsp/iosapp/Nav/main.m303642726#303642726#0(0"0(0#0#28"/Users/vsp/iosapp/Nav/main.m4300885448#1592"    cd /Users/vsp/iosapp/Nav    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Nav-generated-files.hmap -I/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Nav-own-target-headers.hmap -I/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Nav-all-target-headers.hmap -iquote /Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Nav-project-headers.hmap -F/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator -I/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/DerivedSources/i386 -I/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nav_Prefix-bzfpmvfzvzievygnpklciuznfbwd/Nav_Prefix.pch -c /Users/vsp/iosapp/Nav/main.m -o /Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/main.o0#
+
+CCompileXIB /Users/vsp/iosapp/Nav/DisclosureDetail.xib
+s303651041.882614
+e303651043.776708
+r1
+xCompileXIB
+x/Users/vsp/iosapp/Nav/DisclosureDetail.xib
+lSLF07#2@31"CompileXIB DisclosureDetail.xib303651041#303651043#0(0"0(0#0#42"/Users/vsp/iosapp/Nav/DisclosureDetail.xib4300885448#439"    cd /Users/vsp/iosapp/Nav    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app/DisclosureDetail.nib /Users/vsp/iosapp/Nav/DisclosureDetail.xib0#
+
+CCompileXIB /Users/vsp/iosapp/Nav/MainWindow.xib
+s303646058.465029
+e303646060.286907
+r1
+xCompileXIB
+x/Users/vsp/iosapp/Nav/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib303646058#303646060#0(0"0(0#0#36"/Users/vsp/iosapp/Nav/MainWindow.xib4300885448#427"    cd /Users/vsp/iosapp/Nav    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app/MainWindow.nib /Users/vsp/iosapp/Nav/MainWindow.xib0#
+
+CCpResource build/Debug-iphonesimulator/Nav.app/ceshi.png ../../Downloads/ceshi.png
+s303651217.591081
+e303651217.662018
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Nav.app/ceshi.png
+x../../Downloads/ceshi.png
+lSLF07#2@30"Copy ../../Downloads/ceshi.png303651217#303651217#0(0"0(0#0#47"/Users/vsp/iosapp/Nav/../../Downloads/ceshi.png4300885448#414"    cd /Users/vsp/iosapp/Nav    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/vsp/iosapp/Nav/../../Downloads/ceshi.png /Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app0#
+
+CGenerateDSYMFile /Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app.dSYM /Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app/Nav
+s303652692.778492
+e303652692.803853
+r1
+xGenerateDSYMFile
+x/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app.dSYM
+x/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app/Nav
+lSLF07#2@97"GenerateDSYMFile build/Debug-iphonesimulator/Nav.app.dSYM build/Debug-iphonesimulator/Nav.app/Nav303652692#303652692#0(0"0(0#0#61"/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app/Nav4300885448#320"    cd /Users/vsp/iosapp/Nav    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app/Nav -o /Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app.dSYM0#
+
+CLd /Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app/Nav normal i386
+s303652692.749014
+e303652692.778375
+r1
+xLd
+x/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app/Nav
+xnormal
+xi386
+lSLF07#2@66"Link /Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app/Nav303652692#303652692#0(0"0(0#0#0"4300885448#759"    cd /Users/vsp/iosapp/Nav    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -L/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator -F/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator -filelist /Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Objects-normal/i386/Nav.LinkFileList -mmacosx-version-min=10.5 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app/Nav0#
+
+CProcessInfoPlistFile /Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app/Info.plist Nav-Info.plist
+s303642724.431751
+e303642724.462904
+r1
+xProcessInfoPlistFile
+x/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app/Info.plist
+xNav-Info.plist
+lSLF07#2@22"Process Nav-Info.plist303642724#303642724#0(0"0(0#0#36"/Users/vsp/iosapp/Nav/Nav-Info.plist4300885448#416"    cd /Users/vsp/iosapp/Nav    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Nav-Info.plist -genpkginfo /Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app/Info.plist0#
+
+CProcessPCH /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nav_Prefix-bzfpmvfzvzievygnpklciuznfbwd/Nav_Prefix.pch.gch Nav_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s303642725.029641
+e303642726.133906
+r1
+xProcessPCH
+x/var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nav_Prefix-bzfpmvfzvzievygnpklciuznfbwd/Nav_Prefix.pch.gch
+xNav_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@25"Precompile Nav_Prefix.pch303642725#303642726#0(0"0(0#0#36"/Users/vsp/iosapp/Nav/Nav_Prefix.pch4300885448#1505"    cd /Users/vsp/iosapp/Nav    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Nav-generated-files.hmap -I/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Nav-own-target-headers.hmap -I/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Nav-all-target-headers.hmap -iquote /Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/Nav-project-headers.hmap -F/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator -I/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/DerivedSources/i386 -I/Users/vsp/iosapp/Nav/build/Nav.build/Debug-iphonesimulator/Nav.build/DerivedSources -c /Users/vsp/iosapp/Nav/Nav_Prefix.pch -o /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nav_Prefix-bzfpmvfzvzievygnpklciuznfbwd/Nav_Prefix.pch.gch0#
+
+CTouch /Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app
+s303652692.803951
+e303652692.807097
+r1
+xTouch
+x/Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app
+lSLF07#2@63"Touch /Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app303652692#303652692#0(0"0(0#0#0"4300885448#240"    cd /Users/vsp/iosapp/Nav    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/vsp/iosapp/Nav/build/Debug-iphonesimulator/Nav.app0#
+
