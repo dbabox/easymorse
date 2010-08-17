@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="200dp">
+	<TextView android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="最近访问人物" />
+	<HorizontalScrollView android:layout_width="fill_parent"
+		android:layout_height="160dp">
+		<FrameLayout android:layout_width="fill_parent"
+			android:layout_height="match_parent">
+			<LinearLayout android:layout_width="1100dp"
+				android:layout_height="match_parent" android:orientation="horizontal">
+				<GridView android:id="@+id/grid" android:layout_width="fill_parent"
+					android:gravity="center" android:layout_height="fill_parent"
+					android:horizontalSpacing="1.0dip" android:verticalSpacing="1.0dip"
+					android:stretchMode="spacingWidthUniform" android:numColumns="auto_fit"
+					android:columnWidth="80dip">
+				</GridView>
+			</LinearLayout>
+		</FrameLayout>
+	</HorizontalScrollView>
+</LinearLayout>
