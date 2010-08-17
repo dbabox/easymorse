@@ -5,11 +5,14 @@ import java.util.HashMap;
 
 import android.app.ListActivity;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.SimpleAdapter;
 
 public class GridDemoActivity extends ListActivity {
@@ -21,11 +24,23 @@ public class GridDemoActivity extends ListActivity {
 
 		LayoutInflater layoutInflater = (LayoutInflater) this
 				.getSystemService("layout_inflater");
-		View headerView=layoutInflater.inflate(R.layout.list_header, null);
+		View headerView = layoutInflater.inflate(R.layout.list_header, null);
 		setGridView(headerView);
-		ListView listView=(ListView) this.findViewById(android.R.id.list);
+		ListView listView = (ListView) this.findViewById(android.R.id.list);
 		listView.addHeaderView(headerView);
-		listView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,new String[]{"隋","唐","宋","元","明","清"}));
+		listView.setAdapter(new ArrayAdapter<String>(this,
+				android.R.layout.simple_list_item_1, new String[] { "隋", "唐",
+						"宋", "元", "明", "清" }));
+
+		Message message = new Message();
+		message.obj = (ProgressBar) headerView.findViewById(R.id.p1);
+		;
+		new Handler() {
+			public void handleMessage(Message msg) {
+				ProgressBar bar = (ProgressBar) msg.obj;
+				bar.setVisibility(ProgressBar.GONE);
+			}
+		}.sendMessageDelayed(message, 1000 * 10);
 	}
 
 	private void setGridView(View view) {
