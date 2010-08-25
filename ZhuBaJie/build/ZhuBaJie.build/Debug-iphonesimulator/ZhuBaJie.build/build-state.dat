@@ -1,1011 +1,0 @@
-TZhuBaJie
-v7
-r0
-t303986298.961634
-cCheck dependencies
-cProcessInfoPlistFile /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/Info.plist ZhuBaJie-Info.plist
-cCompileXIB /Users/vsp/iosapp/ZhuBaJie/MainWindow.xib
-cCpResource build/Debug-iphonesimulator/ZhuBaJie.app/home_icon_unactive.png home_icon_unactive.png
-cCpResource build/Debug-iphonesimulator/ZhuBaJie.app/login_bg_zbj.png login_bg_zbj.png
-cCpResource build/Debug-iphonesimulator/ZhuBaJie.app/message_icon_unactive.png message_icon_unactive.png
-cCpResource build/Debug-iphonesimulator/ZhuBaJie.app/more_icon_unactive.png more_icon_unactive.png
-cCpResource build/Debug-iphonesimulator/ZhuBaJie.app/mytask_icon_unactive.png mytask_icon_unactive.png
-cCpResource build/Debug-iphonesimulator/ZhuBaJie.app/user_avatar_default.png user_avatar_default.png
-cCompileXIB /Users/vsp/iosapp/ZhuBaJie/loginview.xib
-cCompileXIB /Users/vsp/iosapp/ZhuBaJie/home.xib
-cCompileXIB /Users/vsp/iosapp/ZhuBaJie/mytask.xib
-cCompileXIB /Users/vsp/iosapp/ZhuBaJie/message.xib
-cCompileXIB /Users/vsp/iosapp/ZhuBaJie/more.xib
-cCpResource build/Debug-iphonesimulator/ZhuBaJie.app/next_page_pressed.png next_page_pressed.png
-cCpResource build/Debug-iphonesimulator/ZhuBaJie.app/next_page.png next_page.png
-cCpResource build/Debug-iphonesimulator/ZhuBaJie.app/previous_page.png previous_page.png
-cCompileXIB /Users/vsp/iosapp/ZhuBaJie/homeitem.xib
-cCpResource build/Debug-iphonesimulator/ZhuBaJie.app/comment_icon_active.png comment_icon_active.png
-cCpResource build/Debug-iphonesimulator/ZhuBaJie.app/submit_icon_active.png submit_icon_active.png
-cCpResource build/Debug-iphonesimulator/ZhuBaJie.app/participation_icon_active.png participation_icon_active.png
-cCpResource build/Debug-iphonesimulator/ZhuBaJie.app/collect_icon_active.png collect_icon_active.png
-cCompileXIB /Users/vsp/iosapp/ZhuBaJie/tender.xib
-cCpResource build/Debug-iphonesimulator/ZhuBaJie.app/btn_send.png btn_send.png
-cCompileXIB /Users/vsp/iosapp/ZhuBaJie/mytaskitems.xib
-cCompileXIB /Users/vsp/iosapp/ZhuBaJie/sendmessage.xib
-cCpResource build/Debug-iphonesimulator/ZhuBaJie.app/icon.png icon.png
-cProcessPCH /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZhuBaJie_Prefix-ffazlkkplgupaoalfprfupbguhzp/ZhuBaJie_Prefix.pch.gch ZhuBaJie_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/main.o /Users/vsp/iosapp/ZhuBaJie/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/ZhuBaJieAppDelegate.o /Users/vsp/iosapp/ZhuBaJie/Classes/ZhuBaJieAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/LoginViewController.o /Users/vsp/iosapp/ZhuBaJie/Classes/LoginViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/HomeViewController.o /Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/MyTaskViewController.o /Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/MessageViewController.o /Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/MoreViewController.o /Users/vsp/iosapp/ZhuBaJie/Classes/MoreViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/HomeItemViewController.o /Users/vsp/iosapp/ZhuBaJie/Classes/HomeItemViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/TenderViewController.o /Users/vsp/iosapp/ZhuBaJie/Classes/TenderViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/MyTaskItemsViewController.o /Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/SendMessageViewController.o /Users/vsp/iosapp/ZhuBaJie/Classes/SendMessageViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cLd /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/ZhuBaJie normal i386
-cGenerateDSYMFile /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app.dSYM /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/ZhuBaJie
-cTouch /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk
-c000000004C68A2AB00000000000000EE
-t1281925803
-s238
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c000000004B2B4CC3000000000026EE30
-t1261128899
-s2551344
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004B2B4DC8000000000027E880
-t1261129160
-s2615424
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c000000004B2B4DAE0000000000001355
-t1261129134
-s4949
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c000000004B2B61620000000000000788
-t1261134178
-s1928
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c000000004B2B62B500000000016721E0
-t1261134517
-s23536096
-
-N/Users/vsp/iosapp/ZhuBaJie/Classes/HomeItemViewController.h
-c000000004C6E1B100000000000000165
-t1282284304
-s357
-i<UIKit/UIKit.h>
-
-N/Users/vsp/iosapp/ZhuBaJie/Classes/HomeItemViewController.m
-c000000004C6E3A2A000000000000072E
-t1282292266
-s1838
-i"HomeItemViewController.h"
-i"TenderViewController.h"
-
-N/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.h
-c000000004C6D34530000000000000151
-t1282225235
-s337
-i<UIKit/UIKit.h>
-
-N/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m
-c000000004C6E280C0000000000000A51
-t1282287628
-s2641
-i"HomeViewController.h"
-i"ZhuBaJieAppDelegate.h"
-i"HomeItemViewController.h"
-
-N/Users/vsp/iosapp/ZhuBaJie/Classes/LoginVieController.h
-c000000004C6D271300000000000000E5
-t1282221843
-s229
-i<UIKit/UIKit.h>
-
-N/Users/vsp/iosapp/ZhuBaJie/Classes/LoginVieController.m
-c000000004C6D267E00000000000005E6
-t1282221694
-s1510
-i"LoginVieController.h"
-
-N/Users/vsp/iosapp/ZhuBaJie/Classes/LoginViewController.h
-c000000004C6D2C5C0000000000000205
-t1282223196
-s517
-i<UIKit/UIKit.h>
-
-N/Users/vsp/iosapp/ZhuBaJie/Classes/LoginViewController.m
-c000000004C6D2F2D00000000000006B2
-t1282223917
-s1714
-i"LoginViewController.h"
-
-N/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.h
-c000000004C6E3AA00000000000000154
-t1282292384
-s340
-i<UIKit/UIKit.h>
-
-N/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m
-c000000004C6E3B2C00000000000009C1
-t1282292524
-s2497
-i"MessageViewController.h"
-i"SendMessageViewController.h"
-
-N/Users/vsp/iosapp/ZhuBaJie/Classes/MoreViewController.h
-c000000004C6E302C0000000000000151
-t1282289708
-s337
-i<UIKit/UIKit.h>
-
-N/Users/vsp/iosapp/ZhuBaJie/Classes/MoreViewController.m
-c000000004C6E30AF0000000000000902
-t1282289839
-s2306
-i"MoreViewController.h"
-
-N/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.h
-c000000004C6E3651000000000000015C
-t1282291281
-s348
-i<UIKit/UIKit.h>
-
-N/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m
-c000000004C6E35D20000000000000A47
-t1282291154
-s2631
-i"MyTaskItemsViewController.h"
-i"HomeItemViewController.h"
-
-N/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.h
-c000000004C6E2DEF0000000000000156
-t1282289135
-s342
-i<UIKit/UIKit.h>
-
-N/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m
-c000000004C6E32FB000000000000096F
-t1282290427
-s2415
-i"MyTaskViewController.h"
-i"MyTaskItemsViewController.h"
-
-N/Users/vsp/iosapp/ZhuBaJie/Classes/SendMessageViewController.h
-c000000004C6E3CE000000000000001B9
-t1282292960
-s441
-i<UIKit/UIKit.h>
-
-N/Users/vsp/iosapp/ZhuBaJie/Classes/SendMessageViewController.m
-c000000004C6E3D920000000000000495
-t1282293138
-s1173
-i"SendMessageViewController.h"
-
-N/Users/vsp/iosapp/ZhuBaJie/Classes/TenderViewController.h
-c000000004C6E1C7400000000000000E6
-t1282284660
-s230
-i<UIKit/UIKit.h>
-
-N/Users/vsp/iosapp/ZhuBaJie/Classes/TenderViewController.m
-c000000004C6E22F500000000000003E9
-t1282286325
-s1001
-i"TenderViewController.h"
-
-N/Users/vsp/iosapp/ZhuBaJie/Classes/ZhuBaJieAppDelegate.h
-c000000004C6D2DB00000000000000254
-t1282223536
-s596
-i<UIKit/UIKit.h>
-
-N/Users/vsp/iosapp/ZhuBaJie/Classes/ZhuBaJieAppDelegate.m
-c000000004C6D2F0F00000000000002B7
-t1282223887
-s695
-i"ZhuBaJieAppDelegate.h"
-i"LoginViewController.h"
-
-N/Users/vsp/iosapp/ZhuBaJie/MainWindow.xib
-c000000004C6E2A710000000000009DCC
-t1282288241
-s40396
-
-N/Users/vsp/iosapp/ZhuBaJie/ZhuBaJie_Prefix.pch
-c000000004C6D25EF00000000000000B9
-t1282221551
-s185
-i<Foundation/Foundation.h>
-i<UIKit/UIKit.h>
-
-N/Users/vsp/iosapp/ZhuBaJie/btn_send.png
-c000000004C2871C600000000000003B6
-t1277718982
-s950
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app
-t1282293498
-s1020
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app.dSYM
-t1282293141
-s102
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/Info.plist
-t1282221555
-s568
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/MainWindow.nib
-t1282288247
-s4729
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/PkgInfo
-t1282221555
-s8
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/ZhuBaJie
-t1282293141
-s47552
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/btn_send.png
-t1282287303
-s950
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/collect_icon_active.png
-t1282271748
-s927
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/comment_icon_active.png
-t1282271748
-s1363
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/home.nib
-t1282226061
-s3460
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/home_icon_unactive.png
-t1282222084
-s936
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/homeitem.nib
-t1282284526
-s5736
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/icon.png
-t1282293498
-s5071
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/login_bg_zbj.png
-t1282222084
-s17426
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/loginview.nib
-t1282223423
-s4482
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/message.nib
-t1282289686
-s1534
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/message_icon_unactive.png
-t1282222084
-s761
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/more.nib
-t1282289796
-s1534
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/more_icon_unactive.png
-t1282222084
-s542
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/mytask.nib
-t1282287740
-s1534
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/mytask_icon_unactive.png
-t1282222084
-s429
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/mytaskitems.nib
-t1282291219
-s3473
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/mytasl.nib
-t2
-s0
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/next_page.png
-t1282224990
-s1008
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/next_page_pressed.png
-t1282224990
-s991
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/participation_icon_active.png
-t1282271748
-s1424
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/previous_page.png
-t1282224990
-s1029
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/sendmessage.nib
-t1282293275
-s3746
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/submit_icon_active.png
-t1282271748
-s466
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/tender.nib
-t1282287358
-s4282
-
-N/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/user_avatar_default.png
-t1282222084
-s2487
-
-N/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/HomeItemViewController.o
-t1282292338
-s35160
-
-N/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/HomeViewController.o
-t1282287741
-s41004
-
-N/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/LoginVieController.o
-t2
-s0
-
-N/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/LoginViewController.o
-t1282224530
-s34376
-
-N/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/MessageViewController.o
-t1282293104
-s40148
-
-N/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/MoreViewController.o
-t1282289841
-s38824
-
-N/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/MyTaskItemsViewController.o
-t1282291814
-s41212
-
-N/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/MyTaskViewController.o
-t1282291813
-s40076
-
-N/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/SendMessageViewController.o
-t1282293141
-s32972
-
-N/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/TenderViewController.o
-t1282286872
-s30340
-
-N/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/ZhuBaJie.LinkFileList
-c000000004C6E38640000000000000577
-t1282291812
-s1399
-
-N/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/ZhuBaJieAppDelegate.o
-t1282223896
-s41572
-
-N/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/main.o
-t1282221556
-s5932
-
-N/Users/vsp/iosapp/ZhuBaJie/collect_icon_active.png
-c000000004C2871C6000000000000039F
-t1277718982
-s927
-
-N/Users/vsp/iosapp/ZhuBaJie/comment_icon_active.png
-c000000004C2871C60000000000000553
-t1277718982
-s1363
-
-N/Users/vsp/iosapp/ZhuBaJie/home.xib
-c000000004C6D378900000000000059F5
-t1282226057
-s23029
-
-N/Users/vsp/iosapp/ZhuBaJie/home_icon_unactive.png
-c000000004C2871C600000000000003A8
-t1277718982
-s936
-
-N/Users/vsp/iosapp/ZhuBaJie/homeitem.xib
-c000000004C6E160E00000000000092CB
-t1282283022
-s37579
-
-N/Users/vsp/iosapp/ZhuBaJie/icon.png
-c000000004C2871C600000000000013CF
-t1277718982
-s5071
-
-N/Users/vsp/iosapp/ZhuBaJie/login_bg_zbj.png
-c000000004C2871C60000000000004412
-t1277718982
-s17426
-
-N/Users/vsp/iosapp/ZhuBaJie/loginview.xib
-c000000004C6D2D3E0000000000006F23
-t1282223422
-s28451
-
-N/Users/vsp/iosapp/ZhuBaJie/main.m
-c000000004C6D25EF0000000000000165
-t1282221551
-s357
-i<UIKit/UIKit.h>
-
-N/Users/vsp/iosapp/ZhuBaJie/message.xib
-c000000004C6E2FD300000000000044F6
-t1282289619
-s17654
-
-N/Users/vsp/iosapp/ZhuBaJie/message_icon_unactive.png
-c000000004C2871C600000000000002F9
-t1277718982
-s761
-
-N/Users/vsp/iosapp/ZhuBaJie/more.xib
-c000000004C6E307E00000000000044D0
-t1282289790
-s17616
-
-N/Users/vsp/iosapp/ZhuBaJie/more_icon_unactive.png
-c000000004C2871C6000000000000021E
-t1277718982
-s542
-
-N/Users/vsp/iosapp/ZhuBaJie/mytask.xib
-c000000004C6E28780000000000004444
-t1282287736
-s17476
-
-N/Users/vsp/iosapp/ZhuBaJie/mytask_icon_unactive.png
-c000000004C2871C600000000000001AD
-t1277718982
-s429
-
-N/Users/vsp/iosapp/ZhuBaJie/mytaskitems.xib
-c000000004C6E360F00000000000059D0
-t1282291215
-s22992
-
-N/Users/vsp/iosapp/ZhuBaJie/mytasl.xib
-c000000004C6D307F00000000000014D9
-t1282224255
-s5337
-
-N/Users/vsp/iosapp/ZhuBaJie/next_page.png
-c000000004C2871C600000000000003F0
-t1277718982
-s1008
-
-N/Users/vsp/iosapp/ZhuBaJie/next_page_pressed.png
-c000000004C2871C600000000000003DF
-t1277718982
-s991
-
-N/Users/vsp/iosapp/ZhuBaJie/participation_icon_active.png
-c000000004C2871C60000000000000590
-t1277718982
-s1424
-
-N/Users/vsp/iosapp/ZhuBaJie/previous_page.png
-c000000004C2871C60000000000000405
-t1277718982
-s1029
-
-N/Users/vsp/iosapp/ZhuBaJie/sendmessage.xib
-c000000004C6E3E170000000000005EE7
-t1282293271
-s24295
-
-N/Users/vsp/iosapp/ZhuBaJie/submit_icon_active.png
-c000000004C2871C600000000000001D2
-t1277718982
-s466
-
-N/Users/vsp/iosapp/ZhuBaJie/tender.xib
-c000000004C6E26FB0000000000006563
-t1282287355
-s25955
-
-N/Users/vsp/iosapp/ZhuBaJie/user_avatar_default.png
-c000000004C2871C600000000000009B7
-t1277718982
-s2487
-
-N/var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZhuBaJie_Prefix-ffazlkkplgupaoalfprfupbguhzp/ZhuBaJie_Prefix.pch.gch
-t1282221555
-s13034960
-
-NZhuBaJie-Info.plist
-c000000004C6D25EF000000000000038D
-t1282221551
-s909
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies303986298#303986298#0(0"0(0#1#0"4300885448#0"0#
-
-CCompileC build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/HomeItemViewController.o /Users/vsp/iosapp/ZhuBaJie/Classes/HomeItemViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s303985137.884667
-e303985138.374853
-r1
-xCompileC
-xbuild/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/HomeItemViewController.o
-x/Users/vsp/iosapp/ZhuBaJie/Classes/HomeItemViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/vsp/iosapp/ZhuBaJie/Classes/HomeItemViewController.m: In function '-[HomeItemViewController buttonClickedpress:]':
-o/Users/vsp/iosapp/ZhuBaJie/Classes/HomeItemViewController.m:32: warning: 'HomeItemViewController' may not respond to '-deliveryPressButton'
-o/Users/vsp/iosapp/ZhuBaJie/Classes/HomeItemViewController.m:32: warning: (Messages without a matching method signature
-o/Users/vsp/iosapp/ZhuBaJie/Classes/HomeItemViewController.m:32: warning: will be assumed to return 'id' and accept
-o/Users/vsp/iosapp/ZhuBaJie/Classes/HomeItemViewController.m:32: warning: '...' as arguments.)
-o/Users/vsp/iosapp/ZhuBaJie/Classes/HomeItemViewController.m: In function '-[HomeItemViewController deliveryPressButton]':
-o/Users/vsp/iosapp/ZhuBaJie/Classes/HomeItemViewController.m:42: warning: incompatible Objective-C types initializing 'struct UINavigationController *', expected 'struct UINavigationBar *'
-o/Users/vsp/iosapp/ZhuBaJie/Classes/HomeItemViewController.m:44: warning: 'UINavigationBar' may not respond to '-pushViewController:animated:'
-lSLF07#2@67"Compile /Users/vsp/iosapp/ZhuBaJie/Classes/HomeItemViewController.m303985137#303985138#0(1042"/Users/vsp/iosapp/ZhuBaJie/Classes/HomeItemViewController.m: In function '-[HomeItemViewController buttonClickedpress:]':/Users/vsp/iosapp/ZhuBaJie/Classes/HomeItemViewController.m:32: warning: 'HomeItemViewController' may not respond to '-deliveryPressButton'/Users/vsp/iosapp/ZhuBaJie/Classes/HomeItemViewController.m:32: warning: (Messages without a matching method signature/Users/vsp/iosapp/ZhuBaJie/Classes/HomeItemViewController.m:32: warning: will be assumed to return 'id' and accept/Users/vsp/iosapp/ZhuBaJie/Classes/HomeItemViewController.m:32: warning: '...' as arguments.)/Users/vsp/iosapp/ZhuBaJie/Classes/HomeItemViewController.m: In function '-[HomeItemViewController deliveryPressButton]':/Users/vsp/iosapp/ZhuBaJie/Classes/HomeItemViewController.m:42: warning: incompatible Objective-C types initializing 'struct UINavigationController *', expected 'struct UINavigationBar *'/Users/vsp/iosapp/ZhuBaJie/Classes/HomeItemViewController.m:44: warning: 'UINavigationBar' may not respond to '-pushViewController:animated:'4(22@66"'HomeItemViewController' may not respond to '-deliveryPressButton'303985138#122#140#0(6@59"/Users/vsp/iosapp/ZhuBaJie/Classes/HomeItemViewController.m303985066#32#0#32#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)303985138#262#119#0(6@59"/Users/vsp/iosapp/ZhuBaJie/Classes/HomeItemViewController.m303985066#32#0#32#0#0"0(22@114"Incompatible Objective-C types initializing 'struct UINavigationController *', expected 'struct UINavigationBar *'303985138#712#188#0(6@59"/Users/vsp/iosapp/ZhuBaJie/Classes/HomeItemViewController.m303985066#42#0#42#0#61"incompatible Objective-C types initializing '*', expected '*'0(22@68"'UINavigationBar' may not respond to '-pushViewController:animated:'303985138#900#142#0(6@59"/Users/vsp/iosapp/ZhuBaJie/Classes/HomeItemViewController.m303985066#44#0#44#0#26"'*' may not respond to '*'0(0#0#59"/Users/vsp/iosapp/ZhuBaJie/Classes/HomeItemViewController.m4300885448#1791"    cd /Users/vsp/iosapp/ZhuBaJie    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-generated-files.hmap -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-own-target-headers.hmap -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-all-target-headers.hmap -iquote /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-project-headers.hmap -F/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator -I/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/DerivedSources/i386 -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZhuBaJie_Prefix-ffazlkkplgupaoalfprfupbguhzp/ZhuBaJie_Prefix.pch -c /Users/vsp/iosapp/ZhuBaJie/Classes/HomeItemViewController.m -o /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/HomeItemViewController.o0#
-
-CCompileC build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/HomeViewController.o /Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s303980540.662566
-e303980541.149387
-r1
-xCompileC
-xbuild/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/HomeViewController.o
-x/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m: In function '-[HomeViewController tableView:cellForRowAtIndexPath:]':
-o/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m:74: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)
-o/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m:76: warning: 'setImage:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)
-o/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m: In function '-[HomeViewController tableView:didSelectRowAtIndexPath:]':
-o/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m:95: warning: incompatible Objective-C types initializing 'struct UINavigationController *', expected 'struct UINavigationBar *'
-o/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m:98: warning: 'UINavigationBar' may not respond to '-pushViewController:animated:'
-o/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m:98: warning: (Messages without a matching method signature
-o/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m:98: warning: will be assumed to return 'id' and accept
-o/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m:98: warning: '...' as arguments.)
-o/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m:93: warning: unused variable 'row'
-lSLF07#2@63"Compile /Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m303980540#303980541#0(1518"/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m: In function '-[HomeViewController tableView:cellForRowAtIndexPath:]':/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m:74: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m:76: warning: 'setImage:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m: In function '-[HomeViewController tableView:didSelectRowAtIndexPath:]':/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m:95: warning: incompatible Objective-C types initializing 'struct UINavigationController *', expected 'struct UINavigationBar *'/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m:98: warning: 'UINavigationBar' may not respond to '-pushViewController:animated:'/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m:98: warning: (Messages without a matching method signature/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m:98: warning: will be assumed to return 'id' and accept/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m:98: warning: '...' as arguments.)/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m:93: warning: unused variable 'row'6(22@196"'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)303980540#127#266#0(6@55"/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m303980428#74#0#74#0#33"'*' is deprecated (declared at *)0(22@197"'setImage:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)303980540#393#267#0(6@55"/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m303980428#76#0#76#0#33"'*' is deprecated (declared at *)0(22@114"Incompatible Objective-C types initializing 'struct UINavigationController *', expected 'struct UINavigationBar *'303980540#789#184#0(6@55"/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m303980428#95#0#95#0#61"incompatible Objective-C types initializing '*', expected '*'0(22@68"'UINavigationBar' may not respond to '-pushViewController:animated:'303980540#973#138#0(6@55"/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m303980428#98#0#98#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)303980540#1111#115#0(6@55"/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m303980428#98#0#98#0#0"0(22@21"Unused variable 'row'303980540#1427#91#0(6@55"/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m303980428#93#0#93#0#19"unused variable '*'0(0#0#55"/Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m4300885448#1783"    cd /Users/vsp/iosapp/ZhuBaJie    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-generated-files.hmap -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-own-target-headers.hmap -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-all-target-headers.hmap -iquote /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-project-headers.hmap -F/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator -I/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/DerivedSources/i386 -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZhuBaJie_Prefix-ffazlkkplgupaoalfprfupbguhzp/ZhuBaJie_Prefix.pch -c /Users/vsp/iosapp/ZhuBaJie/Classes/HomeViewController.m -o /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/HomeViewController.o0#
-
-CCompileC build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/LoginVieController.o /Users/vsp/iosapp/ZhuBaJie/Classes/LoginVieController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
-
-CCompileC build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/LoginViewController.o /Users/vsp/iosapp/ZhuBaJie/Classes/LoginViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s303917330.650299
-e303917330.815239
-r1
-xCompileC
-xbuild/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/LoginViewController.o
-x/Users/vsp/iosapp/ZhuBaJie/Classes/LoginViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@64"Compile /Users/vsp/iosapp/ZhuBaJie/Classes/LoginViewController.m303917330#303917330#0(0"0(0#0#56"/Users/vsp/iosapp/ZhuBaJie/Classes/LoginViewController.m4300885448#1785"    cd /Users/vsp/iosapp/ZhuBaJie    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-generated-files.hmap -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-own-target-headers.hmap -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-all-target-headers.hmap -iquote /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-project-headers.hmap -F/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator -I/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/DerivedSources/i386 -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZhuBaJie_Prefix-ffazlkkplgupaoalfprfupbguhzp/ZhuBaJie_Prefix.pch -c /Users/vsp/iosapp/ZhuBaJie/Classes/LoginViewController.m -o /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/LoginViewController.o0#
-
-CCompileC build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/MessageViewController.o /Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s303985903.922447
-e303985904.328593
-r1
-xCompileC
-xbuild/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/MessageViewController.o
-x/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m: In function '-[MessageViewController tableView:cellForRowAtIndexPath:]':
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m:73: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m: In function '-[MessageViewController tableView:didSelectRowAtIndexPath:]':
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m:87: warning: 'MessageViewController' may not respond to '-sendMessage'
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m:87: warning: (Messages without a matching method signature
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m:87: warning: will be assumed to return 'id' and accept
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m:87: warning: '...' as arguments.)
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m: In function '-[MessageViewController sendMessage]':
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m:96: warning: incompatible Objective-C types initializing 'struct UINavigationController *', expected 'struct UINavigationBar *'
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m:99: warning: 'UINavigationBar' may not respond to '-pushViewController:animated:'
-lSLF07#2@66"Compile /Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m303985903#303985904#0(1432"/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m: In function '-[MessageViewController tableView:cellForRowAtIndexPath:]':/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m:73: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m: In function '-[MessageViewController tableView:didSelectRowAtIndexPath:]':/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m:87: warning: 'MessageViewController' may not respond to '-sendMessage'/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m:87: warning: (Messages without a matching method signature/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m:87: warning: will be assumed to return 'id' and accept/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m:87: warning: '...' as arguments.)/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m: In function '-[MessageViewController sendMessage]':/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m:96: warning: incompatible Objective-C types initializing 'struct UINavigationController *', expected 'struct UINavigationBar *'/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m:99: warning: 'UINavigationBar' may not respond to '-pushViewController:animated:'5(22@196"'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)303985904#133#269#0(6@58"/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m303985324#73#0#73#0#33"'*' is deprecated (declared at *)0(22@57"'MessageViewController' may not respond to '-sendMessage'303985904#537#130#0(6@58"/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m303985324#87#0#87#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)303985904#667#118#0(6@58"/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m303985324#87#0#87#0#0"0(22@114"Incompatible Objective-C types initializing 'struct UINavigationController *', expected 'struct UINavigationBar *'303985904#1104#187#0(6@58"/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m303985324#96#0#96#0#61"incompatible Objective-C types initializing '*', expected '*'0(22@68"'UINavigationBar' may not respond to '-pushViewController:animated:'303985904#1291#141#0(6@58"/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m303985324#99#0#99#0#26"'*' may not respond to '*'0(0#0#58"/Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m4300885448#1789"    cd /Users/vsp/iosapp/ZhuBaJie    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-generated-files.hmap -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-own-target-headers.hmap -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-all-target-headers.hmap -iquote /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-project-headers.hmap -F/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator -I/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/DerivedSources/i386 -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZhuBaJie_Prefix-ffazlkkplgupaoalfprfupbguhzp/ZhuBaJie_Prefix.pch -c /Users/vsp/iosapp/ZhuBaJie/Classes/MessageViewController.m -o /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/MessageViewController.o0#
-
-CCompileC build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/MoreViewController.o /Users/vsp/iosapp/ZhuBaJie/Classes/MoreViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s303982640.889722
-e303982641.019893
-r1
-xCompileC
-xbuild/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/MoreViewController.o
-x/Users/vsp/iosapp/ZhuBaJie/Classes/MoreViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MoreViewController.m: In function '-[MoreViewController tableView:cellForRowAtIndexPath:]':
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MoreViewController.m:73: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)
-lSLF07#2@63"Compile /Users/vsp/iosapp/ZhuBaJie/Classes/MoreViewController.m303982640#303982641#0(393"/Users/vsp/iosapp/ZhuBaJie/Classes/MoreViewController.m: In function '-[MoreViewController tableView:cellForRowAtIndexPath:]':/Users/vsp/iosapp/ZhuBaJie/Classes/MoreViewController.m:73: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)1(22@196"'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)303982640#127#266#0(6@55"/Users/vsp/iosapp/ZhuBaJie/Classes/MoreViewController.m303982639#73#0#73#0#33"'*' is deprecated (declared at *)0(0#0#55"/Users/vsp/iosapp/ZhuBaJie/Classes/MoreViewController.m4300885448#1783"    cd /Users/vsp/iosapp/ZhuBaJie    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-generated-files.hmap -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-own-target-headers.hmap -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-all-target-headers.hmap -iquote /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-project-headers.hmap -F/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator -I/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/DerivedSources/i386 -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZhuBaJie_Prefix-ffazlkkplgupaoalfprfupbguhzp/ZhuBaJie_Prefix.pch -c /Users/vsp/iosapp/ZhuBaJie/Classes/MoreViewController.m -o /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/MoreViewController.o0#
-
-CCompileC build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/MyTaskItemsViewController.o /Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s303984613.820738
-e303984614.160164
-r1
-xCompileC
-xbuild/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/MyTaskItemsViewController.o
-x/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m: In function '-[MyTaskItemsViewController tableView:cellForRowAtIndexPath:]':
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m:78: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m:80: warning: 'setImage:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m: In function '-[MyTaskItemsViewController tableView:didSelectRowAtIndexPath:]':
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m:99: warning: incompatible Objective-C types initializing 'struct UINavigationController *', expected 'struct UINavigationBar *'
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m:102: warning: 'UINavigationBar' may not respond to '-pushViewController:animated:'
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m:102: warning: (Messages without a matching method signature
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m:102: warning: will be assumed to return 'id' and accept
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m:102: warning: '...' as arguments.)
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m:97: warning: unused variable 'row'
-lSLF07#2@70"Compile /Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m303984613#303984614#0(1606"/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m: In function '-[MyTaskItemsViewController tableView:cellForRowAtIndexPath:]':/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m:78: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m:80: warning: 'setImage:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m: In function '-[MyTaskItemsViewController tableView:didSelectRowAtIndexPath:]':/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m:99: warning: incompatible Objective-C types initializing 'struct UINavigationController *', expected 'struct UINavigationBar *'/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m:102: warning: 'UINavigationBar' may not respond to '-pushViewController:animated:'/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m:102: warning: (Messages without a matching method signature/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m:102: warning: will be assumed to return 'id' and accept/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m:102: warning: '...' as arguments.)/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m:97: warning: unused variable 'row'6(22@196"'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)303984613#141#273#0(6@62"/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m303983954#78#0#78#0#33"'*' is deprecated (declared at *)0(22@197"'setImage:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)303984613#414#274#0(6@62"/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m303983954#80#0#80#0#33"'*' is deprecated (declared at *)0(22@114"Incompatible Objective-C types initializing 'struct UINavigationController *', expected 'struct UINavigationBar *'303984613#831#191#0(6@62"/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m303983954#99#0#99#0#61"incompatible Objective-C types initializing '*', expected '*'0(22@68"'UINavigationBar' may not respond to '-pushViewController:animated:'303984613#1022#146#0(6@62"/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m303983954#102#0#102#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)303984613#1168#123#0(6@62"/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m303983954#102#0#102#0#0"0(22@21"Unused variable 'row'303984613#1508#98#0(6@62"/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m303983954#97#0#97#0#19"unused variable '*'0(0#0#62"/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m4300885448#1797"    cd /Users/vsp/iosapp/ZhuBaJie    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-generated-files.hmap -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-own-target-headers.hmap -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-all-target-headers.hmap -iquote /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-project-headers.hmap -F/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator -I/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/DerivedSources/i386 -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZhuBaJie_Prefix-ffazlkkplgupaoalfprfupbguhzp/ZhuBaJie_Prefix.pch -c /Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskItemsViewController.m -o /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/MyTaskItemsViewController.o0#
-
-CCompileC build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/MyTaskViewController.o /Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s303984613.661259
-e303984613.819381
-r1
-xCompileC
-xbuild/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/MyTaskViewController.o
-x/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m: In function '-[MyTaskViewController tableView:cellForRowAtIndexPath:]':
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m:75: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m: In function '-[MyTaskViewController tableView:didSelectRowAtIndexPath:]':
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m:84: warning: incompatible Objective-C types initializing 'struct UINavigationController *', expected 'struct UINavigationBar *'
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m:87: warning: 'UINavigationBar' may not respond to '-pushViewController:animated:'
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m:87: warning: (Messages without a matching method signature
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m:87: warning: will be assumed to return 'id' and accept
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m:87: warning: '...' as arguments.)
-o/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m:82: warning: unused variable 'row'
-lSLF07#2@65"Compile /Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m303984613#303984613#0(1273"/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m: In function '-[MyTaskViewController tableView:cellForRowAtIndexPath:]':/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m:75: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m: In function '-[MyTaskViewController tableView:didSelectRowAtIndexPath:]':/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m:84: warning: incompatible Objective-C types initializing 'struct UINavigationController *', expected 'struct UINavigationBar *'/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m:87: warning: 'UINavigationBar' may not respond to '-pushViewController:animated:'/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m:87: warning: (Messages without a matching method signature/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m:87: warning: will be assumed to return 'id' and accept/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m:87: warning: '...' as arguments.)/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m:82: warning: unused variable 'row'5(22@196"'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:200)303984613#131#268#0(6@57"/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m303983227#75#0#75#0#33"'*' is deprecated (declared at *)0(22@114"Incompatible Objective-C types initializing 'struct UINavigationController *', expected 'struct UINavigationBar *'303984613#532#186#0(6@57"/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m303983227#84#0#84#0#61"incompatible Objective-C types initializing '*', expected '*'0(22@68"'UINavigationBar' may not respond to '-pushViewController:animated:'303984613#718#140#0(6@57"/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m303983227#87#0#87#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)303984613#858#117#0(6@57"/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m303983227#87#0#87#0#0"0(22@21"Unused variable 'row'303984613#1180#93#0(6@57"/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m303983227#82#0#82#0#19"unused variable '*'0(0#0#57"/Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m4300885448#1787"    cd /Users/vsp/iosapp/ZhuBaJie    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-generated-files.hmap -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-own-target-headers.hmap -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-all-target-headers.hmap -iquote /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-project-headers.hmap -F/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator -I/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/DerivedSources/i386 -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZhuBaJie_Prefix-ffazlkkplgupaoalfprfupbguhzp/ZhuBaJie_Prefix.pch -c /Users/vsp/iosapp/ZhuBaJie/Classes/MyTaskViewController.m -o /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/MyTaskViewController.o0#
-
-CCompileC build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/SendMessageViewController.o /Users/vsp/iosapp/ZhuBaJie/Classes/SendMessageViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s303985941.158553
-e303985941.308974
-r1
-xCompileC
-xbuild/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/SendMessageViewController.o
-x/Users/vsp/iosapp/ZhuBaJie/Classes/SendMessageViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@70"Compile /Users/vsp/iosapp/ZhuBaJie/Classes/SendMessageViewController.m303985941#303985941#0(0"0(0#0#62"/Users/vsp/iosapp/ZhuBaJie/Classes/SendMessageViewController.m4300885448#1797"    cd /Users/vsp/iosapp/ZhuBaJie    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-generated-files.hmap -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-own-target-headers.hmap -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-all-target-headers.hmap -iquote /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-project-headers.hmap -F/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator -I/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/DerivedSources/i386 -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZhuBaJie_Prefix-ffazlkkplgupaoalfprfupbguhzp/ZhuBaJie_Prefix.pch -c /Users/vsp/iosapp/ZhuBaJie/Classes/SendMessageViewController.m -o /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/SendMessageViewController.o0#
-
-CCompileC build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/TenderViewController.o /Users/vsp/iosapp/ZhuBaJie/Classes/TenderViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s303979672.673990
-e303979672.939598
-r1
-xCompileC
-xbuild/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/TenderViewController.o
-x/Users/vsp/iosapp/ZhuBaJie/Classes/TenderViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@65"Compile /Users/vsp/iosapp/ZhuBaJie/Classes/TenderViewController.m303979672#303979672#0(0"0(0#0#57"/Users/vsp/iosapp/ZhuBaJie/Classes/TenderViewController.m4300885448#1787"    cd /Users/vsp/iosapp/ZhuBaJie    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-generated-files.hmap -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-own-target-headers.hmap -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-all-target-headers.hmap -iquote /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-project-headers.hmap -F/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator -I/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/DerivedSources/i386 -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZhuBaJie_Prefix-ffazlkkplgupaoalfprfupbguhzp/ZhuBaJie_Prefix.pch -c /Users/vsp/iosapp/ZhuBaJie/Classes/TenderViewController.m -o /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/TenderViewController.o0#
-
-CCompileC build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/ZhuBaJieAppDelegate.o /Users/vsp/iosapp/ZhuBaJie/Classes/ZhuBaJieAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s303916696.418913
-e303916696.583788
-r1
-xCompileC
-xbuild/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/ZhuBaJieAppDelegate.o
-x/Users/vsp/iosapp/ZhuBaJie/Classes/ZhuBaJieAppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@64"Compile /Users/vsp/iosapp/ZhuBaJie/Classes/ZhuBaJieAppDelegate.m303916696#303916696#0(0"0(0#0#56"/Users/vsp/iosapp/ZhuBaJie/Classes/ZhuBaJieAppDelegate.m4300885448#1785"    cd /Users/vsp/iosapp/ZhuBaJie    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-generated-files.hmap -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-own-target-headers.hmap -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-all-target-headers.hmap -iquote /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-project-headers.hmap -F/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator -I/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/DerivedSources/i386 -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZhuBaJie_Prefix-ffazlkkplgupaoalfprfupbguhzp/ZhuBaJie_Prefix.pch -c /Users/vsp/iosapp/ZhuBaJie/Classes/ZhuBaJieAppDelegate.m -o /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/ZhuBaJieAppDelegate.o0#
-
-CCompileC build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/main.o /Users/vsp/iosapp/ZhuBaJie/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s303914356.041276
-e303914356.101630
-r1
-xCompileC
-xbuild/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/main.o
-x/Users/vsp/iosapp/ZhuBaJie/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@41"Compile /Users/vsp/iosapp/ZhuBaJie/main.m303914356#303914356#0(0"0(0#0#33"/Users/vsp/iosapp/ZhuBaJie/main.m4300885448#1747"    cd /Users/vsp/iosapp/ZhuBaJie    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-generated-files.hmap -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-own-target-headers.hmap -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-all-target-headers.hmap -iquote /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-project-headers.hmap -F/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator -I/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/DerivedSources/i386 -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZhuBaJie_Prefix-ffazlkkplgupaoalfprfupbguhzp/ZhuBaJie_Prefix.pch -c /Users/vsp/iosapp/ZhuBaJie/main.m -o /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/main.o0#
-
-CCompileXIB /Users/vsp/iosapp/ZhuBaJie/MainWindow.xib
-s303981046.492058
-e303981047.853504
-r1
-xCompileXIB
-x/Users/vsp/iosapp/ZhuBaJie/MainWindow.xib
-lSLF07#2@25"CompileXIB MainWindow.xib303981046#303981047#0(0"0(0#0#41"/Users/vsp/iosapp/ZhuBaJie/MainWindow.xib4300885448#447"    cd /Users/vsp/iosapp/ZhuBaJie    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/MainWindow.nib /Users/vsp/iosapp/ZhuBaJie/MainWindow.xib0#
-
-CCompileXIB /Users/vsp/iosapp/ZhuBaJie/home.xib
-s303918860.868689
-e303918861.381386
-r1
-xCompileXIB
-x/Users/vsp/iosapp/ZhuBaJie/home.xib
-lSLF07#2@19"CompileXIB home.xib303918860#303918861#0(0"0(0#0#35"/Users/vsp/iosapp/ZhuBaJie/home.xib4300885448#435"    cd /Users/vsp/iosapp/ZhuBaJie    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/home.nib /Users/vsp/iosapp/ZhuBaJie/home.xib0#
-
-CCompileXIB /Users/vsp/iosapp/ZhuBaJie/homeitem.xib
-s303977325.511083
-e303977326.652495
-r1
-xCompileXIB
-x/Users/vsp/iosapp/ZhuBaJie/homeitem.xib
-lSLF07#2@23"CompileXIB homeitem.xib303977325#303977326#0(0"0(0#0#39"/Users/vsp/iosapp/ZhuBaJie/homeitem.xib4300885448#443"    cd /Users/vsp/iosapp/ZhuBaJie    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/homeitem.nib /Users/vsp/iosapp/ZhuBaJie/homeitem.xib0#
-
-CCompileXIB /Users/vsp/iosapp/ZhuBaJie/loginview.xib
-s303916223.297424
-e303916223.732085
-r1
-xCompileXIB
-x/Users/vsp/iosapp/ZhuBaJie/loginview.xib
-lSLF07#2@24"CompileXIB loginview.xib303916223#303916223#0(0"0(0#0#40"/Users/vsp/iosapp/ZhuBaJie/loginview.xib4300885448#445"    cd /Users/vsp/iosapp/ZhuBaJie    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/loginview.nib /Users/vsp/iosapp/ZhuBaJie/loginview.xib0#
-
-CCompileXIB /Users/vsp/iosapp/ZhuBaJie/message.xib
-s303982485.692846
-e303982486.641715
-r1
-xCompileXIB
-x/Users/vsp/iosapp/ZhuBaJie/message.xib
-lSLF07#2@22"CompileXIB message.xib303982485#303982486#0(0"0(0#0#38"/Users/vsp/iosapp/ZhuBaJie/message.xib4300885448#441"    cd /Users/vsp/iosapp/ZhuBaJie    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/message.nib /Users/vsp/iosapp/ZhuBaJie/message.xib0#
-
-CCompileXIB /Users/vsp/iosapp/ZhuBaJie/more.xib
-s303982596.032865
-e303982596.871442
-r1
-xCompileXIB
-x/Users/vsp/iosapp/ZhuBaJie/more.xib
-lSLF07#2@19"CompileXIB more.xib303982596#303982596#0(0"0(0#0#35"/Users/vsp/iosapp/ZhuBaJie/more.xib4300885448#435"    cd /Users/vsp/iosapp/ZhuBaJie    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/more.nib /Users/vsp/iosapp/ZhuBaJie/more.xib0#
-
-CCompileXIB /Users/vsp/iosapp/ZhuBaJie/mytask.xib
-s303980539.536087
-e303980540.662096
-r1
-xCompileXIB
-x/Users/vsp/iosapp/ZhuBaJie/mytask.xib
-lSLF07#2@21"CompileXIB mytask.xib303980539#303980540#0(0"0(0#0#37"/Users/vsp/iosapp/ZhuBaJie/mytask.xib4300885448#439"    cd /Users/vsp/iosapp/ZhuBaJie    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/mytask.nib /Users/vsp/iosapp/ZhuBaJie/mytask.xib0#
-
-CCompileXIB /Users/vsp/iosapp/ZhuBaJie/mytaskitems.xib
-s303984018.511990
-e303984019.469331
-r1
-xCompileXIB
-x/Users/vsp/iosapp/ZhuBaJie/mytaskitems.xib
-lSLF07#2@26"CompileXIB mytaskitems.xib303984018#303984019#0(0"0(0#0#42"/Users/vsp/iosapp/ZhuBaJie/mytaskitems.xib4300885448#449"    cd /Users/vsp/iosapp/ZhuBaJie    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/mytaskitems.nib /Users/vsp/iosapp/ZhuBaJie/mytaskitems.xib0#
-
-CCompileXIB /Users/vsp/iosapp/ZhuBaJie/mytasl.xib
-r0
-
-CCompileXIB /Users/vsp/iosapp/ZhuBaJie/sendmessage.xib
-s303986074.525658
-e303986075.423435
-r1
-xCompileXIB
-x/Users/vsp/iosapp/ZhuBaJie/sendmessage.xib
-lSLF07#2@26"CompileXIB sendmessage.xib303986074#303986075#0(0"0(0#0#42"/Users/vsp/iosapp/ZhuBaJie/sendmessage.xib4300885448#449"    cd /Users/vsp/iosapp/ZhuBaJie    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/sendmessage.nib /Users/vsp/iosapp/ZhuBaJie/sendmessage.xib0#
-
-CCompileXIB /Users/vsp/iosapp/ZhuBaJie/tender.xib
-s303980157.561469
-e303980158.560582
-r1
-xCompileXIB
-x/Users/vsp/iosapp/ZhuBaJie/tender.xib
-lSLF07#2@21"CompileXIB tender.xib303980157#303980158#0(0"0(0#0#37"/Users/vsp/iosapp/ZhuBaJie/tender.xib4300885448#439"    cd /Users/vsp/iosapp/ZhuBaJie    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/tender.nib /Users/vsp/iosapp/ZhuBaJie/tender.xib0#
-
-CCpResource build/Debug-iphonesimulator/ZhuBaJie.app/btn_send.png btn_send.png
-s303980103.811256
-e303980103.840398
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/ZhuBaJie.app/btn_send.png
-xbtn_send.png
-lSLF07#2@17"Copy btn_send.png303980103#303980103#0(0"0(0#0#39"/Users/vsp/iosapp/ZhuBaJie/btn_send.png4300885448#421"    cd /Users/vsp/iosapp/ZhuBaJie    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/vsp/iosapp/ZhuBaJie/btn_send.png /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app0#
-
-CCpResource build/Debug-iphonesimulator/ZhuBaJie.app/collect_icon_active.png collect_icon_active.png
-s303964548.041352
-e303964548.135968
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/ZhuBaJie.app/collect_icon_active.png
-xcollect_icon_active.png
-lSLF07#2@28"Copy collect_icon_active.png303964548#303964548#0(0"0(0#0#50"/Users/vsp/iosapp/ZhuBaJie/collect_icon_active.png4300885448#432"    cd /Users/vsp/iosapp/ZhuBaJie    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/vsp/iosapp/ZhuBaJie/collect_icon_active.png /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app0#
-
-CCpResource build/Debug-iphonesimulator/ZhuBaJie.app/comment_icon_active.png comment_icon_active.png
-s303964548.033412
-e303964548.105236
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/ZhuBaJie.app/comment_icon_active.png
-xcomment_icon_active.png
-lSLF07#2@28"Copy comment_icon_active.png303964548#303964548#0(0"0(0#0#50"/Users/vsp/iosapp/ZhuBaJie/comment_icon_active.png4300885448#432"    cd /Users/vsp/iosapp/ZhuBaJie    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/vsp/iosapp/ZhuBaJie/comment_icon_active.png /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app0#
-
-CCpResource build/Debug-iphonesimulator/ZhuBaJie.app/home_icon_unactive.png home_icon_unactive.png
-s303914883.979816
-e303914884.016541
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/ZhuBaJie.app/home_icon_unactive.png
-xhome_icon_unactive.png
-lSLF07#2@27"Copy home_icon_unactive.png303914883#303914884#0(0"0(0#0#49"/Users/vsp/iosapp/ZhuBaJie/home_icon_unactive.png4300885448#431"    cd /Users/vsp/iosapp/ZhuBaJie    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/vsp/iosapp/ZhuBaJie/home_icon_unactive.png /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app0#
-
-CCpResource build/Debug-iphonesimulator/ZhuBaJie.app/icon.png icon.png
-s303986298.880267
-e303986298.956775
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/ZhuBaJie.app/icon.png
-xicon.png
-lSLF07#2@13"Copy icon.png303986298#303986298#0(0"0(0#0#35"/Users/vsp/iosapp/ZhuBaJie/icon.png4300885448#417"    cd /Users/vsp/iosapp/ZhuBaJie    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/vsp/iosapp/ZhuBaJie/icon.png /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app0#
-
-CCpResource build/Debug-iphonesimulator/ZhuBaJie.app/login_bg_zbj.png login_bg_zbj.png
-s303914883.980565
-e303914884.016675
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/ZhuBaJie.app/login_bg_zbj.png
-xlogin_bg_zbj.png
-lSLF07#2@21"Copy login_bg_zbj.png303914883#303914884#0(0"0(0#0#43"/Users/vsp/iosapp/ZhuBaJie/login_bg_zbj.png4300885448#425"    cd /Users/vsp/iosapp/ZhuBaJie    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/vsp/iosapp/ZhuBaJie/login_bg_zbj.png /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app0#
-
-CCpResource build/Debug-iphonesimulator/ZhuBaJie.app/message_icon_unactive.png message_icon_unactive.png
-s303914883.981190
-e303914884.016782
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/ZhuBaJie.app/message_icon_unactive.png
-xmessage_icon_unactive.png
-lSLF07#2@30"Copy message_icon_unactive.png303914883#303914884#0(0"0(0#0#52"/Users/vsp/iosapp/ZhuBaJie/message_icon_unactive.png4300885448#434"    cd /Users/vsp/iosapp/ZhuBaJie    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/vsp/iosapp/ZhuBaJie/message_icon_unactive.png /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app0#
-
-CCpResource build/Debug-iphonesimulator/ZhuBaJie.app/more_icon_unactive.png more_icon_unactive.png
-s303914883.981792
-e303914884.016885
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/ZhuBaJie.app/more_icon_unactive.png
-xmore_icon_unactive.png
-lSLF07#2@27"Copy more_icon_unactive.png303914883#303914884#0(0"0(0#0#49"/Users/vsp/iosapp/ZhuBaJie/more_icon_unactive.png4300885448#431"    cd /Users/vsp/iosapp/ZhuBaJie    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/vsp/iosapp/ZhuBaJie/more_icon_unactive.png /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app0#
-
-CCpResource build/Debug-iphonesimulator/ZhuBaJie.app/mytask_icon_unactive.png mytask_icon_unactive.png
-s303914883.982435
-e303914884.016990
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/ZhuBaJie.app/mytask_icon_unactive.png
-xmytask_icon_unactive.png
-lSLF07#2@29"Copy mytask_icon_unactive.png303914883#303914884#0(0"0(0#0#51"/Users/vsp/iosapp/ZhuBaJie/mytask_icon_unactive.png4300885448#433"    cd /Users/vsp/iosapp/ZhuBaJie    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/vsp/iosapp/ZhuBaJie/mytask_icon_unactive.png /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app0#
-
-CCpResource build/Debug-iphonesimulator/ZhuBaJie.app/next_page.png next_page.png
-s303917790.346760
-e303917790.374569
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/ZhuBaJie.app/next_page.png
-xnext_page.png
-lSLF07#2@18"Copy next_page.png303917790#303917790#0(0"0(0#0#40"/Users/vsp/iosapp/ZhuBaJie/next_page.png4300885448#422"    cd /Users/vsp/iosapp/ZhuBaJie    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/vsp/iosapp/ZhuBaJie/next_page.png /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app0#
-
-CCpResource build/Debug-iphonesimulator/ZhuBaJie.app/next_page_pressed.png next_page_pressed.png
-s303917790.345928
-e303917790.359772
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/ZhuBaJie.app/next_page_pressed.png
-xnext_page_pressed.png
-lSLF07#2@26"Copy next_page_pressed.png303917790#303917790#0(0"0(0#0#48"/Users/vsp/iosapp/ZhuBaJie/next_page_pressed.png4300885448#430"    cd /Users/vsp/iosapp/ZhuBaJie    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/vsp/iosapp/ZhuBaJie/next_page_pressed.png /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app0#
-
-CCpResource build/Debug-iphonesimulator/ZhuBaJie.app/participation_icon_active.png participation_icon_active.png
-s303964548.038448
-e303964548.127363
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/ZhuBaJie.app/participation_icon_active.png
-xparticipation_icon_active.png
-lSLF07#2@34"Copy participation_icon_active.png303964548#303964548#0(0"0(0#0#56"/Users/vsp/iosapp/ZhuBaJie/participation_icon_active.png4300885448#438"    cd /Users/vsp/iosapp/ZhuBaJie    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/vsp/iosapp/ZhuBaJie/participation_icon_active.png /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app0#
-
-CCpResource build/Debug-iphonesimulator/ZhuBaJie.app/previous_page.png previous_page.png
-s303917790.357024
-e303917790.374720
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/ZhuBaJie.app/previous_page.png
-xprevious_page.png
-lSLF07#2@22"Copy previous_page.png303917790#303917790#0(0"0(0#0#44"/Users/vsp/iosapp/ZhuBaJie/previous_page.png4300885448#426"    cd /Users/vsp/iosapp/ZhuBaJie    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/vsp/iosapp/ZhuBaJie/previous_page.png /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app0#
-
-CCpResource build/Debug-iphonesimulator/ZhuBaJie.app/submit_icon_active.png submit_icon_active.png
-s303964548.034557
-e303964548.113974
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/ZhuBaJie.app/submit_icon_active.png
-xsubmit_icon_active.png
-lSLF07#2@27"Copy submit_icon_active.png303964548#303964548#0(0"0(0#0#49"/Users/vsp/iosapp/ZhuBaJie/submit_icon_active.png4300885448#431"    cd /Users/vsp/iosapp/ZhuBaJie    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/vsp/iosapp/ZhuBaJie/submit_icon_active.png /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app0#
-
-CCpResource build/Debug-iphonesimulator/ZhuBaJie.app/user_avatar_default.png user_avatar_default.png
-s303914883.983153
-e303914884.017092
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/ZhuBaJie.app/user_avatar_default.png
-xuser_avatar_default.png
-lSLF07#2@28"Copy user_avatar_default.png303914883#303914884#0(0"0(0#0#50"/Users/vsp/iosapp/ZhuBaJie/user_avatar_default.png4300885448#432"    cd /Users/vsp/iosapp/ZhuBaJie    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/vsp/iosapp/ZhuBaJie/user_avatar_default.png /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app0#
-
-CGenerateDSYMFile /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app.dSYM /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/ZhuBaJie
-s303985941.335187
-e303985941.446184
-r1
-xGenerateDSYMFile
-x/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app.dSYM
-x/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/ZhuBaJie
-lSLF07#2@112"GenerateDSYMFile build/Debug-iphonesimulator/ZhuBaJie.app.dSYM build/Debug-iphonesimulator/ZhuBaJie.app/ZhuBaJie303985941#303985941#0(0"0(0#0#76"/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/ZhuBaJie4300885448#350"    cd /Users/vsp/iosapp/ZhuBaJie    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/ZhuBaJie -o /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app.dSYM0#
-
-CLd /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/ZhuBaJie normal i386
-s303985941.309074
-e303985941.335088
-r1
-xLd
-x/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/ZhuBaJie
-xnormal
-xi386
-lSLF07#2@81"Link /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/ZhuBaJie303985941#303985941#0(0"0(0#0#0"4300885448#809"    cd /Users/vsp/iosapp/ZhuBaJie    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -L/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator -F/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator -filelist /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/Objects-normal/i386/ZhuBaJie.LinkFileList -mmacosx-version-min=10.5 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/ZhuBaJie0#
-
-CProcessInfoPlistFile /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/Info.plist ZhuBaJie-Info.plist
-s303914355.071357
-e303914355.076140
-r1
-xProcessInfoPlistFile
-x/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/Info.plist
-xZhuBaJie-Info.plist
-lSLF07#2@27"Process ZhuBaJie-Info.plist303914355#303914355#0(0"0(0#0#46"/Users/vsp/iosapp/ZhuBaJie/ZhuBaJie-Info.plist4300885448#446"    cd /Users/vsp/iosapp/ZhuBaJie    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility ZhuBaJie-Info.plist -genpkginfo /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app/Info.plist0#
-
-CProcessPCH /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZhuBaJie_Prefix-ffazlkkplgupaoalfprfupbguhzp/ZhuBaJie_Prefix.pch.gch ZhuBaJie_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-s303914355.357428
-e303914356.041169
-r1
-xProcessPCH
-x/var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZhuBaJie_Prefix-ffazlkkplgupaoalfprfupbguhzp/ZhuBaJie_Prefix.pch.gch
-xZhuBaJie_Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@30"Precompile ZhuBaJie_Prefix.pch303914355#303914356#0(0"0(0#0#46"/Users/vsp/iosapp/ZhuBaJie/ZhuBaJie_Prefix.pch4300885448#1650"    cd /Users/vsp/iosapp/ZhuBaJie    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-generated-files.hmap -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-own-target-headers.hmap -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-all-target-headers.hmap -iquote /Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/ZhuBaJie-project-headers.hmap -F/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator -I/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/DerivedSources/i386 -I/Users/vsp/iosapp/ZhuBaJie/build/ZhuBaJie.build/Debug-iphonesimulator/ZhuBaJie.build/DerivedSources -c /Users/vsp/iosapp/ZhuBaJie/ZhuBaJie_Prefix.pch -o /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ZhuBaJie_Prefix-ffazlkkplgupaoalfprfupbguhzp/ZhuBaJie_Prefix.pch.gch0#
-
-CTouch /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app
-s303986298.958773
-e303986298.961587
-r1
-xTouch
-x/Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app
-lSLF07#2@73"Touch /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app303986298#303986298#0(0"0(0#0#0"4300885448#255"    cd /Users/vsp/iosapp/ZhuBaJie    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/vsp/iosapp/ZhuBaJie/build/Debug-iphonesimulator/ZhuBaJie.app0#
-
