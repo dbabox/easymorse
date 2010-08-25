@@ -1,256 +1,0 @@
-TPlayMoveViewDemo
-v7
-r0
-t303270246.058233
-cCheck dependencies
-cProcessInfoPlistFile /Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app/Info.plist PlayMoveViewDemo-Info.plist
-cCompileXIB /Users/vsp/iosapp/PlayMoveViewDemo/MainWindow.xib
-cCompileXIB /Users/vsp/iosapp/PlayMoveViewDemo/PlayMoveViewDemoViewController.xib
-cProcessPCH /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PlayMoveViewDemo_Prefix-aippwukwjlcimnafmbpijzkodsur/PlayMoveViewDemo_Prefix.pch.gch PlayMoveViewDemo_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/Objects-normal/i386/main.o /Users/vsp/iosapp/PlayMoveViewDemo/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/Objects-normal/i386/PlayMoveViewDemoAppDelegate.o /Users/vsp/iosapp/PlayMoveViewDemo/Classes/PlayMoveViewDemoAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/Objects-normal/i386/PlayMoveViewDemoViewController.o /Users/vsp/iosapp/PlayMoveViewDemo/Classes/PlayMoveViewDemoViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cLd /Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app/PlayMoveViewDemo normal i386
-cGenerateDSYMFile /Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app.dSYM /Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app/PlayMoveViewDemo
-cTouch /Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk
-c000000004C58250200000000000000EE
-t1280845058
-s238
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c000000004B2B4CC3000000000026EE30
-t1261128899
-s2551344
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004B2B4DC8000000000027E880
-t1261129160
-s2615424
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c000000004B2B4DAE0000000000001355
-t1261129134
-s4949
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c000000004B2B61620000000000000788
-t1261134178
-s1928
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c000000004B2B62B500000000016721E0
-t1261134517
-s23536096
-
-N/Users/vsp/iosapp/PlayMoveViewDemo/Classes/PlayMoveViewDemoAppDelegate.h
-c000000004C6351D80000000000000210
-t1281577432
-s528
-i<UIKit/UIKit.h>
-
-N/Users/vsp/iosapp/PlayMoveViewDemo/Classes/PlayMoveViewDemoAppDelegate.m
-c000000004C6351D80000000000000292
-t1281577432
-s658
-i"PlayMoveViewDemoAppDelegate.h"
-i"PlayMoveViewDemoViewController.h"
-
-N/Users/vsp/iosapp/PlayMoveViewDemo/Classes/PlayMoveViewDemoViewController.h
-c000000004C6351D80000000000000104
-t1281577432
-s260
-i<UIKit/UIKit.h>
-
-N/Users/vsp/iosapp/PlayMoveViewDemo/Classes/PlayMoveViewDemoViewController.m
-c000000004C6351D800000000000005D6
-t1281577432
-s1494
-i"PlayMoveViewDemoViewController.h"
-
-N/Users/vsp/iosapp/PlayMoveViewDemo/MainWindow.xib
-c000000004C6351D800000000000024B1
-t1281577432
-s9393
-
-N/Users/vsp/iosapp/PlayMoveViewDemo/PlayMoveViewDemoViewController.xib
-c000000004C6351D800000000000018FF
-t1281577432
-s6399
-
-N/Users/vsp/iosapp/PlayMoveViewDemo/PlayMoveViewDemo_Prefix.pch
-c000000004C6351D800000000000000C9
-t1281577432
-s201
-i<Foundation/Foundation.h>
-i<UIKit/UIKit.h>
-
-N/Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app
-t1281577446
-s238
-
-N/Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app.dSYM
-t1281577446
-s102
-
-N/Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app/Info.plist
-t1281577443
-s606
-
-N/Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app/MainWindow.nib
-t1281577444
-s1513
-
-N/Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app/PkgInfo
-t1281577443
-s8
-
-N/Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app/PlayMoveViewDemo
-t1281577446
-s19648
-
-N/Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app/PlayMoveViewDemoViewController.nib
-t1281577444
-s1151
-
-N/Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/Objects-normal/i386/PlayMoveViewDemo.LinkFileList
-c000000004C6351E300000000000001C9
-t1281577443
-s457
-
-N/Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/Objects-normal/i386/PlayMoveViewDemoAppDelegate.o
-t1281577445
-s38272
-
-N/Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/Objects-normal/i386/PlayMoveViewDemoViewController.o
-t1281577445
-s30056
-
-N/Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/Objects-normal/i386/main.o
-t1281577445
-s5948
-
-N/Users/vsp/iosapp/PlayMoveViewDemo/main.m
-c000000004C6351D8000000000000016D
-t1281577432
-s365
-i<UIKit/UIKit.h>
-
-N/var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PlayMoveViewDemo_Prefix-aippwukwjlcimnafmbpijzkodsur/PlayMoveViewDemo_Prefix.pch.gch
-t1281577445
-s13034960
-
-NPlayMoveViewDemo-Info.plist
-c000000004C6351D8000000000000038D
-t1281577432
-s909
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies303270243#303270243#0(0"0(0#1#0"4300885448#0"0#
-
-CCompileC build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/Objects-normal/i386/PlayMoveViewDemoAppDelegate.o /Users/vsp/iosapp/PlayMoveViewDemo/Classes/PlayMoveViewDemoAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s303270245.854286
-e303270245.949745
-r1
-xCompileC
-xbuild/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/Objects-normal/i386/PlayMoveViewDemoAppDelegate.o
-x/Users/vsp/iosapp/PlayMoveViewDemo/Classes/PlayMoveViewDemoAppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@80"Compile /Users/vsp/iosapp/PlayMoveViewDemo/Classes/PlayMoveViewDemoAppDelegate.m303270245#303270245#0(0"0(0#0#72"/Users/vsp/iosapp/PlayMoveViewDemo/Classes/PlayMoveViewDemoAppDelegate.m4300885448#2049"    cd /Users/vsp/iosapp/PlayMoveViewDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/PlayMoveViewDemo-generated-files.hmap -I/Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/PlayMoveViewDemo-own-target-headers.hmap -I/Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/PlayMoveViewDemo-all-target-headers.hmap -iquote /Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/PlayMoveViewDemo-project-headers.hmap -F/Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator -I/Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/DerivedSources/i386 -I/Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PlayMoveViewDemo_Prefix-aippwukwjlcimnafmbpijzkodsur/PlayMoveViewDemo_Prefix.pch -c /Users/vsp/iosapp/PlayMoveViewDemo/Classes/PlayMoveViewDemoAppDelegate.m -o /Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/Objects-normal/i386/PlayMoveViewDemoAppDelegate.o0#
-
-CCompileC build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/Objects-normal/i386/PlayMoveViewDemoViewController.o /Users/vsp/iosapp/PlayMoveViewDemo/Classes/PlayMoveViewDemoViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s303270245.910425
-e303270246.000175
-r1
-xCompileC
-xbuild/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/Objects-normal/i386/PlayMoveViewDemoViewController.o
-x/Users/vsp/iosapp/PlayMoveViewDemo/Classes/PlayMoveViewDemoViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@83"Compile /Users/vsp/iosapp/PlayMoveViewDemo/Classes/PlayMoveViewDemoViewController.m303270245#303270246#0(0"0(0#0#75"/Users/vsp/iosapp/PlayMoveViewDemo/Classes/PlayMoveViewDemoViewController.m4300885448#2055"    cd /Users/vsp/iosapp/PlayMoveViewDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/PlayMoveViewDemo-generated-files.hmap -I/Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/PlayMoveViewDemo-own-target-headers.hmap -I/Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/PlayMoveViewDemo-all-target-headers.hmap -iquote /Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/PlayMoveViewDemo-project-headers.hmap -F/Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator -I/Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/DerivedSources/i386 -I/Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PlayMoveViewDemo_Prefix-aippwukwjlcimnafmbpijzkodsur/PlayMoveViewDemo_Prefix.pch -c /Users/vsp/iosapp/PlayMoveViewDemo/Classes/PlayMoveViewDemoViewController.m -o /Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/Objects-normal/i386/PlayMoveViewDemoViewController.o0#
-
-CCompileC build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/Objects-normal/i386/main.o /Users/vsp/iosapp/PlayMoveViewDemo/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s303270245.853221
-e303270245.910312
-r1
-xCompileC
-xbuild/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/Objects-normal/i386/main.o
-x/Users/vsp/iosapp/PlayMoveViewDemo/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@49"Compile /Users/vsp/iosapp/PlayMoveViewDemo/main.m303270245#303270245#0(0"0(0#0#41"/Users/vsp/iosapp/PlayMoveViewDemo/main.m4300885448#1995"    cd /Users/vsp/iosapp/PlayMoveViewDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/PlayMoveViewDemo-generated-files.hmap -I/Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/PlayMoveViewDemo-own-target-headers.hmap -I/Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/PlayMoveViewDemo-all-target-headers.hmap -iquote /Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/PlayMoveViewDemo-project-headers.hmap -F/Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator -I/Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/DerivedSources/i386 -I/Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PlayMoveViewDemo_Prefix-aippwukwjlcimnafmbpijzkodsur/PlayMoveViewDemo_Prefix.pch -c /Users/vsp/iosapp/PlayMoveViewDemo/main.m -o /Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/Objects-normal/i386/main.o0#
-
-CCompileXIB /Users/vsp/iosapp/PlayMoveViewDemo/MainWindow.xib
-s303270243.353515
-e303270244.787099
-r1
-xCompileXIB
-x/Users/vsp/iosapp/PlayMoveViewDemo/MainWindow.xib
-lSLF07#2@25"CompileXIB MainWindow.xib303270243#303270244#0(0"0(0#0#49"/Users/vsp/iosapp/PlayMoveViewDemo/MainWindow.xib4300885448#479"    cd /Users/vsp/iosapp/PlayMoveViewDemo    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app/MainWindow.nib /Users/vsp/iosapp/PlayMoveViewDemo/MainWindow.xib0#
-
-CCompileXIB /Users/vsp/iosapp/PlayMoveViewDemo/PlayMoveViewDemoViewController.xib
-s303270243.366851
-e303270244.769114
-r1
-xCompileXIB
-x/Users/vsp/iosapp/PlayMoveViewDemo/PlayMoveViewDemoViewController.xib
-lSLF07#2@45"CompileXIB PlayMoveViewDemoViewController.xib303270243#303270244#0(0"0(0#0#69"/Users/vsp/iosapp/PlayMoveViewDemo/PlayMoveViewDemoViewController.xib4300885448#519"    cd /Users/vsp/iosapp/PlayMoveViewDemo    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app/PlayMoveViewDemoViewController.nib /Users/vsp/iosapp/PlayMoveViewDemo/PlayMoveViewDemoViewController.xib0#
-
-CGenerateDSYMFile /Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app.dSYM /Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app/PlayMoveViewDemo
-s303270246.040867
-e303270246.055182
-r1
-xGenerateDSYMFile
-x/Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app.dSYM
-x/Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app/PlayMoveViewDemo
-lSLF07#2@136"GenerateDSYMFile build/Debug-iphonesimulator/PlayMoveViewDemo.app.dSYM build/Debug-iphonesimulator/PlayMoveViewDemo.app/PlayMoveViewDemo303270246#303270246#0(0"0(0#0#100"/Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app/PlayMoveViewDemo4300885448#398"    cd /Users/vsp/iosapp/PlayMoveViewDemo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app/PlayMoveViewDemo -o /Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app.dSYM0#
-
-CLd /Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app/PlayMoveViewDemo normal i386
-s303270246.000349
-e303270246.040766
-r1
-xLd
-x/Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app/PlayMoveViewDemo
-xnormal
-xi386
-lSLF07#2@105"Link /Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app/PlayMoveViewDemo303270246#303270246#0(0"0(0#0#0"4300885448#889"    cd /Users/vsp/iosapp/PlayMoveViewDemo    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -L/Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator -F/Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator -filelist /Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/Objects-normal/i386/PlayMoveViewDemo.LinkFileList -mmacosx-version-min=10.5 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app/PlayMoveViewDemo0#
-
-CProcessInfoPlistFile /Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app/Info.plist PlayMoveViewDemo-Info.plist
-s303270243.349951
-e303270243.353432
-r1
-xProcessInfoPlistFile
-x/Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app/Info.plist
-xPlayMoveViewDemo-Info.plist
-lSLF07#2@35"Process PlayMoveViewDemo-Info.plist303270243#303270243#0(0"0(0#0#62"/Users/vsp/iosapp/PlayMoveViewDemo/PlayMoveViewDemo-Info.plist4300885448#494"    cd /Users/vsp/iosapp/PlayMoveViewDemo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility PlayMoveViewDemo-Info.plist -genpkginfo /Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app/Info.plist0#
-
-CProcessPCH /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PlayMoveViewDemo_Prefix-aippwukwjlcimnafmbpijzkodsur/PlayMoveViewDemo_Prefix.pch.gch PlayMoveViewDemo_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-s303270244.787218
-e303270245.853043
-r1
-xProcessPCH
-x/var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PlayMoveViewDemo_Prefix-aippwukwjlcimnafmbpijzkodsur/PlayMoveViewDemo_Prefix.pch.gch
-xPlayMoveViewDemo_Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@38"Precompile PlayMoveViewDemo_Prefix.pch303270244#303270245#0(0"0(0#0#62"/Users/vsp/iosapp/PlayMoveViewDemo/PlayMoveViewDemo_Prefix.pch4300885448#1882"    cd /Users/vsp/iosapp/PlayMoveViewDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/PlayMoveViewDemo-generated-files.hmap -I/Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/PlayMoveViewDemo-own-target-headers.hmap -I/Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/PlayMoveViewDemo-all-target-headers.hmap -iquote /Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/PlayMoveViewDemo-project-headers.hmap -F/Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator -I/Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/DerivedSources/i386 -I/Users/vsp/iosapp/PlayMoveViewDemo/build/PlayMoveViewDemo.build/Debug-iphonesimulator/PlayMoveViewDemo.build/DerivedSources -c /Users/vsp/iosapp/PlayMoveViewDemo/PlayMoveViewDemo_Prefix.pch -o /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PlayMoveViewDemo_Prefix-aippwukwjlcimnafmbpijzkodsur/PlayMoveViewDemo_Prefix.pch.gch0#
-
-CTouch /Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app
-s303270246.055270
-e303270246.058187
-r1
-xTouch
-x/Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app
-lSLF07#2@89"Touch /Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app303270246#303270246#0(0"0(0#0#0"4300885448#279"    cd /Users/vsp/iosapp/PlayMoveViewDemo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/vsp/iosapp/PlayMoveViewDemo/build/Debug-iphonesimulator/PlayMoveViewDemo.app0#
-
