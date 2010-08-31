@@ -2,11 +2,17 @@
 <FrameLayout android:layout_width="fill_parent"
 	android:gravity="center" android:layout_height="fill_parent"
 	xmlns:android="http://schemas.android.com/apk/res/android">
-	<LinearLayout android:layout_width="fill_parent"
-		android:gravity="center" android:layout_height="fill_parent">
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
 		<VideoView android:id="@+id/videoView" android:layout_width="fill_parent"
-			android:layout_height="fill_parent" />
-	</LinearLayout>
+			android:layout_height="fill_parent" android:layout_centerHorizontal="true"
+			android:layout_centerVertical="true" />
+		<TextView android:id="@+id/timeText" android:focusable="false"
+			android:visibility="invisible" android:focusableInTouchMode="false"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_marginLeft="5.0dip" android:layout_alignParentLeft="true"
+			android:layout_alignParentTop="true" />
+	</RelativeLayout>
 	<LinearLayout android:layout_width="fill_parent"
 		android:gravity="center" android:layout_height="fill_parent">
 		<ImageView android:id="@+id/image" android:layout_height="wrap_content"
@@ -14,7 +20,7 @@
 	</LinearLayout>
 	<LinearLayout android:layout_width="fill_parent"
 		android:gravity="center|bottom" android:layout_height="fill_parent">
-		<ProgressBar android:id="@+id/progress" 
+		<ProgressBar android:id="@+id/progress"
 			android:layout_height="wrap_content" android:layout_width="wrap_content" />
 	</LinearLayout>
 </FrameLayout>
