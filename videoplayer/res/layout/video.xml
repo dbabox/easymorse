@@ -4,7 +4,7 @@
 	xmlns:android="http://schemas.android.com/apk/res/android">
 	<RelativeLayout android:layout_width="fill_parent"
 		android:layout_height="fill_parent">
-		<VideoView android:id="@+id/videoView" android:layout_width="fill_parent"
+		<com.easymorse.videoplayer.CustomerVideoView android:id="@+id/videoView" android:layout_width="fill_parent"
 			android:layout_height="fill_parent" android:layout_centerHorizontal="true"
 			android:layout_centerVertical="true" />
 		<TextView android:id="@+id/timeText" android:focusable="false"

@@ -17,14 +17,11 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.TextView;
-import android.widget.VideoView;
 
 public class MediaPlayerActivity extends Activity {
-	private VideoView videoView;
+	private CustomerVideoView videoView;
 
 	private ImageView imageView;
-
-	// private ProgressBar progressBar;
 
 	private TextView timeTextView;
 
@@ -48,15 +45,13 @@ public class MediaPlayerActivity extends Activity {
 		this.scheduledExecutorService = Executors.newScheduledThreadPool(2);
 		this.handler = new Handler();
 
-		this.videoView = (VideoView) this.findViewById(R.id.videoView);
+		this.videoView = (CustomerVideoView) this.findViewById(R.id.videoView);
 		this.imageView = (ImageView) this.findViewById(R.id.image);
 		this.imageView.setImageResource(R.drawable.ad);
 
 		this.timeTextView = (TextView) this.findViewById(R.id.timeText);
 		this.titleTextView = (TextView) this.findViewById(R.id.videoTitle);
 		this.clockTextView = (TextView) this.findViewById(R.id.clockText);
-
-		// this.progressBar = (ProgressBar) this.findViewById(R.id.progress);
 
 		MediaController controller = new MediaController(this);
 		this.videoView.setMediaController(controller);
