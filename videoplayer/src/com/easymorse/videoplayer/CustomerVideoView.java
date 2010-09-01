@@ -33,10 +33,6 @@ public class CustomerVideoView extends SurfaceView implements
 
 	private OnPreparedListener onPreparedListener;
 
-	private int videoWidth;
-
-	private int videoHeight;
-
 	private MediaController mediaController;
 
 	protected SurfaceHolder surfaceHolder;
@@ -62,12 +58,11 @@ public class CustomerVideoView extends SurfaceView implements
 			if (mediaController != null) {
 				mediaController.hide();
 			}
-
-			release(true);
+			release();
 		}
 	};
 
-	private void release(boolean cleartargetstate) {
+	private void release() {
 		if (mediaPlayer != null) {
 			mediaPlayer.reset();
 			mediaPlayer.release();
@@ -195,24 +190,7 @@ public class CustomerVideoView extends SurfaceView implements
 		this.onPreparedListener = onPreparedListener;
 	}
 
-	@Override
-	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-		int width = getDefaultSize(videoWidth, widthMeasureSpec);
-		int height = getDefaultSize(videoHeight, heightMeasureSpec);
-		if (videoWidth > 0 && videoHeight > 0) {
-			if (videoWidth * height > width * videoHeight) {
-				height = width * videoHeight / videoWidth;
-			} else if (videoWidth * height < width * videoHeight) {
-				width = height * videoWidth / videoHeight;
-			}
-		}
-		Log.i(TAG, "setting size: " + width + 'x' + height);
-		setMeasuredDimension(width, height);
-	}
-
 	private void initVideoView() {
-		videoWidth = 0;
-		videoHeight = 0;
 		getHolder().addCallback(surfaceHolderCallback);
 		getHolder().setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
 		setFocusable(true);

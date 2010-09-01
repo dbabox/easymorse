@@ -103,7 +103,7 @@ public class MediaPlayerActivity extends Activity {
 
 		videoView
 				.setVideoURI(Uri
-						.parse("http://wangjun.easymorse.com/wp-content/video/mp4/tuzi.3gp"));
+						.parse("http://wangjun.easymorse.com/wp-content/video/mp4/tuzi.mp4"));
 	}
 
 	private static String getTimeFormatValue(long time) {
