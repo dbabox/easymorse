@@ -20,7 +20,7 @@
 //}
 
 - (IBAction)buttonPressed:(id)sender{
-	NSString* content= [[NSString alloc] initWithFormat:@"来自%@按钮",[sender titleForState:UIControlStateNormal]];
+	NSString* content= [[NSString alloc] initWithFormat:@"来自于%@按钮",[sender titleForState:UIControlStateNormal]];
 	text.text=content;
 	[content release];
 }
