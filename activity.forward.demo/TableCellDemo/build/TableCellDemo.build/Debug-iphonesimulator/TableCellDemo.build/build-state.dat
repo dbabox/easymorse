@@ -1,0 +1,324 @@
+TTableCellDemo
+v7
+r0
+t306640490.793843
+cCheck dependencies
+cProcessInfoPlistFile /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app/Info.plist TableCellDemo-Info.plist
+cCompileXIB /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/MainWindow.xib
+cCompileXIB /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/TableCellDemoViewController.xib
+cCompileXIB /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/mycell.xib
+cCpResource build/Debug-iphonesimulator/TableCellDemo.app/wangjun.jpg wangjun.jpg
+cProcessPCH /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableCellDemo_Prefix-gedlohompjgsrydthizauiyctved/TableCellDemo_Prefix.pch.gch TableCellDemo_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/Objects-normal/i386/main.o /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/Objects-normal/i386/TableCellDemoAppDelegate.o /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/Classes/TableCellDemoAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/Objects-normal/i386/TableCellDemoViewController.o /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/Classes/TableCellDemoViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/Objects-normal/i386/MyCell.o /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/Classes/MyCell.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app/TableCellDemo normal i386
+cGenerateDSYMFile /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app.dSYM /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app/TableCellDemo
+cTouch /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk
+c000000004C7F71D30000000000000132
+t1283420627
+s306
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004BFDFE39000000000027C7D0
+t1274936889
+s2607056
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004BFDFE7C000000000029D5D0
+t1274936956
+s2741712
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004BFDFE6E0000000000001466
+t1274936942
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004C0470BB00000000000009CD
+t1275359419
+s2509
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004C0471620000000001D47210
+t1275359586
+s30700048
+
+N/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/Classes/MyCell.h
+c000000004C96BC380000000000000119
+t1284947000
+s281
+i<UIKit/UIKit.h>
+
+N/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/Classes/MyCell.m
+c000000004C96BC4C0000000000000284
+t1284947020
+s644
+i"MyCell.h"
+
+N/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/Classes/TableCellDemoAppDelegate.h
+c000000004C96B9D100000000000001FE
+t1284946385
+s510
+i<UIKit/UIKit.h>
+
+N/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/Classes/TableCellDemoAppDelegate.m
+c000000004C96B9D10000000000000AA4
+t1284946385
+s2724
+i"TableCellDemoAppDelegate.h"
+i"TableCellDemoViewController.h"
+
+N/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/Classes/TableCellDemoViewController.h
+c000000004C96BE3E000000000000017E
+t1284947518
+s382
+i<UIKit/UIKit.h>
+
+N/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/Classes/TableCellDemoViewController.m
+c000000004C96BEC1000000000000061E
+t1284947649
+s1566
+i"TableCellDemoViewController.h"
+i"MyCell.h"
+
+N/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/MainWindow.xib
+c000000004C96B9D10000000000004E71
+t1284946385
+s20081
+
+N/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/TableCellDemoViewController.xib
+c000000004C96BECF0000000000004BC3
+t1284947663
+s19395
+
+N/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/TableCellDemo_Prefix.pch
+c000000004C96B9D100000000000000C3
+t1284946385
+s195
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app
+t1284947690
+s306
+
+N/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app.dSYM
+t1284947655
+s102
+
+N/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app/Info.plist
+t1284946393
+s615
+
+N/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app/MainWindow.nib
+t1284946393
+s1135
+
+N/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app/PkgInfo
+t1284946393
+s8
+
+N/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app/TableCellDemo
+t1284947655
+s23972
+
+N/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app/TableCellDemoViewController.nib
+t1284947669
+s1240
+
+N/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app/mycell.nib
+t1284947690
+s2244
+
+N/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app/wangjun.jpg
+t1284947459
+s1949
+
+N/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/Objects-normal/i386/MyCell.o
+t1284947067
+s36016
+
+N/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/Objects-normal/i386/TableCellDemo.LinkFileList
+c000000004C96BC78000000000000028D
+t1284947064
+s653
+
+N/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/Objects-normal/i386/TableCellDemoAppDelegate.o
+t1284947552
+s48160
+
+N/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/Objects-normal/i386/TableCellDemoViewController.o
+t1284947655
+s45160
+
+N/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/Objects-normal/i386/main.o
+t1284946394
+s6340
+
+N/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/main.m
+c000000004C96B9D1000000000000016A
+t1284946385
+s362
+i<UIKit/UIKit.h>
+
+N/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/mycell.xib
+c000000004C96BEE500000000000051F6
+t1284947685
+s20982
+
+N/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/wangjun.jpg
+c000000004C95F895000000000000079D
+t1284896917
+s1949
+
+N/var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableCellDemo_Prefix-gedlohompjgsrydthizauiyctved/TableCellDemo_Prefix.pch.gch
+t1284946394
+s15232016
+
+NTableCellDemo-Info.plist
+c000000004C96B9D1000000000000038D
+t1284946385
+s909
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies306640490#306640490#0(0"0(0#1#0"8607264032#0"0#
+
+CCompileC build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/Objects-normal/i386/MyCell.o /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/Classes/MyCell.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s306639866.026710
+e306639867.272655
+r1
+xCompileC
+xbuild/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/Objects-normal/i386/MyCell.o
+x/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/Classes/MyCell.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@81"Compile /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/Classes/MyCell.m306639866#306639867#0(0"0(0#0#73"/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/Classes/MyCell.m8615173568#2231"    cd /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/TableCellDemo-generated-files.hmap -I/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/TableCellDemo-own-target-headers.hmap -I/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/TableCellDemo-all-target-headers.hmap -iquote /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/TableCellDemo-project-headers.hmap -F/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator -I/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/include -I/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/DerivedSources/i386 -I/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableCellDemo_Prefix-gedlohompjgsrydthizauiyctved/TableCellDemo_Prefix.pch -c /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/Classes/MyCell.m -o /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/Objects-normal/i386/MyCell.o0#
+
+CCompileC build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/Objects-normal/i386/TableCellDemoAppDelegate.o /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/Classes/TableCellDemoAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s306640351.198317
+e306640352.458174
+r1
+xCompileC
+xbuild/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/Objects-normal/i386/TableCellDemoAppDelegate.o
+x/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/Classes/TableCellDemoAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@99"Compile /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/Classes/TableCellDemoAppDelegate.m306640351#306640352#0(0"0(0#0#91"/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/Classes/TableCellDemoAppDelegate.m8599096416#2267"    cd /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/TableCellDemo-generated-files.hmap -I/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/TableCellDemo-own-target-headers.hmap -I/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/TableCellDemo-all-target-headers.hmap -iquote /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/TableCellDemo-project-headers.hmap -F/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator -I/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/include -I/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/DerivedSources/i386 -I/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableCellDemo_Prefix-gedlohompjgsrydthizauiyctved/TableCellDemo_Prefix.pch -c /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/Classes/TableCellDemoAppDelegate.m -o /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/Objects-normal/i386/TableCellDemoAppDelegate.o0#
+
+CCompileC build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/Objects-normal/i386/TableCellDemoViewController.o /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/Classes/TableCellDemoViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s306640455.266271
+e306640455.416418
+r1
+xCompileC
+xbuild/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/Objects-normal/i386/TableCellDemoViewController.o
+x/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/Classes/TableCellDemoViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@102"Compile /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/Classes/TableCellDemoViewController.m306640455#306640455#0(0"0(0#0#94"/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/Classes/TableCellDemoViewController.m8615964352#2273"    cd /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/TableCellDemo-generated-files.hmap -I/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/TableCellDemo-own-target-headers.hmap -I/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/TableCellDemo-all-target-headers.hmap -iquote /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/TableCellDemo-project-headers.hmap -F/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator -I/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/include -I/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/DerivedSources/i386 -I/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableCellDemo_Prefix-gedlohompjgsrydthizauiyctved/TableCellDemo_Prefix.pch -c /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/Classes/TableCellDemoViewController.m -o /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/Objects-normal/i386/TableCellDemoViewController.o0#
+
+CCompileC build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/Objects-normal/i386/main.o /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s306639194.870522
+e306639194.938775
+r1
+xCompileC
+xbuild/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/Objects-normal/i386/main.o
+x/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@71"Compile /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/main.m306639194#306639194#0(0"0(0#0#63"/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/main.m8600334144#2219"    cd /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/TableCellDemo-generated-files.hmap -I/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/TableCellDemo-own-target-headers.hmap -I/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/TableCellDemo-all-target-headers.hmap -iquote /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/TableCellDemo-project-headers.hmap -F/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator -I/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/include -I/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/DerivedSources/i386 -I/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableCellDemo_Prefix-gedlohompjgsrydthizauiyctved/TableCellDemo_Prefix.pch -c /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/main.m -o /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/Objects-normal/i386/main.o0#
+
+CCompileXIB /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/MainWindow.xib
+s306639193.120208
+e306639193.715034
+r1
+xCompileXIB
+x/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib306639193#306639193#0(0"0(0#0#71"/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/MainWindow.xib8605619904#630"    cd /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app/MainWindow.nib /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk0#
+
+CCompileXIB /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/TableCellDemoViewController.xib
+s306640468.249176
+e306640469.126861
+r1
+xCompileXIB
+x/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/TableCellDemoViewController.xib
+lSLF07#2@42"CompileXIB TableCellDemoViewController.xib306640468#306640469#0(0"0(0#0#88"/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/TableCellDemoViewController.xib8607474688#664"    cd /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app/TableCellDemoViewController.nib /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/TableCellDemoViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk0#
+
+CCompileXIB /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/mycell.xib
+s306640490.276312
+e306640490.790323
+r1
+xCompileXIB
+x/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/mycell.xib
+lSLF07#2@21"CompileXIB mycell.xib306640490#306640490#0(0"0(0#0#67"/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/mycell.xib8616348608#622"    cd /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app/mycell.nib /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/mycell.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk0#
+
+CCpResource build/Debug-iphonesimulator/TableCellDemo.app/wangjun.jpg wangjun.jpg
+s306640259.741555
+e306640259.781177
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/TableCellDemo.app/wangjun.jpg
+xwangjun.jpg
+lSLF07#2@16"Copy wangjun.jpg306640259#306640259#0(0"0(0#0#68"/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/wangjun.jpg8614630080#515"    cd /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/wangjun.jpg /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app0#
+
+CGenerateDSYMFile /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app.dSYM /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app/TableCellDemo
+s306640455.446424
+e306640455.465836
+r1
+xGenerateDSYMFile
+x/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app.dSYM
+x/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app/TableCellDemo
+lSLF07#2@127"GenerateDSYMFile build/Debug-iphonesimulator/TableCellDemo.app.dSYM build/Debug-iphonesimulator/TableCellDemo.app/TableCellDemo306640455#306640455#0(0"0(0#0#116"/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app/TableCellDemo8605552864#455"    cd /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app/TableCellDemo -o /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app.dSYM0#
+
+CLd /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app/TableCellDemo normal i386
+s306640455.416507
+e306640455.446313
+r1
+xLd
+x/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app/TableCellDemo
+xnormal
+xi386
+lSLF07#2@121"Link /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app/TableCellDemo306640455#306640455#0(0"0(0#0#0"8615853056#1020"    cd /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -L/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator -F/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator -filelist /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/Objects-normal/i386/TableCellDemo.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app/TableCellDemo0#
+
+CProcessInfoPlistFile /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app/Info.plist TableCellDemo-Info.plist
+s306639193.090607
+e306639193.120108
+r1
+xProcessInfoPlistFile
+x/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app/Info.plist
+xTableCellDemo-Info.plist
+lSLF07#2@32"Process TableCellDemo-Info.plist306639193#306639193#0(0"0(0#0#81"/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/TableCellDemo-Info.plist27303433521266800#551"    cd /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility TableCellDemo-Info.plist -genpkginfo /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app/Info.plist0#
+
+CProcessPCH /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableCellDemo_Prefix-gedlohompjgsrydthizauiyctved/TableCellDemo_Prefix.pch.gch TableCellDemo_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s306639193.715186
+e306639194.870295
+r1
+xProcessPCH
+x/var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableCellDemo_Prefix-gedlohompjgsrydthizauiyctved/TableCellDemo_Prefix.pch.gch
+xTableCellDemo_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@35"Precompile TableCellDemo_Prefix.pch306639193#306639194#0(0"0(0#0#81"/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/TableCellDemo_Prefix.pch8604255232#2087"    cd /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/TableCellDemo-generated-files.hmap -I/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/TableCellDemo-own-target-headers.hmap -I/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/TableCellDemo-all-target-headers.hmap -iquote /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/TableCellDemo-project-headers.hmap -F/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator -I/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/include -I/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/DerivedSources/i386 -I/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/TableCellDemo.build/Debug-iphonesimulator/TableCellDemo.build/DerivedSources -c /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/TableCellDemo_Prefix.pch -o /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TableCellDemo_Prefix-gedlohompjgsrydthizauiyctved/TableCellDemo_Prefix.pch.gch0#
+
+CTouch /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app
+s306640490.791103
+e306640490.793795
+r1
+xTouch
+x/Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app
+lSLF07#2@108"Touch /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app306640490#306640490#0(0"0(0#0#0"8614520192#320"    cd /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/vsp/iosworkspace/iosiphoneeasymorse/TableCellDemo/build/Debug-iphonesimulator/TableCellDemo.app0#
+

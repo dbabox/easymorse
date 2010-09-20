@@ -1,0 +1,120 @@
+// !$*UTF8*$!
+{
+	1D6058900D05DD3D006BFB54 /* TableCellDemo */ = {
+		activeExec = 0;
+		executables = (
+			6B5A19DC1246F151001B497D /* TableCellDemo */,
+		);
+	};
+	28D7ACF60DDB3853001CB0EB /* TableCellDemoViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {587, 389}}";
+			sepNavSelRange = "{228, 0}";
+			sepNavVisRange = "{0, 295}";
+		};
+	};
+	28D7ACF70DDB3853001CB0EB /* TableCellDemoViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {879, 637}}";
+			sepNavSelRange = "{1297, 0}";
+			sepNavVisRange = "{242, 1062}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 6B5A19DC1246F151001B497D /* TableCellDemo */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* TableCellDemo */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* TableCellDemo */,
+		);
+		codeSenseManager = 6B5A19FB1246F15B001B497D /* Code sense */;
+		executables = (
+			6B5A19DC1246F151001B497D /* TableCellDemo */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					490,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 306639185;
+			PBXWorkspaceStateSaveDate = 306639185;
+		};
+		sourceControlManager = 6B5A19FA1246F15B001B497D /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	6B5A19DC1246F151001B497D /* TableCellDemo */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = TableCellDemo;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	6B5A19FA1246F15B001B497D /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	6B5A19FB1246F15B001B497D /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	6B5A1A081246F326001B497D /* MyCell.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {879, 467}}";
+			sepNavSelRange = "{269, 5}";
+			sepNavVisRange = "{0, 281}";
+		};
+	};
+	6B5A1A091246F326001B497D /* MyCell.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {879, 467}}";
+			sepNavSelRange = "{195, 0}";
+			sepNavVisRange = "{0, 644}";
+		};
+	};
+}
