@@ -4,11 +4,14 @@ import java.util.Arrays;
 import java.util.List;
 
 import android.app.Activity;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.GestureDetector.OnGestureListener;
 import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
@@ -21,6 +24,8 @@ public class SwitchViewsActivity extends Activity {
 	private int currentIndex;
 
 	private ImageView currentImageView;
+
+	private ViewGroup pageControl;
 
 	private GestureDetector gestureDetector = new GestureDetector(
 			new OnGestureListener() {
@@ -50,33 +55,34 @@ public class SwitchViewsActivity extends Activity {
 
 				}
 
-@Override
-public boolean onFling(MotionEvent e1, MotionEvent e2,
-		float velocityX, float velocityY) {
-	Log.d(TAG, "fling...");
-	Log.d(TAG, "current index:" + currentIndex);
-	ImageView imageView = null;
-	if (e1.getX() < e2.getX()) {
-		Log.d(TAG, "to right");
-		imageView = getPreviousImageView();
-		if (imageView != null) {
-			viewSwitcher.removeView(currentImageView);
-			viewSwitcher.addView(imageView);
-			currentImageView = imageView;
-		}
-	} else {
-		Log.d(TAG, "to left");
-		imageView = getNextImageView();
-	}
+				@Override
+				public boolean onFling(MotionEvent e1, MotionEvent e2,
+						float velocityX, float velocityY) {
+					Log.d(TAG, "fling...");
+					Log.d(TAG, "current index:" + currentIndex);
+					ImageView imageView = null;
+					if (e1.getX() < e2.getX()) {
+						Log.d(TAG, "to right");
+						imageView = getPreviousImageView();
+						if (imageView != null) {
+							viewSwitcher.removeView(currentImageView);
+							viewSwitcher.addView(imageView);
+							currentImageView = imageView;
+						}
+					} else {
+						Log.d(TAG, "to left");
+						imageView = getNextImageView();
+					}
 
-	if (imageView != null) {
-		viewSwitcher.removeView(currentImageView);
-		viewSwitcher.addView(imageView);
-		currentImageView = imageView;
-	}
+					if (imageView != null) {
+						viewSwitcher.removeView(currentImageView);
+						viewSwitcher.addView(imageView);
+						currentImageView = imageView;
+						generatePageControl();
+					}
 
-	return true;
-}
+					return true;
+				}
 
 				@Override
 				public boolean onDown(MotionEvent e) {
@@ -96,6 +102,9 @@ public boolean onFling(MotionEvent e1, MotionEvent e2,
 
 		this.viewSwitcher = (FrameLayout) this.findViewById(R.id.viewSwitcher);
 		this.viewSwitcher.addView(getCurrentImageView());
+
+		this.pageControl = (ViewGroup) this.findViewById(R.id.pageControl);
+		this.generatePageControl();
 	}
 
 	@Override
@@ -135,4 +144,18 @@ public boolean onFling(MotionEvent e1, MotionEvent e2,
 		}
 		return null;
 	}
+
+private void generatePageControl() {
+	pageControl.removeAllViews();
+
+	for (int i = 0; i < drawableIds.size(); i++) {
+		ImageView imageView = new ImageView(this);
+		if (currentIndex == i) {
+			imageView.setImageResource(R.drawable.page_indicator_focused);
+		} else {
+			imageView.setImageResource(R.drawable.page_indicator);
+		}
+		this.pageControl.addView(imageView);
+	}
+}
 }
