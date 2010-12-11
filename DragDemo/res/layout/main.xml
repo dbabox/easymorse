@@ -6,4 +6,8 @@
 		android:layout_width="480px" android:id="@+id/Pawn"
 		android:layout_gravity="center">
 	</View>
+	<View android:background="@drawable/a2" android:layout_height="700px"
+		android:layout_width="480px" android:id="@+id/SideView"
+		android:layout_gravity="center">
+	</View>
 </FrameLayout>

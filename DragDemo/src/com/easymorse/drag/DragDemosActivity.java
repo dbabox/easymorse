@@ -1,6 +1,7 @@
 package com.easymorse.drag;
 
 import android.app.Activity;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.GestureDetector;
@@ -12,6 +13,10 @@ import android.widget.FrameLayout;
 import android.widget.FrameLayout.LayoutParams;
 
 public class DragDemosActivity extends Activity {
+
+	private FrameLayout board;
+
+	private View sideView;
 
 	private GestureDetector gestureDetector = new GestureDetector(
 			new OnGestureListener() {
@@ -40,6 +45,10 @@ public class DragDemosActivity extends Activity {
 							.getLayoutParams();
 					par.leftMargin = (int) (e2.getRawX() - e1.getRawX());
 					pawn.setLayoutParams(par);
+
+					par = (LayoutParams) sideView.getLayoutParams();
+					par.leftMargin = (int) (e2.getRawX() - e1.getRawX()) + 480;
+					sideView.setLayoutParams(par);
 					return true;
 				}
 
@@ -64,6 +73,14 @@ public class DragDemosActivity extends Activity {
 
 		pawn = findViewById(R.id.Pawn);
 		pawn.setOnTouchListener(dragt);
+
+		board = (FrameLayout) findViewById(R.id.Board);
+
+		sideView = findViewById(R.id.SideView);
+		LayoutParams params = (LayoutParams) sideView.getLayoutParams();
+		params.leftMargin = 480;
+		sideView.setLayoutParams(params);
+
 	}
 
 	OnTouchListener dragt = new OnTouchListener() {
@@ -78,7 +95,7 @@ public class DragDemosActivity extends Activity {
 				}// inner case MOVE
 				case MotionEvent.ACTION_UP: {
 					gestureDetector.onTouchEvent(event);
-					//TODO animation
+					// TODO animation
 					break;
 				}// inner case UP
 				case MotionEvent.ACTION_DOWN: {
