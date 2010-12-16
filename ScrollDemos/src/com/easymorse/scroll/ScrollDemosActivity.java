@@ -2,21 +2,21 @@ package com.easymorse.scroll;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.View;
+import android.widget.ImageView;
 
 public class ScrollDemosActivity extends Activity {
-	
-	// private GestureDetector gestureDetector;
-	//
-	// private int currentScrollPosition;
-	
+
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main);
-
-		View view = this.findViewById(R.id.imageView);
-		view.scrollBy(100, 0);
+		MyViewGroup viewGroup=new MyViewGroup(this);
+		setContentView(viewGroup);
+		
+		ImageView imageView=new ImageView(this);
+		imageView.setImageDrawable(getResources().getDrawable(R.drawable.a1));
+		viewGroup.addView(imageView);
+		
+		viewGroup.getScroller().startScroll(0, 0, 480, 0,10000);
 	}
 }
