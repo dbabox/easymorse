@@ -1,301 +1,0 @@
-TIphoneDelete
-v7
-r0
-t306491983.556685
-cCheck dependencies
-cProcessInfoPlistFile /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app/Info.plist IphoneDelete-Info.plist
-cCompileXIB /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/MainWindow.xib
-cCompileXIB /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/IphoneDeleteViewController.xib
-cProcessPCH /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/IphoneDelete_Prefix-hkxqetxzxibojveecdyrikmggczb/IphoneDelete_Prefix.pch.gch IphoneDelete_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/Objects-normal/i386/main.o /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/Objects-normal/i386/IphoneDeleteAppDelegate.o /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/IphoneDeleteAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/Objects-normal/i386/IphoneDeleteViewController.o /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/IphoneDeleteViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/Objects-normal/i386/ManagerMessage.o /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/ManagerMessage.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cLd /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app/IphoneDelete normal i386
-cGenerateDSYMFile /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app.dSYM /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app/IphoneDelete
-cTouch /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk
-c000000004C7F71D30000000000000132
-t1283420627
-s306
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c000000004BFDFE39000000000027C7D0
-t1274936889
-s2607056
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004BFDFE7C000000000029D5D0
-t1274936956
-s2741712
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c000000004BFDFE6E0000000000001466
-t1274936942
-s5222
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c000000004C0470BB00000000000009CD
-t1275359419
-s2509
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c000000004C0471620000000001D47210
-t1275359586
-s30700048
-
-N/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/IphoneDeleteAppDelegate.h
-c000000004C9468D400000000000001F8
-t1284794580
-s504
-i<UIKit/UIKit.h>
-
-N/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/IphoneDeleteAppDelegate.m
-c000000004C9468D40000000000000A9F
-t1284794580
-s2719
-i"IphoneDeleteAppDelegate.h"
-i"IphoneDeleteViewController.h"
-
-N/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/IphoneDeleteViewController.h
-c000000004C9475AB0000000000000170
-t1284797867
-s368
-i<UIKit/UIKit.h>
-i"NoteDelegate.h"
-
-N/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/IphoneDeleteViewController.m
-c000000004C9476410000000000000325
-t1284798017
-s805
-i"IphoneDeleteViewController.h"
-i"ManagerMessage.h"
-
-N/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/ManagerMessage.h
-c000000004C9473CC0000000000000169
-t1284797388
-s361
-i<Foundation/Foundation.h>
-i"NoteDelegate.h"
-
-N/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/ManagerMessage.m
-c000000004C94764E0000000000000259
-t1284798030
-s601
-i"ManagerMessage.h"
-
-N/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/NoteDelegate.h
-c000000004C946CDD0000000000000107
-t1284795613
-s263
-i<UIKit/UIKit.h>
-
-N/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/IphoneDeleteViewController.xib
-c000000004C9475CD0000000000004A4C
-t1284797901
-s19020
-
-N/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/IphoneDelete_Prefix.pch
-c000000004C9468D400000000000000C1
-t1284794580
-s193
-i<Foundation/Foundation.h>
-i<UIKit/UIKit.h>
-
-N/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/MainWindow.xib
-c000000004C9468D40000000000004E65
-t1284794580
-s20069
-
-N/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app
-t1284798033
-s238
-
-N/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app.dSYM
-t1284798033
-s102
-
-N/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app/Info.plist
-t1284794732
-s611
-
-N/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app/IphoneDelete
-t1284798033
-s19348
-
-N/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app/IphoneDeleteViewController.nib
-t1284797909
-s1340
-
-N/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app/MainWindow.nib
-t1284794735
-s1133
-
-N/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app/PkgInfo
-t1284794732
-s8
-
-N/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/Objects-normal/i386/IphoneDelete.LinkFileList
-c000000004C946BA10000000000000287
-t1284795297
-s647
-
-N/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/Objects-normal/i386/IphoneDeleteAppDelegate.o
-t1284797909
-s48104
-
-N/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/Objects-normal/i386/IphoneDeleteViewController.o
-t1284798033
-s39372
-
-N/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/Objects-normal/i386/ManagerMessage.o
-t1284798033
-s9556
-
-N/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/Objects-normal/i386/main.o
-t1284794737
-s6336
-
-N/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/main.m
-c000000004C9468D40000000000000169
-t1284794580
-s361
-i<UIKit/UIKit.h>
-
-N/var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/IphoneDelete_Prefix-hkxqetxzxibojveecdyrikmggczb/IphoneDelete_Prefix.pch.gch
-t1284794737
-s15232016
-
-NIphoneDelete-Info.plist
-c000000004C9468D4000000000000038D
-t1284794580
-s909
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies306491983#306491983#0(0"0(0#1#0"8632653600#0"0#
-
-CCompileC build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/Objects-normal/i386/IphoneDeleteAppDelegate.o /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/IphoneDeleteAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s306490709.367883
-e306490709.559909
-r1
-xCompileC
-xbuild/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/Objects-normal/i386/IphoneDeleteAppDelegate.o
-x/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/IphoneDeleteAppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@97"Compile /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/IphoneDeleteAppDelegate.m306490709#306490709#0(0"0(0#0#89"/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/IphoneDeleteAppDelegate.m8632878816#2234"    cd /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/IphoneDelete-generated-files.hmap -I/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/IphoneDelete-own-target-headers.hmap -I/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/IphoneDelete-all-target-headers.hmap -iquote /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/IphoneDelete-project-headers.hmap -F/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator -I/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/include -I/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/DerivedSources/i386 -I/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/IphoneDelete_Prefix-hkxqetxzxibojveecdyrikmggczb/IphoneDelete_Prefix.pch -c /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/IphoneDeleteAppDelegate.m -o /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/Objects-normal/i386/IphoneDeleteAppDelegate.o0#
-
-CCompileC build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/Objects-normal/i386/IphoneDeleteViewController.o /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/IphoneDeleteViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s306490832.985608
-e306490833.266624
-r1
-xCompileC
-xbuild/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/Objects-normal/i386/IphoneDeleteViewController.o
-x/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/IphoneDeleteViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/IphoneDeleteViewController.m: In function '-[IphoneDeleteViewController viewDidLoad]':
-o/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/IphoneDeleteViewController.m:25: warning: passing argument 1 of 'setNoteDelegate:' from incompatible pointer type
-lSLF07#2@100"Compile /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/IphoneDeleteViewController.m306490832#306490833#0(329"/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/IphoneDeleteViewController.m: In function '-[IphoneDeleteViewController viewDidLoad]':/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/IphoneDeleteViewController.m:25: warning: passing argument 1 of 'setNoteDelegate:' from incompatible pointer type1(22@71"Passing argument 1 of 'setNoteDelegate:' from incompatible pointer type306490833#151#178#0(6@92"/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/IphoneDeleteViewController.m306490817#25#0#25#0#56"passing argument * of '*' from incompatible pointer type0(0#0#92"/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/IphoneDeleteViewController.m8631312704#2240"    cd /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/IphoneDelete-generated-files.hmap -I/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/IphoneDelete-own-target-headers.hmap -I/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/IphoneDelete-all-target-headers.hmap -iquote /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/IphoneDelete-project-headers.hmap -F/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator -I/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/include -I/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/DerivedSources/i386 -I/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/IphoneDelete_Prefix-hkxqetxzxibojveecdyrikmggczb/IphoneDelete_Prefix.pch -c /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/IphoneDeleteViewController.m -o /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/Objects-normal/i386/IphoneDeleteViewController.o0#
-
-CCompileC build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/Objects-normal/i386/ManagerMessage.o /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/ManagerMessage.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s306490833.086737
-e306490833.341350
-r1
-xCompileC
-xbuild/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/Objects-normal/i386/ManagerMessage.o
-x/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/ManagerMessage.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/ManagerMessage.m: In function '-[ManagerMessage targetMethod:]':
-o/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/ManagerMessage.m:25: warning: invalid receiver type 'id <NoteDelegate>*'
-o/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/ManagerMessage.m: In function '-[ManagerMessage setNoteDelegate:]':
-o/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/ManagerMessage.m:10: warning: passing argument 4 of 'objc_setProperty' from incompatible pointer type
-lSLF07#2@88"Compile /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/ManagerMessage.m306490833#306490833#0(564"/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/ManagerMessage.m: In function '-[ManagerMessage targetMethod:]':/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/ManagerMessage.m:25: warning: invalid receiver type 'id <NoteDelegate>*'/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/ManagerMessage.m: In function '-[ManagerMessage setNoteDelegate:]':/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/ManagerMessage.m:10: warning: passing argument 4 of 'objc_setProperty' from incompatible pointer type2(22@42"Invalid receiver type 'id <NoteDelegate>*'306490833#129#137#0(6@80"/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/ManagerMessage.m306490830#25#0#25#0#0"0(22@71"Passing argument 4 of 'objc_setProperty' from incompatible pointer type306490833#398#166#0(6@80"/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/ManagerMessage.m306490830#10#0#10#0#56"passing argument * of '*' from incompatible pointer type0(0#0#80"/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/ManagerMessage.m8632090528#2216"    cd /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/IphoneDelete-generated-files.hmap -I/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/IphoneDelete-own-target-headers.hmap -I/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/IphoneDelete-all-target-headers.hmap -iquote /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/IphoneDelete-project-headers.hmap -F/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator -I/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/include -I/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/DerivedSources/i386 -I/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/IphoneDelete_Prefix-hkxqetxzxibojveecdyrikmggczb/IphoneDelete_Prefix.pch -c /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/Classes/ManagerMessage.m -o /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/Objects-normal/i386/ManagerMessage.o0#
-
-CCompileC build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/Objects-normal/i386/main.o /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s306487537.800347
-e306487538.020754
-r1
-xCompileC
-xbuild/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/Objects-normal/i386/main.o
-x/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@70"Compile /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/main.m306487537#306487538#0(0"0(0#0#62"/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/main.m8630342368#2188"    cd /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/IphoneDelete-generated-files.hmap -I/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/IphoneDelete-own-target-headers.hmap -I/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/IphoneDelete-all-target-headers.hmap -iquote /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/IphoneDelete-project-headers.hmap -F/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator -I/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/include -I/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/DerivedSources/i386 -I/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/IphoneDelete_Prefix-hkxqetxzxibojveecdyrikmggczb/IphoneDelete_Prefix.pch -c /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/main.m -o /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/Objects-normal/i386/main.o0#
-
-CCompileXIB /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/IphoneDeleteViewController.xib
-s306490707.432722
-e306490709.367446
-r1
-xCompileXIB
-x/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/IphoneDeleteViewController.xib
-lSLF07#2@41"CompileXIB IphoneDeleteViewController.xib306490707#306490709#0(0"0(0#0#86"/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/IphoneDeleteViewController.xib8619676864#658"    cd /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app/IphoneDeleteViewController.nib /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/IphoneDeleteViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk0#
-
-CCompileXIB /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/MainWindow.xib
-s306487532.535545
-e306487535.278519
-r1
-xCompileXIB
-x/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/MainWindow.xib
-lSLF07#2@25"CompileXIB MainWindow.xib306487532#306487535#0(0"0(0#0#70"/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/MainWindow.xib8611633504#626"    cd /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app/MainWindow.nib /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk0#
-
-CGenerateDSYMFile /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app.dSYM /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app/IphoneDelete
-s306490833.374824
-e306490833.391782
-r1
-xGenerateDSYMFile
-x/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app.dSYM
-x/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app/IphoneDelete
-lSLF07#2@124"GenerateDSYMFile build/Debug-iphonesimulator/IphoneDelete.app.dSYM build/Debug-iphonesimulator/IphoneDelete.app/IphoneDelete306490833#306490833#0(0"0(0#0#113"/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app/IphoneDelete8631306656#449"    cd /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app/IphoneDelete -o /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app.dSYM0#
-
-CLd /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app/IphoneDelete normal i386
-s306490833.341443
-e306490833.374722
-r1
-xLd
-x/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app/IphoneDelete
-xnormal
-xi386
-lSLF07#2@118"Link /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app/IphoneDelete306490833#306490833#0(0"0(0#0#0"8610492608#1010"    cd /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -L/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator -F/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator -filelist /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/Objects-normal/i386/IphoneDelete.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app/IphoneDelete0#
-
-CProcessInfoPlistFile /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app/Info.plist IphoneDelete-Info.plist
-s306487532.475251
-e306487532.535436
-r1
-xProcessInfoPlistFile
-x/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app/Info.plist
-xIphoneDelete-Info.plist
-lSLF07#2@31"Process IphoneDelete-Info.plist306487532#306487532#0(0"0(0#0#79"/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/IphoneDelete-Info.plist29273878619029552#545"    cd /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility IphoneDelete-Info.plist -genpkginfo /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app/Info.plist0#
-
-CProcessPCH /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/IphoneDelete_Prefix-hkxqetxzxibojveecdyrikmggczb/IphoneDelete_Prefix.pch.gch IphoneDelete_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-s306487535.278867
-e306487537.800201
-r1
-xProcessPCH
-x/var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/IphoneDelete_Prefix-hkxqetxzxibojveecdyrikmggczb/IphoneDelete_Prefix.pch.gch
-xIphoneDelete_Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@34"Precompile IphoneDelete_Prefix.pch306487535#306487537#0(0"0(0#0#79"/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/IphoneDelete_Prefix.pch8594666592#2058"    cd /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/IphoneDelete-generated-files.hmap -I/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/IphoneDelete-own-target-headers.hmap -I/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/IphoneDelete-all-target-headers.hmap -iquote /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/IphoneDelete-project-headers.hmap -F/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator -I/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/include -I/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/DerivedSources/i386 -I/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/IphoneDelete.build/Debug-iphonesimulator/IphoneDelete.build/DerivedSources -c /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/IphoneDelete_Prefix.pch -o /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/IphoneDelete_Prefix-hkxqetxzxibojveecdyrikmggczb/IphoneDelete_Prefix.pch.gch0#
-
-CTouch /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app
-s306490833.391885
-e306490833.394600
-r1
-xTouch
-x/Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app
-lSLF07#2@106"Touch /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app306490833#306490833#0(0"0(0#0#0"8630799776#317"    cd /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/vsp/iosworkspace/iosiphoneeasymorse/IphoneDelete/build/Debug-iphonesimulator/IphoneDelete.app0#
-
