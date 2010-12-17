@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.GestureDetector.OnGestureListener;
 import android.view.MotionEvent;
-import android.widget.ImageView;
 
 public class ScrollDemosActivity extends Activity {
 
@@ -16,8 +15,6 @@ public class ScrollDemosActivity extends Activity {
 
 	private MyViewGroup viewGroup;
 
-	// private int scrollPosition;
-
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -25,9 +22,9 @@ public class ScrollDemosActivity extends Activity {
 		viewGroup = new MyViewGroup(this);
 		setContentView(viewGroup);
 
-		ImageView imageView = new ImageView(this);
-		imageView.setImageDrawable(getResources().getDrawable(R.drawable.a1));
-		viewGroup.addView(imageView);
+		// ImageView imageView = new ImageView(this);
+		// imageView.setImageDrawable(getResources().getDrawable(R.drawable.a1));
+		// viewGroup.addView(imageView);
 
 		gestureDetector = new GestureDetector(new OnGestureListener() {
 
@@ -44,7 +41,6 @@ public class ScrollDemosActivity extends Activity {
 			public boolean onScroll(MotionEvent e1, MotionEvent e2,
 					float distanceX, float distanceY) {
 				viewGroup.scrollBy((int) distanceX, 0);
-				// scrollPosition = (int) (e2.getRawX() - e1.getRawX());
 				return true;
 			}
 
@@ -63,14 +59,33 @@ public class ScrollDemosActivity extends Activity {
 				return false;
 			}
 		});
+
+		// ViewConfiguration configuration = ViewConfiguration.get(this);
+		// Toast.makeText(
+		// this,
+		// "touch slop:" + configuration.getScaledTouchSlop()
+		// + " tap timeout:" + configuration.getTapTimeout(), 1000)
+		// .show();
 	}
 
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 		gestureDetector.onTouchEvent(event);
 
+		// if (event.getAction() == MotionEvent.ACTION_MOVE) {
+		// VelocityTracker tracker = VelocityTracker.obtain();
+		// tracker.addMovement(event);
+		// tracker.computeCurrentVelocity(1);
+		// Toast.makeText(ScrollDemosActivity.this,
+		// " tracker:" + tracker.getXVelocity(), 1000).show();
+		// }
+
 		if (event.getAction() == MotionEvent.ACTION_UP) {
+			// if (Math.abs(scrollPosition) < 480 / 2) {
 			viewGroup.scrollTo(0, 0);
+			// } else if (scrollPosition < 0) {
+			// viewGroup.scrollTo(480, 0);
+			// }
 		}
 
 		return true;

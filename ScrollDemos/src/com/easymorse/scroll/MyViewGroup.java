@@ -5,6 +5,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.Scroller;
 
 public class MyViewGroup extends ViewGroup {
@@ -13,23 +14,37 @@ public class MyViewGroup extends ViewGroup {
 
 	private Scroller scroller;
 
+	private int currentScreenIndex;
+
 	public Scroller getScroller() {
 		return scroller;
 	}
 
 	public MyViewGroup(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
-		this.scroller = new Scroller(context);
+		initView(context);
 	}
 
 	public MyViewGroup(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		this.scroller = new Scroller(context);
+		initView(context);
 	}
 
 	public MyViewGroup(Context context) {
 		super(context);
+		initView(context);
+	}
+
+	private void initView(Context context) {
 		this.scroller = new Scroller(context);
+
+		ImageView imageView = new ImageView(context);
+		imageView.setImageDrawable(getResources().getDrawable(R.drawable.a1));
+		this.addView(imageView);
+
+		imageView = new ImageView(context);
+		imageView.setImageDrawable(getResources().getDrawable(R.drawable.a2));
+		this.addView(imageView);
 	}
 
 	@Override
@@ -37,10 +52,13 @@ public class MyViewGroup extends ViewGroup {
 			int bottom) {
 		Log.d(TAG, ">>left: " + left + " top: " + top + " right: " + right
 				+ " bottom:" + bottom);
-		View child = getChildAt(0);
-		child.setVisibility(View.VISIBLE);
-		child.measure(right - left, bottom - top);
-		child.layout(0, 0, 480, 800);
+
+		for (int i = 0; i < getChildCount(); i++) {
+			View child = getChildAt(i);
+			child.setVisibility(View.VISIBLE);
+			child.measure(right - left, bottom - top);
+			child.layout(0 + i * 480, 0, 480 + i * 480, 800);
+		}
 	}
 
 	@Override
