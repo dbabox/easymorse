@@ -3,9 +3,12 @@ package com.easymorse.scroll;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.GestureDetector;
+import android.view.GestureDetector.OnGestureListener;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewConfiguration;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.Scroller;
 
 public class MyViewGroup extends ViewGroup {
@@ -15,6 +18,18 @@ public class MyViewGroup extends ViewGroup {
 	private Scroller scroller;
 
 	private int currentScreenIndex;
+
+	private GestureDetector gestureDetector;
+
+	// 设置一个标志位，防止底层的onTouch事件重复处理UP事件
+	private boolean fling;
+
+	public void setCurrentScreenIndex(int currentScreenIndex) {
+		this.currentScreenIndex = Math.max(0,
+				Math.min(currentScreenIndex, getChildCount()));
+		scrollTo(this.currentScreenIndex * getWidth(), 0);
+		invalidate();
+	}
 
 	public Scroller getScroller() {
 		return scroller;
@@ -35,16 +50,63 @@ public class MyViewGroup extends ViewGroup {
 		initView(context);
 	}
 
-	private void initView(Context context) {
+	private void initView(final Context context) {
 		this.scroller = new Scroller(context);
 
-		ImageView imageView = new ImageView(context);
-		imageView.setImageDrawable(getResources().getDrawable(R.drawable.a1));
-		this.addView(imageView);
+		this.gestureDetector = new GestureDetector(new OnGestureListener() {
 
-		imageView = new ImageView(context);
-		imageView.setImageDrawable(getResources().getDrawable(R.drawable.a2));
-		this.addView(imageView);
+			@Override
+			public boolean onSingleTapUp(MotionEvent e) {
+				return false;
+			}
+
+			@Override
+			public void onShowPress(MotionEvent e) {
+			}
+
+			@Override
+			public boolean onScroll(MotionEvent e1, MotionEvent e2,
+					float distanceX, float distanceY) {
+				if ((distanceX > 0 && currentScreenIndex < getChildCount() - 1)// 防止移动过最后一页
+						|| (distanceX < 0 && getScrollX() > 0)) {// 防止向第一页之前移动
+					scrollBy((int) distanceX, 0);
+				}
+				return true;
+			}
+
+			@Override
+			public void onLongPress(MotionEvent e) {
+			}
+
+			@Override
+			public boolean onFling(MotionEvent e1, MotionEvent e2,
+					float velocityX, float velocityY) {
+				Log.d(TAG, "min velocity >>>"
+						+ ViewConfiguration.get(context)
+								.getScaledMinimumFlingVelocity()
+						+ " current velocity>>" + velocityX);
+				if (Math.abs(velocityX) > ViewConfiguration.get(context)
+						.getScaledMinimumFlingVelocity()) {// 判断是否达到最小轻松速度，取绝对值的
+					if (velocityX > 0 && currentScreenIndex > 0) {
+						Log.d(TAG, ">>>>fling to left");
+						fling = true;
+						scrollToScreen(currentScreenIndex - 1);
+					} else if (velocityX < 0
+							&& currentScreenIndex < getChildCount() - 1) {
+						Log.d(TAG, ">>>>fling to right");
+						fling = true;
+						scrollToScreen(currentScreenIndex + 1);
+					}
+				}
+
+				return true;
+			}
+
+			@Override
+			public boolean onDown(MotionEvent e) {
+				return false;
+			}
+		});
 	}
 
 	@Override
@@ -53,11 +115,15 @@ public class MyViewGroup extends ViewGroup {
 		Log.d(TAG, ">>left: " + left + " top: " + top + " right: " + right
 				+ " bottom:" + bottom);
 
+		/**
+		 * 设置布局，将子视图顺序横屏排列
+		 */
 		for (int i = 0; i < getChildCount(); i++) {
 			View child = getChildAt(i);
 			child.setVisibility(View.VISIBLE);
 			child.measure(right - left, bottom - top);
-			child.layout(0 + i * 480, 0, 480 + i * 480, 800);
+			child.layout(0 + i * getWidth(), 0, getWidth() + i * getWidth(),
+					getHeight());
 		}
 	}
 
@@ -68,4 +134,51 @@ public class MyViewGroup extends ViewGroup {
 			postInvalidate();
 		}
 	}
+
+	@Override
+	public boolean onTouchEvent(MotionEvent event) {
+		gestureDetector.onTouchEvent(event);
+
+		switch (event.getAction()) {
+		case MotionEvent.ACTION_DOWN:
+			break;
+		case MotionEvent.ACTION_MOVE:
+			break;
+		case MotionEvent.ACTION_UP:
+			if (!fling) {
+				snapToDestination();
+			}
+			fling = false;
+			break;
+		default:
+			break;
+		}
+		return true;
+	}
+
+	/**
+	 * 切换到指定屏
+	 * 
+	 * @param whichScreen
+	 */
+	public void scrollToScreen(int whichScreen) {
+		if (getFocusedChild() != null && whichScreen != currentScreenIndex
+				&& getFocusedChild() == getChildAt(currentScreenIndex)) {
+			getFocusedChild().clearFocus();
+		}
+
+		final int delta = whichScreen * getWidth() - getScrollX();
+		scroller.startScroll(getScrollX(), 0, delta, 0, Math.abs(delta) * 2);
+		invalidate();
+
+		currentScreenIndex = whichScreen;
+	}
+
+	/**
+	 * 根据当前x坐标位置确定切换到第几屏
+	 */
+	private void snapToDestination() {
+		scrollToScreen((getScrollX() + (getWidth() / 2)) / getWidth());
+	}
+
 }
