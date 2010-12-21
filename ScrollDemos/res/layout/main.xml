@@ -1,8 +1,11 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="horizontal" android:layout_width="fill_parent"
 	android:layout_height="fill_parent" android:id="@+id/myView">
-	<ImageView android:id="@+id/imageView" android:layout_width="wrap_content"
-		android:layout_height="wrap_content" android:src="@drawable/a1" />
-	<!-- <ImageView android:id="@+id/imageView2" android:layout_width="wrap_content" -->
-	<!-- android:layout_height="wrap_content" android:src="@drawable/a2" /> -->
-</LinearLayout>
+	<com.easymorse.scroll.MyViewGroup
+		android:id="@+id/myViewGroup" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" />
+	<com.easymorse.scroll.PageControlView android:id="@+id/pageControl"
+		android:layout_width="fill_parent" android:layout_height="40px"
+		android:background="#8f00000f" android:layout_alignParentBottom="true"
+		android:gravity="center" />
+</RelativeLayout>

@@ -21,19 +21,15 @@ public class MyViewGroup extends ViewGroup {
 
 	private GestureDetector gestureDetector;
 
+	private ScrollToScreenCallback scrollToScreenCallback;
+
+	public void setScrollToScreenCallback(
+			ScrollToScreenCallback scrollToScreenCallback) {
+		this.scrollToScreenCallback = scrollToScreenCallback;
+	}
+
 	// 设置一个标志位，防止底层的onTouch事件重复处理UP事件
 	private boolean fling;
-
-	public void setCurrentScreenIndex(int currentScreenIndex) {
-		this.currentScreenIndex = Math.max(0,
-				Math.min(currentScreenIndex, getChildCount()));
-		scrollTo(this.currentScreenIndex * getWidth(), 0);
-		invalidate();
-	}
-
-	public Scroller getScroller() {
-		return scroller;
-	}
 
 	public MyViewGroup(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
@@ -172,6 +168,10 @@ public class MyViewGroup extends ViewGroup {
 		invalidate();
 
 		currentScreenIndex = whichScreen;
+		if (scrollToScreenCallback != null) {
+			scrollToScreenCallback
+					.callback(currentScreenIndex);
+		}
 	}
 
 	/**
@@ -181,4 +181,7 @@ public class MyViewGroup extends ViewGroup {
 		scrollToScreen((getScrollX() + (getWidth() / 2)) / getWidth());
 	}
 
+	interface ScrollToScreenCallback {
+		public void callback(int currentIndex);
+	}
 }
