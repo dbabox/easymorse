@@ -10,7 +10,9 @@ import java.util.Set;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.View.OnKeyListener;
 import android.view.View.OnLongClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -36,14 +38,20 @@ public class ListViewDemoActivity extends Activity {
 	 * 
 	 */
 	class MyObservable extends Observable {
-		public void checkboxChanged(View checkbox) {
+		public void checkboxChanged(boolean visible) {
 			setChanged();
-			notifyObservers(checkbox);
+			notifyObservers(visible);
 		}
 	}
 
 	// 本例中的ListView
 	private ListView myListView;
+
+	// checkbox是否可见的标志位
+	private boolean checkItemVisible;
+
+	// 存放选中的checkbox条目的图片列表下标
+	private Set<Integer> checkedIds = new HashSet<Integer>();
 
 	// 创建观察对象
 	private MyObservable observable = new MyObservable();
@@ -104,12 +112,6 @@ public class ListViewDemoActivity extends Activity {
 			// 每行显示几个图片
 			private static final int ROW_ELEMENTS_SIZE = 5;
 
-			// checkbox是否可见的标志位
-			private boolean checkItemVisible;
-
-			// 存放选中的checkbox条目的图片列表下标
-			private Set<Integer> checkedIds = new HashSet<Integer>();
-
 			@Override
 			public View getView(final int position, View convertView,
 					ViewGroup parent) {
@@ -147,19 +149,21 @@ public class ListViewDemoActivity extends Activity {
 					// 获取Checkbox
 					final CheckBox checkBox = (CheckBox) view
 							.findViewById(R.id.checkItem);
-					// 如果在选择列表中有，设置为可选
+					// 如果在选择列表中有，设置为选取
 					checkBox.setChecked(checkedIds.contains(index));
 
 					// 创建观察者，用于监控是否有Checkbox可见性事件，然后加入到可观察对象中
 					Observer observer = new Observer() {
 						@Override
 						public void update(Observable observable, Object data) {
-							checkBox.setVisibility(View.VISIBLE);
+							checkBox.setVisibility((Boolean) data ? View.VISIBLE
+									: View.INVISIBLE);
+							checkBox.setChecked(checkedIds.contains(index));
 						}
 					};
 					observable.addObserver(observer);
 
-					//checkbox增加监听器，监控勾选状态
+					// checkbox增加监听器，监控勾选状态
 					checkBox.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
 						@Override
@@ -172,19 +176,21 @@ public class ListViewDemoActivity extends Activity {
 							}
 						}
 					});
-					
-					//设置checkbox的可见性
+
+					// 设置checkbox的可见性
 					if (checkItemVisible) {
 						checkBox.setVisibility(View.VISIBLE);
 					}
 
-					//设置长按监听器
+					// 设置长按监听器
 					view.setOnLongClickListener(new OnLongClickListener() {
 
 						@Override
 						public boolean onLongClick(View v) {
-							checkItemVisible = true;
-							observable.checkboxChanged(v);
+							if (!checkItemVisible) {
+								checkItemVisible = true;
+								observable.checkboxChanged(true);
+							}
 							return true;
 						}
 					});
@@ -207,9 +213,22 @@ public class ListViewDemoActivity extends Activity {
 
 			@Override
 			public int getCount() {
-				//ceil取大于输入值的最小整数，比如输入3.1，则返回4
+				// ceil取大于输入值的最小整数，比如输入3.1，则返回4
 				return (int) Math.ceil(drawables.size()
 						/ (float) ROW_ELEMENTS_SIZE);
+			}
+		});
+
+		myListView.setOnKeyListener(new OnKeyListener() {
+			@Override
+			public boolean onKey(View v, int keyCode, KeyEvent event) {
+				if (keyCode == KeyEvent.KEYCODE_BACK) {
+					checkItemVisible = false;
+					checkedIds.clear();// 清除选择checkbox的id
+					observable.checkboxChanged(false);
+					return true;
+				}
+				return false;
 			}
 		});
 
