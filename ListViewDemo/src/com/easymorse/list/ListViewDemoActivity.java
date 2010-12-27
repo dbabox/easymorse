@@ -115,6 +115,13 @@ public class ListViewDemoActivity extends Activity {
 		myListView.addFooterView(View.inflate(this, R.layout.footer, null));
 
 		toolbar = (ViewGroup) this.findViewById(R.id.toolbar);
+		this.observable.addObserver(new Observer() {
+			@Override
+			public void update(Observable observable, Object data) {
+				toolbar.setVisibility((Boolean) data ? View.VISIBLE
+						: View.INVISIBLE);
+			}
+		});
 
 		// 设置选择按钮
 		Button button = (Button) this.findViewById(R.id.addToButton);
@@ -210,7 +217,7 @@ public class ListViewDemoActivity extends Activity {
 	 * @param layout
 	 */
 	private void generateRowElements(final int position, ViewGroup layout) {
-		//防止删除部分内容后该行已经不存在的情况下报错
+		// 防止删除部分内容后该行已经不存在的情况下报错
 		if (position * ROW_ELEMENTS_SIZE > drawables.size() - 1) {
 			return;
 		}
@@ -247,8 +254,8 @@ public class ListViewDemoActivity extends Activity {
 				public void update(Observable observable, Object data) {
 					checkBox.setVisibility((Boolean) data ? View.VISIBLE
 							: View.INVISIBLE);
-					toolbar.setVisibility((Boolean) data ? View.VISIBLE
-							: View.INVISIBLE);
+					// toolbar.setVisibility((Boolean) data ? View.VISIBLE
+					// : View.INVISIBLE);
 					checkBox.setChecked(checkedIds.contains(index));
 				}
 			};
