@@ -123,6 +123,25 @@ public class ListViewDemoActivity extends Activity {
 			}
 		});
 
+		this.observable.addObserver(new Observer() {
+
+			@Override
+			public void update(Observable observable, Object data) {
+				for (int i = 0; i < myListView.getChildCount(); i++) {
+					ViewGroup rowViewGroup = (ViewGroup) myListView
+							.getChildAt(i);
+					for (int j = 0; j < rowViewGroup.getChildCount(); j++) {
+						ViewGroup elementViewGroup = (ViewGroup) rowViewGroup
+								.getChildAt(j);
+						CheckBox checkBox = (CheckBox) elementViewGroup
+								.findViewById(R.id.checkItem);
+						checkBox.setVisibility((Boolean) data ? View.VISIBLE
+								: View.INVISIBLE);
+					}
+				}
+			}
+		});
+
 		// 设置选择按钮
 		Button button = (Button) this.findViewById(R.id.addToButton);
 		button.setOnClickListener(new OnClickListener() {
@@ -248,18 +267,19 @@ public class ListViewDemoActivity extends Activity {
 			// 如果在选择列表中有，设置为选取
 			checkBox.setChecked(checkedIds.contains(index));
 
+			// 以下代码注释掉了，可能会造成内存泄露，因为每次生成行内容都会调用，这样会注册很多过时不用的observer实例
 			// 创建观察者，用于监控是否有Checkbox可见性事件，然后加入到可观察对象中
-			Observer observer = new Observer() {
-				@Override
-				public void update(Observable observable, Object data) {
-					checkBox.setVisibility((Boolean) data ? View.VISIBLE
-							: View.INVISIBLE);
-					// toolbar.setVisibility((Boolean) data ? View.VISIBLE
-					// : View.INVISIBLE);
-					checkBox.setChecked(checkedIds.contains(index));
-				}
-			};
-			observable.addObserver(observer);
+			// Observer observer = new Observer() {
+			// @Override
+			// public void update(Observable observable, Object data) {
+			// checkBox.setVisibility((Boolean) data ? View.VISIBLE
+			// : View.INVISIBLE);
+			// // toolbar.setVisibility((Boolean) data ? View.VISIBLE
+			// // : View.INVISIBLE);
+			// checkBox.setChecked(checkedIds.contains(index));
+			// }
+			// };
+			// observable.addObserver(observer);
 
 			// checkbox增加监听器，监控勾选状态
 			checkBox.setOnCheckedChangeListener(new OnCheckedChangeListener() {
