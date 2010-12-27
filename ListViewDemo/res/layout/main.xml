@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="vertical" android:layout_width="fill_parent"
 	android:layout_height="fill_parent">
 	<ListView android:id="@+id/myList" android:layout_width="fill_parent"
-		android:layout_height="fill_parent" android:cacheColorHint="#ffffffff" android:background="#ffffffff"/>
-</LinearLayout>
+		android:layout_height="fill_parent" android:cacheColorHint="#ffffffff"
+		android:background="#ffffffff" />
+	<LinearLayout android:id="@+id/toolbar" android:orientation="horizontal" android:layout_alignParentBottom="true"
+		android:layout_width="fill_parent" android:layout_height="50dip"
+		android:visibility="invisible">
+		<Button android:id="@+id/addToButton" android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:text="选择" android:layout_weight="1"/>
+			<Button android:id="@+id/removeButton" android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:text="删除" android:layout_weight="1"/>
+	</LinearLayout>
+</RelativeLayout>
