@@ -115,6 +115,8 @@ public class ListViewDemoActivity extends Activity {
 		myListView.addFooterView(View.inflate(this, R.layout.footer, null));
 
 		toolbar = (ViewGroup) this.findViewById(R.id.toolbar);
+
+		// 监听，当得到观察者通知，就改变toolbar的可见行
 		this.observable.addObserver(new Observer() {
 			@Override
 			public void update(Observable observable, Object data) {
@@ -123,6 +125,7 @@ public class ListViewDemoActivity extends Activity {
 			}
 		});
 
+		// 监听，当得到观察者通知，就改变当前屏幕下所有行的checkbox的可见行
 		this.observable.addObserver(new Observer() {
 
 			@Override
