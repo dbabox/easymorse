@@ -7,9 +7,10 @@
 		android:layout_height="fill_parent">
 		<ImageView android:id="@+id/cdImage" android:layout_width="103dip"
 			android:layout_height="103dip" android:scaleType="fitCenter"
-			 android:maxWidth="103dip" android:maxHeight="103dip"/>
-		<CheckBox android:id="@+id/checkItem" android:layout_width="match_parent"
-			android:layout_height="fill_parent" android:visibility="invisible" />
+			android:maxWidth="103dip" android:maxHeight="103dip" />
+		<CheckBox android:id="@+id/checkItem" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:visibility="invisible"
+			android:layout_gravity="right" />
 	</FrameLayout>
 	<TextView android:id="@+id/cdTitle" android:layout_width="match_parent"
 		android:layout_height="wrap_content" android:paddingTop="2dip" />
