@@ -15,7 +15,27 @@ public class Page {
 
 	private int no;
 
+	public String getOrderFieldName() {
+		return orderFieldName;
+	}
+
+	public void setOrderFieldName(String orderFieldName) {
+		this.orderFieldName = orderFieldName;
+	}
+
+	public boolean isOrderDesc() {
+		return orderDesc;
+	}
+
+	public void setOrderDesc(boolean orderDesc) {
+		this.orderDesc = orderDesc;
+	}
+
 	private int size;
+
+	private String orderFieldName;
+
+	private boolean orderDesc;
 
 	/**
 	 * 

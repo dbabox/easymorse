@@ -7,8 +7,23 @@ package com.easymorse.list.datasource;
  * 
  */
 public class Record {
+	
+	public static final String ORDER_BY_NAME="name";
+	
+	public static final String ORDER_BY_PLAY_TIMES="play_times";
+	
 	// id
 	private Long id;
+
+	private int playTimes;
+
+	public int getPlayTimes() {
+		return playTimes;
+	}
+
+	public void setPlayTimes(int playTimes) {
+		this.playTimes = playTimes;
+	}
 
 	public Long getId() {
 		return id;
@@ -29,9 +44,10 @@ public class Record {
 	// 名称
 	private String name;
 
-	public Record(Long id, String name) {
+	public Record(Long id, String name,int playTimes) {
 		this.id = id;
 		this.name = name;
+		this.playTimes=playTimes;
 	}
 
 	public Record() {

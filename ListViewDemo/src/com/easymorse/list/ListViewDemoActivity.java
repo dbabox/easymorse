@@ -8,17 +8,26 @@ import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Rect;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.ContextMenu;
 import android.view.KeyEvent;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ContextMenu.ContextMenuInfo;
 import android.view.View.OnClickListener;
 import android.view.View.OnKeyListener;
+import android.view.View.OnLongClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.RadioGroup;
+import android.widget.TextView;
+
+import com.easymorse.list.datasource.Record;
 
 /**
  * 演示带CheckBox的ListView
@@ -28,24 +37,32 @@ import android.widget.RadioGroup;
  */
 public class ListViewDemoActivity extends Activity {
 
+	class TagSetupDialog extends Dialog {
+
+		public TagSetupDialog(Context context) {
+			super(context);
+		}
+
+	}
+
 	/**
 	 * 自定义对话框
 	 * 
 	 * @author marshal
 	 * 
 	 */
-	class MyDialog extends Dialog {
+	class ViewSetupDialog extends Dialog {
 
-		public MyDialog(Context context) {
+		public ViewSetupDialog(Context context) {
 			super(context);
 		}
 
-		public MyDialog(Context context, boolean cancelable,
+		public ViewSetupDialog(Context context, boolean cancelable,
 				OnCancelListener cancelListener) {
 			super(context, cancelable, cancelListener);
 		}
 
-		public MyDialog(Context context, int theme) {
+		public ViewSetupDialog(Context context, int theme) {
 			super(context, theme);
 		}
 
@@ -75,7 +92,7 @@ public class ListViewDemoActivity extends Activity {
 	@SuppressWarnings("unused")
 	private static final String TAG = "listview";
 
-	//mvc模式里的model
+	// mvc模式里的model
 	private ListViewModel model = new ListViewModel();
 
 	private BaseAdapter listModeListViewAdapter;
@@ -87,14 +104,14 @@ public class ListViewDemoActivity extends Activity {
 
 	private ViewGroup toolbar;
 
-	private MyDialog dialog;
+	private ViewSetupDialog viewSetupDialog;
 
-	private RadioGroup viewModeRadioGroup;
+	private TagSetupDialog tagSetupDialog;
 
 	private ViewGroup listContailer;
 
-	private void initListView(int radioId) {
-		if (radioId == R.id.viewModeThumder) {
+	private void initListView() {
+		if (model.chooseViewModeId == R.id.viewModeThumder) {
 			// 自定义的ListView适配器,thumder模式
 			myListView.setAdapter(thumderModeListViewAdapter);
 
@@ -109,12 +126,12 @@ public class ListViewDemoActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-		
-		//设置model对象
+
+		// 设置model对象
 		model = new ListViewModel();
 		model.context = this;
-		
-		//设置listview的adapter
+
+		// 设置listview的adapter
 		this.listModeListViewAdapter = new ListModeListViewAdapter(model);
 		this.thumderModeListViewAdapter = new ThumderModeListViewAdapter(model);
 
@@ -123,47 +140,109 @@ public class ListViewDemoActivity extends Activity {
 		/**
 		 * 视图对话框
 		 */
-		dialog = new MyDialog(this);
-		dialog.setContentView(R.layout.view_dialog);
-		dialog.setTitle("对话框");
-		viewModeRadioGroup = (RadioGroup) dialog
-				.findViewById(R.id.viewModeRadioGroup);
-		viewModeRadioGroup.check(R.id.viewModeThumder);
+		viewSetupDialog = new ViewSetupDialog(this);
+		viewSetupDialog.setContentView(R.layout.view_dialog);
+		viewSetupDialog.setTitle("对话框");
 
-		viewModeRadioGroup
-				.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-					@Override
-					public void onCheckedChanged(RadioGroup group, int checkedId) {
-						model.elementChangeObservable
-								.listViewNeedChange(new ListViewNeedChangeData(
-										ListViewNeedChangeData.TYPE_VIEW_MODE,
-										checkedId));
-					}
-				});
+		/**
+		 * tag对话框
+		 */
+		tagSetupDialog = new TagSetupDialog(this);
+		tagSetupDialog.setContentView(R.layout.tag_dialog);
+		tagSetupDialog.setTitle("选择tag");
+
+		GridView gridView = (GridView) tagSetupDialog
+				.findViewById(R.id.tagsGrid);
+		gridView.setAdapter(new BaseAdapter() {
+
+			@Override
+			public View getView(int position, View convertView, ViewGroup parent) {
+				TextView textView = new TextView(ListViewDemoActivity.this);
+				textView.setText("" + position);
+				registerForContextMenu(textView);
+				return textView;
+			}
+
+			@Override
+			public long getItemId(int position) {
+				return position;
+			}
+
+			@Override
+			public Object getItem(int position) {
+				return null;
+			}
+
+			@Override
+			public int getCount() {
+				return 100;
+			}
+		});
+
+		// radio按钮改变监听器，以下2组radio按钮共用一个监听器
+		RadioGroup.OnCheckedChangeListener onCheckedChangeListener = new RadioGroup.OnCheckedChangeListener() {
+			@Override
+			public void onCheckedChanged(RadioGroup group, int checkedId) {
+				model.elementChangeObservable.listViewNeedChange(checkedId);
+			}
+		};
+
+		// 设置视图模式
+		RadioGroup radioGroup = (RadioGroup) viewSetupDialog
+				.findViewById(R.id.viewModeRadioGroup);
+		radioGroup.check(model.chooseViewModeId);
+		radioGroup.setOnCheckedChangeListener(onCheckedChangeListener);
+
+		radioGroup = (RadioGroup) viewSetupDialog
+				.findViewById(R.id.sortByRadioGroup);
+		radioGroup.check(model.chooseSortById);
+		radioGroup.setOnCheckedChangeListener(onCheckedChangeListener);
+
+		// 设置tag按钮
+		Button button = (Button) viewSetupDialog.findViewById(R.id.chooseTags);
+		button.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				tagSetupDialog.show();
+			}
+		});
 
 		model.elementChangeObservable.addObserver(new Observer() {
 
 			@Override
 			public void update(Observable observable, Object data) {
-				if (data instanceof ListViewNeedChangeData) {
-					ListViewNeedChangeData _data = (ListViewNeedChangeData) data;
-					switch (_data.getType()) {
-					case ListViewNeedChangeData.TYPE_VIEW_MODE:
-						initListView((Integer) _data.data);
-						dialog.hide();
-						break;
-					default:
-					}
+				int id = (Integer) data;
+
+				switch (id) {
+				// view mode
+				case R.id.viewModeList:
+				case R.id.viewModeThumder:
+					model.chooseViewModeId = (Integer) data;
+					break;
+				case R.id.sortByPlayAlpha:
+					model.page.setOrderFieldName(Record.ORDER_BY_NAME);
+					// 可在这里设置名称升序
+					break;
+				case R.id.sortByPlayArtist:
+					// TODO 没写呢
+					break;
+				case R.id.sortByPlayTimes:
+					model.page.setOrderFieldName(Record.ORDER_BY_PLAY_TIMES);
+					// 可在这里设置播放次数降序
+					break;
+				default:
 				}
+				initListView();
+				viewSetupDialog.hide();
 			}
 		});
 
 		toolbar = (ViewGroup) this.findViewById(R.id.toolBar);
-		Button button = (Button) toolbar.findViewById(R.id.orderButton);
+		button = (Button) toolbar.findViewById(R.id.orderButton);
 		button.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				dialog.show();
+				viewSetupDialog.show();
 			}
 		});
 
@@ -194,8 +273,8 @@ public class ListViewDemoActivity extends Activity {
 		 */
 		myListView = (ListView) View.inflate(this, R.layout.listview, null);
 		this.listContailer.addView(myListView);
-		
-		//设置长按监听器
+
+		// 设置长按监听器
 		myListView.setOnKeyListener(new OnKeyListener() {
 			@Override
 			public boolean onKey(View v, int keyCode, KeyEvent event) {
@@ -209,8 +288,22 @@ public class ListViewDemoActivity extends Activity {
 				return false;// 其他情况下不处理，使用系统对回退键的处理，即退出应用
 			}
 		});
-		
-		initListView(viewModeRadioGroup.getCheckedRadioButtonId());
+
+		initListView();
+	}
+
+	@Override
+	public void onCreateContextMenu(ContextMenu menu, View v,
+			ContextMenuInfo menuInfo) {
+		super.onCreateContextMenu(menu, v, menuInfo);
+		menu.add(0, 1, 0, "Edit");
+		menu.add(0, 2, 0, "Delete");
+	}
+
+	@Override
+	public boolean onContextItemSelected(MenuItem item) {
+		Log.d(TAG, ">>>>selected....");
+		return super.onContextItemSelected(item);
 	}
 
 }

@@ -5,6 +5,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 import com.easymorse.list.datasource.Page;
+import com.easymorse.list.datasource.Record;
 import com.easymorse.list.datasource.RecordDao;
 
 /**
@@ -32,12 +33,12 @@ public abstract class AbstractListViewAdapter extends BaseAdapter {
 	
 	public AbstractListViewAdapter(ListViewModel model){
 		this.model=model;
-		this.dao=new RecordDao(model.context);
+		this.dao=RecordDao.getRecordDao(model.context);
 	}
 
 	@Override
 	public int getCount() {
-		Page page = new Page();
+		Page page = model.page;
 		page.setSize(getPageSize());
 		page.setNo(1);
 		dao.browse(page);
@@ -46,7 +47,7 @@ public abstract class AbstractListViewAdapter extends BaseAdapter {
 
 	@Override
 	public Object getItem(int position) {
-		Page page = new Page();
+		Page page =model.page;
 		page.setNo(position + 1);
 		page.setSize(getPageSize());
 		dao.browse(page);
@@ -63,9 +64,11 @@ public abstract class AbstractListViewAdapter extends BaseAdapter {
 		ViewGroup layout = (ViewGroup) View.inflate(this.model.context,
 				R.layout.row, null);
 
-		Page page = new Page();
+		Page page = model.page;
 		page.setNo(position + 1);
 		page.setSize(getPageSize());
+		page.setOrderFieldName(Record.ORDER_BY_PLAY_TIMES);
+		page.setOrderDesc(true);
 		dao.browse(page);
 
 		if (!page.getResults().isEmpty()) {
