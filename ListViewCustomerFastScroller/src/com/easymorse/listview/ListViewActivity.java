@@ -3,11 +3,15 @@ package com.easymorse.listview;
 import java.lang.reflect.Field;
 
 import android.app.Activity;
+import android.graphics.PixelFormat;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.view.WindowManager.LayoutParams;
 import android.widget.AbsListView;
+import android.widget.AbsListView.OnScrollListener;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -190,11 +194,25 @@ public class ListViewActivity extends Activity {
 			"Yarra Valley Pyramid", "Yorkshire Blue", "Zamorano",
 			"Zanetti Grana Padano", "Zanetti Parmigiano Reggiano" };
 
+	private TextView overlay;
+
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
+
+		this.overlay = (TextView) View.inflate(this, R.layout.overlay, null);
+		getWindowManager()
+				.addView(
+						overlay,
+						new WindowManager.LayoutParams(
+								LayoutParams.WRAP_CONTENT,
+								LayoutParams.WRAP_CONTENT,
+								WindowManager.LayoutParams.TYPE_APPLICATION,
+								WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
+										| WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
+								PixelFormat.TRANSLUCENT));
 
 		ListView listView = (ListView) findViewById(R.id.listView);
 		listView.setAdapter(new BaseAdapter() {
@@ -221,15 +239,37 @@ public class ListViewActivity extends Activity {
 			}
 		});
 
+		listView.setOnScrollListener(new OnScrollListener() {
+
+			boolean visible;
+
+			@Override
+			public void onScrollStateChanged(AbsListView view, int scrollState) {
+				visible = true;
+				if (scrollState == ListView.OnScrollListener.SCROLL_STATE_IDLE) {
+					overlay.setVisibility(View.INVISIBLE);
+				}
+			}
+
+			@Override
+			public void onScroll(AbsListView view, int firstVisibleItem,
+					int visibleItemCount, int totalItemCount) {
+				if (visible) {
+					overlay.setText(items[firstVisibleItem].substring(0, 1));
+					overlay.setVisibility(View.VISIBLE);
+				}
+			}
+		});
+
 		try {
 			Field f = AbsListView.class.getDeclaredField("mFastScroller");
 			f.setAccessible(true);
-			Object o=f.get(listView);
-			f=f.getType().getDeclaredField("mThumbDrawable");
+			Object o = f.get(listView);
+			f = f.getType().getDeclaredField("mThumbDrawable");
 			f.setAccessible(true);
-			Drawable drawable=(Drawable) f.get(o);
-			drawable=getResources().getDrawable(R.drawable.icon);
-			f.set(o,drawable);
+			Drawable drawable = (Drawable) f.get(o);
+			drawable = getResources().getDrawable(R.drawable.icon);
+			f.set(o, drawable);
 			Toast.makeText(this, f.getType().getName(), 1000).show();
 		} catch (Exception e) {
 			throw new RuntimeException(e);
