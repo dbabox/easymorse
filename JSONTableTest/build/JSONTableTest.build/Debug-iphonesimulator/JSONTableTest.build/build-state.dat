@@ -1,474 +1,0 @@
-TJSONTableTest
-v7
-r0
-t303636583.889389
-cCheck dependencies
-cProcessInfoPlistFile /Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app/Info.plist JSONTableTest-Info.plist
-cCompileXIB /Users/vsp/iosapp/JSONTableTest/MainWindow.xib
-cCompileXIB /Users/vsp/iosapp/JSONTableTest/JSONTableTestViewController.xib
-cCpResource build/Debug-iphonesimulator/JSONTableTest.app/data data
-cProcessPCH /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/JSONTableTest_Prefix-arzjanqkccfyfegzrxsokosiknya/JSONTableTest_Prefix.pch.gch JSONTableTest_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/main.o /Users/vsp/iosapp/JSONTableTest/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/JSONTableTestAppDelegate.o /Users/vsp/iosapp/JSONTableTest/Classes/JSONTableTestAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/JSONTableTestViewController.o /Users/vsp/iosapp/JSONTableTest/Classes/JSONTableTestViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/MyDataSource.o /Users/vsp/iosapp/JSONTableTest/Classes/MyDataSource.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/NSObject+SBJSON.o /Volumes/JSON_2.3/JSON/NSObject+SBJSON.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/NSString+SBJSON.o /Volumes/JSON_2.3/JSON/NSString+SBJSON.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/SBJsonBase.o /Volumes/JSON_2.3/JSON/SBJsonBase.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/SBJsonParser.o /Volumes/JSON_2.3/JSON/SBJsonParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/SBJsonWriter.o /Volumes/JSON_2.3/JSON/SBJsonWriter.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cLd /Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app/JSONTableTest normal i386
-cGenerateDSYMFile /Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app.dSYM /Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app/JSONTableTest
-cTouch /Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk
-c000000004C68A2AB00000000000000EE
-t1281925803
-s238
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c000000004B2B4CC3000000000026EE30
-t1261128899
-s2551344
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004B2B4DC8000000000027E880
-t1261129160
-s2615424
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c000000004B2B4DAE0000000000001355
-t1261129134
-s4949
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c000000004B2B61620000000000000788
-t1261134178
-s1928
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c000000004B2B62B500000000016721E0
-t1261134517
-s23536096
-
-N/Users/vsp/iosapp/JSONTableTest/Classes/JSONTableTestAppDelegate.h
-c000000004C64FCB800000000000001FE
-t1281686712
-s510
-i<UIKit/UIKit.h>
-
-N/Users/vsp/iosapp/JSONTableTest/Classes/JSONTableTestAppDelegate.m
-c000000004C64FCB80000000000000283
-t1281686712
-s643
-i"JSONTableTestAppDelegate.h"
-i"JSONTableTestViewController.h"
-
-N/Users/vsp/iosapp/JSONTableTest/Classes/JSONTableTestViewController.h
-c000000004C68E8900000000000000174
-t1281943696
-s372
-i<UIKit/UIKit.h>
-
-N/Users/vsp/iosapp/JSONTableTest/Classes/JSONTableTestViewController.m
-c000000004C68E8840000000000000934
-t1281943684
-s2356
-i"JSONTableTestViewController.h"
-i"MyDataSource.h"
-
-N/Users/vsp/iosapp/JSONTableTest/Classes/MyDataSource.h
-c000000004C68E75A0000000000000146
-t1281943386
-s326
-i<Foundation/Foundation.h>
-
-N/Users/vsp/iosapp/JSONTableTest/Classes/MyDataSource.m
-c000000004C68E8040000000000000332
-t1281943556
-s818
-i"MyDataSource.h"
-i"JSON.h"
-
-N/Users/vsp/iosapp/JSONTableTest/JSONTableTestViewController.xib
-c000000004C651C340000000000004843
-t1281694772
-s18499
-
-N/Users/vsp/iosapp/JSONTableTest/JSONTableTest_Prefix.pch
-c000000004C64FCB800000000000000C3
-t1281686712
-s195
-i<Foundation/Foundation.h>
-i<UIKit/UIKit.h>
-
-N/Users/vsp/iosapp/JSONTableTest/MainWindow.xib
-c000000004C64FCB80000000000002490
-t1281686712
-s9360
-
-N/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app
-t1281943783
-s272
-
-N/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app.dSYM
-t1281943783
-s102
-
-N/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app/Info.plist
-t1281686716
-s588
-
-N/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app/JSONTableTest
-t1281943783
-s50368
-
-N/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app/JSONTableTestViewController.nib
-t1281694892
-s1560
-
-N/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app/MainWindow.nib
-t1281686717
-s1507
-
-N/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app/PkgInfo
-t1281686716
-s8
-
-N/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app/data
-t1281695497
-s79
-
-N/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/JSONTableTest.LinkFileList
-c000000004C68E5E200000000000004D6
-t1281943010
-s1238
-
-N/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/JSONTableTestAppDelegate.o
-t1281943783
-s38252
-
-N/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/JSONTableTestViewController.o
-t1281943783
-s39616
-
-N/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/MyDataSource.o
-t1281943783
-s8556
-
-N/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/NSObject+SBJSON.o
-t1281943011
-s6932
-
-N/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/NSString+SBJSON.o
-t1281943011
-s6928
-
-N/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/SBJsonBase.o
-t1281943011
-s12064
-
-N/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/SBJsonParser.o
-t1281943011
-s30884
-
-N/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/SBJsonWriter.o
-t1281943011
-s23908
-
-N/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/main.o
-t1281942958
-s5944
-
-N/Users/vsp/iosapp/JSONTableTest/data
-c000000004C651F05000000000000004F
-t1281695493
-s79
-
-N/Users/vsp/iosapp/JSONTableTest/main.m
-c000000004C64FCB8000000000000016A
-t1281686712
-s362
-i<UIKit/UIKit.h>
-
-N/Volumes/JSON_2.3/JSON/JSON.h
-c000000004C5354180000000000000BE8
-t1280529432
-s3048
-i"SBJsonParser.h"
-i"SBJsonWriter.h"
-i"NSObject+SBJSON.h"
-i"NSString+SBJSON.h"
-i<JSON/SBJsonParser.h>
-i<JSON/SBJsonWriter.h>
-i<JSON/NSObject+SBJSON.h>
-i<JSON/NSString+SBJSON.h>
-
-N/Volumes/JSON_2.3/JSON/NSObject+SBJSON.h
-c000000004C535269000000000000085F
-t1280529001
-s2143
-i<Foundation/Foundation.h>
-
-N/Volumes/JSON_2.3/JSON/NSObject+SBJSON.m
-c000000004C535269000000000000077D
-t1280529001
-s1917
-i"NSObject+SBJSON.h"
-i"SBJsonWriter.h"
-
-N/Volumes/JSON_2.3/JSON/NSString+SBJSON.h
-c000000004C53526900000000000007F0
-t1280529001
-s2032
-i<Foundation/Foundation.h>
-
-N/Volumes/JSON_2.3/JSON/NSString+SBJSON.m
-c000000004C535269000000000000075D
-t1280529001
-s1885
-i"NSString+SBJSON.h"
-i"SBJsonParser.h"
-
-N/Volumes/JSON_2.3/JSON/SBJsonBase.h
-c000000004C5352690000000000000B82
-t1280529001
-s2946
-i<Foundation/Foundation.h>
-
-N/Volumes/JSON_2.3/JSON/SBJsonBase.m
-c000000004C5352690000000000000AC1
-t1280529001
-s2753
-i"SBJsonBase.h"
-
-N/Volumes/JSON_2.3/JSON/SBJsonParser.h
-c000000004C5352690000000000000C8F
-t1280529001
-s3215
-i<Foundation/Foundation.h>
-i"SBJsonBase.h"
-
-N/Volumes/JSON_2.3/JSON/SBJsonParser.m
-c000000004C5352690000000000003B7A
-t1280529001
-s15226
-i"SBJsonParser.h"
-
-N/Volumes/JSON_2.3/JSON/SBJsonWriter.h
-c000000004C53526900000000000011D9
-t1280529001
-s4569
-i<Foundation/Foundation.h>
-i"SBJsonBase.h"
-
-N/Volumes/JSON_2.3/JSON/SBJsonWriter.m
-c000000004C53526900000000000020D8
-t1280529001
-s8408
-i"SBJsonWriter.h"
-
-N/var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/JSONTableTest_Prefix-arzjanqkccfyfegzrxsokosiknya/JSONTableTest_Prefix.pch.gch
-t1281942957
-s13034960
-
-NJSONTableTest-Info.plist
-c000000004C64FCB8000000000000038D
-t1281686712
-s909
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies303636583#303636583#0(0"0(0#1#0"4300885448#0"0#
-
-CCompileC build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/JSONTableTestAppDelegate.o /Users/vsp/iosapp/JSONTableTest/Classes/JSONTableTestAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s303636583.640568
-e303636583.731732
-r1
-xCompileC
-xbuild/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/JSONTableTestAppDelegate.o
-x/Users/vsp/iosapp/JSONTableTest/Classes/JSONTableTestAppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@74"Compile /Users/vsp/iosapp/JSONTableTest/Classes/JSONTableTestAppDelegate.m303636583#303636583#0(0"0(0#0#66"/Users/vsp/iosapp/JSONTableTest/Classes/JSONTableTestAppDelegate.m4300885448#1950"    cd /Users/vsp/iosapp/JSONTableTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-generated-files.hmap -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-own-target-headers.hmap -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-all-target-headers.hmap -iquote /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-project-headers.hmap -F/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator -I/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/DerivedSources/i386 -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/JSONTableTest_Prefix-arzjanqkccfyfegzrxsokosiknya/JSONTableTest_Prefix.pch -c /Users/vsp/iosapp/JSONTableTest/Classes/JSONTableTestAppDelegate.m -o /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/JSONTableTestAppDelegate.o0#
-
-CCompileC build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/JSONTableTestViewController.o /Users/vsp/iosapp/JSONTableTest/Classes/JSONTableTestViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s303636583.643004
-e303636583.787726
-r1
-xCompileC
-xbuild/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/JSONTableTestViewController.o
-x/Users/vsp/iosapp/JSONTableTest/Classes/JSONTableTestViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@77"Compile /Users/vsp/iosapp/JSONTableTest/Classes/JSONTableTestViewController.m303636583#303636583#0(0"0(0#0#69"/Users/vsp/iosapp/JSONTableTest/Classes/JSONTableTestViewController.m4300885448#1956"    cd /Users/vsp/iosapp/JSONTableTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-generated-files.hmap -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-own-target-headers.hmap -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-all-target-headers.hmap -iquote /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-project-headers.hmap -F/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator -I/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/DerivedSources/i386 -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/JSONTableTest_Prefix-arzjanqkccfyfegzrxsokosiknya/JSONTableTest_Prefix.pch -c /Users/vsp/iosapp/JSONTableTest/Classes/JSONTableTestViewController.m -o /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/JSONTableTestViewController.o0#
-
-CCompileC build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/MyDataSource.o /Users/vsp/iosapp/JSONTableTest/Classes/MyDataSource.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s303636583.731834
-e303636583.844049
-r1
-xCompileC
-xbuild/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/MyDataSource.o
-x/Users/vsp/iosapp/JSONTableTest/Classes/MyDataSource.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@62"Compile /Users/vsp/iosapp/JSONTableTest/Classes/MyDataSource.m303636583#303636583#0(0"0(0#0#54"/Users/vsp/iosapp/JSONTableTest/Classes/MyDataSource.m4300885448#1926"    cd /Users/vsp/iosapp/JSONTableTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-generated-files.hmap -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-own-target-headers.hmap -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-all-target-headers.hmap -iquote /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-project-headers.hmap -F/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator -I/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/DerivedSources/i386 -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/JSONTableTest_Prefix-arzjanqkccfyfegzrxsokosiknya/JSONTableTest_Prefix.pch -c /Users/vsp/iosapp/JSONTableTest/Classes/MyDataSource.m -o /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/MyDataSource.o0#
-
-CCompileC build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/NSObject+SBJSON.o /Volumes/JSON_2.3/JSON/NSObject+SBJSON.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s303635811.007518
-e303635811.068347
-r1
-xCompileC
-xbuild/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/NSObject+SBJSON.o
-x/Volumes/JSON_2.3/JSON/NSObject+SBJSON.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@48"Compile /Volumes/JSON_2.3/JSON/NSObject+SBJSON.m303635811#303635811#0(0"0(0#0#40"/Volumes/JSON_2.3/JSON/NSObject+SBJSON.m4300885448#1915"    cd /Users/vsp/iosapp/JSONTableTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-generated-files.hmap -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-own-target-headers.hmap -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-all-target-headers.hmap -iquote /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-project-headers.hmap -F/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator -I/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/DerivedSources/i386 -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/JSONTableTest_Prefix-arzjanqkccfyfegzrxsokosiknya/JSONTableTest_Prefix.pch -c /Volumes/JSON_2.3/JSON/NSObject+SBJSON.m -o /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/NSObject+SBJSON.o0#
-
-CCompileC build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/NSString+SBJSON.o /Volumes/JSON_2.3/JSON/NSString+SBJSON.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s303635811.068454
-e303635811.155849
-r1
-xCompileC
-xbuild/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/NSString+SBJSON.o
-x/Volumes/JSON_2.3/JSON/NSString+SBJSON.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@48"Compile /Volumes/JSON_2.3/JSON/NSString+SBJSON.m303635811#303635811#0(0"0(0#0#40"/Volumes/JSON_2.3/JSON/NSString+SBJSON.m4300885448#1915"    cd /Users/vsp/iosapp/JSONTableTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-generated-files.hmap -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-own-target-headers.hmap -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-all-target-headers.hmap -iquote /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-project-headers.hmap -F/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator -I/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/DerivedSources/i386 -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/JSONTableTest_Prefix-arzjanqkccfyfegzrxsokosiknya/JSONTableTest_Prefix.pch -c /Volumes/JSON_2.3/JSON/NSString+SBJSON.m -o /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/NSString+SBJSON.o0#
-
-CCompileC build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/SBJsonBase.o /Volumes/JSON_2.3/JSON/SBJsonBase.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s303635811.123909
-e303635811.227330
-r1
-xCompileC
-xbuild/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/SBJsonBase.o
-x/Volumes/JSON_2.3/JSON/SBJsonBase.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@43"Compile /Volumes/JSON_2.3/JSON/SBJsonBase.m303635811#303635811#0(0"0(0#0#35"/Volumes/JSON_2.3/JSON/SBJsonBase.m4300885448#1905"    cd /Users/vsp/iosapp/JSONTableTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-generated-files.hmap -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-own-target-headers.hmap -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-all-target-headers.hmap -iquote /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-project-headers.hmap -F/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator -I/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/DerivedSources/i386 -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/JSONTableTest_Prefix-arzjanqkccfyfegzrxsokosiknya/JSONTableTest_Prefix.pch -c /Volumes/JSON_2.3/JSON/SBJsonBase.m -o /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/SBJsonBase.o0#
-
-CCompileC build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/SBJsonParser.o /Volumes/JSON_2.3/JSON/SBJsonParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s303635811.155952
-e303635811.380718
-r1
-xCompileC
-xbuild/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/SBJsonParser.o
-x/Volumes/JSON_2.3/JSON/SBJsonParser.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@45"Compile /Volumes/JSON_2.3/JSON/SBJsonParser.m303635811#303635811#0(0"0(0#0#37"/Volumes/JSON_2.3/JSON/SBJsonParser.m4300885448#1909"    cd /Users/vsp/iosapp/JSONTableTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-generated-files.hmap -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-own-target-headers.hmap -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-all-target-headers.hmap -iquote /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-project-headers.hmap -F/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator -I/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/DerivedSources/i386 -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/JSONTableTest_Prefix-arzjanqkccfyfegzrxsokosiknya/JSONTableTest_Prefix.pch -c /Volumes/JSON_2.3/JSON/SBJsonParser.m -o /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/SBJsonParser.o0#
-
-CCompileC build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/SBJsonWriter.o /Volumes/JSON_2.3/JSON/SBJsonWriter.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s303635811.227602
-e303635811.362918
-r1
-xCompileC
-xbuild/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/SBJsonWriter.o
-x/Volumes/JSON_2.3/JSON/SBJsonWriter.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@45"Compile /Volumes/JSON_2.3/JSON/SBJsonWriter.m303635811#303635811#0(0"0(0#0#37"/Volumes/JSON_2.3/JSON/SBJsonWriter.m4300885448#1909"    cd /Users/vsp/iosapp/JSONTableTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-generated-files.hmap -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-own-target-headers.hmap -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-all-target-headers.hmap -iquote /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-project-headers.hmap -F/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator -I/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/DerivedSources/i386 -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/JSONTableTest_Prefix-arzjanqkccfyfegzrxsokosiknya/JSONTableTest_Prefix.pch -c /Volumes/JSON_2.3/JSON/SBJsonWriter.m -o /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/SBJsonWriter.o0#
-
-CCompileC build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/main.o /Users/vsp/iosapp/JSONTableTest/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s303635757.956282
-e303635758.221417
-r1
-xCompileC
-xbuild/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/main.o
-x/Users/vsp/iosapp/JSONTableTest/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@46"Compile /Users/vsp/iosapp/JSONTableTest/main.m303635757#303635758#0(0"0(0#0#38"/Users/vsp/iosapp/JSONTableTest/main.m4300885448#1902"    cd /Users/vsp/iosapp/JSONTableTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-generated-files.hmap -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-own-target-headers.hmap -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-all-target-headers.hmap -iquote /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-project-headers.hmap -F/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator -I/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/DerivedSources/i386 -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/DerivedSources -include /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/JSONTableTest_Prefix-arzjanqkccfyfegzrxsokosiknya/JSONTableTest_Prefix.pch -c /Users/vsp/iosapp/JSONTableTest/main.m -o /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/main.o0#
-
-CCompileXIB /Users/vsp/iosapp/JSONTableTest/JSONTableTestViewController.xib
-s303387691.029101
-e303387692.164454
-r1
-xCompileXIB
-x/Users/vsp/iosapp/JSONTableTest/JSONTableTestViewController.xib
-lSLF07#2@42"CompileXIB JSONTableTestViewController.xib303387691#303387692#0(0"0(0#0#63"/Users/vsp/iosapp/JSONTableTest/JSONTableTestViewController.xib4300885448#501"    cd /Users/vsp/iosapp/JSONTableTest    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app/JSONTableTestViewController.nib /Users/vsp/iosapp/JSONTableTest/JSONTableTestViewController.xib0#
-
-CCompileXIB /Users/vsp/iosapp/JSONTableTest/MainWindow.xib
-s303379516.936046
-e303379517.363918
-r1
-xCompileXIB
-x/Users/vsp/iosapp/JSONTableTest/MainWindow.xib
-lSLF07#2@25"CompileXIB MainWindow.xib303379516#303379517#0(0"0(0#0#46"/Users/vsp/iosapp/JSONTableTest/MainWindow.xib4300885448#467"    cd /Users/vsp/iosapp/JSONTableTest    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app/MainWindow.nib /Users/vsp/iosapp/JSONTableTest/MainWindow.xib0#
-
-CCpResource build/Debug-iphonesimulator/JSONTableTest.app/data data
-s303388296.985506
-e303388297.029039
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/JSONTableTest.app/data
-xdata
-lSLF07#2@9"Copy data303388296#303388297#0(0"0(0#0#36"/Users/vsp/iosapp/JSONTableTest/data4300885448#433"    cd /Users/vsp/iosapp/JSONTableTest    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/vsp/iosapp/JSONTableTest/data /Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app0#
-
-CGenerateDSYMFile /Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app.dSYM /Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app/JSONTableTest
-s303636583.869714
-e303636583.886512
-r1
-xGenerateDSYMFile
-x/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app.dSYM
-x/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app/JSONTableTest
-lSLF07#2@127"GenerateDSYMFile build/Debug-iphonesimulator/JSONTableTest.app.dSYM build/Debug-iphonesimulator/JSONTableTest.app/JSONTableTest303636583#303636583#0(0"0(0#0#91"/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app/JSONTableTest4300885448#380"    cd /Users/vsp/iosapp/JSONTableTest    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app/JSONTableTest -o /Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app.dSYM0#
-
-CLd /Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app/JSONTableTest normal i386
-s303636583.844197
-e303636583.869605
-r1
-xLd
-x/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app/JSONTableTest
-xnormal
-xi386
-lSLF07#2@96"Link /Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app/JSONTableTest303636583#303636583#0(0"0(0#0#0"4300885448#859"    cd /Users/vsp/iosapp/JSONTableTest    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -L/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator -F/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator -filelist /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/Objects-normal/i386/JSONTableTest.LinkFileList -mmacosx-version-min=10.5 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app/JSONTableTest0#
-
-CProcessInfoPlistFile /Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app/Info.plist JSONTableTest-Info.plist
-s303379516.932432
-e303379516.935953
-r1
-xProcessInfoPlistFile
-x/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app/Info.plist
-xJSONTableTest-Info.plist
-lSLF07#2@32"Process JSONTableTest-Info.plist303379516#303379516#0(0"0(0#0#56"/Users/vsp/iosapp/JSONTableTest/JSONTableTest-Info.plist4300885448#476"    cd /Users/vsp/iosapp/JSONTableTest    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility JSONTableTest-Info.plist -genpkginfo /Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app/Info.plist0#
-
-CProcessPCH /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/JSONTableTest_Prefix-arzjanqkccfyfegzrxsokosiknya/JSONTableTest_Prefix.pch.gch JSONTableTest_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-s303635755.491562
-e303635757.956103
-r1
-xProcessPCH
-x/var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/JSONTableTest_Prefix-arzjanqkccfyfegzrxsokosiknya/JSONTableTest_Prefix.pch.gch
-xJSONTableTest_Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@35"Precompile JSONTableTest_Prefix.pch303635755#303635757#0(0"0(0#0#56"/Users/vsp/iosapp/JSONTableTest/JSONTableTest_Prefix.pch4300885448#1795"    cd /Users/vsp/iosapp/JSONTableTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-generated-files.hmap -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-own-target-headers.hmap -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-all-target-headers.hmap -iquote /Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/JSONTableTest-project-headers.hmap -F/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator -I/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/include -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/DerivedSources/i386 -I/Users/vsp/iosapp/JSONTableTest/build/JSONTableTest.build/Debug-iphonesimulator/JSONTableTest.build/DerivedSources -c /Users/vsp/iosapp/JSONTableTest/JSONTableTest_Prefix.pch -o /var/folders/x-/x-m1Mb-EEMeYmG-WPXSADE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/JSONTableTest_Prefix-arzjanqkccfyfegzrxsokosiknya/JSONTableTest_Prefix.pch.gch0#
-
-CTouch /Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app
-s303636583.886593
-e303636583.889347
-r1
-xTouch
-x/Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app
-lSLF07#2@83"Touch /Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app303636583#303636583#0(0"0(0#0#0"4300885448#270"    cd /Users/vsp/iosapp/JSONTableTest    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/vsp/iosapp/JSONTableTest/build/Debug-iphonesimulator/JSONTableTest.app0#
-
