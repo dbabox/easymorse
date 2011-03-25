@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:background="#99ffffff">
+	<ImageView android:id="@+id/authorImage"
+		android:layout_width="80dp" android:layout_height="100dp" android:src="@drawable/marshal"
+		android:layout_alignParentLeft="true" android:padding="4dp" />
+	<TextView android:id="@+id/authorName" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_alignParentTop="true"
+		android:layout_toRightOf="@id/authorImage" android:text="name"
+		android:textColor="#ff000000" android:textSize="15sp"
+		android:textStyle="bold" android:padding="1dp"/>
+	<TextView android:id="@+id/authorIntroduction"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_toRightOf="@id/authorImage" android:layout_below="@id/authorName"
+		android:text="introduction" android:textColor="#ff000000"
+		android:textSize="10sp" android:padding="1dp"/>
+</RelativeLayout>
