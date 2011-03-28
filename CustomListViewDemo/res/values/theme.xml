@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="custom_background_color">#FFFFFFFF</color>
+	<style name="RiverTheme" parent="android:Theme.Light">
+		<item name="android:windowBackground">@color/custom_background_color</item>
+	</style>
+</resources>
