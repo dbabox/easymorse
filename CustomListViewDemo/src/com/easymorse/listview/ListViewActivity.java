@@ -26,8 +26,9 @@ public class ListViewActivity extends Activity {
 		Cursor cursor = managedQuery(RiverContentProvider.CONTENT_URI, null,
 				null, null, null);
 		CursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.row,
-				cursor, new String[] { RiverContentProvider.NAME },
-				new int[] { R.id.riverName });
+				cursor, new String[] { RiverContentProvider.NAME,
+						RiverContentProvider.INTRODUCTION }, new int[] {
+						R.id.riverName, R.id.riverIntroduction });
 		riverListView.setAdapter(adapter);
 	}
 

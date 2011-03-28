@@ -5,14 +5,25 @@ public class River {
 
 	private String name;
 
+	private String introduction;
+
 	private int length;
 
 	public River() {
 	}
 
-	public River(String name, int length) {
+	public River(String name, int length, String introduction) {
 		this.name = name;
 		this.length = length;
+		this.introduction = introduction;
+	}
+
+	public String getIntroduction() {
+		return introduction;
+	}
+
+	public void setIntroduction(String introduction) {
+		this.introduction = introduction;
 	}
 
 	public int getId() {

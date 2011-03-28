@@ -23,19 +23,55 @@ public class RiverContentProvider extends ContentProvider {
 	public static final String NAME = "name";
 
 	public static final String LENGTH = "length";
+	
+	public static final String INTRODUCTION = "introduction";
 
 	private static SQLiteDatabase database;
 
-	private static final int DATABASE_VERSION = 2;
+	private static final int DATABASE_VERSION = 3;
 
 	private static final List<River> RIVERS = new ArrayList<River>();
 
 	static {
-		River river = new River("长江", 6380);
+		River river = new River(
+				"长江",
+				6380,
+				"长江（古称江、大江等）位于中国境内，发源于中国青海省唐古拉山各拉丹东雪山的姜根迪如冰川中，是中国、亚洲第一和世界第三大（同时也是长）河流，其长度仅次于尼罗河及亚马逊河，超过地球半径。");
 		RIVERS.add(river);
 
-		river = new River("黄河", 5464);
+		river = new River(
+				"黄河",
+				5464,
+				"中国古代称河，发源于中国青海省巴颜喀拉山脉，流经青海、四川、甘肃、宁夏、内蒙古、陕西、山西、河南、山东9个省区，最后于山东省东营市垦利县注入渤海，是中国第二长河，仅次于长江，也是世界第七长河流。");
 		RIVERS.add(river);
+
+		river = new River("辽河", 1390, "辽河是中华人民共和国东北地区南部的大河，流经河北、内蒙古、吉林、辽宁等省区。");
+		RIVERS.add(river);
+
+		river = new River(
+				"海河",
+				73,
+				"海河由于地势不高，每当海中涨潮时，河水倒流，落潮时河水顺流，和海水的潮汐相同，因此取名为“海”河。海河支流的永定河原名“无定河”，就是因为河道经常改变，只是皇帝为了祈愿它不再泛滥才人为改名为永定河。");
+		RIVERS.add(river);
+
+		river = new River(
+				"淮河",
+				1000,
+				"淮河发源于河南省桐柏山老鸦叉，东流经河南，安徽，江苏三省，淮河下游水分三路。主流通过三河闸，出三河，经宝应湖、高邮湖在三江营入长江，是为入江水道，至此全长约1,000公里；另一路在洪泽湖东岸出高良涧闸，经苏北灌溉总渠在扁担港入黄海；第三路在洪泽湖东北岸出二河闸，经淮沭河北上连云港市，经临洪口注入海州湾。2003年开通淮河入海水道，自二河闸下游，紧贴苏北灌溉总渠北岸入海。");
+		RIVERS.add(river);
+
+		river = new River(
+				"黑龙江",
+				4444,
+				"发源于蒙古国肯特山东麓，在石勒喀河与额尔古纳河交汇处形成。经过中国黑龙江省北界与俄罗斯哈巴罗夫斯克边疆区东南界，流入鄂霍次克海鞑靼海峡。黑龙江是中国三大河流之一、世界十大河之一（有些资料计为第六）。黑龙江本是中国的内河，19世纪中后期沙俄强行占领中国黑龙江以北、乌苏里江以东大片领土之后，才成为中俄界河。2004年，中国和俄罗斯签署最后边界协定，将两国国界以黑龙江为基本界限划清。");
+		RIVERS.add(river);
+
+		river = new River(
+				"珠江",
+				2400,
+				"原指广州到入海口的一段河道，后来逐渐成为西江、北江、东江和珠江三角洲诸河的总称。其干流西江发源于云南省东北部沾益县的马雄山，干流流经云南、贵州、广西、广东四省（自治区）及香港、澳门特别行政区。");
+		RIVERS.add(river);
+
 	}
 
 	@Override
@@ -59,7 +95,7 @@ public class RiverContentProvider extends ContentProvider {
 	@Override
 	public boolean onCreate() {
 		database = new RiverDatabaseHelper(getContext(), "rivers", null,
-				DATABASE_VERSION).getReadableDatabase();
+				DATABASE_VERSION).getWritableDatabase();
 		return database != null;
 	}
 
@@ -88,15 +124,16 @@ public class RiverContentProvider extends ContentProvider {
 		public void onCreate(SQLiteDatabase database) {
 			database.execSQL("create table if not exists rivers("
 					+ " _id integer primary key autoincrement," + " name text,"
-					+ "length integer" + ");");
+					+ "length integer,"+ " introduction text" + ");");
 
 			SQLiteStatement statement = database
-					.compileStatement("insert into rivers(name,length) values(?,?)");
+					.compileStatement("insert into rivers(name,length,introduction) values(?,?,?)");
 
 			for (River r : RIVERS) {
 				int index = 1;
 				statement.bindString(index++, r.getName());
 				statement.bindLong(index++, r.getLength());
+				statement.bindString(index++, r.getIntroduction());
 				statement.executeInsert();
 			}
 
