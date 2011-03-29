@@ -12,6 +12,7 @@ import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteStatement;
 import android.net.Uri;
+import android.util.Log;
 
 public class RiverContentProvider extends ContentProvider {
 
@@ -23,7 +24,7 @@ public class RiverContentProvider extends ContentProvider {
 	public static final String NAME = "name";
 
 	public static final String LENGTH = "length";
-	
+
 	public static final String INTRODUCTION = "introduction";
 
 	private static SQLiteDatabase database;
@@ -94,23 +95,54 @@ public class RiverContentProvider extends ContentProvider {
 
 	@Override
 	public boolean onCreate() {
+		Log.d("list", "on create cp");
 		database = new RiverDatabaseHelper(getContext(), "rivers", null,
 				DATABASE_VERSION).getWritableDatabase();
+
+		new Thread() {
+			boolean flag;
+
+			@Override
+			public void run() {
+				try {
+					while (true) {
+						Thread.sleep(1000 * 3);
+						ContentValues values = new ContentValues();
+						if (flag) {
+							values.put(RiverContentProvider.NAME, "Long River");
+						} else {
+							values.put(RiverContentProvider.NAME, "长江");
+						}
+						flag=!flag;
+						update(RiverContentProvider.CONTENT_URI, values,
+								"_id=1", null);
+						Log.d("list", ">>>>>>>update record");
+					}
+				} catch (InterruptedException e) {
+					Log.d("list", e.getMessage());
+				}
+			}
+		}.start();
+
 		return database != null;
 	}
 
 	@Override
 	public Cursor query(Uri uri, String[] projection, String selection,
 			String[] selectionArgs, String sortOrder) {
-		return database.query("rivers", projection, selection, selectionArgs,
-				null, null, sortOrder);
+		Cursor cursor = database.query("rivers", projection, selection,
+				selectionArgs, null, null, sortOrder);
+		cursor.setNotificationUri(getContext().getContentResolver(), uri);
+		return cursor;
 	}
 
 	@Override
 	public int update(Uri uri, ContentValues values, String selection,
 			String[] selectionArgs) {
-		// TODO Auto-generated method stub
-		return 0;
+		int returnValue = database.update("rivers", values, selection,
+				selectionArgs);
+		getContext().getContentResolver().notifyChange(uri, null);
+		return returnValue;
 	}
 
 	private static class RiverDatabaseHelper extends SQLiteOpenHelper {
@@ -124,7 +156,7 @@ public class RiverContentProvider extends ContentProvider {
 		public void onCreate(SQLiteDatabase database) {
 			database.execSQL("create table if not exists rivers("
 					+ " _id integer primary key autoincrement," + " name text,"
-					+ "length integer,"+ " introduction text" + ");");
+					+ "length integer," + " introduction text" + ");");
 
 			SQLiteStatement statement = database
 					.compileStatement("insert into rivers(name,length,introduction) values(?,?,?)");
