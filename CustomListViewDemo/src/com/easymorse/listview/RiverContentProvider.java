@@ -113,7 +113,7 @@ public class RiverContentProvider extends ContentProvider {
 						} else {
 							values.put(RiverContentProvider.NAME, "长江");
 						}
-						flag=!flag;
+						flag = !flag;
 						update(RiverContentProvider.CONTENT_URI, values,
 								"_id=1", null);
 						Log.d("list", ">>>>>>>update record");
