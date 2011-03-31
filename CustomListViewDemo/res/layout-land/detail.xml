@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_height="match_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:padding="3dp" android:layout_width="match_parent"
+	android:scrollbars="vertical">
+	<LinearLayout android:layout_width="match_parent"
+		android:layout_height="match_parent" android:orientation="horizontal">
+		<RelativeLayout android:layout_width="match_parent"
+			android:layout_height="match_parent" android:gravity="center_vertical">
+			<FrameLayout android:id="@+id/riverImageFrame"
+				android:layout_width="300dp" android:layout_height="200dp"
+				android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+				<ImageView android:id="@+id/riverImage"
+					android:layout_width="match_parent" android:layout_height="match_parent"
+					android:scaleType="centerInside" android:padding="2dp" />
+				<ProgressBar android:id="@+id/riverImageProgress"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_gravity="center" />
+			</FrameLayout>
+			<TextView android:id="@+id/riverIntroduction"
+				android:layout_width="match_parent" android:layout_height="wrap_content"
+				android:layout_toRightOf="@id/riverImageFrame"
+				android:text="长江（古称江、大江等）位于中国境内，发源于中国青海省唐古拉山各拉丹东雪山的姜根迪如冰川中，是中国、亚洲第一和世界第三大（同时也是长）河流，其长度仅次于尼罗河及亚马逊河，超过地球半径。" />
+		</RelativeLayout>
+	</LinearLayout>
+</ScrollView>

@@ -9,13 +9,24 @@ public class River {
 
 	private int length;
 
+	private String imageUrl;
+
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+
 	public River() {
 	}
 
-	public River(String name, int length, String introduction) {
+	public River(String name, int length, String introduction, String imageUrl) {
 		this.name = name;
 		this.length = length;
 		this.introduction = introduction;
+		this.imageUrl = imageUrl;
 	}
 
 	public String getIntroduction() {

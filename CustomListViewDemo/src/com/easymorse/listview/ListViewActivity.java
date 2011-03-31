@@ -1,5 +1,6 @@
 package com.easymorse.listview;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -9,13 +10,16 @@ import android.support.v4.content.Loader;
 import android.support.v4.widget.CursorAdapter;
 import android.support.v4.widget.SimpleCursorAdapter;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 public class ListViewActivity extends FragmentActivity {
 
 	private ListView riverListView;
 
-	private SimpleCursorAdapter adapter;
+	private CursorAdapter adapter;
 
 	/** Called when the activity is first created. */
 	@Override
@@ -27,6 +31,10 @@ public class ListViewActivity extends FragmentActivity {
 		setRiverListViewAdapter();
 	}
 
+	public void onClick(View view) {
+		Log.d("list", "click!");
+	}
+
 	private void initLoader() {
 		getSupportLoaderManager().initLoader(0, null,
 				new LoaderCallbacks<Cursor>() {
@@ -34,14 +42,14 @@ public class ListViewActivity extends FragmentActivity {
 					@Override
 					public Loader<Cursor> onCreateLoader(int id, Bundle args) {
 						Log.d("list", "on create loader");
-						 CursorLoader cursorLoader=new CursorLoader(ListViewActivity.this,
+						CursorLoader cursorLoader = new CursorLoader(
+								ListViewActivity.this,
 								RiverContentProvider.CONTENT_URI, new String[] {
 										RiverContentProvider._ID,
 										RiverContentProvider.NAME,
 										RiverContentProvider.INTRODUCTION },
 								null, null, null);
-						 //cursorLoader.setUpdateThrottle(1000);
-						 return cursorLoader;
+						return cursorLoader;
 					}
 
 					@Override
@@ -67,7 +75,22 @@ public class ListViewActivity extends FragmentActivity {
 		adapter = new SimpleCursorAdapter(this, R.layout.row, cursor,
 				new String[] { RiverContentProvider.NAME,
 						RiverContentProvider.INTRODUCTION }, new int[] {
-						R.id.riverName, R.id.riverIntroduction }, CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER);
+						R.id.riverName, R.id.riverIntroduction },
+				CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER);
+
 		riverListView.setAdapter(adapter);
+
+		riverListView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				Log.d("list", ">>" + id);
+				Intent intent = new Intent();
+				intent.setClass(ListViewActivity.this, DetailViewActivity.class);
+				intent.putExtra(GlobalValues.RIVER_ID, id);
+				startActivity(intent);
+			}
+		});
 	}
 }
