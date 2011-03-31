@@ -115,7 +115,7 @@ public class RiverContentProvider extends ContentProvider {
 	public Cursor query(Uri uri, String[] projection, String selection,
 			String[] selectionArgs, String sortOrder) {
 		Cursor cursor = null;
-		switch (uriMatcher.match(uri)) {//判断是访问river集合还是指定id访问单条记录
+		switch (uriMatcher.match(uri)) {// 判断是访问river集合还是指定id访问单条记录
 		case ITEMS:
 			cursor = database.query("rivers", projection, selection,
 					selectionArgs, null, null, sortOrder);

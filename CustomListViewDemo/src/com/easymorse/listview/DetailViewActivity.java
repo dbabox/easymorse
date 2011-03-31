@@ -23,6 +23,12 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+/**
+ * river详细信息activity
+ * 
+ * @author marshal
+ * 
+ */
 public class DetailViewActivity extends Activity {
 
 	ImageView imageView;
@@ -55,50 +61,55 @@ public class DetailViewActivity extends Activity {
 				.getColumnIndex(RiverContentProvider.IMAGE_URL)), "" + id);
 	}
 
-	private class ShowImageTask extends AsyncTask<String, Void, Void> {
+private class ShowImageTask extends AsyncTask<String, Void, Void> {
 
-		private String fileName;
+	private String fileName;
 
-		@Override
-		protected Void doInBackground(String... params) {
-			fileName = params[1] + ".jpg";
+	@Override
+	protected Void doInBackground(String... params) {
+		fileName = params[1] + ".jpg";
 
-			File cacheFile = new File(getCacheDir(), fileName);
-			if (!cacheFile.exists()) {
-				File tempFile = new File(getCacheDir(), "tmp");
-				HttpClient client = new DefaultHttpClient();
-				HttpGet get = new HttpGet(params[0]);
-				try {
-					HttpResponse response = client.execute(get);
-					FileOutputStream outputStream = new FileOutputStream(
-							tempFile);
-					InputStream inputStream = response.getEntity().getContent();
-					for (int i = inputStream.read(); i != -1; i = inputStream
-							.read()) {
-						outputStream.write(i);
-					}
-					inputStream.close();
-					outputStream.close();
-
-					tempFile.renameTo(cacheFile);
-				} catch (Exception e) {
-					throw new RuntimeException(e);
-				}
-			}
-
-			return null;
-		}
-
-		@Override
-		protected void onPostExecute(Void result) {
+		File cacheFile = new File(getCacheDir(), fileName);
+		if (!cacheFile.exists()) {
+			//创建临时文件，用于下载图片使用
+			File tempFile = new File(getCacheDir(), "tmp");
+			HttpClient client = new DefaultHttpClient();
+			HttpGet get = new HttpGet(params[0]);
 			try {
-				imageView.setImageDrawable(Drawable.createFromStream(
-						new FileInputStream(new File(getCacheDir(), fileName)),
-						"river.jpg"));
-			} catch (FileNotFoundException e) {
+				HttpResponse response = client.execute(get);
+				FileOutputStream outputStream = new FileOutputStream(
+						tempFile);
+				InputStream inputStream = response.getEntity().getContent();
+				for (int i = inputStream.read(); i != -1; i = inputStream
+						.read()) {
+					outputStream.write(i);
+				}
+				inputStream.close();
+				outputStream.close();
+				
+				/**
+				 * 改名临时文件，改为对应河流id的jpg文件
+				 * 这样做是为了防止图片下载不全的问题
+				 */
+				tempFile.renameTo(cacheFile);
+			} catch (Exception e) {
 				throw new RuntimeException(e);
 			}
-			imageLoadProgressBar.setVisibility(View.GONE);
 		}
+
+		return null;
+	}
+
+	@Override
+	protected void onPostExecute(Void result) {
+		try {
+			imageView.setImageDrawable(Drawable.createFromStream(
+					new FileInputStream(new File(getCacheDir(), fileName)),
+					"river.jpg"));
+		} catch (FileNotFoundException e) {
+			throw new RuntimeException(e);
+		}
+		imageLoadProgressBar.setVisibility(View.GONE);
+	}
 	}
 }
