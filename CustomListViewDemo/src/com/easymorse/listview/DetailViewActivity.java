@@ -70,8 +70,6 @@ public class DetailViewActivity extends Activity {
 				HttpGet get = new HttpGet(params[0]);
 				try {
 					HttpResponse response = client.execute(get);
-					// FileOutputStream outputStream = openFileOutput(fileName,
-					// MODE_PRIVATE);
 					FileOutputStream outputStream = new FileOutputStream(
 							tempFile);
 					InputStream inputStream = response.getEntity().getContent();

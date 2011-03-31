@@ -15,6 +15,11 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
+/**
+ * 列表显示Activity，也是应用的入口Activity
+ * @author marshal
+ *
+ */
 public class ListViewActivity extends FragmentActivity {
 
 	private ListView riverListView;
@@ -28,13 +33,16 @@ public class ListViewActivity extends FragmentActivity {
 		setContentView(R.layout.main);
 
 		initLoader();
-		setRiverListViewAdapter();
+		initRiverListView();
 	}
 
 	public void onClick(View view) {
 		Log.d("list", "click!");
 	}
 
+	/**
+	 * 初始化Loader，为ListView数据做异步加载，即不依赖UI线程加载
+	 */
 	private void initLoader() {
 		getSupportLoaderManager().initLoader(0, null,
 				new LoaderCallbacks<Cursor>() {
@@ -67,7 +75,10 @@ public class ListViewActivity extends FragmentActivity {
 				});
 	}
 
-	private void setRiverListViewAdapter() {
+	/**
+	 * 初始化RiverListView，主要时设置Cursor和adapter，以及点击ListView条目的动作
+	 */
+	private void initRiverListView() {
 		riverListView = (ListView) this.findViewById(R.id.riverList);
 
 		Cursor cursor = managedQuery(RiverContentProvider.CONTENT_URI, null,

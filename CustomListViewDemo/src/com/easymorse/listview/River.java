@@ -1,5 +1,11 @@
 package com.easymorse.listview;
 
+/**
+ * River Bean。目前之在插入数据库记录时用到。
+ * 
+ * @author marshal
+ * 
+ */
 public class River {
 	private int id;
 
