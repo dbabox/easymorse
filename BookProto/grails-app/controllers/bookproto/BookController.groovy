@@ -3,6 +3,34 @@ package bookproto
 class BookController {
 
 	def book
+	
+	def image={
+		def imageFile=new File(request.session.getServletContext().getRealPath("/WEB-INF/images/grails_logo.png"))
+		def range=request.getHeader('Range')
+		int rangeValue=0
+		
+		if(range){
+			rangeValue=Integer.parseInt(range.substring (6, range.length()-1))
+			response.setStatus(206)
+		}
+		
+		def imageData=null
+		
+		if(range){
+			def inputStream=new FileInputStream(imageFile)
+			imageData=new byte[imageFile.length()-rangeValue]
+			inputStream.skip(rangeValue)
+			inputStream.read(imageData, 0, imageData.length)
+		}else{
+			imageData=imageFile.readBytes()
+		}
+		
+		//response.setHeader("Content-disposition", "attachment; filename=grails.png")
+		response.contentType ='image/jpeg'
+		response.addHeader "Content-Length", ""+(imageData.length)
+		response.outputStream<<imageData
+		response.outputStream.flush()
+	}
 
 	//编辑，用于新建和修改
 	def edit={
