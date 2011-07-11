@@ -60,6 +60,7 @@ jQuery.fn.reset = function(fn) {
 </head>
 <body>
 	<div class="content" style="margin-left: 20px;">
+		<g:message code="${flash.message}" />
 		<g:form  id="bookForm" url="[controller:'book',action:'save']">
 			<div>
 				书名：<input id="bookName" type="text" name="name" value="${book?.name}" />

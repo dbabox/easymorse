@@ -14,6 +14,7 @@ class BookController {
 		book=new Book(params)
 		book.save()
 		
+		flash.message="""图书（${book.name}）已保存。"""
 		redirect(action:'edit',id:book.id)
 	}
 
