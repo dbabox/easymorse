@@ -49,10 +49,12 @@ class BookController {
 	//对话框获取符合条件的相关图书
 	def getNotRelatedBooks={
 		def bookId=params.id
+		def relatedIds=request.getParameterValues('related_id')
 		def notRelatedBooks=[]
 
-		def hql='from Book b'
+		def hql='from Book b '
 		
+		/*
 		if(params.id){
 			def relatedIds=request.getParameterValues('related_id')
 			hql+=' where b.id not in ('
@@ -63,6 +65,30 @@ class BookController {
 
 			hql<<="""'${bookId}')"""
 		}
+		*/
+		
+		if(bookId || relatedIds){
+			def idList=[]
+			
+			if(bookId){
+				idList.add(bookId)
+			}
+			
+			if(relatedIds){
+				idList.addAll(relatedIds)
+			}
+			
+			def notInIdsString=""
+			for(int i=0;i<idList.size();i++){
+				notInIdsString+="""'${idList[i]}'"""
+				if(i<idList.size()-1){
+					notInIdsString+=","
+				}
+			}
+			
+			hql+=""" where b.id not in ( ${notInIdsString} )"""
+		}
+		
 		
 		notRelatedBooks=Book.findAll(hql)
 
