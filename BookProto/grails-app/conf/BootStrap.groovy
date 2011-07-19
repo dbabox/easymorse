@@ -5,6 +5,7 @@ class BootStrap {
     def init = { servletContext ->
 		environments{
 			development{
+				/*
 				def testBook=new Book(name:"中国史学史")
 				
 				testBook.relativeBooks.add(new Book(name:"中国通史"))
@@ -18,6 +19,7 @@ class BootStrap {
 				new Book(name:"中国战争史").save()
 				new Book(name:"中国科学技术史").save()
 				new Book(name:"中国对外交流史").save()
+				*/
 			}
 		}
     }
