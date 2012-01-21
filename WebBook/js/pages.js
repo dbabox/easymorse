@@ -60,5 +60,5 @@ var Pages=function(items,index){
 
 function createPages(){
 	Pages('items',3);
-	console.log('create pages.');
+	console.log('-->create pages.');
 }
