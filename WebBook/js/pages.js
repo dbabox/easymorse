@@ -13,6 +13,10 @@ var Pages=function(items,index){
 	var pages=$('<div class="pages"></div>');
 	pages.appendTo(pageScroll);
 	
+	$(pages).css({ 
+        '-webkit-transform': 'translate3d(0px,0px,0px)'
+    });
+	
 	pages.items=items;
 	pages.index=index;
 	
@@ -32,11 +36,13 @@ var Pages=function(items,index){
 			console.log('pages left->'+$(pages).position().left);
 			pages.moveX+=e.originalEvent.touches[0].pageX-pages.lastX;
 			$(pages).css({ 
-		        '-webkit-transform': 'translate3d('+pages.moveX+'px,0px,0px)', 
-		        '-webkit-transition-duration': '0ms', 
-		        '-webkit-backface-visibility': 'hidden', 
-		        '-webkit-transition-property': '-webkit-transform' 
+		        '-webkit-transform': 'translate3d('+pages.moveX+'px,0px,0px)'
 		    });
+			
+//			, 
+//	        '-webkit-transition-duration': '0ms', 
+//	        '-webkit-backface-visibility': 'hidden', 
+//	        '-webkit-transition-property': '-webkit-transform' 
 			
 			pages.lastX=e.originalEvent.touches[0].pageX;
 		}
