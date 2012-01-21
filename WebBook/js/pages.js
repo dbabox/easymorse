@@ -20,6 +20,9 @@ var Pages=function(items,index){
 	$(pageScroll).appendTo($('#content'));
 	
 	$(pageScroll).on('touchstart touchmove touchend',function(e){
+		
+		console.log('touch:'+e.type);
+		
 		if(e.type=='touchstart'){
 			pages.lastX=e.originalEvent.touches[0].pageX;
 			pages.moveX=0;
