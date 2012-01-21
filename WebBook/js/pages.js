@@ -26,7 +26,7 @@ var Pages=function(items,index){
 		}
 		
 		if(e.type=='touchmove'){
-			//console.log('pages left->'+$(pages).position().left);
+			console.log('pages left->'+$(pages).position().left);
 			pages.moveX+=e.originalEvent.touches[0].pageX-pages.lastX;
 			$(pages).css({ 
 		        '-webkit-transform': 'translate3d('+pages.moveX+'px,0px,0px)', 
