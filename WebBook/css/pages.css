@@ -29,8 +29,6 @@ body {
 .pages{
 	-webkit-transform-style: preserve-3d;
 	height: 768px;
-	width: 3072px;
-	left: -1024px;
 	top:0px;
 	position: absolute;
 	background-color: rgba(100,200,0,0.8);
