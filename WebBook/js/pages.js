@@ -41,6 +41,7 @@ var Pages = function(size, index) {
 			'touchstart touchmove touchend',
 			function(e) {
 				e.preventDefault();
+				e.stopPropagation();
 
 				if (e.type == 'touchstart') {
 					pages.moveX = 0;
