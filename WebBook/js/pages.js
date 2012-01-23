@@ -1,4 +1,4 @@
-var PAGES_CACHE_SIZE=1;
+var PAGES_CACHE_SIZE=2;
 
 var Page = function(pageIndex) {
 	var that = $('<div class="page"></div>');
