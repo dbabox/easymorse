@@ -1,17 +1,24 @@
+var PAGES_CACHE_SIZE=1;
+
 var Page = function(pageIndex) {
 	var that = $('<div class="page"></div>');
-	 that.loadContent = function() {
-	 that.load('data/page' + (pageIndex) + '.html');
-	 return that;
-	 };
-
 	that.index = pageIndex;
 
-	// that.registePageLoadAction=function(){
-	// that.parent().on('pageLoad',function(e,pageIndex){
-	// console.log('>>page index:'+page.index);
-	// });
-	// };
+	 that.registePageLoadAction = function() {
+		that.parent().on('pageLoad', function(e,currentIndex) {
+			if(that.index>=currentIndex-PAGES_CACHE_SIZE && that.index<=currentIndex+PAGES_CACHE_SIZE){
+				if(that.is(':empty')){
+					that.load('data/page' + (that.index+1) + '.html');
+					console.log('load it:'+that.index);
+				}
+			}else{
+				if(!that.is(':empty')){
+					that.empty();
+					console.log('empty it:'+that.index);
+				}
+			}
+		});
+	};
 
 	return that;
 };
@@ -20,16 +27,12 @@ var Pages = function(size, index) {
 	var pageScroll = $('<div class="pageScroll"></div>');
 
 	var pages = $('<div class="pages"></div>');
-	pages.size = 4;
-	pages.index = 0;
+	pages.size = size;
+	pages.currentIndex = index;
 	pages.width = 1024;
 	pages.css('width', pages.width * pages.size + 'px');
 
 	pages.appendTo(pageScroll);
-
-	pages.isRevert = function() {
-		return Math.abs(pages.moveX) < 1024 / 3;
-	};
 
 	$('#content').empty();
 	$(pageScroll).appendTo($('#content'));
@@ -54,7 +57,7 @@ var Pages = function(size, index) {
 							'-webkit-transform',
 							'translate3d('
 									+ (pages.moveX + pages.width
-											* (-pages.index)) + 'px,0,0)');
+											* (-pages.currentIndex)) + 'px,0,0)');
 
 					pages.lastX = e.originalEvent.touches[0].pageX;
 				}
@@ -62,21 +65,20 @@ var Pages = function(size, index) {
 				var moveX = 0;
 
 				if (e.type == 'touchend') {
-					console.log('velocity:'+pages.velocity);
-					if (!pages.isRevert() || Math.abs(pages.velocity)>2) {
-						console.log('pages index:' + pages.index);
+					if (Math.abs(pages.moveX) > 1024 / 3 || Math.abs(pages.velocity)>2) {
+						console.log('pages index:' + pages.currentIndex);
 						if (pages.moveX < 0) {
-							if (pages.index <= pages.size - 2) {
-								pages.index++;
+							if (pages.currentIndex <= pages.size - 2) {
+								pages.currentIndex++;
 							}
 						} else {
-							if (pages.index > 0) {
-								pages.index--;
+							if (pages.currentIndex > 0) {
+								pages.currentIndex--;
 							}
 						}
 					}
 
-					moveX = pages.width * (-pages.index);
+					moveX = pages.width * (-pages.currentIndex);
 
 					$(pages).css(
 							{
@@ -92,12 +94,15 @@ var Pages = function(size, index) {
 			'-webkit-transition-duration' : ''
 		});
 
+		//$(pages).trigger('pageLoad',pages.currentIndex);
+		pages.trigger('pageLoad',pages.currentIndex);
 	});
 
 	for ( var i = 0; i < pages.size; i++) {
-		 Page(i+1).loadContent().appendTo(pages);
-		//Page(i).appendTo(pages).registePageLoadAction();
+		Page(i).appendTo(pages).registePageLoadAction();
 	}
+	
+	pages.trigger('pageLoad',pages.currentIndex);
 };
 
 function createPages() {
