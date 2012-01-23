@@ -34,7 +34,6 @@ var Pages = function(size, index) {
 				if (e.type == 'touchstart') {
 					pages.moveX=0;
 					pages.lastX = e.originalEvent.touches[0].pageX;
-					console.log('pages index:'+pages.index);
 				}
 
 				if (e.type == 'touchmove') {
@@ -50,8 +49,9 @@ var Pages = function(size, index) {
 
 				if (e.type == 'touchend') {
 					if(!pages.isRevert()){
+						console.log('pages index:'+pages.index);
 						if(pages.moveX<0){
-							if(pages.index<pages.size-1){
+							if(pages.index<=pages.size-2){
 								pages.index++;
 							}
 						}else{
@@ -59,9 +59,9 @@ var Pages = function(size, index) {
 								pages.index--;
 							}
 						}
-						moveX=pages.width*(-pages.index);
-					}else{
 					}
+					
+					moveX=pages.width*(-pages.index);
 					
 					$(pages).css({
 						'-webkit-transform':'translate3d(' + moveX + 'px,0,0)',
