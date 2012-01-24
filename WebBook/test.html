@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>simple test</title>
+
+<script src="js/jquery/jquery-1.7.1.js"></script>
+<link href="css/test.css" rel="stylesheet">
+</head>
+<body>
+<div id='photo1' class="pulloutimage" style="width:298px; height:223px">
+<img class="original" src="http://www.dynamicdrive.com/dynamicindex4/desert.jpg" />
+<!-- <img class="ondemand" src="http://www.dynamicdrive.com/dynamicindex4/forest.jpg" /> -->
+</div>
+
+<br />
+<div class="pulloutimage" style="width:263px; height:199px">
+<img class="original" src="http://dynamicdrive.com/dynamicindex14/stadium.jpg" />
+<img class="ondemand" src="http://www.dynamicdrive.com/cssexamples/media/horses.jpg" />
+</div>
+<script type="text/javascript">
+$('#photo1').on('click',function(e){
+	$('#photo1').toggleClass('animationTest');
+});
+</script>
+</body>
+</html>

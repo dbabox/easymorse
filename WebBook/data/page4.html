@@ -1,26 +1,21 @@
-<div class='imageComponent'>
-<img id='p4image' class='imageContent' src='images/p4.jpg' />
-</div>
+<div id='p4Component' class='imageComponent'></div>
 <script>
-$('#p4image').on('touchstart touchmove touchend',function(e){
-	e.preventDefault();
-	
-	//var p4image=document.getElementById('p4image');
-	var p4image=$('#p4image')[0];
-	console.log('touch move:'+p4image.moved);
-	
-	if(e.type=='touchstart'){
-		p4image.moved=false;
-	}
-	
-	if(e.type=='touchmove'){
-		p4image.moved=true;
-	}
-	
-	if(e.type=='touchend' && !p4image.moved){
-		console.log('p4image touch end');
-		alert('touch end');
-		p4image.moved=false;
-	}
-});
+	$('#p4Component').on('touchstart touchmove touchend', function(e) {
+		e.preventDefault();
+
+		var p4image = $('#p4Component')[0];
+
+		if (e.type == 'touchstart') {
+			p4image.moved = false;
+		}
+
+		if (e.type == 'touchmove') {
+			p4image.moved = true;
+		}
+
+		if (e.type == 'touchend' && !p4image.moved) {
+ 			console.log('run touchend.');
+ 			$('#p4Component').toggleClass('doImageScale');	
+		}
+	});
 </script>

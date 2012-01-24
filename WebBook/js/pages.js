@@ -55,10 +55,14 @@ var Pages = function(size, index) {
 					pages.moveX += e.originalEvent.touches[0].pageX
 							- pages.lastX;
 					$(pages).css(
-							'-webkit-transform',
-							'translate3d('
-									+ (pages.moveX + pages.width
-											* (-pages.currentIndex)) + 'px,0,0)');
+//							'-webkit-transform',
+//							'translate3d('
+//									+ (pages.moveX + pages.width
+//											* (-pages.currentIndex)) + 'px,0,0)');
+					'-webkit-transform',
+					'translate('
+							+ (pages.moveX + pages.width
+									* (-pages.currentIndex)) + 'px,0)');
 
 					pages.lastX = e.originalEvent.touches[0].pageX;
 				}

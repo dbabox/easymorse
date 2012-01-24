@@ -1,0 +1,40 @@
+@CHARSET "utf-8";
+
+.imageComponent{
+	top:100px;
+	left:200px;
+	width: 300px;
+	height: 200px;
+	position: relative;
+	background-color: rgba(0,0,0,0.2);
+	overflow: hidden;
+	
+	-webkit-box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
+	background: transparent url(../images/p4.jpg) -550px -200px no-repeat;
+}
+
+@-webkit-keyframes imageScale{
+	0%{
+/* 		-webkit-transform: rotate(0deg); */
+/* 		left:0; */
+	}
+	50%{
+/* 		left:100px; */
+	}
+	100%{
+		top:0px;
+		left:0px;
+		width:1024px;
+		height:768px;
+		background: transparent url(../images/p4.jpg);
+/* 		left:0; */
+/* 		-webkit-transform: scale(4); */
+/* 		-webkit-transform: rotate(360deg); */
+	}
+}
+
+.doImageScale{
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-duration :  .5s;
+	-webkit-animation-name : imageScale;
+}

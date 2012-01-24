@@ -1,8 +1,13 @@
 @CHARSET "utf-8";
 
+.screen{
+    -webkit-transform: translate3d(0,0,0);
+}
+
 body {
 	margin: 0px;
 }
+
 
 #app {
 	height: 768px;
@@ -28,6 +33,8 @@ body {
 
 .pages{
 	-webkit-transform-style: preserve-3d;
+/* 	-webkit-transform: translate3d(0,0,0); */
+/* 	-webkit-perspective: 0;  */
 	height: 768px;
 	top:0px;
 	position: absolute;
@@ -41,23 +48,11 @@ body {
 	float: left;
 }
 
-.pageAnimation{
-/* 	-webkit-transition-duration:0.5s; */
-/* 	-webkit-transition-timing-function: ease-out; */
-}
-
-.imageComponent{
-	top:100px;
-	left:200px;
-	width: 300px;
-	height: 200px;
-	position: relative;
-	background-color: rgba(0,0,0,0.2);
-	overflow: hidden;
-}
-
-.imageContent{
-	top:-200px;
-	left:-550px;
-	position: relative;
+#prompt{
+	margin:0px auto;
+	top:0px;
+	height:768px;
+	width:1024px;
+	position:absolute;
+	pointer-events:none;
 }
