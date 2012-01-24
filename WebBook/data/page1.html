@@ -1,1 +1,25 @@
-<img src='images/p1.jpg' />
+<div class='scaleComponent'>
+	<div id='p1Image' class='scaleImage'></div>
+</div>
+
+<script>
+$('#p1Image').css('background','url("images/p1a.jpg")');
+
+$('#p1Image').on('touchstart touchmove touchend', function(e) {
+	var imageObj = $('#p1Image')[0];
+
+	if (e.type == 'touchstart') {
+		imageObj.moved = false;
+	}
+
+	if (e.type == 'touchmove') {
+		imageObj.moved = true;
+	}
+
+	if (e.type == 'touchend' && !imageObj.moved) {
+		$('#p1Image').toggleClass('scaleImageForward');
+		$('#p1Image').parent().toggleClass('scaleComponentForward');
+	}
+});
+
+</script>

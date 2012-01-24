@@ -1,0 +1,43 @@
+@CHARSET "utf-8";
+
+.scaleComponent{
+	top:10px;
+	left:10px;
+	position: relative;
+}
+
+.scaleImage{
+	width:1024px;
+	height:768px;
+	-webkit-transform: scale(0.4);
+	-webkit-transform-origin:0% 0%;
+	-webkit-box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
+}
+
+@-webkit-keyframes scaleImageAnimation{
+	0%{
+	}
+	100%{
+		-webkit-transform: scale(1);
+/* 		-webkit-transform-origin:-100px -100px; */
+	}
+}
+
+.scaleImageForward{
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-duration :  .5s;
+	-webkit-animation-name : scaleImageAnimation;
+}
+
+@-webkit-keyframes scaleComponentAnimation{
+	100%{
+		top:0px;
+		left:0px;
+	}
+}
+
+.scaleComponentForward{
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-duration :  .5s;
+	-webkit-animation-name : scaleComponentAnimation;
+}
