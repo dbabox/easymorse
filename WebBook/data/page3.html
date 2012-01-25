@@ -22,6 +22,7 @@ $('#p3Image').on('touchstart touchmove touchend',function(e) {
 		$('#p3Image').parent().css('-webkit-transform','scale('+obj.scale+') '+
  				'rotate('+obj.rotation+'deg)'+
  				'translate('+touch.pageX+'px,'+touch.pageY+'px)');
+		$('#p3Image').parent().css('-webkit-animation-duration','0');
 		
 // 		+
 // 			'translate('+touch.pageX+'px,'+touch.pageY+'px)'
