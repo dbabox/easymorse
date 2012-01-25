@@ -22,7 +22,7 @@ $('#p3Image').on('touchstart touchmove touchend',function(e) {
 // 		+
 // 			'translate('+touch.pageX+'px,'+touch.pageY+'px)'
 		
-		console.log('touch move');
+		console.log('touch move, X,Y:'+touch.pageX+','+touch.pageY);
 	}
 	
 	if(e.originalEvent.touches.length>1 || !obj.propagation){
