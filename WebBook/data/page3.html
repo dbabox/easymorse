@@ -1,1 +1,14 @@
-<img src='images/p3.jpg' />
+<div class='pinchComponent'>
+	<div id='p3Image' class='pinchImage'></div>
+</div>
+<script>
+$('#p3Image').css('background','url("images/p3a.jpg")');
+$('#p3Image').on('gesturestart gesturechange gestureend',function(e){
+	e.preventDefault();
+	e.stopPropagation();
+	
+	if(e.type='gesturechange'){
+		console.log('gesture scale:'+e.originalEvent.scale);
+	}
+});
+</script>

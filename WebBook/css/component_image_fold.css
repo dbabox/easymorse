@@ -1,0 +1,80 @@
+@CHARSET "utf-8";
+
+.foldComponent{
+	top:10px;
+	left:10px;
+	width:1024px;
+	height:768px;
+	position: relative;
+	-webkit-perspective: 2000px;
+	-webkit-transform: scale(0.4);
+	-webkit-transform-origin:0% 0%;
+}
+
+.imageFold{
+	width:512px;
+	height:768px;
+/* 	-webkit-transform: scale(0.4); */
+	-webkit-transform-origin:0% 0%;
+	-webkit-box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
+}
+
+.imageFoldBack{
+	z-index:-1;
+	position:absolute;
+	left:512px;
+	width:512px;
+	height:768px;
+	-webkit-transform: rotateY(180deg);
+	-webkit-transform-origin:0% 0%;
+	-webkit-box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
+	
+	
+}
+
+@-webkit-keyframes foldImageAnimation{
+ 	0% { -webkit-transform: rotateY(180deg);   }
+    100%   { -webkit-transform: rotateY(0deg); }
+}
+
+@-webkit-keyframes foldComponentAnimation{
+	from{
+		-webkit-transform: scale(0.4);
+		top:10px;
+		left:10px;
+	}
+	to{
+		-webkit-transform: scale(1);
+		top:0px;
+		left:0px;
+	}
+}
+
+@-webkit-keyframes foldLeftImageAnimation{
+	from{
+		-webkit-box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
+	}
+	to{
+		-webkit-box-shadow: 4px 4px 4px rgba(0,0,0,0);
+	}
+}
+
+.foldLeftImageForward{
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-duration :  0.5s;
+	-webkit-animation-name : foldLeftImageAnimation;
+}
+
+.foldImageForward{
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-duration :  0.5s;
+	-webkit-animation-name : foldImageAnimation;
+	-webkit-transform-origin:0 0;
+}
+
+.foldComponentForward{
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-duration :  0.5s;
+	-webkit-animation-name : foldComponentAnimation;
+}
+

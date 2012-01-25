@@ -1,0 +1,18 @@
+@CHARSET "utf-8";
+
+.pinchComponent{
+	top:10px;
+	left:10px;
+	width:1024px;
+	height:768px;
+	position: relative;
+	-webkit-transform: scale(0.4);
+	-webkit-transform-origin:0 0;
+/* 	background: rgba(0,0,0,.2); */
+}
+
+.pinchImage{
+	width:1024px;
+	height:768px;
+	-webkit-box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
+}

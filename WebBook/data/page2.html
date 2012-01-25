@@ -1,3 +1,29 @@
-<div class='scaleComponent'>
-	<img src='images/p2a.jpg' />
+<div class='foldComponent'>
+	<div id='p2ImgBack' class='imageFoldBack'></div>
+	<div id='p2Img' class='imageFold'></div>
 </div>
+
+<script>
+$('#p2Img').css('background','url("images/p2a.jpg")');
+$('#p2ImgBack').css('background','url("images/p2a.jpg") 512px');
+
+$('#p2Img').on('touchstart touchmove touchend', function(e) {
+	var imageObj = $('#p2Img')[0];
+
+	if (e.type == 'touchstart') {
+		imageObj.moved = false;
+	}
+
+	if (e.type == 'touchmove') {
+		imageObj.moved = true;
+	}
+
+	if (e.type == 'touchend' && !imageObj.moved) {
+		$('#p2ImgBack').parent().toggleClass('foldComponentForward');
+		$('#p2ImgBack').toggleClass('foldImageForward');
+		$('#p2Img').toggleClass('foldLeftImageForward');
+		console.log('touch end.');
+	}
+});
+
+</script>

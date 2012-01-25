@@ -1,8 +1,10 @@
 @CHARSET "utf-8";
 
-.screen{
-    -webkit-transform: translate3d(0,0,0);
-}
+@IMPORT url("component_scale_image.css");
+@IMPORT url("component_image_fold.css");
+@IMPORT url("component_pinch_image.css");
+@IMPORT url("component_image.css");
+
 
 body {
 	margin: 0px;
