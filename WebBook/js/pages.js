@@ -43,9 +43,9 @@ var Pages = function(size, index) {
 				e.preventDefault();
 				e.stopPropagation();
 				
-				if(e.originalEvent.touches.length>1){
-					return;
-				}
+//				if(e.originalEvent.touches.length>1){
+//					return;
+//				}
 
 				if (e.type == 'touchstart') {
 					pages.moveX = 0;
