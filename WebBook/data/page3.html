@@ -36,9 +36,9 @@ $('#p3Image').on('gesturestart gesturechange gestureend',function(e){
 		$('#p3Image').delay(700).queue(function(){
 			var obj=$('#p3Image')[0];
 			obj.gesture=false;
+			console.log('end: set obj gesture false');
 		});
 		
-		console.log('end: set obj gesture false');
 	}
 });
 </script>
