@@ -18,21 +18,9 @@ $('#p3Image').on('touchstart touchmove touchend',function(e) {
 		if(e.type=='touchend'){
 			obj.started=false;
 		}
-		
-		return;
 	}else{
 		console.log('do single touch:'+e.type);
 	}
-	
-// 	var obj=$('#p3Image')[0];
-	
-// 	if(e.type=='touchstart' && e.originalEvent.touches.length==1){
-// 		obj.touchStart=true;
-// 	}
-	
-// 	if(e.type=='touchend'){
-// 		obj.touchStart=false;
-// 	}
 });
 
 $('#p3Image').on('gesturestart gesturechange gestureend',function(e){
@@ -44,9 +32,10 @@ $('#p3Image').on('gesturestart gesturechange gestureend',function(e){
 	}
 	
 	if(e.type=='gesturechange'){
-		console.log('gesture change rotation:'+e.originalEvent.rotation);
+		var touch=e.originalEvent.touches[0];
 		$('#p3Image').parent().css('-webkit-transform','scale('+e.originalEvent.scale*0.4+') '+
-				'rotate('+e.originalEvent.rotation+'deg)');
+				'rotate('+e.originalEvent.rotation+'deg)'+
+				'translate('+touch.pageX+'px,'+touch.pageY+'px)');
 	}
 	
 	if(e.type=='gestureend'){
