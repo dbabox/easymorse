@@ -9,9 +9,14 @@ $('#p3Image').on('touchstart touchmove touchend',function(e) {
 	
 	var obj=$('#p3Image')[0];
 	
-	if(obj.gesture){
-		console.log('obj gesture true---> do not touch action.');
-		e.stopPropagation();
+// 	if(obj.gesture){
+// 		console.log('obj gesture true---> do not touch action.');
+// 		e.stopPropagation();
+// 		return;
+// 	}
+
+	if(e.originalEvent.touches && e.originalEvent.touches.length>1){
+		console.log('touch more that one.');
 		return;
 	}
 });
@@ -21,8 +26,8 @@ $('#p3Image').on('gesturestart gesturechange gestureend',function(e){
 	e.stopPropagation();
 	
 	if(e.type=='gesturestart'){
-		var obj=$('#p3Image')[0];
-		obj.gesture=true;
+// 		var obj=$('#p3Image')[0];
+// 		obj.gesture=true;
 	}
 	
 	if(e.type=='gesturechange'){
@@ -34,11 +39,11 @@ $('#p3Image').on('gesturestart gesturechange gestureend',function(e){
 	}
 	
 	if(e.type=='gestureend'){
-		$('#p3Image').delay(700).queue(function(){
-			var obj=$('#p3Image')[0];
-			obj.gesture=false;
-			console.log('end: set obj gesture false');
-		});
+// 		$('#p3Image').delay(700).queue(function(){
+// 			var obj=$('#p3Image')[0];
+// 			obj.gesture=false;
+// 			console.log('end: set obj gesture false');
+// 		});
 		
 	}
 });
