@@ -16,9 +16,11 @@ $('#p3Image').on('gesturestart gesturechange gestureend',function(e){
 	e.preventDefault();
 	e.stopPropagation();
 	
-	if(e.type='gesturechange'){
-		console.log('gesture scale:'+e.originalEvent.scale);
-		$('#p3Image').parent().css('-webkit-transform','scale('+e.originalEvent.scale+')');
+	if(e.type=='gesturechange'){
+		console.log('gesture rotation:'+e.originalEvent.rotation);
+		$('#p3Image').parent().css('-webkit-transform','scale('+e.originalEvent.scale*0.4+') '+
+				'rotate('+e.originalEvent.rotation+'deg)');
+		//$('#p3Image').parent().css('-webkit-transform','rotate('+e.originalEvent.rotation+'deg)');
 		$('#p3Image').parent().css('-webkit-transform-origin','50% 50%');
 	}
 });
