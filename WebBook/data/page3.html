@@ -19,12 +19,10 @@ $('#p3Image').on('gesturestart gesturechange gestureend',function(e){
 	e.preventDefault();
 	e.stopPropagation();
 	
-	if(e.type=='gesturechange'){
+	if(e.type=='gesturestart'){
 		var obj=$('#p3Image')[0];
 		obj.gesture=true;
 	}
-	
-	
 	
 	if(e.type=='gesturechange'){
 		console.log('gesture rotation:'+e.originalEvent.rotation);
@@ -32,6 +30,11 @@ $('#p3Image').on('gesturestart gesturechange gestureend',function(e){
 				'rotate('+e.originalEvent.rotation+'deg)');
 		//$('#p3Image').parent().css('-webkit-transform','rotate('+e.originalEvent.rotation+'deg)');
 		//$('#p3Image').parent().css('-webkit-transform-origin','50% 50%');
+	}
+	
+	if(e.type=='gestureend'){
+		var obj=$('#p3Image')[0];
+		obj.gesture=false;
 	}
 });
 </script>
