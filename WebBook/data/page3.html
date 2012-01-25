@@ -15,9 +15,15 @@ $('#p3Image').on('touchstart touchmove touchend',function(e) {
 // 		return;
 // 	}
 
-	if(e.originalEvent.touches && e.originalEvent.touches.length>1){
+	if(e.type=='touchstart'){
+		if(e.originalEvent.touches && e.originalEvent.touches.length>1){
+			obj.gesture=true;
+		}
+	}
+
+	if(obj.gesture){
 		console.log('touch more that one.');
-		return;
+		e.stopPropagation();
 	}
 });
 
