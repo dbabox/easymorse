@@ -9,26 +9,31 @@ $('#p3Image').on('touchstart touchmove touchend',function(e) {
 	
 	var obj=$('#p3Image')[0];
 	
-	if(e.type=='touchstart'){
-		obj.gesture=e.originalEvent.touches.length>1;
+	if(e.type=='touchstart' && obj.gesture=e.originalEvent.touches.length==1){
+// 		obj.gesture=e.originalEvent.touches.length>1;
 		obj.touchStart=true;
 		console.log('touch start: '+obj.gesture);
 	}
 	
-	if(e.type=='touchmove'){
-		console.log('touch move: '+obj.gesture);
-		if(obj.gesture || !obj.touchStart){
-			//e.stopPropagation();
-			//console.log('touch stop propagation. ');
-			return true;
-		}
+	if(!obj.touchStart){
+		e.stopPropagation();
 	}
 	
-	if(e.type=='touchend'){
-		obj.gesture=false;
-		obj.touchStart=false;
-		console.log('touch end: '+obj.gesture);
-	}
+// 	if(e.type=='touchmove'){
+// 		console.log('touch move: '+obj.gesture);
+// 	}
+	
+// 	if(e.type=='touchend'){
+// 		obj.gesture=false;
+// 		obj.touchStart=false;
+// 		console.log('touch end: '+obj.gesture);
+// 	}
+	
+// 	if(obj.gesture || !obj.touchStart){
+// 		e.stopPropagation();
+// 		//console.log('touch stop propagation. ');
+// 		return true;
+// 	}
 	
 });
 
