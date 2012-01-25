@@ -6,7 +6,10 @@ $('#p3Image').css('background','url("images/p3a.jpg")');
 
 $('#p3Image').on('touchstart touchmove touchend',function(e) {
 	e.preventDefault();
-	if(e.originalEvent.touches.length>1){
+	
+	var obj=$('#p3Image')[0];
+	
+	if(obj.gesture){
 		e.stopPropagation();
 		return;
 	}
@@ -15,6 +18,13 @@ $('#p3Image').on('touchstart touchmove touchend',function(e) {
 $('#p3Image').on('gesturestart gesturechange gestureend',function(e){
 	e.preventDefault();
 	e.stopPropagation();
+	
+	if(e.type=='gesturechange'){
+		var obj=$('#p3Image')[0];
+		obj.gesture=true;
+	}
+	
+	
 	
 	if(e.type=='gesturechange'){
 		console.log('gesture rotation:'+e.originalEvent.rotation);
