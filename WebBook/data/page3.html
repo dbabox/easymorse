@@ -6,12 +6,22 @@ $('#p3Image').css('background','url("images/p3a.jpg")');
 
 $('#p3Image').on('touchstart touchmove touchend',function(e) {
 	e.preventDefault();
+	var obj=$('#p3Image')[0];
 	
-	if(e.originalEvent.touches.length>1){
+	if(e.type=='touchstart'){
+		obj.started=e.originalEvent.touches.length==1;
+	}
+	
+	if(e.originalEvent.touches.length>1 || !obj.started){
 		e.stopPropagation();
+		
+		if(e.type=='touchend'){
+			obj.started=false;
+		}
+		
 		return;
 	}else{
-		console.log('single touch:'+e.type);
+		console.log('do single touch:'+e.type);
 	}
 	
 // 	var obj=$('#p3Image')[0];
