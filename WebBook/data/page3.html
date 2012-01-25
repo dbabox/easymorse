@@ -3,12 +3,23 @@
 </div>
 <script>
 $('#p3Image').css('background','url("images/p3a.jpg")');
+
+$('#p3Image').on('touchstart touchmove touchend',function(e) {
+	e.preventDefault();
+	if(e.originalEvent.touches.length>1){
+		e.stopPropagation();
+		return;
+	}
+});
+
 $('#p3Image').on('gesturestart gesturechange gestureend',function(e){
 	e.preventDefault();
 	e.stopPropagation();
 	
 	if(e.type='gesturechange'){
 		console.log('gesture scale:'+e.originalEvent.scale);
+		$('#p3Image').parent().css('-webkit-transform','scale('+e.originalEvent.scale+')');
+		$('#p3Image').parent().css('-webkit-transform-origin','50% 50%');
 	}
 });
 </script>

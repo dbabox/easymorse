@@ -1,8 +1,8 @@
 @CHARSET "utf-8";
 
 .pinchComponent{
-	top:10px;
-	left:10px;
+	top:150px;
+	left:300px;
 	width:1024px;
 	height:768px;
 	position: relative;
