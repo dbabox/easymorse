@@ -10,6 +10,8 @@ $('#p3Image').on('touchstart touchmove touchend',function(e) {
 	if(e.originalEvent.touches.length>1){
 		e.stopPropagation();
 		return;
+	}else{
+		console.log('single touch:'+e.type);
 	}
 	
 // 	var obj=$('#p3Image')[0];
