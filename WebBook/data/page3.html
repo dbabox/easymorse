@@ -5,22 +5,23 @@
 $('#p3Image').css('background','url("images/p3a.jpg")');
 
 $('#p3Image').on('touchstart touchmove touchend',function(e) {
-	e.preventDefault();
+	return true;
+// 	e.preventDefault();
 	
-	var obj=$('#p3Image')[0];
+// 	var obj=$('#p3Image')[0];
 	
-	if(e.type=='touchstart' && e.originalEvent.touches.length==1){
-		obj.touchStart=true;
-		console.log('touch start: '+obj.gesture);
-	}
+// 	if(e.type=='touchstart' && e.originalEvent.touches.length==1){
+// 		obj.touchStart=true;
+// 		console.log('touch start: '+obj.gesture);
+// 	}
 	
-	if(!obj.touchStart){
-		e.stopPropagation();
-	}
+// 	if(!obj.touchStart){
+// 		e.stopPropagation();
+// 	}
 	
-	if(e.type=='touchend'){
-		obj.touchStart=false;
-	}
+// 	if(e.type=='touchend'){
+// 		obj.touchStart=false;
+// 	}
 });
 
 $('#p3Image').on('gesturestart gesturechange gestureend',function(e){
