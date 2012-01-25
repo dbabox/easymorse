@@ -6,8 +6,20 @@ $('#p3Image').css('background','url("images/p3a.jpg")');
 
 $('#p3Image').on('touchstart touchmove touchend',function(e) {
 	e.preventDefault();
-	e.stopPropagation();
-// 	e.preventDefault();
+	var obj=$('#p3Image')[0];
+	
+	if(e.type=='touchstart' && e.originalEvent.touches.length==1){
+		obj.touchStart=true;
+	}
+	
+	if(e.type=='touchend'){
+		obj.touchStart=false;
+	}
+	
+	if(!obj.touchStart){
+		e.stopPropagation();
+	}
+	
 	
 // 	var obj=$('#p3Image')[0];
 	
