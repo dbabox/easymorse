@@ -35,6 +35,7 @@ $('#p3Image').on('gesturestart gesturechange gestureend',function(e){
 	if(e.type=='gestureend'){
 		var obj=$('#p3Image')[0];
 		obj.gesture=false;
+		console.log('end: set obj gesture false');
 	}
 });
 </script>
