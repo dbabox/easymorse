@@ -26,6 +26,7 @@ $('#p3Image').on('touchstart touchmove touchend',function(e) {
 	if(obj.gesture){
 		console.log('touch more that one.');
 		e.stopPropagation();
+		return true;
 	}
 });
 
