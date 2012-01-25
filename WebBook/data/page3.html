@@ -40,6 +40,7 @@ $('#p3Image').on('gesturestart gesturechange gestureend',function(e){
 	if(e.type=='gesturechange'){
 		$('#p3Image').parent().css('-webkit-transform','scale('+e.originalEvent.scale*0.4+') '+
 				'rotate('+e.originalEvent.rotation+'deg)');
+		console.log('gesture change');
 	}
 	
 	if(e.type=='gestureend'){
