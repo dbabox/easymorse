@@ -17,6 +17,10 @@ $('#p3Image').on('touchstart touchmove touchend',function(e) {
 	if(!obj.touchStart){
 		e.stopPropagation();
 	}
+	
+	if(e.type=='touchend'){
+		obj.touchStart=false;
+	}
 });
 
 $('#p3Image').on('gesturestart gesturechange gestureend',function(e){
