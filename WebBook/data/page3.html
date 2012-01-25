@@ -7,6 +7,7 @@ $('#p3Image').css('background','url("images/p3a.jpg")');
 $('#p3Image').on('touchstart touchmove touchend',function(e) {
 	e.preventDefault();
 	var obj=$('#p3Image')[0];
+	var touch=e.originalEvent.touches[0];
 	
 	if(e.type=='touchstart'){
 		obj.propagation=e.originalEvent.touches.length==1;
@@ -15,7 +16,7 @@ $('#p3Image').on('touchstart touchmove touchend',function(e) {
 	}
 	
 	if(e.type=='touchmove' && !obj.propagation){
-		var touch=e.originalEvent.touches[0];
+// 		var touch=e.originalEvent.touches[0];
 // 		$('#p3Image').parent().css('-webkit-transform','translate('+touch.pageX+'px,'+touch.pageY+'px)');
 		
 		$('#p3Image').parent().css('-webkit-transform','scale('+obj.scale+') '+
