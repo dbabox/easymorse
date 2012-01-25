@@ -12,7 +12,7 @@ $('#p3Image').on('touchstart touchmove touchend',function(e) {
 		obj.propagation=e.originalEvent.touches.length==1;
 	}
 	
-	if(e.type=='touchmove'){
+	if(e.type=='touchmove' && !obj.propagation){
 		var touch=e.originalEvent.touches[0];
 // 		$('#p3Image').parent().css('-webkit-transform','translate('+touch.pageX+'px,'+touch.pageY+'px)');
 		
