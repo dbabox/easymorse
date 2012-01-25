@@ -1,27 +1,31 @@
-<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>simple test</title>
-
+<title>test</title>
 <script src="js/jquery/jquery-1.7.1.js"></script>
 <link href="css/test.css" rel="stylesheet">
 </head>
-<body>
-<div id='photo1' class="pulloutimage" style="width:298px; height:223px">
-<img class="original" src="http://www.dynamicdrive.com/dynamicindex4/desert.jpg" />
-<!-- <img class="ondemand" src="http://www.dynamicdrive.com/dynamicindex4/forest.jpg" /> -->
-</div>
 
-<br />
-<div class="pulloutimage" style="width:263px; height:199px">
-<img class="original" src="http://dynamicdrive.com/dynamicindex14/stadium.jpg" />
-<img class="ondemand" src="http://www.dynamicdrive.com/cssexamples/media/horses.jpg" />
-</div>
-<script type="text/javascript">
-$('#photo1').on('click',function(e){
-	$('#photo1').toggleClass('animationTest');
-});
-</script>
+<body>
+	<div id='dragContent'></div>
+
+	<script>
+		$('#dragContent').on('touchstart touchmove touchend', function(e) {
+			e.preventDefault();
+			var touch = e.originalEvent.targetTouches[0];
+			var obj = $('#dragContent')[0];
+
+			if (e.type == 'touchstart') {
+				var offset=$('#dragContent').offset();
+				obj.x=touch.pageX-offset.left;
+				obj.y=touch.pageY-offset.top;
+			}
+
+			if (e.type == 'touchmove') {
+				var moveX=touch.pageX-obj.x;
+				var moveY=touch.pageY-obj.y;
+				$('#dragContent').css('-webkit-transform','translate('+moveX+'px,'+moveY+'px)');
+			}
+		});
+	</script>
 </body>
 </html>
