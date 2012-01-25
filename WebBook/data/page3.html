@@ -10,6 +10,8 @@ $('#p3Image').on('touchstart touchmove touchend',function(e) {
 	
 	if(e.type=='touchstart'){
 		obj.propagation=e.originalEvent.touches.length==1;
+		obj.lastX=touch.pageX;
+		obj.lastY=touch.pageY;
 	}
 	
 	if(e.type=='touchmove' && !obj.propagation){
@@ -17,12 +19,16 @@ $('#p3Image').on('touchstart touchmove touchend',function(e) {
 // 		$('#p3Image').parent().css('-webkit-transform','translate('+touch.pageX+'px,'+touch.pageY+'px)');
 		
 		$('#p3Image').parent().css('-webkit-transform','scale('+obj.scale+') '+
- 				'rotate('+obj.rotation+'deg)');
+ 				'rotate('+obj.rotation+'deg)'+
+ 				'translate('+touch.pageX+'px,'+touch.pageY+'px)');
 		
 // 		+
 // 			'translate('+touch.pageX+'px,'+touch.pageY+'px)'
 		
 		console.log('touch move, X,Y:'+touch.pageX+','+touch.pageY);
+		
+		obj.lastX=touch.pageX;
+		obj.lastY=touch.pageY;
 	}
 	
 	if(e.originalEvent.touches.length>1 || !obj.propagation){
