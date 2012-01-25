@@ -16,9 +16,11 @@ $('#p3Image').on('touchstart touchmove touchend',function(e) {
 		var touch=e.originalEvent.touches[0];
 // 		$('#p3Image').parent().css('-webkit-transform','translate('+touch.pageX+'px,'+touch.pageY+'px)');
 		
-		$('#p3Image').parent().css('-webkit-transform','scale('+e.originalEvent.scale*0.4+') '+
- 				'rotate('+e.originalEvent.rotation+'deg)'+
- 				'translate('+touch.pageX+'px,'+touch.pageY+'px)');
+		$('#p3Image').parent().css('-webkit-transform','scale('+obj.scale+') '+
+ 				'rotate('+obj.rotation+'deg)');
+		
+// 		+
+// 			'translate('+touch.pageX+'px,'+touch.pageY+'px)'
 		
 		console.log('touch move');
 	}
