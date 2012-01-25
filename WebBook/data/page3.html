@@ -18,8 +18,9 @@ $('#p3Image').on('touchstart touchmove touchend',function(e) {
 	if(e.type=='touchmove'){
 		console.log('touch move: '+obj.gesture);
 		if(obj.gesture || !obj.touchStart){
-			e.stopPropagation();
-			console.log('touch stop propagation. ');
+			//e.stopPropagation();
+			//console.log('touch stop propagation. ');
+			return true;
 		}
 	}
 	
