@@ -22,12 +22,13 @@ $('#p3Image').on('touchstart touchmove touchend',function(e) {
 		$('#p3Image').parent().css('-webkit-transform','scale('+obj.scale+') '+
  				'rotate('+obj.rotation+'deg)'+
  				'translate('+touch.clientX+'px,'+touch.clientY+'px)');
+		$('#p3Image').parent().css('-webkit-transform-origin','50%,50%');
 // 		$('#p3Image').parent().css('-webkit-animation-duration','0');
 		
 // 		+
 // 			'translate('+touch.pageX+'px,'+touch.pageY+'px)'
 		
-		console.log('touch move, X,Y:'+touch.clientX+','+touch.clientY);
+		console.log('==>touch move, X,Y:'+touch.clientX+','+touch.clientY);
 		
 		obj.lastX=touch.pageX;
 		obj.lastY=touch.pageY;
@@ -51,7 +52,7 @@ $('#p3Image').on('gesturestart gesturechange gestureend',function(e){
 	var obj=$('#p3Image')[0];
 	
 	if(e.type=='gesturestart'){
-		console.log('===>>gesture start ');
+		console.log('--->>gesture start ');
 	}
 	
 	if(e.type=='gesturechange'){
