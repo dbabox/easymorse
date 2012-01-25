@@ -9,18 +9,18 @@ $('#p3Image').on('touchstart touchmove touchend',function(e) {
 	var obj=$('#p3Image')[0];
 	
 	if(e.type=='touchstart'){
-		obj.started=e.originalEvent.touches.length==1;
+		obj.propagation=e.originalEvent.touches.length==1;
 	}
 	
 	if(e.type=='touchmove'){
 		console.log('touch move');
 	}
 	
-	if(e.originalEvent.touches.length>1 || !obj.started){
+	if(e.originalEvent.touches.length>1 || !obj.propagation){
 		e.stopPropagation();
 		
 		if(e.type=='touchend'){
-			obj.started=false;
+			obj.propagation=false;
 		}
 	}else{
 		console.log('do single touch:'+e.type);
