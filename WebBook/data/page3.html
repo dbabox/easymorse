@@ -10,6 +10,7 @@ $('#p3Image').on('touchstart touchmove touchend',function(e) {
 	var obj=$('#p3Image')[0];
 	
 	if(obj.gesture){
+		console.log('obj gesture true---> do not touch action.');
 		e.stopPropagation();
 		return;
 	}
