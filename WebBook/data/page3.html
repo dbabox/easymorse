@@ -17,23 +17,6 @@ $('#p3Image').on('touchstart touchmove touchend',function(e) {
 	if(!obj.touchStart){
 		e.stopPropagation();
 	}
-	
-// 	if(e.type=='touchmove'){
-// 		console.log('touch move: '+obj.gesture);
-// 	}
-	
-// 	if(e.type=='touchend'){
-// 		obj.gesture=false;
-// 		obj.touchStart=false;
-// 		console.log('touch end: '+obj.gesture);
-// 	}
-	
-// 	if(obj.gesture || !obj.touchStart){
-// 		e.stopPropagation();
-// 		//console.log('touch stop propagation. ');
-// 		return true;
-// 	}
-	
 });
 
 $('#p3Image').on('gesturestart gesturechange gestureend',function(e){
