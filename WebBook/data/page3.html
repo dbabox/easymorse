@@ -9,7 +9,7 @@ $('#p3Image').on('touchstart touchmove touchend',function(e) {
 	
 	var obj=$('#p3Image')[0];
 	
-	if(e.type=='touchstart' && obj.gesture=e.originalEvent.touches.length==1){
+	if(e.type=='touchstart' && e.originalEvent.touches.length==1){
 // 		obj.gesture=e.originalEvent.touches.length>1;
 		obj.touchStart=true;
 		console.log('touch start: '+obj.gesture);
