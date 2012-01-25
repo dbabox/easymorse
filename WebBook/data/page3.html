@@ -9,24 +9,23 @@ $('#p3Image').on('touchstart touchmove touchend',function(e) {
 	
 	var obj=$('#p3Image')[0];
 	
-// 	if(obj.gesture){
-// 		console.log('obj gesture true---> do not touch action.');
-// 		e.stopPropagation();
-// 		return;
-// 	}
-
-	if(e.type=='touchend'){
-		obj.gesture=false;
-	}
-
 	if(e.type=='touchstart'){
 		obj.gesture=e.originalEvent.touches.length>1;
+		console.log('touch start: '+obj.gesture);
+	}
+	
+	if(e.type=='touchmove'){
+		console.log('touch move: '+obj.gesture);
+	}
+	
+	if(e.type=='touchend'){
+		obj.gesture=false;
+		console.log('touch end: '+obj.gesture);
 	}
 	
 	if(obj.gesture){
-		console.log('touch more that one.');
 		e.stopPropagation();
-		return true;
+		console.log('touch stop propagation. ');
 	}
 });
 
@@ -35,27 +34,17 @@ $('#p3Image').on('gesturestart gesturechange gestureend',function(e){
 	e.stopPropagation();
 	
 	if(e.type=='gesturestart'){
-// 		var obj=$('#p3Image')[0];
-// 		obj.gesture=true;
+		console.log('gesture start ');
 	}
 	
 	if(e.type=='gesturechange'){
-		console.log('gesture rotation:'+e.originalEvent.rotation);
+		console.log('gesture change rotation:'+e.originalEvent.rotation);
 		$('#p3Image').parent().css('-webkit-transform','scale('+e.originalEvent.scale*0.4+') '+
 				'rotate('+e.originalEvent.rotation+'deg)');
-		//$('#p3Image').parent().css('-webkit-transform','rotate('+e.originalEvent.rotation+'deg)');
-		//$('#p3Image').parent().css('-webkit-transform-origin','50% 50%');
 	}
 	
 	if(e.type=='gestureend'){
-// 		$('#p3Image').delay(700).queue(function(){
-// 			var obj=$('#p3Image')[0];
-// 			obj.gesture=false;
-// 			console.log('end: set obj gesture false');
-// 		});
-		
+		console.log('gesture end');
 	}
-	
-	return true;
 });
 </script>
