@@ -5,7 +5,8 @@
 $('#p3Image').css('background','url("images/p3a.jpg")');
 
 $('#p3Image').on('touchstart touchmove touchend',function(e) {
-	return true;
+	e.preventDefault();
+	e.stopPropagation();
 // 	e.preventDefault();
 	
 // 	var obj=$('#p3Image')[0];
