@@ -16,9 +16,7 @@ $('#p3Image').on('touchstart touchmove touchend',function(e) {
 // 	}
 
 	if(e.type=='touchstart'){
-		if(e.originalEvent.touches && e.originalEvent.touches.length>1){
-			obj.gesture=true;
-		}
+		obj.gesture=e.originalEvent.touches && e.originalEvent.touches.length>1;
 	}
 
 	if(obj.gesture){
