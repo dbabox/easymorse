@@ -36,7 +36,7 @@
 		if (e.type == 'touchmove') {
 			if(obj.propagation){
 				obj.singleTouchMoved=true;	
-			}else if(!obj.singleTouchMoved){
+			}else if(!obj.singleTouchMoved && !obj.gestureEnd){
 				e.stopPropagation();
 				
 				obj.moveX += (touch.pageX - obj.lastX);
@@ -49,7 +49,7 @@
 						'translate3d(' + obj.moveX/0.4 + 'px,' + obj.moveY/0.4
 								+ 'px,0)');
 
-				console.log('-----####>moveX:' + obj.moveX);
+				console.log('####>moveX:' + obj.moveX);
 
 				obj.lastX = touch.pageX;
 				obj.lastY = touch.pageY;
@@ -72,6 +72,10 @@
 	$('#p3Image').on('gesturestart gesturechange gestureend',function(e){
 		var obj=$('#p3Image')[0];
 		
+		if(e.type=='gesturestart'){
+			obj.gestureEnd=false;
+		}
+		
 		if(e.type=='gesturechange'){
 			obj.scale=e.originalEvent.scale;
 			obj.rotation=e.originalEvent.rotation;
@@ -81,6 +85,8 @@
 		
 		if(e.type=='gestureend' && obj.gestureChanged){
 // 			$('#p3Image').toggleClass('scaleImageForward');
+
+			obj.gestureEnd=true;
 
 			$('#p3Image').css({
 // 				'-webkit-animation-fill-mode': 'forwards',
