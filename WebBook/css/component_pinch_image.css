@@ -16,3 +16,17 @@
 	height:768px;
 	-webkit-box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
 }
+
+@-webkit-keyframes pinchImageAnimation{
+	0%{
+	}
+	100%{
+		-webkit-transform: scale(.4) translate3d(0,0,0) rotate(0deg);
+	}
+}
+
+.scaleImageForward{
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-duration :  .5s;
+	-webkit-animation-name : pinchImageAnimation;
+}

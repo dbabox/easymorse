@@ -18,6 +18,8 @@
 				obj.moveY = 0;
 			}
 			
+			$('#p3Image').toggleClass('scaleImageForward');
+			
 			obj.propagation = e.originalEvent.targetTouches.length == 1;
 			console.log('touch start');
 		}
@@ -45,9 +47,15 @@
 			}
 		}
 
-		if (e.type == 'touchend' && e.originalEvent.targetTouches.length==0) {
-			obj.singleTouchMoved=false;
-			console.log('touch end');
+		if (e.type == 'touchend') {
+			if(e.originalEvent.targetTouches.length==1){
+				$('#p3Image').toggleClass('scaleImageForward');
+			}
+			
+			if(e.originalEvent.targetTouches.length==0){
+				obj.singleTouchMoved=false;
+				console.log('touch end');
+			}
 		}
 
 	});
