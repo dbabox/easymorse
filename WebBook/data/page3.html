@@ -10,11 +10,12 @@
 		var obj = $('#p3Image')[0];
 
 		if (e.type == 'touchstart') {
-// 			$('#p3Image').css({
+			$('#p3Image').css({
 // 				'-webkit-animation-fill-mode': '',
 // 				'-webkit-animation-duration' :  '',
-// 				'-webkit-animation-name' : ''	
-// 			});
+// 				'-webkit-animation-name' : ''
+				'-webkit-transition-duration': '0',
+			});
 			
 			obj.lastX = touch.pageX;
 			obj.lastY = touch.pageY;
@@ -48,7 +49,7 @@
 						'translate3d(' + obj.moveX/0.4 + 'px,' + obj.moveY/0.4
 								+ 'px,0)');
 
-				console.log('####>moveX:' + obj.moveX);
+				console.log('-----####>moveX:' + obj.moveX);
 
 				obj.lastX = touch.pageX;
 				obj.lastY = touch.pageY;
