@@ -24,7 +24,7 @@
 
 		if (e.type == 'touchend') {
 			obj.singleTouchMoved=false;
-			console.log('multi touch end');
+			console.log('multi touch end, touch.length:'+ e.originalEvent.targetTouches.length);
 		}
 
 	});
