@@ -6,6 +6,7 @@
 
 	$('#p3Image').on('touchstart touchmove touchend', function(e) {
 		e.preventDefault();
+		var touch = e.originalEvent.touches[0];
 		var obj = $('#p3Image')[0];
 
 		if (e.type == 'touchstart') {
