@@ -5,10 +5,18 @@ body {
 }
 
 #dragContent{
-	top:100px;
-	left:200px;
-	height: 200px;
-	width: 400px;
+	height: 768px;
+	width: 1024px;
 	background: rgba(0,0,0,0.2);
-	margin: 0px auto;
+	background:url('../images/p3a.jpg')
+}
+
+.scaleContent{
+	-webkit-transform:scale(0.4);
+}
+
+#imageContent{
+/* 	height: 768px; */
+/* 	width: 1024px; */
+/* 	background:url('../images/p3a.jpg'); */
 }

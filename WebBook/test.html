@@ -7,7 +7,7 @@
 </head>
 
 <body>
-	<div id='dragContent'>本示例只能用触摸设备使用</div>
+	<div id='dragContent' class='scaleContent'></div>
 
 	<script>
 		$('#dragContent').on(
@@ -33,8 +33,8 @@
 						
 						$('#dragContent').css(
 								'-webkit-transform',
-								'translate(' + obj.moveX + 'px,' + obj.moveY
-										+ 'px)');
+								'translate3d(' + obj.moveX + 'px,' + obj.moveY
+										+ 'px,0)');
 
 						console.log('moveX:' + obj.moveX);
 
