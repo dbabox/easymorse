@@ -16,9 +16,9 @@
 		if (e.type == 'touchmove') {
 			if(obj.propagation){
 				obj.singleTouchMoved=true;	
-			}else{
+			}else if(!obj.singleTouchMoved){
 				e.stopPropagation();
-				console.log('-->multi touch move');
+				console.log('>>>multi touch move');
 			}
 		}
 
