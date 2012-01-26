@@ -10,11 +10,12 @@
 		var obj = $('#p3Image')[0];
 
 		if (e.type == 'touchstart') {
-			$('#p3Image').css({
-				'-webkit-animation-fill-mode': '',
-				'-webkit-animation-duration' :  '',
-				'-webkit-animation-name' : ''	
-			});
+			$('#p3Image').css(
+					'-webkit-transform',
+					'scale('+1+') '+
+					'rotate('+0+'deg)'+
+					'translate3d(' + 0 + 'px,' + 0
+							+ 'px,0)');
 			
 			obj.lastX = touch.pageX;
 			obj.lastY = touch.pageY;
