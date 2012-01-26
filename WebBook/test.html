@@ -17,8 +17,12 @@
 			if (e.type == 'touchstart') {
 				obj.lastX=touch.pageX;
 				obj.lastY=touch.pageY;
-				obj.moveX=0;
-				obj.moveY=0;
+				
+				if(!obj.moveX){
+					obj.moveX=0;
+					obj.moveY=0;
+				}
+				
 			}
 
 			if (e.type == 'touchmove') {
