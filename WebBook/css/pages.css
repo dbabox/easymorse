@@ -36,7 +36,6 @@ body {
 .pages{
 	-webkit-transform-style: preserve-3d;
 /* 	-webkit-transform: translate3d(0,0,0); */
-/* 	-webkit-perspective: 0;  */
 	height: 768px;
 	top:0px;
 	position: absolute;

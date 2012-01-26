@@ -18,7 +18,7 @@
 	0%{
 	}
 	100%{
-		-webkit-transform: scale(1);
+		-webkit-transform: scale(1) translate3d(0,0,0);;
 /* 		-webkit-transform-origin:-100px -100px; */
 	}
 }
