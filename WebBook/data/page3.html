@@ -33,6 +33,7 @@
 				
 				$('#p3Image').css(
 						'-webkit-transform',
+						'scale('+obj.scale+') '+
 						'translate3d(' + obj.moveX/0.4 + 'px,' + obj.moveY/0.4
 								+ 'px,0)');
 
@@ -49,4 +50,14 @@
 		}
 
 	});
+	
+	$('#p3Image').on('gesturestart gesturechange gestureend',function(e){
+		var obj=$('#p3Image')[0];
+		
+		if(e.type=='gesturechange'){
+			obj.scale=e.originalEvent.scale*0.4;
+			obj.rotation=e.originalEvent.rotation;
+			console.log('gesture change');
+		}
+	}
 </script>
