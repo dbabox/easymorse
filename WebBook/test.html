@@ -13,17 +13,24 @@
 			e.preventDefault();
 			var touch = e.originalEvent.targetTouches[0];
 			var obj = $('#dragContent')[0];
-
+			
 			if (e.type == 'touchstart') {
-				var offset=$('#dragContent').offset();
-				obj.x=touch.pageX-offset.left;
-				obj.y=touch.pageY-offset.top;
+				obj.lastX=touch.pageX;
+				obj.lastY=touch.pageY;
+				obj.moveX=0;
+				obj.moveY=0;
 			}
 
 			if (e.type == 'touchmove') {
-				var moveX=touch.pageX-obj.x;
-				var moveY=touch.pageY-obj.y;
-				$('#dragContent').css('-webkit-transform','translate('+moveX+'px,'+moveY+'px)');
+				obj.moveX+=(touch.pageX-obj.lastX);
+				obj.moveY+=(touch.pageY-obj.lastY);
+				$('#dragContent').css('-webkit-transform','translate('+obj.moveX+'px,'+obj.moveY+'px)');
+				
+				obj.lastX=touch.pageX;
+				obj.lastY=touch.pageY;
+			}
+			
+			if(e.type=='touchend'){
 			}
 		});
 	</script>
