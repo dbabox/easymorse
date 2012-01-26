@@ -10,35 +10,42 @@
 	<div id='dragContent'>本示例只能用触摸设备使用</div>
 
 	<script>
-		$('#dragContent').on('touchstart touchmove touchend', function(e) {
-			e.preventDefault();
-			var touch = e.originalEvent.touches[0];
-			var obj = $('#dragContent')[0];
-			
-			if (e.type == 'touchstart') {
-				obj.lastX=touch.pageX;
-				obj.lastY=touch.pageY;
-				
-				if(!obj.moveX){
-					obj.moveX=0;
-					obj.moveY=0;
-				}
-			}
+		$('#dragContent').on(
+				'touchstart touchmove touchend',
+				function(e) {
+					e.preventDefault();
+					var touch = e.originalEvent.touches[0];
+					var obj = $('#dragContent')[0];
 
-			if (e.type == 'touchmove') {
-				obj.moveX+=(touch.pageX-obj.lastX);
-				obj.moveY+=(touch.pageY-obj.lastY);
-				$('#dragContent').css('-webkit-transform','translate('+obj.moveX+'px,'+obj.moveY+'px)');
-				
-				console.log('moveX:'+obj.moveX);
-				
-				obj.lastX=touch.pageX;
-				obj.lastY=touch.pageY;
-			}
-			
-			if(e.type=='touchend'){
-			}
-		});
+					if (e.type == 'touchstart') {
+						obj.lastX = touch.pageX;
+						obj.lastY = touch.pageY;
+
+						if (!obj.moveX) {
+							obj.moveX = 0;
+							obj.moveY = 0;
+						}
+					}
+
+					if (e.type == 'touchmove') {
+						obj.moveX += (touch.pageX - obj.lastX);
+						obj.moveY += (touch.pageY - obj.lastY);
+						
+						$('#dragContent').css('-webkit-animation-duration','0');
+						$('#dragContent').css(
+								'-webkit-transform',
+								'translate(' + obj.moveX + 'px,' + obj.moveY
+										+ 'px)');
+
+						console.log('moveX:' + obj.moveX);
+
+						obj.lastX = touch.pageX;
+						obj.lastY = touch.pageY;
+					}
+
+					if (e.type == 'touchend') {
+					}
+				});
 	</script>
 </body>
 </html>
