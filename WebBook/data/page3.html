@@ -2,29 +2,26 @@
 	<div id='p3Image' class='pinchImage'></div>
 </div>
 <script>
-$('#p3Image').css('background','url("images/p3a.jpg")');
+	$('#p3Image').css('background', 'url("images/p3a.jpg")');
 
-$('#p3Image').on('touchstart touchmove touchend',function(e) {
-	e.preventDefault();
-	var obj=$('#p3Image')[0];
-	
-	if(e.type=='touchstart'){
-		obj.propagation=e.originalEvent.targetTouches.length==1;
-		console.log('touch start');
-	}
-	
-	if(!obj.propagation){
-		e.stopPropagation();
-		
-		if(e.type=='touchmove'){
+	$('#p3Image').on('touchstart touchmove touchend', function(e) {
+		e.preventDefault();
+		var obj = $('#p3Image')[0];
+
+		if (e.type == 'touchstart') {
+			obj.propagation = e.originalEvent.targetTouches.length == 1;
+			console.log('touch start');
+		}
+
+		if (e.type == 'touchmove' && !obj.propagation) {
+			e.stopPropagation();
+
 			console.log('multi touch move');
 		}
-		
-		if(e.type=='touchend'){
+
+		if (e.type == 'touchend') {
 			console.log('multi touch end');
 		}
-	}
-	
-	
-});
+
+	});
 </script>
