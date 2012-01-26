@@ -48,7 +48,7 @@
 						'translate3d(' + obj.moveX/0.4 + 'px,' + obj.moveY/0.4
 								+ 'px,0)');
 
-				console.log('=====####>moveX:' + obj.moveX);
+				console.log('####>moveX:' + obj.moveX);
 
 				obj.lastX = touch.pageX;
 				obj.lastY = touch.pageY;
@@ -82,8 +82,9 @@
 // 			$('#p3Image').toggleClass('scaleImageForward');
 
 			$('#p3Image').css({
-				'-webkit-animation-fill-mode': 'forwards',
-				'-webkit-animation-duration' :  '.5s',
+// 				'-webkit-animation-fill-mode': 'forwards',
+// 				'-webkit-animation-duration' :  '.5s',
+				'-webkit-transition-duration': '.5s',
 				'-webkit-transform':'scale(1) translate3d(0,0,0) rotate(0deg)'
 // 				'-webkit-animation-name' : 'pinchImageAnimation'	
 			});
