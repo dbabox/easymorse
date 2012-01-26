@@ -11,7 +11,7 @@
 	<script>
 		$('#dragContent').on('touchstart touchmove touchend', function(e) {
 			e.preventDefault();
-			var touch = e.originalEvent.targetTouches[0];
+			var touch = e.originalEvent.touches[0];
 			var obj = $('#dragContent')[0];
 			
 			if (e.type == 'touchstart') {
@@ -25,6 +25,10 @@
 				obj.moveX+=(touch.pageX-obj.lastX);
 				obj.moveY+=(touch.pageY-obj.lastY);
 				$('#dragContent').css('-webkit-transform','translate('+obj.moveX+'px,'+obj.moveY+'px)');
+				
+				//$('#dragContent').css('-webkit-transform','translate('+5+'px,'+0+'px)');
+				
+				console.log('moveX:'+obj.moveX);
 				
 				obj.lastX=touch.pageX;
 				obj.lastY=touch.pageY;
