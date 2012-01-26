@@ -9,6 +9,14 @@
 		var obj = $('#p3Image')[0];
 
 		if (e.type == 'touchstart') {
+			obj.lastX = touch.pageX;
+			obj.lastY = touch.pageY;
+			
+			if (!obj.moveX) {
+				obj.moveX = 0;
+				obj.moveY = 0;
+			}
+			
 			obj.propagation = e.originalEvent.targetTouches.length == 1;
 			console.log('touch start');
 		}
@@ -18,13 +26,25 @@
 				obj.singleTouchMoved=true;	
 			}else if(!obj.singleTouchMoved){
 				e.stopPropagation();
-				console.log('>>>multi touch move');
+				
+				obj.moveX += (touch.pageX - obj.lastX);
+				obj.moveY += (touch.pageY - obj.lastY);
+				
+				$('#dragContent').css(
+						'-webkit-transform',
+						'translate(' + obj.moveX + 'px,' + obj.moveY
+								+ 'px)');
+
+				console.log('moveX:' + obj.moveX);
+
+				obj.lastX = touch.pageX;
+				obj.lastY = touch.pageY;
 			}
 		}
 
-		if (e.type == 'touchend') {
+		if (e.type == 'touchend' && e.originalEvent.targetTouches.length==0) {
 			obj.singleTouchMoved=false;
-			console.log('multi touch end, touch.length:'+ e.originalEvent.targetTouches.length);
+			console.log('touch end');
 		}
 
 	});
