@@ -40,7 +40,7 @@
 						'translate3d(' + obj.moveX/0.4 + 'px,' + obj.moveY/0.4
 								+ 'px,0)');
 
-				console.log('----------->moveX:' + obj.moveX);
+				console.log('>moveX:' + obj.moveX);
 
 				obj.lastX = touch.pageX;
 				obj.lastY = touch.pageY;
@@ -66,11 +66,13 @@
 		if(e.type=='gesturechange'){
 			obj.scale=e.originalEvent.scale;
 			obj.rotation=e.originalEvent.rotation;
+			obj.gestureChanged=true;
 			console.log('gesture change');
 		}
 		
-		if(e.type=='gestureend'){
+		if(e.type=='gestureend' && obj.gestureChanged){
 			$('#p3Image').toggleClass('scaleImageForward');
+			obj.gestureChanged=false;
 		}
 	});
 </script>
