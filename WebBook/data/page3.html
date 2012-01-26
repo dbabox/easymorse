@@ -20,7 +20,7 @@
 				obj.rotation=0;
 			//}
 			
-			$('#p3Image').toggleClass('scaleImageForward');
+// 			$('#p3Image').toggleClass('scaleImageForward');
 			
 			obj.propagation = e.originalEvent.targetTouches.length == 1;
 			console.log('touch start');
@@ -73,7 +73,14 @@
 		}
 		
 		if(e.type=='gestureend' && obj.gestureChanged){
-			$('#p3Image').toggleClass('scaleImageForward');
+// 			$('#p3Image').toggleClass('scaleImageForward');
+
+			$('#p3Image').css({
+				'-webkit-animation-fill-mode': 'forwards',
+				'-webkit-animation-duration' :  '.5s',
+				'-webkit-animation-name' : 'pinchImageAnimation'	
+			});
+
 			obj.gestureChanged=false;
 			console.log('gesture end');
 		}
