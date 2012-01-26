@@ -33,10 +33,11 @@
 				
 				$('#p3Image').css(
 						'-webkit-transform',
+						'scale('+obj.scale+') '+
 						'translate3d(' + obj.moveX/0.4 + 'px,' + obj.moveY/0.4
 								+ 'px,0)');
 
-				console.log('==>>moveX:' + obj.moveX);
+				console.log('>>>moveX:' + obj.moveX);
 
 				obj.lastX = touch.pageX;
 				obj.lastY = touch.pageY;
@@ -58,5 +59,5 @@
 			obj.rotation=e.originalEvent.rotation;
 			console.log('gesture change');
 		}
-	}
+	});
 </script>
