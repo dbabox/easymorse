@@ -21,7 +21,7 @@
 	0%{
 	}
 	100%{
-		-webkit-transform: scale(.4) translate3d(0,0,0) rotate(0deg);
+		-webkit-transform: scale(1) translate3d(0,0,0) rotate(0deg);
 	}
 }
 
