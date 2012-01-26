@@ -10,13 +10,6 @@
 		var obj = $('#p3Image')[0];
 
 		if (e.type == 'touchstart') {
-			$('#p3Image').css(
-					'-webkit-transform',
-					'scale('+1+') '+
-					'rotate('+0+'deg)'+
-					'translate3d(' + 0 + 'px,' + 0
-							+ 'px,0)');
-			
 			obj.lastX = touch.pageX;
 			obj.lastY = touch.pageY;
 			
@@ -49,7 +42,7 @@
 						'translate3d(' + obj.moveX/0.4 + 'px,' + obj.moveY/0.4
 								+ 'px,0)');
 
-				console.log('??--##>moveX:' + obj.moveX);
+				console.log('--##>moveX:' + obj.moveX);
 
 				obj.lastX = touch.pageX;
 				obj.lastY = touch.pageY;
@@ -71,6 +64,14 @@
 	
 	$('#p3Image').on('gesturestart gesturechange gestureend',function(e){
 		var obj=$('#p3Image')[0];
+		
+		if(e.type='gesturestart'){
+			$('#p3Image').css({
+				'-webkit-animation-fill-mode': '',
+				'-webkit-animation-duration' :  '',
+				'-webkit-animation-name' : ''	
+			});
+		}
 		
 		if(e.type=='gesturechange'){
 			obj.scale=e.originalEvent.scale;
