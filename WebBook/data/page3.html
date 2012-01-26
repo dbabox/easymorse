@@ -36,23 +36,26 @@
 		if (e.type == 'touchmove') {
 			if(obj.propagation){
 				obj.singleTouchMoved=true;	
-			}else if(!obj.singleTouchMoved && !obj.gestureEnd){
+			}else if(!obj.singleTouchMoved){
 				e.stopPropagation();
 				
-				obj.moveX += (touch.pageX - obj.lastX);
-				obj.moveY += (touch.pageY - obj.lastY);
+				if(!obj.gestureEnd){
 				
-				$('#p3Image').css(
-						'-webkit-transform',
-						'scale('+obj.scale+') '+
-						'rotate('+obj.rotation+'deg)'+
-						'translate3d(' + obj.moveX/0.4 + 'px,' + obj.moveY/0.4
-								+ 'px,0)');
-
-				console.log('####>moveX:' + obj.moveX);
-
-				obj.lastX = touch.pageX;
-				obj.lastY = touch.pageY;
+					obj.moveX += (touch.pageX - obj.lastX);
+					obj.moveY += (touch.pageY - obj.lastY);
+					
+					$('#p3Image').css(
+							'-webkit-transform',
+							'scale('+obj.scale+') '+
+							'rotate('+obj.rotation+'deg)'+
+							'translate3d(' + obj.moveX/0.4 + 'px,' + obj.moveY/0.4
+									+ 'px,0)');
+	
+					console.log('>>###>moveX:' + obj.moveX);
+	
+					obj.lastX = touch.pageX;
+					obj.lastY = touch.pageY;
+				}
 			}
 		}
 
